@@ -1,0 +1,18 @@
+site_name: Processo de Avaliação de Produto de Software
+site_description: Documentação do projeto da disciplina de Qualidade de Software
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.tabs  # Esta linha move o menu para a barra superior
+  palette:
+    primary: custom    # Indica que usaremos uma cor personalizada no CSS
+    accent: amber
+extra_css:
+  - stylesheets/extra.css # Chama o arquivo de estilo que vamos criar
+nav:
+  - Visão Geral: index.md
+  - "Fase 1": fase1-requisitos.md
+  - "Fase 2": fase2-especificacao.md
+  - "Fase 3": fase3-projeto.md
+  - "Fase 4": fase4-execucao.md
