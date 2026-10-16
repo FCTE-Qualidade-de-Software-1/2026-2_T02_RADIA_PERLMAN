@@ -1,9 +1,9 @@
-# Fase 1: Estabelecer Requisitos de Avaliação
+# Fase 1: Requisitos de Avaliação
 
-## 1. Estabelecer o propósito da avaliação
+## 1. Propósito da avaliação
 O propósito desta avaliação é analisar a qualidade do software "Agência Virtual da Neoenergia Brasília", com o objetivo de indicar pontos para melhoria no produto e compreender o seu comportamento diante de cenários práticos de uso. Do ponto de vista dos usuários finais e da equipe de avaliação (alunos de Engenharia de Software), a análise será focada nas visões de qualidade do usuário e do produto, conforme definidas por Garvin (1984). A visão do usuário considera a adequação ao uso, enquanto a visão do produto foca nos atributos e propriedades internas que resultam na qualidade externa.
 
-## 2. Identificar os tipos de produtos a serem avaliados
+## 2. Produto avaliado
 * **Nome do produto:** Agência Virtual da Neoenergia Brasília.
 * **Descrição e Categoria:** O sistema enquadra-se na categoria de **Software Comercial** (Pressman, 2010), organizado de forma a facilitar operações financeiras e de prestação de serviços para clientes corporativos e residenciais.
 * **Principais tarefas e escopo de avaliação:**
@@ -14,8 +14,8 @@ O propósito desta avaliação é analisar a qualidade do software "Agência Vir
     5. Indicadores de continuidade
 * **Perfil dos Usuários:** População em geral do Distrito Federal, abrangendo desde cidadãos leigos até usuários com alto conhecimento em informática. Tal heterogeneidade exige forte ênfase na Engenharia Humana e Usabilidade (Galin, 2018).
 
-## 3. Especificar os modelos de qualidade
-A avaliação basear-se-á na família de normas **SQuaRE (Software product Quality Requirements and Evaluation)**, especificamente a **ISO/IEC 25010** (Modelo de Qualidade de Produto).
+## 3. Modelos de qualidade
+A avaliação baseia se na família de normas **SQuaRE (Software product Quality Requirements and Evaluation)**, especificamente a **ISO/IEC 25010** (Modelo de Qualidade de Produto).
 
  Detalhamos abaixo as características e subcaracterísticas escolhidas. Cada uma recebeu uma nota de "ênfase" (em uma escala de 1 a 5, onde 1 significa nenhum interesse e 5 representa grande interesse para a avaliação):
 
