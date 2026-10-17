@@ -1,0 +1,980 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto da disciplina de Qualidade de Software">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Rastreabilidade entre as Fases 1 e 2 - Processo de Avaliação de Produto de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rastreabilidade-entre-as-fases-1-e-2" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-header__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Processo de Avaliação de Produto de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Rastreabilidade entre as Fases 1 e 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fase1-requisitos/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fase 1
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../objetivos.md" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fase3-projeto/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fase 3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fase4-execucao/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fase 4
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-nav__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Processo de Avaliação de Produto de Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../objetivos.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objetivos de medição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../questoes-hipoteses.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questões e hipóteses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metricas.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métricas e pontuações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grafico-gqm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gráfico GQM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../criterios-julgamento.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Critérios de julgamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rastreabilidade.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rastreabilidade Fase 1–2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocolo-coleta.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo de coleta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-psm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão PSM/CID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase4-execucao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-relacao-entre-caracteristicas-questoes-e-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Relação entre características, questões e métricas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-aplicacao-das-metricas-as-funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Aplicação das métricas às funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-delimitacao-do-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Delimitação do escopo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-correspondencia-conceitual-com-a-fase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Correspondência conceitual com a Fase 1
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="rastreabilidade-entre-as-fases-1-e-2">Rastreabilidade entre as Fases 1 e 2<a class="headerlink" href="#rastreabilidade-entre-as-fases-1-e-2" title="Permanent link">&para;</a></h1>
+<p>Na Fase 1, definimos como propósito identificar oportunidades de melhoria na Agência Virtual da Neoenergia Brasília, considerando as necessidades dos consumidores. As quatro características priorizadas com base na ISO/IEC 25010:2011 serviram de referência para a escolha das métricas apresentadas nesta fase.</p>
+<h2 id="1-relacao-entre-caracteristicas-questoes-e-metricas">1. Relação entre características, questões e métricas<a class="headerlink" href="#1-relacao-entre-caracteristicas-questoes-e-metricas" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th style="text-align: right;">Ênfase</th>
+<th>Subcaracterística</th>
+<th>Objetivo</th>
+<th>Questão e hipótese</th>
+<th>Métrica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usabilidade</td>
+<td style="text-align: right;">5</td>
+<td>Apreensibilidade</td>
+<td><a href="../objetivos/#g1">G1</a></td>
+<td><a href="../questoes-hipoteses/#q1">Q1/H1</a></td>
+<td><a href="../metricas/#m1">M1</a> — localização sem ajuda.</td>
+</tr>
+<tr>
+<td>Usabilidade</td>
+<td style="text-align: right;">5</td>
+<td>Proteção contra erros</td>
+<td><a href="../objetivos/#g1">G1</a></td>
+<td><a href="../questoes-hipoteses/#q2">Q2/H2</a></td>
+<td><a href="../metricas/#m2">M2</a> — validação de entradas inválidas.</td>
+</tr>
+<tr>
+<td>Confiabilidade</td>
+<td style="text-align: right;">4</td>
+<td>Maturidade</td>
+<td><a href="../objetivos/#g2">G2</a></td>
+<td><a href="../questoes-hipoteses/#q3">Q3/H3</a></td>
+<td><a href="../metricas/#m3">M3</a> — execuções sem falhas por fluxo.</td>
+</tr>
+<tr>
+<td>Confiabilidade</td>
+<td style="text-align: right;">4</td>
+<td>Tolerância a falhas</td>
+<td><a href="../objetivos/#g2">G2</a></td>
+<td><a href="../questoes-hipoteses/#q4">Q4/H4</a></td>
+<td><a href="../metricas/#m4">M4</a> — recuperação após desconexão local.</td>
+</tr>
+<tr>
+<td>Segurança</td>
+<td style="text-align: right;">5</td>
+<td>Confidencialidade</td>
+<td><a href="../objetivos/#g3">G3</a></td>
+<td><a href="../questoes-hipoteses/#q5">Q5/H5</a></td>
+<td><a href="../metricas/#m5">M5</a> — bloqueio integral de acesso sem sessão.</td>
+</tr>
+<tr>
+<td>Segurança</td>
+<td style="text-align: right;">5</td>
+<td>Integridade</td>
+<td><a href="../objetivos/#g3">G3</a></td>
+<td><a href="../questoes-hipoteses/#q6">Q6/H6</a></td>
+<td><a href="../metricas/#m6">M6</a> — consistência visível de dados estáveis.</td>
+</tr>
+<tr>
+<td>Eficiência de desempenho</td>
+<td style="text-align: right;">4</td>
+<td>Comportamento no tempo</td>
+<td><a href="../objetivos/#g4">G4</a></td>
+<td><a href="../questoes-hipoteses/#q7">Q7/H7</a></td>
+<td><a href="../metricas/#m7">M7</a> — tempo mediano por fluxo.</td>
+</tr>
+<tr>
+<td>Eficiência de desempenho</td>
+<td style="text-align: right;">4</td>
+<td>Comportamento no tempo</td>
+<td><a href="../objetivos/#g4">G4</a></td>
+<td><a href="../questoes-hipoteses/#q8">Q8/H8</a></td>
+<td><a href="../metricas/#m8">M8</a> — percentil 90 por fluxo.</td>
+</tr>
+</tbody>
+</table>
+<p>Usabilidade e segurança têm ênfase 5 na Fase 1; confiabilidade e eficiência de desempenho, ênfase 4. Essa diferença orientará a prioridade das recomendações, não a fórmula dos indicadores.</p>
+<h2 id="2-aplicacao-das-metricas-as-funcionalidades">2. Aplicação das métricas às funcionalidades<a class="headerlink" href="#2-aplicacao-das-metricas-as-funcionalidades" title="Permanent link">&para;</a></h2>
+<p>A tabela indica em quais funcionalidades pretendemos aplicar cada métrica. Antes dos testes, verificaremos quais etapas estão acessíveis, especialmente nos serviços que exigem autenticação ou emissão de documentos.</p>
+<table>
+<thead>
+<tr>
+<th>Funcionalidade</th>
+<th>Métricas previstas</th>
+<th>Condições de aplicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login e cadastro</td>
+<td>M1, M2, M3, M7 e M8; M5 em página pós-login; M4 se viável</td>
+<td>Testes em campos seguros, sem cadastro fictício nem alteração de conta.</td>
+</tr>
+<tr>
+<td>Segunda via de fatura</td>
+<td>M1, M3, M5, M6, M7 e M8; M4 se viável</td>
+<td>Consultas autorizadas. O tempo de geração de PDF só será medido se a operação for efetivamente realizada.</td>
+</tr>
+<tr>
+<td>Histórico de consumo</td>
+<td>M1, M3, M5, M6, M7 e M8; M4 se viável</td>
+<td>Comparações limitadas a períodos e referências estáveis da conta autorizada.</td>
+</tr>
+<tr>
+<td>Relatório de Nada Consta</td>
+<td>M1, M3, M5, M7 e M8; M4 se viável</td>
+<td>Avaliação das etapas de navegação acessíveis sem modificar registros.</td>
+</tr>
+<tr>
+<td>Indicadores de continuidade</td>
+<td>M1, M3, M7 e M8; M4 se viável</td>
+<td>Acesso, estabilidade e apresentação da tela, sem examinar os cálculos internos do indicador.</td>
+</tr>
+</tbody>
+</table>
+<p>Registraremos os cenários escolhidos antes de começar. Se não houver acesso a alguma etapa ou não conseguirmos reunir observações suficientes, o resultado correspondente ficará inconclusivo, com a justificativa documentada.</p>
+<h2 id="3-delimitacao-do-escopo">3. Delimitação do escopo<a class="headerlink" href="#3-delimitacao-do-escopo" title="Permanent link">&para;</a></h2>
+<p>Retiramos a adequação funcional do escopo e, por isso, não definimos indicadores de completude ou correção funcional. Também não incluímos testes de carga, auditoria de código-fonte ou avaliações da infraestrutura. As métricas escolhidas se concentram no comportamento que conseguimos observar pela interface.</p>
+<p>Esse recorte considera as condições de acesso ao sistema. Como estamos avaliando um serviço de terceiros sem privilégios administrativos, nossas conclusões ficarão limitadas aos fluxos executados e às evidências obtidas durante os testes.</p>
+<h2 id="4-correspondencia-conceitual-com-a-fase-1">4. Correspondência conceitual com a Fase 1<a class="headerlink" href="#4-correspondencia-conceitual-com-a-fase-1" title="Permanent link">&para;</a></h2>
+<p>Dois exemplos citados na definição inicial do escopo exigem uma distinção na hora de medir:</p>
+<ul>
+<li><strong>Dados inválidos e tolerância a falhas.</strong> A reação a um campo preenchido incorretamente será tratada em M2, vinculada à proteção contra erros do usuário. Para tolerância a falhas, a M4 observa especificamente uma interrupção breve da conexão local, durante navegação de leitura.</li>
+<li><strong>Bloqueio após senhas incorretas e integridade.</strong> O bloqueio de tentativas de autenticação é um mecanismo mais diretamente ligado ao controle de acesso. A confidencialidade será examinada em M5; a subcaracterística integridade permanece representada em M6 por uma verificação indireta de consistência entre consultas.</li>
+</ul>
+<p>A M6 não permite verificar a integridade do armazenamento ou a resistência a alterações indevidas. Ao apresentar os resultados, manteremos essa distinção entre a consistência observada na interface e os mecanismos internos de proteção.</p>
+<p>Em M3, a taxa será calculada separadamente para cada fluxo; em M5, qualquer exposição de dados protegidos sem autenticação resultará em classificação insatisfatória. Essa opção evita que resultados agregados ocultem problemas relevantes. O <a href="../grafico-gqm/">gráfico GQM</a> apresenta as ligações entre objetivos, questões e métricas, e os <a href="../criterios-julgamento/">critérios de julgamento</a> explicam a classificação. O acompanhamento do trabalho pelo <a href="../gestao-psm/">PSM/CID</a> permanece separado das medidas de qualidade do produto.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
