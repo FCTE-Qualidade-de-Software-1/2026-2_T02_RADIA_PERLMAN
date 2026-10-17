@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo-neoenergia.svg" alt="Logo da Neoenergia Brasília" width="250">
+  <img src="./docs/assets/logo-neoenergia.svg" alt="Logo da Neoenergia Brasília" width="250">
 </p>
 
 # Processo de Avaliação de Produto de Software
