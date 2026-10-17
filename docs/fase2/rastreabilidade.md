@@ -5,7 +5,7 @@ hide:
 
 # Rastreabilidade entre as Fases 1 e 2
 
-O propósito estabelecido na Fase 1 é identificar oportunidades de melhoria na Agência Virtual da Neoenergia Brasília, considerando o uso do serviço pelos consumidores e as observações da equipe de avaliação. A seleção de métricas parte das quatro características priorizadas naquele documento, com base no modelo de qualidade da ISO/IEC 25010:2011.
+Na Fase 1, definimos como propósito identificar oportunidades de melhoria na Agência Virtual da Neoenergia Brasília, considerando as necessidades dos consumidores. As quatro características priorizadas com base na ISO/IEC 25010:2011 serviram de referência para a escolha das métricas apresentadas nesta fase.
 
 ## 1. Relação entre características, questões e métricas
 
@@ -24,7 +24,7 @@ Usabilidade e segurança têm ênfase 5 na Fase 1; confiabilidade e eficiência 
 
 ## 2. Aplicação das métricas às funcionalidades
 
-A associação abaixo indica os fluxos previstos para observação. A disponibilidade real de cada etapa será confirmada no início da coleta, especialmente quando houver autenticação ou emissão de documentos.
+A tabela indica em quais funcionalidades pretendemos aplicar cada métrica. Antes dos testes, verificaremos quais etapas estão acessíveis, especialmente nos serviços que exigem autenticação ou emissão de documentos.
 
 | Funcionalidade | Métricas previstas | Condições de aplicação |
 |---|---|---|
@@ -34,13 +34,13 @@ A associação abaixo indica os fluxos previstos para observação. A disponibil
 | Relatório de Nada Consta | M1, M3, M5, M7 e M8; M4 se viável | Avaliação das etapas de navegação acessíveis sem modificar registros. |
 | Indicadores de continuidade | M1, M3, M7 e M8; M4 se viável | Acesso, estabilidade e apresentação da tela, sem examinar os cálculos internos do indicador. |
 
-A escolha de cada cenário deverá ser registrada antes da execução. Se uma etapa não puder ser acessada ou não fornecer observações suficientes, a métrica correspondente será apontada como inconclusiva, com justificativa.
+Registraremos os cenários escolhidos antes de começar. Se não houver acesso a alguma etapa ou não conseguirmos reunir observações suficientes, o resultado correspondente ficará inconclusivo, com a justificativa documentada.
 
 ## 3. Delimitação do escopo
 
-Adequação funcional foi retirada da seleção de características. Assim, a avaliação não inclui indicadores específicos de completude ou correção funcional. Também ficam fora do estudo testes de carga, auditoria de código-fonte, avaliação da infraestrutura, alterações de dados de terceiros ou exploração de vulnerabilidades. As métricas adotadas trabalham com o comportamento observável no navegador.
+Retiramos a adequação funcional do escopo e, por isso, não definimos indicadores de completude ou correção funcional. Também não incluímos testes de carga, auditoria de código-fonte ou avaliações da infraestrutura. As métricas escolhidas se concentram no comportamento que conseguimos observar pela interface.
 
-Essa escolha decorre das condições concretas do projeto: trata-se de um serviço de terceiros, utilizado por consumidores, ao qual a equipe não possui acesso administrativo. Os resultados poderão apontar problemas percebidos no uso, mas não representarão uma análise de todos os componentes da plataforma.
+Esse recorte considera as condições de acesso ao sistema. Como estamos avaliando um serviço de terceiros sem privilégios administrativos, nossas conclusões ficarão limitadas aos fluxos executados e às evidências obtidas durante os testes.
 
 ## 4. Correspondência conceitual com a Fase 1
 
@@ -49,6 +49,6 @@ Dois exemplos citados na definição inicial do escopo exigem uma distinção na
 - **Dados inválidos e tolerância a falhas.** A reação a um campo preenchido incorretamente será tratada em M2, vinculada à proteção contra erros do usuário. Para tolerância a falhas, a M4 observa especificamente uma interrupção breve da conexão local, durante navegação de leitura.
 - **Bloqueio após senhas incorretas e integridade.** O bloqueio de tentativas de autenticação é um mecanismo mais diretamente ligado ao controle de acesso. A confidencialidade será examinada em M5; a subcaracterística integridade permanece representada em M6 por uma verificação indireta de consistência entre consultas.
 
-A M6 não testa resistência a modificações não autorizadas nem integridade de armazenamento. A redação da Fase 1 e a interpretação dos resultados devem manter essa distinção para que as conclusões não ultrapassem as evidências disponíveis.
+A M6 não permite verificar a integridade do armazenamento ou a resistência a alterações indevidas. Ao apresentar os resultados, manteremos essa distinção entre a consistência observada na interface e os mecanismos internos de proteção.
 
-Na M3, cada fluxo terá uma taxa própria e o pior resultado será usado em G2; na M5, qualquer exposição efetiva de dados protegidos sem sessão levará à classificação insatisfatória de G3. Essas regras evitam que valores consolidados ocultem falhas relevantes. O [gráfico GQM](grafico-gqm.md) apresenta a hierarquia de objetivos, questões e métricas. Os [Critérios de julgamento](criterios-julgamento.md) detalham as decisões de classificação. O [PSM/CID](gestao-psm.md) acompanha a execução do projeto separadamente, sem integrar os resultados de qualidade do produto.
+Em M3, a taxa será calculada separadamente para cada fluxo; em M5, qualquer exposição de dados protegidos sem autenticação resultará em classificação insatisfatória. Essa opção evita que resultados agregados ocultem problemas relevantes. O [gráfico GQM](grafico-gqm.md) apresenta as ligações entre objetivos, questões e métricas, e os [critérios de julgamento](criterios-julgamento.md) explicam a classificação. O acompanhamento do trabalho pelo [PSM/CID](gestao-psm.md) permanece separado das medidas de qualidade do produto.

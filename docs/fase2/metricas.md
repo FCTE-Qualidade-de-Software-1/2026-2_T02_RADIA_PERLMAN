@@ -5,7 +5,7 @@ hide:
 
 # Métricas e níveis de pontuação
 
-As métricas M1 a M8 foram definidas para responder às [questões do GQM](questoes-hipoteses.md) com dados coletados durante o uso da Agência Virtual. A maioria expressa percentuais de situações observadas; M7 e M8 tratam dos tempos de carregamento. Todas as análises serão limitadas aos fluxos que possam ser percorridos legitimamente e sem alterar dados da conta.
+Definimos oito métricas para responder às [questões do GQM](questoes-hipoteses.md). M1 a M6 são medidas percentuais; M7 e M8 descrevem o tempo de resposta das funcionalidades. A coleta se concentrará nos trechos acessíveis da Agência Virtual, sem modificar informações das contas utilizadas.
 
 | Métrica | Questão | Subcaracterística | Unidade |
 |---|---|---|---|
@@ -20,7 +20,7 @@ As métricas M1 a M8 foram definidas para responder às [questões do GQM](quest
 
 ## Escalas de avaliação
 
-Para interpretar as medições, adotamos os níveis insatisfatório, mínimo aceitável, alvo e excelente. M1 a M4 usam a mesma escala percentual; M5 exige bloqueio em todas as verificações; e M6 possui faixas próprias para que o nível **Alvo** corresponda à hipótese H6. Nas métricas de tempo (M7 e M8), valores menores representam melhor desempenho.
+Adotamos quatro níveis para classificar os resultados: insatisfatório, mínimo aceitável, alvo e excelente. Como M1 a M4 expressam proporções de situações bem-sucedidas, usam a mesma escala. Em M5, exigimos bloqueio em todas as verificações; M6 tem limites próprios, alinhados à hipótese H6. Para os tempos de resposta, M7 e M8, valores menores são preferíveis.
 
 | Métrica | Insatisfatório | Mínimo aceitável | Alvo | Excelente |
 |---|---|---|---|---|
@@ -32,7 +32,7 @@ Para interpretar as medições, adotamos os níveis insatisfatório, mínimo ace
 
 ### Fundamentação dos limites
 
-As faixas foram propostas para distinguir diferentes níveis de resultado em uma avaliação exploratória. Sua escolha considera o tipo de ocorrência medida e a importância das falhas para o consumidor:
+As faixas estabelecem níveis de comparação para a avaliação exploratória. Diferenciamos os limites conforme a natureza de cada medida e o impacto potencial de um resultado inadequado:
 
 | Métricas | Critério adotado |
 |---|---|
@@ -40,13 +40,13 @@ As faixas foram propostas para distinguir diferentes níveis de resultado em uma
 | M5–M6 | Para M5, qualquer exposição efetiva de dados protegidos torna o resultado insatisfatório. Na M6, o **Alvo** começa em 95%, em concordância com H6; a classificação não equivale a uma verificação da integridade interna do sistema. |
 | M7–M8 | Os limites das hipóteses são mediana de até 3 segundos e P90 de até 5 segundos por fluxo. As faixas adicionais distinguem respostas mais rápidas e situações de lentidão acentuada. |
 
-São referências de julgamento estabelecidas para o estudo, não limites fornecidos pela ISO/IEC 25010:2011 ou metas contratuais da Neoenergia. Como não resultam de uma linha de base empírica do produto, **a equipe precisa aprová-las e registrar sua justificativa antes da coleta**. A partir do início das medições, os limites devem permanecer fixos. As hipóteses correspondentes estão em [Questões e hipóteses](questoes-hipoteses.md).
+Esses valores foram definidos para o estudo e não correspondem a limites da ISO/IEC 25010:2011 nem a metas contratuais da Neoenergia. Como ainda não dispomos de uma linha de base empírica do produto, registraremos a justificativa e a aprovação dos limites antes de iniciar os testes. Depois disso, não os modificaremos em função dos resultados obtidos. As hipóteses estão em [Questões e hipóteses](questoes-hipoteses.md).
 
-Nos percentuais, o cálculo geral é `100 × casos adequados / casos elegíveis`. Um caso excluído deve ter motivo registrado e não integra o denominador. Quando não houver observações válidas — ou quando a quantidade mínima prevista não for atingida — a métrica será inconclusiva. A interpretação conjunta está em [Critérios de julgamento](criterios-julgamento.md).
+Para as métricas percentuais, utilizaremos `100 × casos adequados / casos elegíveis`. As exclusões ficarão registradas com justificativa e não entrarão no denominador. Caso a amostra mínima não seja alcançada, o resultado permanecerá inconclusivo. As regras de consolidação estão em [Critérios de julgamento](criterios-julgamento.md).
 
 ## M1 — Sucesso na localização de funcionalidades { #m1 }
 
-**Objetivo:** observar a facilidade com que usuários pouco familiarizados com a plataforma encontram uma função pela primeira vez. Não será necessário concluir a emissão de um documento: a tarefa termina quando o participante alcançar a página previamente definida.
+Na M1, vamos observar se usuários pouco familiarizados com a plataforma conseguem encontrar uma função sem ajuda. A tarefa termina quando o participante chega à página indicada, sem precisar emitir documentos ou alterar informações.
 
 | Campo | Especificação |
 |---|---|
@@ -58,11 +58,11 @@ Nos percentuais, o cálculo geral é `100 × casos adequados / casos elegíveis`
 | Sucesso e exclusões | Sucesso significa chegar ao destino sem dica, dentro do limite previamente combinado (sugestão: três minutos). Ajuda, desistência ou caminho incorreto são insucessos. Tarefas indisponíveis ou dependentes de acesso não autorizado ficam fora do cálculo. |
 | Interpretação | Quanto maior, melhor; faixas da tabela geral. H1 é sustentada com **M1 ≥ 80%** e amostra mínima. |
 
-A amostra será de conveniência. Portanto, o percentual descreve os participantes avaliados, sem representar estatisticamente a população de consumidores do Distrito Federal.
+A amostra de participantes será de conveniência. Assim, os resultados da M1 descreverão as pessoas observadas, sem representar estatisticamente todos os consumidores do Distrito Federal.
 
 ## M2 — Tratamento de entradas inválidas { #m2 }
 
-**Objetivo:** verificar se os formulários reconhecem erros de preenchimento e oferecem informação útil para corrigi-los. Uma restrição silenciosa de digitação, por si só, não será considerada orientação suficiente.
+A M2 examina se os formulários identificam erros de preenchimento e explicam como corrigi-los. Apenas impedir a digitação de um valor não será suficiente para considerar a resposta adequada.
 
 | Campo | Especificação |
 |---|---|
@@ -74,11 +74,11 @@ A amostra será de conveniência. Portanto, o percentual descreve os participant
 | Sucesso e exclusões | A tentativa é adequada quando o erro é impedido ou sinalizado **e** existe orientação compreensível. Serão excluídos campos cuja verificação dependa do envio de dados sensíveis ou da confirmação de uma operação. |
 | Interpretação | Quanto maior, melhor; faixas da tabela geral. H2 é sustentada com **M2 ≥ 80%**. |
 
-Um campo numérico preenchido com quantidade insuficiente de dígitos é um exemplo de entrada para esse teste. A avaliação será feita até a etapa segura de validação; não inclui criação de contas fictícias nem envio de documentos ao sistema. O resultado descreve a interface, não os mecanismos de validação internos.
+Um exemplo de teste é preencher um campo numérico com menos dígitos do que o esperado. Vamos observar a resposta apresentada pela interface antes de qualquer confirmação de dados. Assim, a métrica avaliará o feedback recebido pelo usuário, e não a validação interna do sistema.
 
 ## M3 — Execuções sem falhas observáveis { #m3 }
 
-**Objetivo:** medir a estabilidade de cada fluxo de navegação em condições regulares. Serão registrados travamentos, telas em branco, erros inesperados e interrupções não previstas.
+Com a M3, vamos verificar a estabilidade de cada fluxo em condições regulares de uso. Anotaremos travamentos, telas em branco, erros inesperados e outras interrupções que impeçam concluir a navegação prevista.
 
 | Campo | Especificação |
 |---|---|
@@ -91,11 +91,11 @@ Um campo numérico preenchido com quantidade insuficiente de dígitos é um exem
 | Sucesso e exclusões | É sucesso alcançar o estado esperado sem falha inesperada. Avisos corretos de preenchimento não contam como falha de maturidade. Interrupções intencionais da M4 e problemas comprovadamente locais são registrados separadamente. |
 | Interpretação | Aplicar a escala percentual **a cada fluxo**, sem misturar execuções de funcionalidades diferentes. A hipótese H3 só é sustentada quando todos os fluxos elegíveis com coleta prevista atingirem M3(f) ≥ 80% e houver amostra mínima por fluxo. Para o julgamento de G2, usar a pior classificação entre esses fluxos. |
 
-Os resultados serão apresentados em uma tabela com fluxo, execuções sem falha, total de execuções, percentual e classificação. Se algum fluxo previsto não puder atingir o volume mínimo, a situação será identificada como inconclusiva; os demais resultados serão apresentados individualmente, sem transformar a lacuna em zero nem esconder uma falha pela média geral.
+Apresentaremos os resultados da M3 por fluxo, com número de execuções, sucessos, percentual e classificação. Se um dos fluxos previstos ficar abaixo da amostra mínima, registraremos o impedimento e manteremos seus dados separados, sem atribuir zero ou calcular uma média que esconda diferenças entre funcionalidades.
 
 ## M4 — Retomada após interrupção local da conexão { #m4 }
 
-**Objetivo:** observar a recuperação da navegação quando há uma perda breve de conectividade no dispositivo utilizado para avaliar o sistema. O cenário será aplicado somente em consultas de leitura.
+Na M4, verificaremos se a navegação pode ser retomada após uma interrupção breve da conexão do dispositivo de teste. Esse cenário será aplicado apenas em consultas de leitura.
 
 | Campo | Especificação |
 |---|---|
@@ -107,11 +107,11 @@ Os resultados serão apresentados em uma tabela com fluxo, execuções sem falha
 | Sucesso e exclusões | A retomada é adequada se o fluxo continuar ou retornar à mesma etapa com uma ação, sem reiniciar a jornada. Não serão interrompidos envios de dados, alterações de conta ou processos de confirmação. |
 | Interpretação | Quanto maior, melhor; faixas da tabela geral. H4 é sustentada com **M4 ≥ 80%**. |
 
-A medição envolve também o comportamento do navegador e da rede utilizada. Ela não permite inferir como os servidores da Neoenergia se comportariam diante de uma falha interna.
+Esse resultado também depende do navegador e da rede local; portanto, permitirá avaliar a retomada da navegação no ambiente de teste, mas não a recuperação dos servidores diante de falhas internas.
 
 ## M5 — Bloqueio de acesso a páginas restritas { #m5 }
 
-**Objetivo:** verificar se informações protegidas permanecem inacessíveis quando não há sessão autenticada. Serão usadas apenas páginas conhecidas por meio do acesso legítimo à própria conta ou a uma conta expressamente autorizada.
+A M5 verifica se páginas restritas continuam protegidas após o encerramento da sessão. Para isso, usaremos somente áreas acessadas previamente por uma conta própria ou autorizada.
 
 | Campo | Especificação |
 |---|---|
@@ -123,11 +123,11 @@ A medição envolve também o comportamento do navegador e da rede utilizada. El
 | Sucesso e exclusões | O resultado é adequado quando a informação protegida não fica utilizável sem autenticação. Documentos já salvos localmente não representam acesso ao servidor. Não serão manipulados identificadores ou endereços de terceiros. |
 | Interpretação | H5 é sustentada apenas com **M5 = 100%** e quantidade mínima de verificações. Com M5 < 100%, o resultado é **Insatisfatório**; com 100%, **Excelente**. Não há classificação intermediária para esta métrica. |
 
-Se houver acesso efetivo a dados protegidos sem autenticação, o caso será registrado como ocorrência crítica e a coleta correspondente será interrompida. Páginas históricas mantidas no cache do navegador serão distinguidas de conteúdo privado novamente acessível no sistema.
+Se encontrarmos dados protegidos acessíveis sem autenticação, registraremos a ocorrência como crítica e encerraremos esse cenário. Na análise, distinguiremos conteúdo antigo mantido pelo navegador de informações que continuem acessíveis no sistema.
 
 ## M6 — Consistência de informações estáveis { #m6 }
 
-**Objetivo:** conferir se a interface apresenta o mesmo valor ao consultar, duas vezes e em curto intervalo, uma informação que não deveria mudar. Podem ser utilizados, quando disponíveis, a competência ou o identificador de uma fatura já emitida.
+Na M6, compararemos informações que deveriam permanecer estáveis entre duas consultas próximas. Podemos utilizar, por exemplo, a competência ou o identificador de uma mesma fatura já emitida, caso esses campos estejam disponíveis.
 
 | Campo | Especificação |
 |---|---|
@@ -139,11 +139,11 @@ Se houver acesso efetivo a dados protegidos sem autenticação, o caso será reg
 | Sucesso e exclusões | Sucesso corresponde a valores iguais para a mesma referência, sem atualização no intervalo. Campos dinâmicos e referências incomparáveis são excluídos com justificativa. |
 | Interpretação | Quanto maior, melhor; na escala específica de M6, o nível **Alvo** começa em 95%, limite também exigido por H6. |
 
-A M6 é uma medida indireta: consistência entre consultas não demonstra proteção dos dados armazenados contra modificações não autorizadas. A conclusão ficará restrita a possíveis divergências visíveis.
+A consistência observada na M6 diz respeito à apresentação das informações. Mesmo que os campos coincidam em todas as consultas, não poderemos concluir que o armazenamento esteja protegido contra alterações indevidas.
 
 ## M7 — Mediana do tempo de resposta { #m7 }
 
-**Objetivo:** identificar o tempo típico entre a ação do usuário e a disponibilidade do conteúdo principal. O cálculo será feito por fluxo, pois juntar operações diferentes poderia ocultar lentidão em uma funcionalidade específica.
+A M7 representa o tempo típico entre o comando do usuário e a disponibilidade do conteúdo principal. Calcularemos a mediana de cada fluxo separadamente, para não diluir a lentidão de uma funcionalidade nos resultados de outras.
 
 | Campo | Especificação |
 |---|---|
@@ -155,11 +155,11 @@ A M6 é uma medida indireta: consistência entre consultas não demonstra prote�
 | Tratamento das falhas | Se a tela não ficar utilizável em trinta segundos, registrar timeout separadamente; não atribuir automaticamente duração de trinta segundos à mediana. |
 | Interpretação | Quanto menor, melhor; escala específica M7. **H7 exige mediana ≤ 3 s em todos os fluxos avaliados**. |
 
-As condições de rede, cache, dispositivo e navegador serão mantidas no registro. A medida descreve a experiência no ambiente de teste e não o desempenho do serviço sob carga de muitos usuários.
+No registro de M7, incluiremos rede, cache, dispositivo e navegador. Com isso, poderemos contextualizar os tempos observados, sem estender os resultados ao desempenho do serviço sob alta carga.
 
 ## M8 — Percentil 90 do tempo de resposta { #m8 }
 
-**Objetivo:** complementar a mediana com um indicador das respostas mais demoradas. A M8 utiliza exatamente as mesmas durações válidas obtidas para M7.
+A M8 complementa a mediana ao observar as respostas mais demoradas. Seu cálculo utilizará os mesmos tempos válidos registrados para M7.
 
 | Campo | Especificação |
 |---|---|
@@ -171,8 +171,8 @@ As condições de rede, cache, dispositivo e navegador serão mantidas no regist
 | Tratamento das falhas | Tempos de operações que não terminaram serão reportados como timeouts, fora da lista de durações concluídas. |
 | Interpretação | Quanto menor, melhor; escala específica M8. **H8 exige P90 ≤ 5 s em todos os fluxos avaliados**. |
 
-Com amostras pequenas, o percentil 90 pode variar bastante por causa de poucas observações. Por essa razão, seu resultado deverá ser discutido junto da mediana e da ocorrência de timeouts.
+Como teremos poucas observações por fluxo, o percentil 90 pode variar com um único tempo mais alto. Por isso, analisaremos M8 junto da mediana e da quantidade de timeouts.
 
 ## Registro dos resultados
 
-Para cada métrica, serão mantidos os valores necessários ao recálculo: numerador e denominador dos percentuais ou lista das durações de tempo, além da funcionalidade, data, ambiente, exclusões e evidências correspondentes. Quando não houver dados suficientes, o registro ficará como **inconclusivo**, em vez de receber nota zero. Os procedimentos são complementados pelo [protocolo de coleta](protocolo-coleta.md) e as regras de síntese por [critérios de julgamento](criterios-julgamento.md).
+Guardaremos os valores necessários para refazer cada cálculo: contagens de casos adequados e elegíveis ou lista de durações, além de funcionalidade, data, ambiente, exclusões e evidências. Quando não houver observações suficientes, registraremos **inconclusivo**, sem atribuir nota zero. Os detalhes da coleta estão no [protocolo](protocolo-coleta.md), e a consolidação dos resultados, nos [critérios de julgamento](criterios-julgamento.md).

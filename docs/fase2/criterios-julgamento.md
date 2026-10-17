@@ -5,7 +5,7 @@ hide:
 
 # Critérios de julgamento
 
-As medidas serão interpretadas em três etapas: classificação de cada métrica, resposta à hipótese correspondente e julgamento do objetivo GQM. As faixas estão em [Métricas e níveis de pontuação](metricas.md); a relação entre objetivos, questões e métricas aparece no [gráfico GQM](grafico-gqm.md).
+Para interpretar os resultados, primeiro classificaremos cada métrica; depois verificaremos a hipótese associada e, por último, o objetivo GQM. As faixas estão descritas em [Métricas e níveis de pontuação](metricas.md), e o [gráfico GQM](grafico-gqm.md) permite consultar as relações entre os elementos.
 
 ## Níveis adotados
 
@@ -19,7 +19,7 @@ As medidas serão interpretadas em três etapas: classificação de cada métric
 
 Para M1–M4, M6, M7 e M8, aplicam-se os quatro níveis graduais da tabela de métricas. A M6 tem escala própria: seu nível **Alvo** começa em 95%, coincidindo com o limite de H6. A M5, relativa à confidencialidade, tem apenas dois resultados possíveis após amostra suficiente: **Excelente**, quando todas as verificações impedem o acesso a dados protegidos sem sessão, ou **Insatisfatório**, quando ocorre ao menos uma falha de bloqueio. Os níveis intermediários não são usados para essa métrica. Se não houver dados suficientes, M5 será inconclusiva.
 
-Os níveis acima são distintos das notas de ênfase atribuídas na Fase 1. As ênfases 5 e 4 representam prioridades do estudo, não pontuações obtidas pelo produto.
+Esses níveis não se confundem com as ênfases 5 e 4 da Fase 1, que indicam a prioridade de cada característica no estudo.
 
 ## Cálculo e interpretação das medidas
 
@@ -43,7 +43,7 @@ Se uma métrica for inconclusiva, o objetivo correspondente também será inconc
 
 ## Síntese da avaliação
 
-Não será feita uma média única dos quatro objetivos. A síntese apresentará G1–G4 separadamente, destacando problemas observados em características de ênfase 5 e os limites de cada coleta.
+Na síntese, apresentaremos G1 a G4 separadamente. Preferimos não calcular uma média única, pois ela poderia esconder problemas importantes em alguma das características avaliadas.
 
 | Condição encontrada | Síntese |
 |---|---|
@@ -52,6 +52,6 @@ Não será feita uma média única dos quatro objetivos. A síntese apresentará
 | Ao menos um objetivo Insatisfatório ou ocorrência crítica | Melhorias prioritárias necessárias; informar também qualquer resultado inconclusivo. |
 | Nenhum objetivo Insatisfatório, mas um ou mais inconclusivos | Avaliação global inconclusiva; apresentar os resultados parciais e as lacunas. |
 
-Como exemplo de aplicação da regra, uma taxa de 90% na M1 seria classificada como **Alvo**, e uma taxa de 100% na M2 seria **Excelente**. Nesse cenário, G1 receberia **Alvo**, pela menor classificação. O exemplo ilustra apenas o procedimento de consolidação.
+Por exemplo, se M1 atingir 90% e M2 atingir 100%, as classificações serão **Alvo** e **Excelente**, respectivamente. Nesse caso, G1 terá nível **Alvo**, pois adotamos a menor classificação entre as duas métricas.
 
-Na Fase 4, cada conclusão será acompanhada dos registros de origem: funcionalidade, identificadores de execução, valores brutos, cálculo, faixa atribuída, resultado da hipótese e evidências correspondentes. Os critérios de registro constam no [Protocolo de coleta](protocolo-coleta.md).
+Na apresentação da Fase 4, vamos relacionar cada conclusão à sua origem: funcionalidade, identificação dos testes, valores brutos, fórmula, classificação e evidências. Os campos de registro estão definidos no [protocolo de coleta](protocolo-coleta.md).

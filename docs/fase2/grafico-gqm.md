@@ -5,7 +5,7 @@ hide:
 
 # Gráfico GQM
 
-O diagrama apresenta o desdobramento das quatro características selecionadas na Fase 1. Cada objetivo possui duas questões, e cada questão está ligada à métrica que será utilizada na resposta. As hipóteses correspondentes estão na página de [questões e hipóteses](questoes-hipoteses.md).
+Organizamos no diagrama os quatro objetivos definidos a partir da Fase 1. De cada objetivo partem duas questões, associadas às métricas de medição. As hipóteses estão reunidas na página de [questões e hipóteses](questoes-hipoteses.md).
 
 ```mermaid
 flowchart LR
@@ -48,7 +48,7 @@ flowchart LR
     G4 --> Q8 --> M8
 ```
 
-*Figura 1 — Hierarquia GQM da avaliação da Agência Virtual da Neoenergia Brasília. Fonte: elaboração própria.*
+*Figura 1 — Relações entre objetivos, questões e métricas da avaliação da Agência Virtual da Neoenergia Brasília.*
 
 ## Matriz G–Q–H–M
 
@@ -63,4 +63,4 @@ flowchart LR
 | [G4](objetivos.md#g4) | Comportamento no tempo | [Q7/H7](questoes-hipoteses.md#q7) | [M7](metricas.md#m7) | s |
 | [G4](objetivos.md#g4) | Comportamento no tempo | [Q8/H8](questoes-hipoteses.md#q8) | [M8](metricas.md#m8) | s |
 
-A ligação com as funcionalidades e prioridades da Fase 1 está detalhada em [Rastreabilidade](rastreabilidade.md). Em M3, a taxa de execuções sem falhas é calculada por fluxo; M5 exige bloqueio integral de acesso a dados protegidos. As fórmulas estão em [Métricas](metricas.md) e as regras de interpretação, em [Critérios de julgamento](criterios-julgamento.md). Os indicadores de gestão [PSM/CID](gestao-psm.md) não fazem parte da hierarquia GQM, pois acompanham a execução do projeto, não a qualidade do produto.
+Na [rastreabilidade](rastreabilidade.md), relacionamos essas medidas às funcionalidades e prioridades da Fase 1. As fórmulas estão em [Métricas](metricas.md) e a interpretação está nos [critérios de julgamento](criterios-julgamento.md). Para M3, consideraremos cada fluxo separadamente; para M5, exigiremos o bloqueio completo de acesso a dados protegidos. Os indicadores [PSM/CID](gestao-psm.md) ficam fora do diagrama porque tratam do andamento do projeto, e não da qualidade da Agência Virtual.

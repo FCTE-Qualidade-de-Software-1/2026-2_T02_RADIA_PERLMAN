@@ -5,7 +5,7 @@ hide:
 
 # Acompanhamento do projeto com PSM/CID
 
-O acompanhamento do trabalho utiliza indicadores de gestão baseados em PSM/CID, separados das métricas M1–M8 da Agência Virtual. Enquanto o [GQM](../fase2-especificacao.md) organiza a avaliação da qualidade do produto, os indicadores desta página acompanham as atividades necessárias à sua realização. O propósito é identificar desvios no planejamento e registrar as decisões tomadas a partir deles.
+Além das medidas de qualidade da Agência Virtual, vamos acompanhar o andamento do projeto por meio de indicadores PSM/CID. Diferentemente das métricas M1–M8, que seguem o [GQM](../fase2-especificacao.md) e avaliam o produto, esses indicadores tratam do nosso planejamento: retrabalho, progresso e esforço dedicado às atividades.
 
 ## Indicadores de gestão
 
@@ -19,9 +19,9 @@ Em PSM-1, uma issue é contada uma única vez, mesmo que tenha sido reaberta mai
 
 ## Registro e análise periódica
 
-As tarefas do projeto serão organizadas em issues com responsável, prazo, estimativa de esforço e critério de conclusão. Cada marco de entrega terá as atividades planejadas e os vínculos para commits, revisões e documentos concluídos. Esses registros serão utilizados na apuração dos três indicadores.
+Vamos organizar as atividades em issues com responsável, prazo, estimativa de esforço e critério de conclusão. Em cada marco de entrega, vincularemos as tarefas aos commits, revisões e documentos correspondentes. Esses registros servirão de base para calcular os indicadores.
 
-Em cada apuração, a equipe registrará a data, os valores obtidos, uma interpretação dos desvios e a ação decidida. A decisão deverá indicar responsável e prazo para acompanhamento. Alterações de escopo e mudanças no calendário também serão documentadas.
+A cada apuração, registraremos a data, os valores dos indicadores e nossa interpretação dos desvios. Quando houver necessidade de ajuste, indicaremos a ação escolhida, o responsável e o prazo. Também documentaremos mudanças de escopo e de calendário.
 
 | Data/período | Indicador | Dados da apuração | Valor | Interpretação | Decisão, responsável e prazo | Evidência no Git |
 |---|---|---|---|---|---|---|
@@ -29,8 +29,8 @@ Em cada apuração, a equipe registrará a data, os valores obtidos, uma interpr
 | A preencher | PSM-2 | Tarefas planejadas / concluídas | A calcular | A registrar | A registrar | Milestone ou issue |
 | A preencher | PSM-3 | Horas previstas / registradas | A calcular | A registrar | A registrar | Registro de esforço |
 
-A primeira apuração deve abranger, sempre que houver registros suficientes, a preparação da Entrega 1. Os valores serão preenchidos a partir das issues, milestones e horas registradas pela equipe.
+A primeira apuração contemplará a preparação da Entrega 1, desde que existam registros suficientes para os cálculos. Preencheremos os valores com base nas issues, nos marcos e nas horas efetivamente apontadas.
 
 ## Relação com a avaliação do software
 
-Os indicadores PSM/CID não alteram os resultados das métricas do produto e não entram no [gráfico GQM](grafico-gqm.md). Eles ajudam a explicar como o trabalho foi conduzido e se mudanças de prazo ou esforço afetaram a preparação da avaliação. A coleta dos dados da Agência Virtual segue o [Protocolo de coleta](protocolo-coleta.md), que tem finalidade diferente dos registros de gestão.
+O PSM/CID não altera as notas de qualidade do software e, por isso, não entra no [gráfico GQM](grafico-gqm.md). Seus registros permitirão avaliar como conduzimos o trabalho e quais ajustes foram necessários ao longo das entregas. Para os testes da Agência Virtual, seguiremos o [protocolo de coleta](protocolo-coleta.md).
