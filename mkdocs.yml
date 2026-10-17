@@ -14,14 +14,15 @@ nav:
   - Visão Geral: index.md
   - "Fase 1": fase1-requisitos.md
   - "Fase 2":
-      - Objetivos de medição: objetivos.md
-      - Questões e hipóteses: questoes-hipoteses.md
-      - Métricas e pontuações: metricas.md
-      - Gráfico GQM: grafico-gqm.md
-      - Critérios de julgamento: criterios-julgamento.md
-      - Rastreabilidade Fase 1–2: rastreabilidade.md
-      - Protocolo de coleta: protocolo-coleta.md
-      - Gestão PSM/CID: gestao-psm.md
+      - Especificação da avaliação: fase2-especificacao.md
+      - Objetivos de medição: fase2/objetivos.md
+      - Questões e hipóteses: fase2/questoes-hipoteses.md
+      - Métricas e pontuações: fase2/metricas.md
+      - Gráfico GQM: fase2/grafico-gqm.md
+      - Critérios de julgamento: fase2/criterios-julgamento.md
+      - Rastreabilidade Fase 1–2: fase2/rastreabilidade.md
+      - Protocolo de coleta: fase2/protocolo-coleta.md
+      - Gestão PSM/CID: fase2/gestao-psm.md
   - "Fase 3": fase3-projeto.md
   - "Fase 4": fase4-execucao.md
 
