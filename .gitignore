@@ -1,3 +1,4 @@
-/site
-
-/venv
+.venv/
+venv/
+env/
+/site/

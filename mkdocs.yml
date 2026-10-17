@@ -4,15 +4,42 @@ theme:
   name: material
   language: pt-BR
   features:
-    - navigation.tabs  # Esta linha move o menu para a barra superior
+    - navigation.tabs
   palette:
-    primary: custom    # Indica que usaremos uma cor personalizada no CSS
+    primary: custom
     accent: amber
 extra_css:
-  - stylesheets/extra.css # Chama o arquivo de estilo que vamos criar
+  - stylesheets/extra.css
 nav:
   - Visão Geral: index.md
   - "Fase 1": fase1-requisitos.md
-  - "Fase 2": fase2-especificacao.md
+  - "Fase 2":
+      - Objetivos de medição: objetivos.md
+      - Questões e hipóteses: questoes-hipoteses.md
+      - Métricas e pontuações: metricas.md
+      - Gráfico GQM: grafico-gqm.md
+      - Critérios de julgamento: criterios-julgamento.md
+      - Rastreabilidade Fase 1–2: rastreabilidade.md
+      - Protocolo de coleta: protocolo-coleta.md
+      - Gestão PSM/CID: gestao-psm.md
   - "Fase 3": fase3-projeto.md
   - "Fase 4": fase4-execucao.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
