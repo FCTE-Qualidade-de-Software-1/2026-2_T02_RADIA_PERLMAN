@@ -54,8 +54,24 @@ A avaliação utilizará o modelo de qualidade de produto definido na norma **IS
 **Justificativa da Adaptação:**
 Como a avaliação será conduzida por meio de testes de caixa-preta (black-box) em um ambiente de produção externo, sem acesso ao código-fonte ou à infraestrutura de servidores da Neoenergia, o modelo foi adaptado para excluir características puramente internas (como Manutenibilidade, Portabilidade e Compatibilidade). O foco foi direcionado estritamente para as características dinâmicas e operacionais perceptíveis pelo usuário final e críticas para o negócio.
 
-**Procedimentos de Avaliação e Níveis de Ênfase:**
-Abaixo estão detalhados os procedimentos de avaliação por característica (com base na árvore acima), pontuados em uma escala de ênfase de 1 a 5:
+### **Seleção e Priorização das Características (Justificativa de Ênfase)**
+
+A seleção das características e a atribuição de seus respectivos níveis de ênfase (onde 1 representa nenhum interesse e 5 representa grande interesse) foram pautadas pelo perfil dos usuários finais e pela criticidade do domínio da aplicação (serviços de utilidade pública).
+
+A tabela a seguir consolida as prioridades e suas justificativas:
+
+| Característica (ISO/IEC 25010) | Ênfase (1 a 5) | Nível de Prioridade | Justificativa da Atribuição |
+| --- | --- | --- | --- |
+| **Usabilidade** | **5** | Máxima | A Agência Virtual atende a toda a população do DF, cujo nível de conhecimento em informática é altamente variável. O sistema deve ser intuitivo para garantir que cidadãos leigos consigam operá-lo sem auxílio externo, evitando a superlotação no atendimento presencial.|
+| **Segurança** | **5** | Máxima | O portal processa e expõe dados sensíveis (cadastrais, endereços) e informações financeiras (faturamento). A garantia da confidencialidade e integridade é mandatória para evitar fraudes, acessos indevidos e adequar-se às legislações. |
+| **Confiabilidade** | **4** | Alta | A indisponibilidade impede os clientes de realizarem pagamentos no prazo. A tolerância a falhas é crucial para que, diante de um erro de comunicação ou dado inválido, o sistema informe o usuário de forma clara sem corromper a sessão. |
+| **Eficiência de Desempenho** | **4** | Alta | O tempo de resposta afeta diretamente a percepção de usabilidade. A geração de relatórios e gráficos de consumo exige processamento que não deve exceder limites aceitáveis de espera para garantir a fluidez da navegação. |
+| **Manutenibilidade, Portabilidade e Compatibilidade** | **1** | Nenhuma | A avaliação limita-se a uma abordagem externa (caixa-preta), impossibilitando a medição de atributos de código-fonte, infraestrutura ou arquitetura interna pelos avaliadores. |
+
+
+
+### **Modelos de Qualidade**
+A avaliação utilizará o modelo de qualidade de produto definido na norma ISO/IEC 25010:2011. Abaixo estão detalhados os procedimentos de avaliação por característica, avaliados em uma escala de ênfase de 1 a 5:
 
 * **Usabilidade (Ênfase 5):** Capacidade do portal de ser usado com eficácia, eficiência e satisfação no contexto de uso.
     * *Proteção contra erros do usuário:* Inserir intencionalmente formatos inválidos no formulário de Cadastro/Login para verificar se o sistema protege o usuário e orienta a correção antes do envio dos dados.
