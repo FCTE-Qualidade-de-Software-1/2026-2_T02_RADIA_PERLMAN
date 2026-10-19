@@ -449,6 +449,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="3. Modelos de qualidade e Adaptação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecao-e-priorizacao-das-caracteristicas-justificativa-de-enfase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seleção e Priorização das Características (Justificativa de Ênfase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelos-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos de Qualidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -918,6 +946,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="3. Modelos de qualidade e Adaptação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecao-e-priorizacao-das-caracteristicas-justificativa-de-enfase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seleção e Priorização das Características (Justificativa de Ênfase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelos-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos de Qualidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1008,8 +1064,53 @@
 <p>A avaliação utilizará o modelo de qualidade de produto definido na norma <strong>ISO/IEC 25010:2011</strong>. O modelo original completo abrange oito características. No entanto, o modelo de qualidade deve ser adaptado ao contexto do software a ser avaliado e aos objetivos definidos pelo requisitante.</p>
 <p><strong>Justificativa da Adaptação:</strong>
 Como a avaliação será conduzida por meio de testes de caixa-preta (black-box) em um ambiente de produção externo, sem acesso ao código-fonte ou à infraestrutura de servidores da Neoenergia, o modelo foi adaptado para excluir características puramente internas (como Manutenibilidade, Portabilidade e Compatibilidade). O foco foi direcionado estritamente para as características dinâmicas e operacionais perceptíveis pelo usuário final e críticas para o negócio.</p>
-<p><strong>Procedimentos de Avaliação e Níveis de Ênfase:</strong>
-Abaixo estão detalhados os procedimentos de avaliação por característica (com base na árvore acima), pontuados em uma escala de ênfase de 1 a 5:</p>
+<h3 id="selecao-e-priorizacao-das-caracteristicas-justificativa-de-enfase"><strong>Seleção e Priorização das Características (Justificativa de Ênfase)</strong><a class="headerlink" href="#selecao-e-priorizacao-das-caracteristicas-justificativa-de-enfase" title="Permanent link">&para;</a></h3>
+<p>A seleção das características e a atribuição de seus respectivos níveis de ênfase (onde 1 representa nenhum interesse e 5 representa grande interesse) foram pautadas pelo perfil dos usuários finais e pela criticidade do domínio da aplicação (serviços de utilidade pública).</p>
+<p>A tabela a seguir consolida as prioridades e suas justificativas:</p>
+<table>
+<thead>
+<tr>
+<th>Característica (ISO/IEC 25010)</th>
+<th>Ênfase (1 a 5)</th>
+<th>Nível de Prioridade</th>
+<th>Justificativa da Atribuição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Usabilidade</strong></td>
+<td><strong>5</strong></td>
+<td>Máxima</td>
+<td>A Agência Virtual atende a toda a população do DF, cujo nível de conhecimento em informática é altamente variável. O sistema deve ser intuitivo para garantir que cidadãos leigos consigam operá-lo sem auxílio externo, evitando a superlotação no atendimento presencial.</td>
+</tr>
+<tr>
+<td><strong>Segurança</strong></td>
+<td><strong>5</strong></td>
+<td>Máxima</td>
+<td>O portal processa e expõe dados sensíveis (cadastrais, endereços) e informações financeiras (faturamento). A garantia da confidencialidade e integridade é mandatória para evitar fraudes, acessos indevidos e adequar-se às legislações.</td>
+</tr>
+<tr>
+<td><strong>Confiabilidade</strong></td>
+<td><strong>4</strong></td>
+<td>Alta</td>
+<td>A indisponibilidade impede os clientes de realizarem pagamentos no prazo. A tolerância a falhas é crucial para que, diante de um erro de comunicação ou dado inválido, o sistema informe o usuário de forma clara sem corromper a sessão.</td>
+</tr>
+<tr>
+<td><strong>Eficiência de Desempenho</strong></td>
+<td><strong>4</strong></td>
+<td>Alta</td>
+<td>O tempo de resposta afeta diretamente a percepção de usabilidade. A geração de relatórios e gráficos de consumo exige processamento que não deve exceder limites aceitáveis de espera para garantir a fluidez da navegação.</td>
+</tr>
+<tr>
+<td><strong>Manutenibilidade, Portabilidade e Compatibilidade</strong></td>
+<td><strong>1</strong></td>
+<td>Nenhuma</td>
+<td>A avaliação limita-se a uma abordagem externa (caixa-preta), impossibilitando a medição de atributos de código-fonte, infraestrutura ou arquitetura interna pelos avaliadores.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modelos-de-qualidade"><strong>Modelos de Qualidade</strong><a class="headerlink" href="#modelos-de-qualidade" title="Permanent link">&para;</a></h3>
+<p>A avaliação utilizará o modelo de qualidade de produto definido na norma ISO/IEC 25010:2011. Abaixo estão detalhados os procedimentos de avaliação por característica, avaliados em uma escala de ênfase de 1 a 5:</p>
 <ul>
 <li>
 <p><strong>Usabilidade (Ênfase 5):</strong> Capacidade do portal de ser usado com eficácia, eficiência e satisfação no contexto de uso.</p>
