@@ -6,11 +6,11 @@
 
 Este repositório contém a documentação do projeto prático da disciplina de Qualidade de Software do curso de Engenharia de Software da Universidade de Brasília (UnB).
 
-## 🎯 Objeto de Avaliação
+## Objeto de Avaliação
 
 O produto de software selecionado pelo grupo para passar pelo processo de avaliação é a **[Agência Virtual da Neoenergia Brasília](https://agenciavirtual.neoenergiabrasilia.com.br/)**.
 
-## 📚 Estrutura da Avaliação
+## Estrutura da Avaliação
 
 O projeto reflete a aplicação prática dividida em quatro fases metodológicas:
 1. **Fase 1:** Estabelecer requisitos de avaliação
@@ -20,7 +20,7 @@ O projeto reflete a aplicação prática dividida em quatro fases metodológicas
 
 
 
-## 👥 Integrantes do Grupo
+## Integrantes do Grupo
 
 - Arthur de Lima Sobreira - 231026797
 - Beatriz Figueiredo dos Santos - 232046050
@@ -31,7 +31,7 @@ O projeto reflete a aplicação prática dividida em quatro fases metodológicas
 
 ---
 
-## 🚀 Guia de Manutenção e Deploy da Documentação
+## Guia de Manutenção e Deploy da Documentação
 
 A documentação deste projeto foi construída utilizando o [MkDocs](https://www.mkdocs.org/) (com o tema Material). Todo o site público é gerado a partir dos arquivos Markdown (`.md`) localizados na pasta `docs/`. 
 
