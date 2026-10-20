@@ -176,3 +176,11 @@ Como teremos poucas observações por fluxo, o percentil 90 pode variar com um �
 ## Registro dos resultados
 
 Guardaremos os valores necessários para refazer cada cálculo: contagens de casos adequados e elegíveis ou lista de durações, além de funcionalidade, data, ambiente, exclusões e evidências. Quando não houver observações suficientes, registraremos **inconclusivo**, sem atribuir nota zero. Os detalhes da coleta estão no [protocolo](protocolo-coleta.md), e a consolidação dos resultados, nos [critérios de julgamento](criterios-julgamento.md).
+
+## Histórico de Versões
+
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 14/10/2026 | Criação do documento das métricas | Beatriz Figueiredo dos Santos |
+| 1.1 | 17/10/2026 | Reestruturação do documento | Arthur de Lima Sobreira |
+| 1.2 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |

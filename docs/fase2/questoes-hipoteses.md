@@ -61,3 +61,11 @@ Também calcularemos o percentil 90, a [M8](metricas.md#m8), a partir dos mesmos
 ## Interpretação das hipóteses
 
 Consideraremos uma hipótese **sustentada** quando a métrica correspondente atingir o limite previsto com dados suficientes. Se o resultado ficar abaixo desse limite, a hipótese será **não sustentada**. Na falta de acesso ou de observações válidas, registraremos a situação como **inconclusiva**. As conclusões serão acompanhadas dos valores calculados, das exclusões e das condições dos testes, conforme os [critérios de julgamento](criterios-julgamento.md).
+
+## Histórico de Versões
+
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 14/10/2026 | Criação do documento das questões e hipóteses | Beatriz Figueiredo dos Santos |
+| 1.1 | 17/10/2026 | Reestruturação do documento | Arthur de Lima Sobreira |
+| 1.2 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |

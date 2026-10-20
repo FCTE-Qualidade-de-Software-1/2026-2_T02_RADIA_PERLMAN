@@ -80,3 +80,11 @@ A mediana do tempo de resposta corresponde à [Q7](questoes-hipoteses.md#q7), en
 ## Desdobramento dos objetivos
 
 As [questões e hipóteses](questoes-hipoteses.md) detalham o que será investigado. As medidas e seus limites constam em [Métricas](metricas.md), e os procedimentos de registro estão no [Protocolo de coleta](protocolo-coleta.md). A correspondência com as prioridades e funcionalidades da Fase 1 está na [matriz de rastreabilidade](rastreabilidade.md).
+
+## Histórico de Versões
+
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 14/10/2026 | Criação do documento dos objetivos | Beatriz Figueiredo dos Santos |
+| 1.1 | 17/10/2026 | Reestruturação do documento | Arthur de Lima Sobreira |
+| 1.2 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |

@@ -52,3 +52,10 @@ Dois exemplos citados na definição inicial do escopo exigem uma distinção na
 A M6 não permite verificar a integridade do armazenamento ou a resistência a alterações indevidas. Ao apresentar os resultados, manteremos essa distinção entre a consistência observada na interface e os mecanismos internos de proteção.
 
 Em M3, a taxa será calculada separadamente para cada fluxo; em M5, qualquer exposição de dados protegidos sem autenticação resultará em classificação insatisfatória. Essa opção evita que resultados agregados ocultem problemas relevantes. O [gráfico GQM](grafico-gqm.md) apresenta as ligações entre objetivos, questões e métricas, e os [critérios de julgamento](criterios-julgamento.md) explicam a classificação. O acompanhamento do trabalho pelo [PSM/CID](gestao-psm.md) permanece separado das medidas de qualidade do produto.
+
+## Histórico de Versões
+
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 17/10/2026 | Criação do documento da rastreabilidade| Arthur de Lima Sobreira |
+| 1.1 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |

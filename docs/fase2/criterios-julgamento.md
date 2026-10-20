@@ -55,3 +55,10 @@ Na síntese, apresentaremos G1 a G4 separadamente. Preferimos não calcular uma 
 Por exemplo, se M1 atingir 90% e M2 atingir 100%, as classificações serão **Alvo** e **Excelente**, respectivamente. Nesse caso, G1 terá nível **Alvo**, pois adotamos a menor classificação entre as duas métricas.
 
 Na apresentação da Fase 4, vamos relacionar cada conclusão à sua origem: funcionalidade, identificação dos testes, valores brutos, fórmula, classificação e evidências. Os campos de registro estão definidos no [protocolo de coleta](protocolo-coleta.md).
+
+## Histórico de Versões
+
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 17/10/2026 | Criação do documento dos critérios de julgamento | Arthur de Lima Sobreira |
+| 1.1 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |

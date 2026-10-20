@@ -34,3 +34,10 @@ A primeira apuração contemplará a preparação da Entrega 1, desde que exista
 ## Relação com a avaliação do software
 
 O PSM/CID não altera as notas de qualidade do software e, por isso, não entra no [gráfico GQM](grafico-gqm.md). Seus registros permitirão avaliar como conduzimos o trabalho e quais ajustes foram necessários ao longo das entregas. Para os testes da Agência Virtual, seguiremos o [protocolo de coleta](protocolo-coleta.md).
+
+## Histórico de Versões
+
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 17/10/2026 | Criação do documento do PSM | Arthur de Lima Sobreira |
+| 1.1 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |

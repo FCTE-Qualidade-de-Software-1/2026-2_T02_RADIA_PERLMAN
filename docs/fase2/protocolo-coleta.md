@@ -58,3 +58,10 @@ Podemos medir os intervalos por gravação de interação com marcação tempora
 Manteremos no repositório os dados necessários para reproduzir os cálculos, associados ao cenário e ao identificador de cada execução. Antes da publicação, removeremos informações que possam identificar participantes ou contas. Os casos excluídos e inconclusivos também serão documentados, com seus respectivos motivos.
 
 Após a coleta, vamos conferir os casos elegíveis, aplicar as fórmulas de M1–M8 e comparar os resultados com as faixas estabelecidas. Na M3, usaremos a pior classificação entre os fluxos válidos para julgar G2; na M5, uma falha de bloqueio implicará resultado insatisfatório. As demais regras estão nos [Critérios de julgamento](criterios-julgamento.md). Os limites definidos nesta fase serão mantidos durante a análise.
+
+## Histórico de Versões
+
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 17/10/2026 | Criação do documento dos protocolos de coleta | Arthur de Lima Sobreira |
+| 1.1 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |

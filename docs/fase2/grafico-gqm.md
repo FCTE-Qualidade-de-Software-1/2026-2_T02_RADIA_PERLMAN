@@ -64,3 +64,11 @@ flowchart LR
 | [G4](objetivos.md#g4) | Comportamento no tempo | [Q8/H8](questoes-hipoteses.md#q8) | [M8](metricas.md#m8) | s |
 
 Na [rastreabilidade](rastreabilidade.md), relacionamos essas medidas às funcionalidades e prioridades da Fase 1. As fórmulas estão em [Métricas](metricas.md) e a interpretação está nos [critérios de julgamento](criterios-julgamento.md). Para M3, consideraremos cada fluxo separadamente; para M5, exigiremos o bloqueio completo de acesso a dados protegidos. Os indicadores [PSM/CID](gestao-psm.md) ficam fora do diagrama porque tratam do andamento do projeto, e não da qualidade da Agência Virtual.
+
+## Histórico de Versões
+
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 14/10/2026 | Criação do documento do GQM | Beatriz Figueiredo dos Santos |
+| 1.1 | 17/10/2026 | Reestruturação do documento | Arthur de Lima Sobreira |
+| 1.2 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |

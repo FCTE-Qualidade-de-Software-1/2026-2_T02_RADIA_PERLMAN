@@ -61,3 +61,11 @@ Na Fase 3, essas definições servirão de base ao plano de avaliação, incluin
 ---
 
 **Referência:** SILVA, C. V. P. da; MOURA, D. C. de; CAMPOS, D. de C.; NERY, P. *GQM – Goal-Question-Metric*. 2009.
+
+## Histórico de Versões
+
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 14/10/2026 | Criação do documento inicial da Fase 2 | Beatriz Figueiredo dos Santos |
+| 1.1 | 17/10/2026 | Reestruturação do documento | Arthur de Lima Sobreira |
+| 1.2 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |
