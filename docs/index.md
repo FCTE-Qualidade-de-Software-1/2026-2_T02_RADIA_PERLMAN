@@ -24,10 +24,10 @@ Para padronizar a avaliação, o projeto adota a família de normas **SQuaRE (So
 
 Para que a qualidade do produto seja mensurada de forma sistemática e repetível, o projeto segue um Processo de Avaliação de Produto de Software estruturado em quatro fases fundamentais:
 
-1. **Fase 1 - Estabelecer requisitos de avaliação:** Etapa de definição do propósito da avaliação, identificação do tipo de produto (escopo) e especificação do modelo de qualidade aplicável (ISO/IEC 25010).
-2. **Fase 2 - Especificar a avaliação:** Fase destinada a selecionar as métricas, estabelecer os níveis de pontuação e definir os critérios para o julgamento da qualidade.
-3. **Fase 3 - Projetar a avaliação:** Etapa de consolidação do plano de avaliação, detalhando os recursos, os métodos e o cronograma para execução.
-4. **Fase 4 - Executar a avaliação:** Fase prática onde são obtidas as medidas, comparados os resultados com os critérios estabelecidos e julgada a qualidade final do software, culminando no relatório de avaliação.
+1. **[Fase 1 - Estabelecer requisitos de avaliação:](fase1-requisitos.md)** Etapa de definição do propósito da avaliação, identificação do tipo de produto (escopo) e especificação do modelo de qualidade aplicável (ISO/IEC 25010).
+2. **[Fase 2 - Especificar a avaliação:](fase2-especificacao.md)** Fase destinada a selecionar as métricas, estabelecer os níveis de pontuação e definir os critérios para o julgamento da qualidade.
+3. **[Fase 3 - Projetar a avaliação:](fase3-projeto.md)** Etapa de consolidação do plano de avaliação, detalhando os recursos, os métodos e o cronograma para execução.
+4. **[Fase 4 - Executar a avaliação:](fase4-execucao.md)** Fase prática onde são obtidas as medidas, comparados os resultados com os critérios estabelecidos e julgada a qualidade final do software, culminando no relatório de avaliação.
 
 ---
 

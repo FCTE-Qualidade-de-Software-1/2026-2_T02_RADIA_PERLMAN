@@ -12,7 +12,11 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - Visão Geral: index.md
-  - "Fase 1": fase1-requisitos.md
+  - "Fase 1":
+      - Propósito da avaliação: fase1-requisitos.md
+      - Produto Avaliado: fase1/produto-avaliado.md
+      - Modelo de Qualidade de Produto: fase1/modelo-qualidade.md
+      - Alinhamento aos Objetivos de Desenvolvimento Sustentável (ODS): fase1/alinhamento-ods.md
   - "Fase 2":
       - Especificação da avaliação: fase2-especificacao.md
       - Objetivos de medição: fase2/objetivos.md
