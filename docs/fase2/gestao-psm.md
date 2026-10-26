@@ -185,4 +185,4 @@ Para a avaliação da Agência Virtual da Neoenergia Brasília, será utilizado 
 |---|---|---|---|
 | 1.0 | 17/10/2026 | Criação do documento do PSM | Arthur de Lima Sobreira |
 | 1.1 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |
-| 1.2 | 26/10/2026 | Atualização dos indicadores, documentação da automação e registro da primeira apuração | A definir |
+| 1.2 | 26/10/2026 | Atualização dos indicadores, documentação da automação e registro da primeira apuração | [Isabella Choukaira](https://github.com/isabellachoukaira) |
