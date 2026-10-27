@@ -1,0 +1,1165 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto da disciplina de Qualidade de Software">
+      
+      
+      
+      
+        <link rel="prev" href="../produto-avaliado/">
+      
+      
+        <link rel="next" href="../alinhamento-ods/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Modelo de Qualidade de Produto - Processo de Avaliação de Produto de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#especificar-os-modelos-de-qualidade-e-adaptacao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-header__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Processo de Avaliação de Produto de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modelo de Qualidade de Produto
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../fase1-requisitos/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase2-especificacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fase3-projeto/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fase 3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fase4-execucao/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fase 4
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-nav__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Processo de Avaliação de Produto de Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propósito da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../produto-avaliado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Produto Avaliado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade de Produto
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade de Produto
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#especificar-os-modelos-de-qualidade-e-adaptacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificar os modelos de qualidade e Adaptação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecao-e-priorizacao-das-caracteristicas-justificativa-de-enfase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seleção e Priorização das Características (Justificativa de Ênfase)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedimentos-de-avaliacao-e-niveis-de-enfase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedimentos de Avaliação e Níveis de Ênfase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alinhamento-ods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alinhamento aos Objetivos de Desenvolvimento Sustentável (ODS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2-especificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Especificação da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objetivos de medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/questoes-hipoteses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Questões e hipóteses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/metricas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Métricas e pontuações
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/grafico-gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráfico GQM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/criterios-julgamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critérios de julgamento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rastreabilidade Fase 1–2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/protocolo-coleta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocolo de coleta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/gestao-psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestão PSM/CID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase4-execucao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#especificar-os-modelos-de-qualidade-e-adaptacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificar os modelos de qualidade e Adaptação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecao-e-priorizacao-das-caracteristicas-justificativa-de-enfase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seleção e Priorização das Características (Justificativa de Ênfase)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedimentos-de-avaliacao-e-niveis-de-enfase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedimentos de Avaliação e Níveis de Ênfase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Modelo de Qualidade de Produto</h1>
+
+<h2 id="especificar-os-modelos-de-qualidade-e-adaptacao"><strong>Especificar os modelos de qualidade e Adaptação</strong><a class="headerlink" href="#especificar-os-modelos-de-qualidade-e-adaptacao" title="Permanent link">&para;</a></h2>
+<p>A avaliação utilizará o modelo de qualidade de produto definido na norma <strong>ISO/IEC 25010:2011</strong>. O modelo original completo abrange oito características. No entanto, o modelo de qualidade deve ser adaptado ao contexto do software a ser avaliado e aos objetivos definidos pelo requisitante.</p>
+<ul>
+<li>
+<p><strong>Justificativa da Adaptação:</strong>
+Como a avaliação será conduzida por meio de testes de caixa-preta (black-box) em um ambiente de produção externo, sem acesso ao código-fonte ou à infraestrutura de servidores da Neoenergia, o modelo foi adaptado para excluir características puramente internas (como Manutenibilidade, Portabilidade e Compatibilidade). O foco foi direcionado estritamente para as características dinâmicas e operacionais perceptíveis pelo usuário final e críticas para o negócio.</p>
+</li>
+<li>
+<p><strong>Representação Gráfica do Modelo Adaptado:</strong>
+Abaixo apresenta-se a estrutura em árvore do modelo de qualidade adaptado para o escopo desta avaliação:</p>
+</li>
+</ul>
+<p><pre class="mermaid"><code>graph LR
+    A[Qualidade do Produto&lt;br&gt;ISO/IEC 25010 Adaptada] --&gt; B[Usabilidade]
+    A --&gt; C[Confiabilidade]
+    A --&gt; D[Segurança]
+    A --&gt; E[Eficiência de Desempenho]
+
+    B --&gt; B1[Apreensibilidade]
+    B --&gt; B2[Proteção contra erros]
+    B --&gt; B3[Reconhecimento da adequação]
+    B --&gt; B4[Operabilidade]
+
+    C --&gt; C1[Maturidade]
+    C --&gt; C2[Disponibilidade]
+    C --&gt; C3[Tolerância a falhas / Recuperabilidade]
+
+    D --&gt; D1[Confidencialidade]
+    D --&gt; D2[Integridade / Não repúdio]
+    D --&gt; D3[Autenticidade e Responsabilização]
+
+    E --&gt; E1[Comportamento temporal]
+    E --&gt; E2[Capacidade]
+
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
+    classDef root fill:#18B551,color:#fff,stroke:#0f7a35,stroke-width:2px;
+    class A root;
+</code></pre>
+<em>Fonte: Dara Maria, 2026</em></p>
+<hr />
+<h2 id="selecao-e-priorizacao-das-caracteristicas-justificativa-de-enfase"><strong>Seleção e Priorização das Características (Justificativa de Ênfase)</strong><a class="headerlink" href="#selecao-e-priorizacao-das-caracteristicas-justificativa-de-enfase" title="Permanent link">&para;</a></h2>
+<p>A seleção das características e a atribuição de seus respectivos níveis de ênfase (onde 1 representa nenhum interesse e 5 representa grande interesse) foram pautadas pelo perfil dos usuários finais e pela criticidade do domínio da aplicação (serviços de utilidade pública).</p>
+<p>A tabela a seguir consolida as prioridades e suas justificativas:</p>
+<table>
+<thead>
+<tr>
+<th>Característica (ISO/IEC 25010)</th>
+<th>Ênfase (1 a 5)</th>
+<th>Nível de Prioridade</th>
+<th>Justificativa da Atribuição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Usabilidade</strong></td>
+<td><strong>5</strong></td>
+<td>Máxima</td>
+<td>A Agência Virtual atende a toda a população do DF, cujo nível de conhecimento em informática é altamente variável. O sistema deve ser intuitivo para garantir que cidadãos leigos consigam operá-lo sem auxílio externo, evitando a superlotação no atendimento presencial.</td>
+</tr>
+<tr>
+<td><strong>Segurança</strong></td>
+<td><strong>5</strong></td>
+<td>Máxima</td>
+<td>O portal processa e expõe dados sensíveis (cadastrais, endereços) e informações financeiras (faturamento). A garantia da confidencialidade e integridade é mandatória para evitar fraudes, acessos indevidos e adequar-se às legislações.</td>
+</tr>
+<tr>
+<td><strong>Confiabilidade</strong></td>
+<td><strong>4</strong></td>
+<td>Alta</td>
+<td>A indisponibilidade impede os clientes de realizarem pagamentos no prazo. A tolerância a falhas é crucial para que, diante de um erro de comunicação ou dado inválido, o sistema informe o usuário de forma clara sem corromper a sessão.</td>
+</tr>
+<tr>
+<td><strong>Eficiência de Desempenho</strong></td>
+<td><strong>4</strong></td>
+<td>Alta</td>
+<td>O tempo de resposta afeta diretamente a percepção de usabilidade. A geração de relatórios e gráficos de consumo exige processamento que não deve exceder limites aceitáveis de espera para garantir a fluidez da navegação.</td>
+</tr>
+<tr>
+<td><strong>Manutenibilidade, Portabilidade e Compatibilidade</strong></td>
+<td><strong>1</strong></td>
+<td>Nenhuma</td>
+<td>A avaliação limita-se a uma abordagem externa (caixa-preta), impossibilitando a medição de atributos de código-fonte, infraestrutura ou arquitetura interna pelos avaliadores.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Fonte: Equipe Radia Perlman, 2026</em></p>
+<hr />
+<h2 id="procedimentos-de-avaliacao-e-niveis-de-enfase"><strong>Procedimentos de Avaliação e Níveis de Ênfase</strong><a class="headerlink" href="#procedimentos-de-avaliacao-e-niveis-de-enfase" title="Permanent link">&para;</a></h2>
+<p>Abaixo estão detalhados os procedimentos de avaliação por característica, pontuados em uma escala de ênfase de 1 a 5, com o mapeamento explícito das funcionalidades do escopo escolhidas para cada teste:</p>
+<ul>
+<li>
+<p><strong>Usabilidade (Ênfase 5):</strong> Capacidade do portal de ser usado com eficácia, eficiência e satisfação no contexto de uso.</p>
+<ul>
+<li><em>Proteção contra erros do usuário:</em> <strong>Funcionalidade avaliada:</strong> Login/Cadastro. Inserir intencionalmente formatos inválidos no formulário para verificar se o sistema protege o usuário e orienta a correção antes do envio dos dados.</li>
+<li><em>Operabilidade e Apreensibilidade:</em> <strong>Funcionalidades avaliadas:</strong> Emissão de 2ª via e Histórico de Consumo. Executar a navegação até as faturas de energia e gerar o gráfico de consumo, medindo se os atributos do sistema o tornam fácil de operar e controlar por usuários leigos.</li>
+<li><em>Reconhecimento da adequação:</em> <strong>Funcionalidades avaliadas:</strong> Relatório de Nada Consta e Indicadores de Continuidade. Avaliar se as telas permitem que o usuário reconheça imediatamente que as funções são apropriadas e suficientes para suas necessidades de informação.</li>
+</ul>
+</li>
+<li>
+<p><strong>Confiabilidade (Ênfase 4):</strong> Desempenho de funções sob condições especificadas e por um período determinado.</p>
+<ul>
+<li><em>Disponibilidade:</em> <strong>Funcionalidades avaliadas:</strong> Emissão de 2ª via e Relatório de Nada Consta. Monitorar a proporção de tempo em que essas funções permanecem operacionais e acessíveis.</li>
+<li><em>Maturidade, Tolerância a falhas e Recuperabilidade:</em> <strong>Funcionalidade avaliada:</strong> Histórico de Consumo. Interromper intencionalmente parâmetros de rede durante o carregamento dos gráficos para verificar se o sistema opera como pretendido, restabelece o estado desejado ou recupera dados afetados.</li>
+<li><em>Nota de Escopo:</em> As funcionalidades de <em>Login/Cadastro</em> e <em>Indicadores de Continuidade</em> não são o foco primário das métricas de confiabilidade desta avaliação. O impacto crítico de falhas e indisponibilidade para o cliente e para a concessionária reside na impossibilidade transacional de pagar contas (2ª via) ou comprovar adimplência (Nada Consta).</li>
+</ul>
+</li>
+<li>
+<p><strong>Segurança (Ênfase 5):</strong> Proteção de informações e controle de acesso apropriado à autorização.</p>
+<ul>
+<li><em>Autenticidade e Responsabilização:</em> <strong>Funcionalidade avaliada:</strong> Login/Cadastro. Validar os mecanismos de login para garantir que a identidade alegada pelo usuário possa ser provada e que as ações sejam rastreadas unicamente àquela entidade.</li>
+<li><em>Confidencialidade:</em> <strong>Funcionalidades avaliadas:</strong> Emissão de 2ª via e Histórico de Consumo. Verificar se os dados financeiros e de faturamento estão acessíveis apenas após a autenticação correta.</li>
+<li><em>Integridade e Não repúdio:</em> <strong>Funcionalidade avaliada:</strong> Relatório de Nada Consta. Emitir o relatório e avaliar os mecanismos que previnem a modificação não autorizada do documento e provam que a emissão ocorreu de forma incontestável.</li>
+<li><em>Nota de Escopo:</em> A funcionalidade <em>Indicadores de Continuidade</em> não se encaixa na avaliação de Segurança. Por se tratar de dados de transparência pública (métricas de qualidade do fornecimento de energia da região), ela não expõe informações pessoais, financeiras ou sigilosas que demandem validação de confidencialidade ou integridade restrita do usuário.</li>
+</ul>
+</li>
+<li>
+<p><strong>Eficiência de Desempenho (Ênfase 4):</strong> Desempenho relativo aos recursos utilizados nas operações.</p>
+<ul>
+<li><em>Comportamento temporal:</em> <strong>Funcionalidades avaliadas:</strong> Login/Cadastro e Indicadores de Continuidade. Cronometrar os tempos de resposta e as taxas de processamento ao submeter o formulário de credenciais e ao requisitar o painel de métricas da rede.</li>
+<li><em>Capacidade:</em> <strong>Funcionalidades avaliadas:</strong> Emissão de 2ª via e Histórico de Consumo. Avaliar como o sistema responde sob estresse de pico, verificando se a geração de arquivos PDF e a renderização pesada de gráficos atendem aos requisitos de navegação fluida.</li>
+<li><em>Nota de Escopo:</em> O <em>Relatório de Nada Consta</em> não foi selecionado como alvo principal de medição de desempenho, pois sua emissão é esporádica se comparada ao altíssimo volume de concorrência e requisições simultâneas enfrentadas pela emissão de faturas mensais e consultas de consumo.</li>
+</ul>
+</li>
+</ul>
+<h2 id="referencias"><strong>Referências</strong><a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li>GALIN, D. <em>Software Quality: Concepts and Practice</em>. IEEE Computer Society, John Wiley &amp; Sons, 2018.</li>
+<li>GARVIN, D. A. What Does "Product Quality" Really Mean?. <em>Sloan Management Review</em>, Fall 1984.</li>
+<li>ISO/IEC. <em>ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models</em>. Genebra: ISO, 2011.</li>
+<li>PRESSMAN, R. S. <em>Software Engineering: A Practitioner's Approach</em>, 7. ed. Nova York: McGraw Hill, 2010.</li>
+<li>RAMOS, C. S. <em>Processo de Avaliação de Produto de Software</em>. Material de apoio e slides da disciplina Qualidade de Software 1. Brasília: Universidade de Brasília (UnB), 2026.</li>
+</ul>
+<hr />
+<h2 id="historico-de-versoes">Histórico de Versões<a class="headerlink" href="#historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição da Alteração</th>
+<th>Autor(a)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>16/10/2026</td>
+<td>Criação do documento inicial de Fase 1</td>
+<td>Dara Maria Barbosa de Sousa</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>16/10/2026</td>
+<td>Remoção de Mitigação de Riscos e refatoração de formatação</td>
+<td>Dara Maria Barbosa de Sousa</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>19/10/2026</td>
+<td>Adição da Justificativa da Adaptação.</td>
+<td>Dara Maria Barbosa de Sousa</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

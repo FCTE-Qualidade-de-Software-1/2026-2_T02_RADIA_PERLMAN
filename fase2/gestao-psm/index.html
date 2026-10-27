@@ -1,0 +1,1467 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto da disciplina de Qualidade de Software">
+      
+      
+      
+      
+        <link rel="prev" href="../protocolo-coleta/">
+      
+      
+        <link rel="next" href="../../fase3-projeto/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Gestão PSM/CID - Processo de Avaliação de Produto de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#acompanhamento-do-projeto-com-psmcid" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-header__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Processo de Avaliação de Produto de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gestão PSM/CID
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase1-requisitos/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../fase2-especificacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fase3-projeto/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fase 3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fase4-execucao/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fase 4
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-nav__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Processo de Avaliação de Produto de Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propósito da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/produto-avaliado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Produto Avaliado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/modelo-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade de Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/alinhamento-ods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alinhamento aos Objetivos de Desenvolvimento Sustentável (ODS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2-especificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Especificação da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objetivos de medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../questoes-hipoteses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Questões e hipóteses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metricas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Métricas e pontuações
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grafico-gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráfico GQM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../criterios-julgamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critérios de julgamento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rastreabilidade Fase 1–2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocolo-coleta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocolo de coleta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Gestão PSM/CID
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestão PSM/CID
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indicadores-de-gestao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicadores de gestão
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicadores de gestão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consideracoes-sobre-os-indicadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerações sobre os indicadores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatizacao-da-coleta-de-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatização da coleta de métricas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatização da coleta de métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-da-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura da implementação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionamento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivos-gerados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivos gerados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primeira-apuracao-automatizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primeira apuração automatizada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primeira apuração automatizada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultados-obtidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados obtidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise dos resultados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acoes-de-acompanhamento-propostas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ações de acompanhamento propostas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registro-e-analise-periodica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registro e análise periódica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitacoes-e-melhorias-previstas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitações e melhorias previstas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacao-com-a-avaliacao-do-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relação com a avaliação do software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase4-execucao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indicadores-de-gestao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicadores de gestão
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicadores de gestão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consideracoes-sobre-os-indicadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerações sobre os indicadores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatizacao-da-coleta-de-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatização da coleta de métricas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatização da coleta de métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-da-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura da implementação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionamento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivos-gerados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivos gerados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primeira-apuracao-automatizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primeira apuração automatizada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primeira apuração automatizada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultados-obtidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados obtidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise dos resultados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acoes-de-acompanhamento-propostas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ações de acompanhamento propostas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registro-e-analise-periodica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registro e análise periódica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitacoes-e-melhorias-previstas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitações e melhorias previstas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacao-com-a-avaliacao-do-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relação com a avaliação do software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="acompanhamento-do-projeto-com-psmcid">Acompanhamento do projeto com PSM/CID<a class="headerlink" href="#acompanhamento-do-projeto-com-psmcid" title="Permanent link">&para;</a></h1>
+<p>Além das medidas de qualidade da Agência Virtual da Neoenergia Brasília, acompanhamos o desenvolvimento do projeto por meio de indicadores baseados no PSM/CID.</p>
+<p>Diferentemente das métricas M1–M8, definidas por meio do <a href="../../fase2-especificacao/">GQM</a> para avaliar a qualidade do produto, os indicadores PSM/CID são utilizados para acompanhar a gestão das atividades, o progresso das entregas e a distribuição de responsabilidades da equipe.</p>
+<p>Para facilitar esse acompanhamento, implementamos uma coleta automatizada de dados utilizando GitHub Actions e um script Python.</p>
+<h2 id="indicadores-de-gestao">Indicadores de gestão<a class="headerlink" href="#indicadores-de-gestao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Categoria</th>
+<th>Indicador</th>
+<th>Cálculo</th>
+<th>Fonte de dados</th>
+<th>Uso dos resultados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desempenho dos Processos</td>
+<td><strong>PSM-1 — Retrabalho</strong></td>
+<td><code>100 × issues atualmente fechadas que já foram reabertas / issues atualmente fechadas</code></td>
+<td>Histórico de eventos das Issues do Milestone.</td>
+<td>Identificar tarefas que precisaram retornar ao trabalho após terem sido consideradas concluídas.</td>
+</tr>
+<tr>
+<td>Calendário e Progresso</td>
+<td><strong>PSM-2 — Progresso do marco</strong></td>
+<td><code>100 × issues concluídas / total de issues vinculadas ao marco</code></td>
+<td>Issues e Milestone do GitHub.</td>
+<td>Acompanhar o percentual de conclusão das atividades previstas para a entrega.</td>
+</tr>
+<tr>
+<td>Recursos e Custos</td>
+<td><strong>PSM-3 — Cobertura de atribuição de tarefas</strong></td>
+<td><code>100 × issues com pelo menos um responsável / total de issues vinculadas ao marco</code></td>
+<td>Campo <em>Assignees</em> das Issues.</td>
+<td>Identificar atividades sem responsáveis definidos e apoiar a distribuição das tarefas.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consideracoes-sobre-os-indicadores">Considerações sobre os indicadores<a class="headerlink" href="#consideracoes-sobre-os-indicadores" title="Permanent link">&para;</a></h3>
+<p><strong>PSM-1 — Retrabalho:</strong> a implementação inicial considera as Issues atualmente fechadas que possuem pelo menos um evento de reabertura em seu histórico. Cada Issue é contabilizada uma única vez, mesmo que tenha sido reaberta várias vezes. Issues reabertas que permanecem abertas não entram no cálculo atual.</p>
+<p>Essa implementação representa uma fotografia acumulada das Issues atualmente concluídas e difere da definição inicialmente proposta, que considerava fechamentos e reaberturas em um período específico.</p>
+<p><strong>PSM-2 — Progresso do marco:</strong> considera como conjunto planejado as Issues atualmente vinculadas ao Milestone. Como a inclusão ou exclusão de Issues altera o denominador, mudanças no escopo devem ser registradas e consideradas na interpretação dos resultados. Para avaliações futuras, pretende-se estabelecer uma linha de base fixa.</p>
+<p><strong>PSM-3 — Cobertura de atribuição:</strong> substitui a razão de esforço inicialmente prevista, devido às dificuldades de manter registros consistentes de horas estimadas e realizadas. O indicador utiliza informações disponíveis no GitHub e permite identificar tarefas sem responsáveis definidos.</p>
+<p>A cobertura de atribuição é uma medida adaptada ao contexto da equipe. Ela não representa o esforço efetivamente realizado, o equilíbrio da carga de trabalho nem os custos financeiros do projeto.</p>
+<p>Quando um denominador for zero, o indicador será apresentado como não calculável, acompanhado de uma justificativa.</p>
+<h2 id="automatizacao-da-coleta-de-metricas">Automatização da coleta de métricas<a class="headerlink" href="#automatizacao-da-coleta-de-metricas" title="Permanent link">&para;</a></h2>
+<p>Para reduzir a necessidade de contagem manual das atividades, desenvolvemos uma automação utilizando <strong>GitHub Actions</strong>, <strong>Python</strong> e a <strong>API do GitHub</strong>.</p>
+<p>A automação consulta as Issues vinculadas ao Milestone definido, analisa seus estados, responsáveis e eventos históricos, calcula os indicadores e gera relatórios com os resultados.</p>
+<h3 id="estrutura-da-implementacao">Estrutura da implementação<a class="headerlink" href="#estrutura-da-implementacao" title="Permanent link">&para;</a></h3>
+<p>Os arquivos responsáveis pela automação estão organizados da seguinte forma:</p>
+<div class="highlight"><pre><span></span><code>.github/
+└── workflows/
+    └── metricas-psm.yml
+
+scripts/
+└── coletar_metricas_psm.py
+</code></pre></div>
+<p>O arquivo <code>metricas-psm.yml</code> define a execução do workflow no GitHub Actions.</p>
+<p>O arquivo <code>coletar_metricas_psm.py</code> realiza a consulta aos dados do repositório, calcula os indicadores e gera os relatórios.</p>
+<h3 id="funcionamento">Funcionamento<a class="headerlink" href="#funcionamento" title="Permanent link">&para;</a></h3>
+<ol>
+<li>O GitHub Actions inicia a execução do workflow.</li>
+<li>O script consulta as Issues associadas ao Milestone da entrega.</li>
+<li>São coletadas informações sobre estado das Issues, responsáveis e eventos de reabertura.</li>
+<li>Os indicadores PSM-1, PSM-2 e PSM-3 são calculados automaticamente.</li>
+<li>Os resultados são disponibilizados nos logs e em arquivos gerados pela execução.</li>
+</ol>
+<p>A automação permite execução manual e agendada, conforme a configuração do workflow.</p>
+<h3 id="arquivos-gerados">Arquivos gerados<a class="headerlink" href="#arquivos-gerados" title="Permanent link">&para;</a></h3>
+<p>Ao final da execução, são disponibilizados dois arquivos:</p>
+<ul>
+<li><strong><code>relatorio.md</code>:</strong> apresenta os indicadores calculados, os dados utilizados e as limitações da medição.</li>
+<li><strong><code>metricas.json</code>:</strong> armazena os resultados em formato estruturado, permitindo seu processamento posterior.</li>
+</ul>
+<p>Os arquivos são disponibilizados como artefatos do GitHub Actions.</p>
+<p>A automatização contempla a coleta e o cálculo dos indicadores. A interpretação dos resultados e a definição de ações de gestão continuam sob responsabilidade da equipe.</p>
+<h2 id="primeira-apuracao-automatizada">Primeira apuração automatizada<a class="headerlink" href="#primeira-apuracao-automatizada" title="Permanent link">&para;</a></h2>
+<p>A primeira coleta automatizada foi realizada em <strong>26/10/2026, às 19h17 UTC (16h17, horário de Brasília)</strong>.</p>
+<p><strong>Repositório:</strong> <code>FCTE-Qualidade-de-Software-1/2026-2_T02_RADIA_PERLMAN</code></p>
+<p><strong>Milestone:</strong> <code>Entrega 1 — Fases 1 e 2</code></p>
+<h3 id="resultados-obtidos">Resultados obtidos<a class="headerlink" href="#resultados-obtidos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th style="text-align: right;">Numerador</th>
+<th style="text-align: right;">Denominador</th>
+<th style="text-align: right;">Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PSM-1 — Retrabalho</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;"><strong>0,00%</strong></td>
+</tr>
+<tr>
+<td>PSM-2 — Progresso do marco</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;"><strong>54,55%</strong></td>
+</tr>
+<tr>
+<td>PSM-3 — Cobertura de atribuição</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;"><strong>81,82%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="analise-dos-resultados">Análise dos resultados<a class="headerlink" href="#analise-dos-resultados" title="Permanent link">&para;</a></h3>
+<p><strong>PSM-1 — Retrabalho (0,00%)</strong></p>
+<p>Entre as seis Issues que estavam fechadas no momento da coleta, nenhuma apresentava evento anterior de reabertura.</p>
+<p>Entretanto, o relatório identificou que a <strong>Issue #5</strong> já havia sido reaberta e permanecia aberta. Por esse motivo, ela não foi contabilizada no indicador.</p>
+<p>Assim, o resultado de 0,00% não significa ausência total de retrabalho no projeto. Ele representa apenas a proporção de Issues atualmente fechadas que possuem histórico de reabertura, conforme a implementação inicial.</p>
+<p>Essa limitação indica a necessidade de revisar a definição operacional do indicador para que reaberturas ainda não resolvidas também possam ser consideradas.</p>
+<p><strong>PSM-2 — Progresso do marco (54,55%)</strong></p>
+<p>Das 11 Issues vinculadas ao Milestone, seis estavam concluídas no momento da coleta.</p>
+<p>O resultado indica que pouco mais da metade das atividades registradas havia sido concluída. As cinco Issues restantes ainda estavam abertas.</p>
+<p>Considerando a proximidade do prazo da Entrega 1, esse resultado indica a necessidade de acompanhar as pendências e verificar quais atividades devem ser priorizadas.</p>
+<p><strong>PSM-3 — Cobertura de atribuição (81,82%)</strong></p>
+<p>Das 11 Issues do Milestone, nove possuíam pelo menos um responsável definido.</p>
+<p>O resultado indica que duas Issues estavam sem responsáveis atribuídos no momento da coleta.</p>
+<p>Essa informação pode ser utilizada para revisar a distribuição das responsabilidades e garantir que as atividades pendentes tenham responsáveis identificados.</p>
+<h3 id="acoes-de-acompanhamento-propostas">Ações de acompanhamento propostas<a class="headerlink" href="#acoes-de-acompanhamento-propostas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Ação proposta</th>
+<th>Responsável</th>
+<th>Prazo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PSM-1</td>
+<td>Revisar a definição do indicador para considerar também reaberturas ainda não resolvidas.</td>
+<td>A definir pela equipe</td>
+<td>A definir</td>
+</tr>
+<tr>
+<td>PSM-2</td>
+<td>Verificar as cinco Issues abertas e priorizar as atividades necessárias para concluir a entrega.</td>
+<td>A definir pela equipe</td>
+<td>A definir</td>
+</tr>
+<tr>
+<td>PSM-3</td>
+<td>Identificar as duas Issues sem responsáveis e definir sua atribuição.</td>
+<td>A definir pela equipe</td>
+<td>A definir</td>
+</tr>
+</tbody>
+</table>
+<p>As ações apresentadas são propostas decorrentes da análise dos resultados. Sua execução deverá ser registrada posteriormente, com responsáveis, prazos e evidências correspondentes.</p>
+<h2 id="registro-e-analise-periodica">Registro e análise periódica<a class="headerlink" href="#registro-e-analise-periodica" title="Permanent link">&para;</a></h2>
+<p>As atividades do projeto são organizadas por meio de Issues, com responsáveis, status e vínculos com as entregas.</p>
+<p>Os indicadores serão acompanhados por meio das execuções do GitHub Actions, permitindo registrar diferentes momentos do desenvolvimento.</p>
+<p>A cada apuração, serão considerados:</p>
+<ul>
+<li>Data e horário da coleta.</li>
+<li>Milestone e conjunto de Issues analisados.</li>
+<li>Valores dos indicadores.</li>
+<li>Limitações e alterações no escopo da medição.</li>
+<li>Interpretação dos resultados.</li>
+<li>Ações propostas e decisões tomadas pela equipe.</li>
+<li>Evidências disponíveis no repositório.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Data/período</th>
+<th>Indicador</th>
+<th>Dados da apuração</th>
+<th>Valor</th>
+<th>Interpretação</th>
+<th>Evidência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>26/10/2026</td>
+<td>PSM-1</td>
+<td>0 Issues atualmente fechadas com reabertura / 6 fechadas</td>
+<td>0,00%</td>
+<td>A Issue #5 foi reaberta, mas permanece aberta e não integra o cálculo atual.</td>
+<td>Relatório do GitHub Actions</td>
+</tr>
+<tr>
+<td>26/10/2026</td>
+<td>PSM-2</td>
+<td>6 concluídas / 11 vinculadas ao Milestone</td>
+<td>54,55%</td>
+<td>Cinco atividades permaneciam abertas.</td>
+<td>Milestone e relatório automatizado</td>
+</tr>
+<tr>
+<td>26/10/2026</td>
+<td>PSM-3</td>
+<td>9 com responsáveis / 11 vinculadas ao Milestone</td>
+<td>81,82%</td>
+<td>Duas atividades estavam sem responsáveis definidos.</td>
+<td>Issues e relatório automatizado</td>
+</tr>
+</tbody>
+</table>
+<p>Os resultados apresentados representam a situação do repositório no momento da coleta, não necessariamente a situação atual do projeto.</p>
+<h2 id="limitacoes-e-melhorias-previstas">Limitações e melhorias previstas<a class="headerlink" href="#limitacoes-e-melhorias-previstas" title="Permanent link">&para;</a></h2>
+<p>A implementação inicial automatiza a coleta e o cálculo das três métricas, mas ainda apresenta algumas limitações.</p>
+<p><strong>Retrabalho:</strong> o cálculo considera apenas Issues atualmente fechadas. Pretende-se aprimorar o indicador para considerar também as Issues reabertas que permanecem abertas, mantendo uma definição consistente de numerador e denominador.</p>
+<p><strong>Progresso:</strong> o conjunto de Issues vinculadas ao Milestone pode sofrer alterações. Uma melhoria prevista é estabelecer uma linha de base fixa, permitindo comparar a execução com o planejamento original.</p>
+<p><strong>Cobertura de atribuição:</strong> o indicador verifica a existência de responsáveis, mas não mede a carga de trabalho de cada integrante nem o esforço dedicado às atividades.</p>
+<p><strong>Análise dos resultados:</strong> a automação gera os dados quantitativos, mas a interpretação e as decisões de gestão ainda são registradas manualmente pela equipe.</p>
+<p>Essas limitações serão consideradas na evolução da automação e na interpretação das próximas medições.</p>
+<h2 id="relacao-com-a-avaliacao-do-software">Relação com a avaliação do software<a class="headerlink" href="#relacao-com-a-avaliacao-do-software" title="Permanent link">&para;</a></h2>
+<p>Os indicadores PSM/CID acompanham a gestão do projeto e não alteram diretamente as notas de qualidade atribuídas ao software.</p>
+<p>Por esse motivo, não integram o <a href="../grafico-gqm/">gráfico GQM</a>, que representa os objetivos, questões e métricas da avaliação do produto.</p>
+<p>Os resultados PSM/CID permitem acompanhar a execução do trabalho, identificar necessidades de ajuste e apoiar decisões relacionadas à organização da equipe.</p>
+<p>Para a avaliação da Agência Virtual da Neoenergia Brasília, será utilizado o <a href="../protocolo-coleta/">protocolo de coleta</a> definido na Fase 2.</p>
+<h2 id="historico-de-versoes">Histórico de Versões<a class="headerlink" href="#historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição da Alteração</th>
+<th>Autor(a)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>17/10/2026</td>
+<td>Criação do documento do PSM</td>
+<td>Arthur de Lima Sobreira</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>20/10/2026</td>
+<td>Revisão e versionamento</td>
+<td>Henrique Martins Alencar</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>26/10/2026</td>
+<td>Atualização dos indicadores, documentação da automação e registro da primeira apuração</td>
+<td><a href="https://github.com/isabellachoukaira">Isabella Choukaira</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
