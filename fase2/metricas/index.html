@@ -1,0 +1,1657 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto da disciplina de Qualidade de Software">
+      
+      
+      
+      
+        <link rel="prev" href="../questoes-hipoteses/">
+      
+      
+        <link rel="next" href="../grafico-gqm/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Métricas e pontuações - Processo de Avaliação de Produto de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#metricas-e-niveis-de-pontuacao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-header__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Processo de Avaliação de Produto de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Métricas e pontuações
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase1-requisitos/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../fase2-especificacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fase3-projeto/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fase 3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fase4-execucao/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fase 4
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-nav__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Processo de Avaliação de Produto de Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propósito da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/produto-avaliado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Produto Avaliado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/modelo-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade de Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/alinhamento-ods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alinhamento aos Objetivos de Desenvolvimento Sustentável (ODS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2-especificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Especificação da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objetivos de medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../questoes-hipoteses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Questões e hipóteses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Métricas e pontuações
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Métricas e pontuações
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#escalas-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalas de avaliação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Escalas de avaliação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamentacao-dos-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentação dos limites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m1" class="md-nav__link">
+    <span class="md-ellipsis">
+      M1 — Sucesso na localização de funcionalidades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m2" class="md-nav__link">
+    <span class="md-ellipsis">
+      M2 — Tratamento de entradas inválidas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m3" class="md-nav__link">
+    <span class="md-ellipsis">
+      M3 — Execuções sem falhas observáveis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m4" class="md-nav__link">
+    <span class="md-ellipsis">
+      M4 — Retomada após interrupção local da conexão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m5" class="md-nav__link">
+    <span class="md-ellipsis">
+      M5 — Bloqueio de acesso a páginas restritas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m6" class="md-nav__link">
+    <span class="md-ellipsis">
+      M6 — Consistência de informações estáveis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m7" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7 — Mediana do tempo de resposta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m8" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8 — Percentil 90 do tempo de resposta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registro-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registro dos resultados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grafico-gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráfico GQM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../criterios-julgamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critérios de julgamento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rastreabilidade Fase 1–2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocolo-coleta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocolo de coleta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestão PSM/CID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase4-execucao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#escalas-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalas de avaliação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Escalas de avaliação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamentacao-dos-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentação dos limites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m1" class="md-nav__link">
+    <span class="md-ellipsis">
+      M1 — Sucesso na localização de funcionalidades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m2" class="md-nav__link">
+    <span class="md-ellipsis">
+      M2 — Tratamento de entradas inválidas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m3" class="md-nav__link">
+    <span class="md-ellipsis">
+      M3 — Execuções sem falhas observáveis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m4" class="md-nav__link">
+    <span class="md-ellipsis">
+      M4 — Retomada após interrupção local da conexão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m5" class="md-nav__link">
+    <span class="md-ellipsis">
+      M5 — Bloqueio de acesso a páginas restritas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m6" class="md-nav__link">
+    <span class="md-ellipsis">
+      M6 — Consistência de informações estáveis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m7" class="md-nav__link">
+    <span class="md-ellipsis">
+      M7 — Mediana do tempo de resposta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m8" class="md-nav__link">
+    <span class="md-ellipsis">
+      M8 — Percentil 90 do tempo de resposta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registro-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registro dos resultados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="metricas-e-niveis-de-pontuacao">Métricas e níveis de pontuação<a class="headerlink" href="#metricas-e-niveis-de-pontuacao" title="Permanent link">&para;</a></h1>
+<p>Definimos oito métricas para responder às <a href="../questoes-hipoteses/">questões do GQM</a>. M1 a M6 são medidas percentuais; M7 e M8 descrevem o tempo de resposta das funcionalidades. A coleta se concentrará nos trechos acessíveis da Agência Virtual, sem modificar informações das contas utilizadas.</p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Questão</th>
+<th>Subcaracterística</th>
+<th>Unidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#m1">M1</a> — Localização na primeira tentativa</td>
+<td><a href="../questoes-hipoteses/#q1">Q1</a></td>
+<td>Apreensibilidade</td>
+<td>%</td>
+</tr>
+<tr>
+<td><a href="#m2">M2</a> — Tratamento de entradas inválidas</td>
+<td><a href="../questoes-hipoteses/#q2">Q2</a></td>
+<td>Proteção contra erros do usuário</td>
+<td>%</td>
+</tr>
+<tr>
+<td><a href="#m3">M3</a> — Execuções sem falhas</td>
+<td><a href="../questoes-hipoteses/#q3">Q3</a></td>
+<td>Maturidade</td>
+<td>%</td>
+</tr>
+<tr>
+<td><a href="#m4">M4</a> — Retomada após perda local de conexão</td>
+<td><a href="../questoes-hipoteses/#q4">Q4</a></td>
+<td>Tolerância a falhas</td>
+<td>%</td>
+</tr>
+<tr>
+<td><a href="#m5">M5</a> — Bloqueio de acesso sem sessão</td>
+<td><a href="../questoes-hipoteses/#q5">Q5</a></td>
+<td>Confidencialidade</td>
+<td>%</td>
+</tr>
+<tr>
+<td><a href="#m6">M6</a> — Consistência de dados estáveis</td>
+<td><a href="../questoes-hipoteses/#q6">Q6</a></td>
+<td>Integridade (indicador indireto)</td>
+<td>%</td>
+</tr>
+<tr>
+<td><a href="#m7">M7</a> — Mediana de resposta</td>
+<td><a href="../questoes-hipoteses/#q7">Q7</a></td>
+<td>Comportamento no tempo</td>
+<td>s</td>
+</tr>
+<tr>
+<td><a href="#m8">M8</a> — Percentil 90 de resposta</td>
+<td><a href="../questoes-hipoteses/#q8">Q8</a></td>
+<td>Comportamento no tempo</td>
+<td>s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="escalas-de-avaliacao">Escalas de avaliação<a class="headerlink" href="#escalas-de-avaliacao" title="Permanent link">&para;</a></h2>
+<p>Adotamos quatro níveis para classificar os resultados: insatisfatório, mínimo aceitável, alvo e excelente. Como M1 a M4 expressam proporções de situações bem-sucedidas, usam a mesma escala. Em M5, exigimos bloqueio em todas as verificações; M6 tem limites próprios, alinhados à hipótese H6. Para os tempos de resposta, M7 e M8, valores menores são preferíveis.</p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Insatisfatório</th>
+<th>Mínimo aceitável</th>
+<th>Alvo</th>
+<th>Excelente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M1 a M4</strong></td>
+<td>abaixo de 60%</td>
+<td>de 60% a menos de 80%</td>
+<td>de 80% a menos de 95%</td>
+<td>95% ou mais</td>
+</tr>
+<tr>
+<td><strong>M5</strong></td>
+<td>abaixo de 100%</td>
+<td>não se aplica</td>
+<td>não se aplica</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>M6</strong></td>
+<td>abaixo de 80%</td>
+<td>de 80% a menos de 95%</td>
+<td>de 95% a menos de 100%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>M7</strong></td>
+<td>acima de 5 s</td>
+<td>acima de 3 s até 5 s</td>
+<td>acima de 2 s até 3 s</td>
+<td>até 2 s</td>
+</tr>
+<tr>
+<td><strong>M8</strong></td>
+<td>acima de 8 s</td>
+<td>acima de 5 s até 8 s</td>
+<td>acima de 3 s até 5 s</td>
+<td>até 3 s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fundamentacao-dos-limites">Fundamentação dos limites<a class="headerlink" href="#fundamentacao-dos-limites" title="Permanent link">&para;</a></h3>
+<p>As faixas estabelecem níveis de comparação para a avaliação exploratória. Diferenciamos os limites conforme a natureza de cada medida e o impacto potencial de um resultado inadequado:</p>
+<table>
+<thead>
+<tr>
+<th>Métricas</th>
+<th>Critério adotado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1–M4</td>
+<td>A faixa <strong>Alvo</strong> começa em 80%, valor também previsto nas hipóteses H1–H4. Resultados abaixo de 60% indicam que a situação avaliada não foi atendida em uma parcela expressiva das tentativas; 95% ou mais caracteriza desempenho próximo da totalidade dos casos.</td>
+</tr>
+<tr>
+<td>M5–M6</td>
+<td>Para M5, qualquer exposição efetiva de dados protegidos torna o resultado insatisfatório. Na M6, o <strong>Alvo</strong> começa em 95%, em concordância com H6; a classificação não equivale a uma verificação da integridade interna do sistema.</td>
+</tr>
+<tr>
+<td>M7–M8</td>
+<td>Os limites das hipóteses são mediana de até 3 segundos e P90 de até 5 segundos por fluxo. As faixas adicionais distinguem respostas mais rápidas e situações de lentidão acentuada.</td>
+</tr>
+</tbody>
+</table>
+<p>Esses valores foram definidos para o estudo e não correspondem a limites da ISO/IEC 25010:2011 nem a metas contratuais da Neoenergia. Como ainda não dispomos de uma linha de base empírica do produto, registraremos a justificativa e a aprovação dos limites antes de iniciar os testes. Depois disso, não os modificaremos em função dos resultados obtidos. As hipóteses estão em <a href="../questoes-hipoteses/">Questões e hipóteses</a>.</p>
+<p>Para as métricas percentuais, utilizaremos <code>100 × casos adequados / casos elegíveis</code>. As exclusões ficarão registradas com justificativa e não entrarão no denominador. Caso a amostra mínima não seja alcançada, o resultado permanecerá inconclusivo. As regras de consolidação estão em <a href="../criterios-julgamento/">Critérios de julgamento</a>.</p>
+<h2 id="m1">M1 — Sucesso na localização de funcionalidades<a class="headerlink" href="#m1" title="Permanent link">&para;</a></h2>
+<p>Na M1, vamos observar se usuários pouco familiarizados com a plataforma conseguem encontrar uma função sem ajuda. A tarefa termina quando o participante chega à página indicada, sem precisar emitir documentos ou alterar informações.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Especificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questão e hipótese</td>
+<td><a href="../questoes-hipoteses/#q1">Q1/H1</a></td>
+</tr>
+<tr>
+<td>Cálculo</td>
+<td><code>M1 = 100 × S / N</code>; <strong>S</strong> = tarefas localizadas corretamente na primeira tentativa e sem ajuda; <strong>N</strong> = tarefas de localização elegíveis.</td>
+</tr>
+<tr>
+<td>Fonte</td>
+<td>Fichas de observação de tarefas, com participantes identificados por códigos (P01, P02 etc.).</td>
+</tr>
+<tr>
+<td>Coleta</td>
+<td>Convidar preferencialmente cinco voluntários sem experiência recente com o serviço. Cada um recebe instruções iguais para localizar funções como segunda via, histórico ou indicadores, sem orientação durante a tentativa.</td>
+</tr>
+<tr>
+<td>Quantidade mínima</td>
+<td>Cinco participantes e dez oportunidades de tarefa válidas.</td>
+</tr>
+<tr>
+<td>Sucesso e exclusões</td>
+<td>Sucesso significa chegar ao destino sem dica, dentro do limite previamente combinado (sugestão: três minutos). Ajuda, desistência ou caminho incorreto são insucessos. Tarefas indisponíveis ou dependentes de acesso não autorizado ficam fora do cálculo.</td>
+</tr>
+<tr>
+<td>Interpretação</td>
+<td>Quanto maior, melhor; faixas da tabela geral. H1 é sustentada com <strong>M1 ≥ 80%</strong> e amostra mínima.</td>
+</tr>
+</tbody>
+</table>
+<p>A amostra de participantes será de conveniência. Assim, os resultados da M1 descreverão as pessoas observadas, sem representar estatisticamente todos os consumidores do Distrito Federal.</p>
+<h2 id="m2">M2 — Tratamento de entradas inválidas<a class="headerlink" href="#m2" title="Permanent link">&para;</a></h2>
+<p>A M2 examina se os formulários identificam erros de preenchimento e explicam como corrigi-los. Apenas impedir a digitação de um valor não será suficiente para considerar a resposta adequada.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Especificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questão e hipótese</td>
+<td><a href="../questoes-hipoteses/#q2">Q2/H2</a></td>
+</tr>
+<tr>
+<td>Cálculo</td>
+<td><code>M2 = 100 × V / N</code>; <strong>V</strong> = tentativas inválidas tratadas adequadamente; <strong>N</strong> = tentativas inválidas elegíveis.</td>
+</tr>
+<tr>
+<td>Fonte</td>
+<td>Checklist de campos e mensagens exibidas; imagens de tela sem informações identificáveis, quando necessárias.</td>
+</tr>
+<tr>
+<td>Coleta</td>
+<td>Preparar ao menos dez preenchimentos sintaticamente inválidos em dois ou mais campos ou fluxos acessíveis. Registrar o campo, o tipo de erro, a resposta da interface e a orientação apresentada.</td>
+</tr>
+<tr>
+<td>Quantidade mínima</td>
+<td>Dez tentativas elegíveis em pelo menos dois campos ou fluxos.</td>
+</tr>
+<tr>
+<td>Sucesso e exclusões</td>
+<td>A tentativa é adequada quando o erro é impedido ou sinalizado <strong>e</strong> existe orientação compreensível. Serão excluídos campos cuja verificação dependa do envio de dados sensíveis ou da confirmação de uma operação.</td>
+</tr>
+<tr>
+<td>Interpretação</td>
+<td>Quanto maior, melhor; faixas da tabela geral. H2 é sustentada com <strong>M2 ≥ 80%</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p>Um exemplo de teste é preencher um campo numérico com menos dígitos do que o esperado. Vamos observar a resposta apresentada pela interface antes de qualquer confirmação de dados. Assim, a métrica avaliará o feedback recebido pelo usuário, e não a validação interna do sistema.</p>
+<h2 id="m3">M3 — Execuções sem falhas observáveis<a class="headerlink" href="#m3" title="Permanent link">&para;</a></h2>
+<p>Com a M3, vamos verificar a estabilidade de cada fluxo em condições regulares de uso. Anotaremos travamentos, telas em branco, erros inesperados e outras interrupções que impeçam concluir a navegação prevista.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Especificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questão e hipótese</td>
+<td><a href="../questoes-hipoteses/#q3">Q3/H3</a></td>
+</tr>
+<tr>
+<td>Cálculo</td>
+<td><code>M3(f) = 100 × E(f) / N(f)</code>, em que <strong>f</strong> identifica o fluxo; <strong>E(f)</strong> é o número de execuções sem falha nesse fluxo; <strong>N(f)</strong> é o número de execuções elegíveis do mesmo fluxo, incluindo as que apresentaram falhas.</td>
+</tr>
+<tr>
+<td>Unidade</td>
+<td>Percentual (%) por fluxo.</td>
+</tr>
+<tr>
+<td>Fonte</td>
+<td>Roteiro de navegação, fichas de execução e registro de incidentes identificados pelo fluxo.</td>
+</tr>
+<tr>
+<td>Coleta</td>
+<td>Repetir cada fluxo incluído, registrando o estado esperado, o estado alcançado e eventuais problemas. Dividir as repetições entre pelo menos dois períodos de observação, mantendo as condições descritas no protocolo.</td>
+</tr>
+<tr>
+<td>Quantidade mínima</td>
+<td>Dez execuções elegíveis <strong>para cada fluxo</strong>. Fluxos com menos de dez observações não recebem classificação individual.</td>
+</tr>
+<tr>
+<td>Sucesso e exclusões</td>
+<td>É sucesso alcançar o estado esperado sem falha inesperada. Avisos corretos de preenchimento não contam como falha de maturidade. Interrupções intencionais da M4 e problemas comprovadamente locais são registrados separadamente.</td>
+</tr>
+<tr>
+<td>Interpretação</td>
+<td>Aplicar a escala percentual <strong>a cada fluxo</strong>, sem misturar execuções de funcionalidades diferentes. A hipótese H3 só é sustentada quando todos os fluxos elegíveis com coleta prevista atingirem M3(f) ≥ 80% e houver amostra mínima por fluxo. Para o julgamento de G2, usar a pior classificação entre esses fluxos.</td>
+</tr>
+</tbody>
+</table>
+<p>Apresentaremos os resultados da M3 por fluxo, com número de execuções, sucessos, percentual e classificação. Se um dos fluxos previstos ficar abaixo da amostra mínima, registraremos o impedimento e manteremos seus dados separados, sem atribuir zero ou calcular uma média que esconda diferenças entre funcionalidades.</p>
+<h2 id="m4">M4 — Retomada após interrupção local da conexão<a class="headerlink" href="#m4" title="Permanent link">&para;</a></h2>
+<p>Na M4, verificaremos se a navegação pode ser retomada após uma interrupção breve da conexão do dispositivo de teste. Esse cenário será aplicado apenas em consultas de leitura.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Especificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questão e hipótese</td>
+<td><a href="../questoes-hipoteses/#q4">Q4/H4</a></td>
+</tr>
+<tr>
+<td>Cálculo</td>
+<td><code>M4 = 100 × R / N</code>; <strong>R</strong> = tentativas em que a navegação foi retomada conforme o critério; <strong>N</strong> = interrupções locais elegíveis.</td>
+</tr>
+<tr>
+<td>Fonte</td>
+<td>Registro da etapa anterior, duração da desconexão, ação de recuperação e estado alcançado.</td>
+</tr>
+<tr>
+<td>Coleta</td>
+<td>Interromper a rede local por aproximadamente cinco segundos, restabelecê-la e observar a navegação por até trinta segundos. Admite-se uma ação manual de tentar novamente, desde que esteja disponível na própria interface.</td>
+</tr>
+<tr>
+<td>Quantidade mínima</td>
+<td>Cinco tentativas seguras e independentes.</td>
+</tr>
+<tr>
+<td>Sucesso e exclusões</td>
+<td>A retomada é adequada se o fluxo continuar ou retornar à mesma etapa com uma ação, sem reiniciar a jornada. Não serão interrompidos envios de dados, alterações de conta ou processos de confirmação.</td>
+</tr>
+<tr>
+<td>Interpretação</td>
+<td>Quanto maior, melhor; faixas da tabela geral. H4 é sustentada com <strong>M4 ≥ 80%</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p>Esse resultado também depende do navegador e da rede local; portanto, permitirá avaliar a retomada da navegação no ambiente de teste, mas não a recuperação dos servidores diante de falhas internas.</p>
+<h2 id="m5">M5 — Bloqueio de acesso a páginas restritas<a class="headerlink" href="#m5" title="Permanent link">&para;</a></h2>
+<p>A M5 verifica se páginas restritas continuam protegidas após o encerramento da sessão. Para isso, usaremos somente áreas acessadas previamente por uma conta própria ou autorizada.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Especificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questão e hipótese</td>
+<td><a href="../questoes-hipoteses/#q5">Q5/H5</a></td>
+</tr>
+<tr>
+<td>Cálculo</td>
+<td><code>M5 = 100 × B / N</code>; <strong>B</strong> = verificações sem acesso utilizável a informação protegida; <strong>N</strong> = verificações elegíveis realizadas sem sessão ativa.</td>
+</tr>
+<tr>
+<td>Fonte</td>
+<td>Registro do tipo de página, estado da autenticação e resultado observado.</td>
+</tr>
+<tr>
+<td>Coleta</td>
+<td>Abrir normalmente uma página restrita, encerrar a sessão e verificar o comportamento ao tentar voltar à mesma tela ou reabri-la em uma sessão sem autenticação. Distinguir imagem histórica do navegador de acesso ativo aos dados.</td>
+</tr>
+<tr>
+<td>Quantidade mínima</td>
+<td>Cinco verificações, preferencialmente distribuídas por pelo menos duas páginas restritas.</td>
+</tr>
+<tr>
+<td>Sucesso e exclusões</td>
+<td>O resultado é adequado quando a informação protegida não fica utilizável sem autenticação. Documentos já salvos localmente não representam acesso ao servidor. Não serão manipulados identificadores ou endereços de terceiros.</td>
+</tr>
+<tr>
+<td>Interpretação</td>
+<td>H5 é sustentada apenas com <strong>M5 = 100%</strong> e quantidade mínima de verificações. Com M5 &lt; 100%, o resultado é <strong>Insatisfatório</strong>; com 100%, <strong>Excelente</strong>. Não há classificação intermediária para esta métrica.</td>
+</tr>
+</tbody>
+</table>
+<p>Se encontrarmos dados protegidos acessíveis sem autenticação, registraremos a ocorrência como crítica e encerraremos esse cenário. Na análise, distinguiremos conteúdo antigo mantido pelo navegador de informações que continuem acessíveis no sistema.</p>
+<h2 id="m6">M6 — Consistência de informações estáveis<a class="headerlink" href="#m6" title="Permanent link">&para;</a></h2>
+<p>Na M6, compararemos informações que deveriam permanecer estáveis entre duas consultas próximas. Podemos utilizar, por exemplo, a competência ou o identificador de uma mesma fatura já emitida, caso esses campos estejam disponíveis.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Especificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questão e hipótese</td>
+<td><a href="../questoes-hipoteses/#q6">Q6/H6</a></td>
+</tr>
+<tr>
+<td>Cálculo</td>
+<td><code>M6 = 100 × C / N</code>; <strong>C</strong> = comparações consistentes; <strong>N</strong> = comparações elegíveis da mesma referência.</td>
+</tr>
+<tr>
+<td>Fonte</td>
+<td>Checklist de campos comparados, sem transcrever valores pessoais ou financeiros.</td>
+</tr>
+<tr>
+<td>Coleta</td>
+<td>Selecionar registros estáveis, consultá-los duas vezes na mesma sessão e assinalar “igual”, “divergente” ou “não comparável”. Antes de classificar uma divergência como falha, verificar se houve atualização legítima.</td>
+</tr>
+<tr>
+<td>Quantidade mínima</td>
+<td>Cinco comparações válidas.</td>
+</tr>
+<tr>
+<td>Sucesso e exclusões</td>
+<td>Sucesso corresponde a valores iguais para a mesma referência, sem atualização no intervalo. Campos dinâmicos e referências incomparáveis são excluídos com justificativa.</td>
+</tr>
+<tr>
+<td>Interpretação</td>
+<td>Quanto maior, melhor; na escala específica de M6, o nível <strong>Alvo</strong> começa em 95%, limite também exigido por H6.</td>
+</tr>
+</tbody>
+</table>
+<p>A consistência observada na M6 diz respeito à apresentação das informações. Mesmo que os campos coincidam em todas as consultas, não poderemos concluir que o armazenamento esteja protegido contra alterações indevidas.</p>
+<h2 id="m7">M7 — Mediana do tempo de resposta<a class="headerlink" href="#m7" title="Permanent link">&para;</a></h2>
+<p>A M7 representa o tempo típico entre o comando do usuário e a disponibilidade do conteúdo principal. Calcularemos a mediana de cada fluxo separadamente, para não diluir a lentidão de uma funcionalidade nos resultados de outras.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Especificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questão e hipótese</td>
+<td><a href="../questoes-hipoteses/#q7">Q7/H7</a></td>
+</tr>
+<tr>
+<td>Cálculo</td>
+<td>Ordenar os tempos <code>t1, ..., tn</code>. Com <strong>n</strong> ímpar, usar <code>t[(n+1)/2]</code>; com <strong>n</strong> par, calcular <code>(t[n/2] + t[n/2+1]) / 2</code>.</td>
+</tr>
+<tr>
+<td>Unidade e fonte</td>
+<td>Segundos; gravação local com marcação temporal, cronômetro padronizado ou método equivalente documentado.</td>
+</tr>
+<tr>
+<td>Coleta</td>
+<td>Definir, por fluxo, o clique inicial e o momento em que a interface principal pode ser utilizada. Fazer uma passagem de aquecimento, não contabilizada, e registrar as repetições nas mesmas condições.</td>
+</tr>
+<tr>
+<td>Quantidade mínima</td>
+<td>Dez durações válidas por fluxo, preferencialmente em dois períodos.</td>
+</tr>
+<tr>
+<td>Tratamento das falhas</td>
+<td>Se a tela não ficar utilizável em trinta segundos, registrar timeout separadamente; não atribuir automaticamente duração de trinta segundos à mediana.</td>
+</tr>
+<tr>
+<td>Interpretação</td>
+<td>Quanto menor, melhor; escala específica M7. <strong>H7 exige mediana ≤ 3 s em todos os fluxos avaliados</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p>No registro de M7, incluiremos rede, cache, dispositivo e navegador. Com isso, poderemos contextualizar os tempos observados, sem estender os resultados ao desempenho do serviço sob alta carga.</p>
+<h2 id="m8">M8 — Percentil 90 do tempo de resposta<a class="headerlink" href="#m8" title="Permanent link">&para;</a></h2>
+<p>A M8 complementa a mediana ao observar as respostas mais demoradas. Seu cálculo utilizará os mesmos tempos válidos registrados para M7.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Especificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questão e hipótese</td>
+<td><a href="../questoes-hipoteses/#q8">Q8/H8</a></td>
+</tr>
+<tr>
+<td>Cálculo</td>
+<td>Ordenar as durações em ordem crescente e selecionar o posto <code>ceil(0,90 × n)</code> (método do posto mais próximo). Com dez observações, o P90 será a nona.</td>
+</tr>
+<tr>
+<td>Unidade e fonte</td>
+<td>Segundos; registros brutos das medições utilizadas na M7.</td>
+</tr>
+<tr>
+<td>Coleta</td>
+<td>Calcular o percentil para cada fluxo, guardando as durações ordenadas e o posto empregado. Não juntar medições de telas ou condições diferentes.</td>
+</tr>
+<tr>
+<td>Quantidade mínima</td>
+<td>Dez durações válidas por fluxo.</td>
+</tr>
+<tr>
+<td>Tratamento das falhas</td>
+<td>Tempos de operações que não terminaram serão reportados como timeouts, fora da lista de durações concluídas.</td>
+</tr>
+<tr>
+<td>Interpretação</td>
+<td>Quanto menor, melhor; escala específica M8. <strong>H8 exige P90 ≤ 5 s em todos os fluxos avaliados</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p>Como teremos poucas observações por fluxo, o percentil 90 pode variar com um único tempo mais alto. Por isso, analisaremos M8 junto da mediana e da quantidade de timeouts.</p>
+<h2 id="registro-dos-resultados">Registro dos resultados<a class="headerlink" href="#registro-dos-resultados" title="Permanent link">&para;</a></h2>
+<p>Guardaremos os valores necessários para refazer cada cálculo: contagens de casos adequados e elegíveis ou lista de durações, além de funcionalidade, data, ambiente, exclusões e evidências. Quando não houver observações suficientes, registraremos <strong>inconclusivo</strong>, sem atribuir nota zero. Os detalhes da coleta estão no <a href="../protocolo-coleta/">protocolo</a>, e a consolidação dos resultados, nos <a href="../criterios-julgamento/">critérios de julgamento</a>.</p>
+<h2 id="historico-de-versoes">Histórico de Versões<a class="headerlink" href="#historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição da Alteração</th>
+<th>Autor(a)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>14/10/2026</td>
+<td>Criação do documento das métricas</td>
+<td>Beatriz Figueiredo dos Santos</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>17/10/2026</td>
+<td>Reestruturação do documento</td>
+<td>Arthur de Lima Sobreira</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>20/10/2026</td>
+<td>Revisão e versionamento</td>
+<td>Henrique Martins Alencar</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
