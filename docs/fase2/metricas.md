@@ -1,34 +1,44 @@
----
-hide:
-  - toc
----
-
 # Métricas e níveis de pontuação
 
-Definimos oito métricas para responder às [questões do GQM](questoes-hipoteses.md). M1 a M6 são medidas percentuais; M7 e M8 descrevem o tempo de resposta das funcionalidades. A coleta se concentrará nos trechos acessíveis da Agência Virtual, sem modificar informações das contas utilizadas.
+Definimos 14 métricas para responder às [questões do GQM](questoes-hipoteses.md). M1-M6 e M9–M13 são medidas percentuais; M7 e M8 descrevem o tempo de resposta das funcionalidades; M14 é uma razão entre tempos. A coleta se concentrará nos trechos acessíveis da Agência Virtual, sem modificar informações das contas utilizadas.
 
-| Métrica | Questão | Subcaracterística | Unidade |
-|---|---|---|---|
-| [M1](#m1) — Localização na primeira tentativa | [Q1](questoes-hipoteses.md#q1) | Apreensibilidade | % |
-| [M2](#m2) — Tratamento de entradas inválidas | [Q2](questoes-hipoteses.md#q2) | Proteção contra erros do usuário | % |
-| [M3](#m3) — Execuções sem falhas | [Q3](questoes-hipoteses.md#q3) | Maturidade | % |
-| [M4](#m4) — Retomada após perda local de conexão | [Q4](questoes-hipoteses.md#q4) | Tolerância a falhas | % |
-| [M5](#m5) — Bloqueio de acesso sem sessão | [Q5](questoes-hipoteses.md#q5) | Confidencialidade | % |
-| [M6](#m6) — Consistência de dados estáveis | [Q6](questoes-hipoteses.md#q6) | Integridade (indicador indireto) | % |
-| [M7](#m7) — Mediana de resposta | [Q7](questoes-hipoteses.md#q7) | Comportamento no tempo | s |
-| [M8](#m8) — Percentil 90 de resposta | [Q8](questoes-hipoteses.md#q8) | Comportamento no tempo | s |
+**Tabela 1 —** Métricas, subcaracterísticas e funcionalidades
+ 
+| Métrica | Questão | Subcaracterística | Funcionalidades | Unidade |
+|---|---|---|---|---|
+| [M1](#m1) — Localização na primeira tentativa | [Q1](questoes-hipoteses.md#q1) | Apreensibilidade | 2ª via, histórico de consumo | % |
+| [M2](#m2) — Tratamento de entradas inválidas | [Q2](questoes-hipoteses.md#q2) | Proteção contra erros | Login/cadastro | % |
+| [M3](#m3) — Execuções sem falhas | [Q3](questoes-hipoteses.md#q3) | Maturidade | Histórico de consumo | % por fluxo |
+| [M4](#m4) — Retomada e recuperação após interrupção local | [Q4](questoes-hipoteses.md#q4) | Tolerância a falhas / Recuperabilidade | Histórico de consumo | % |
+| [M5](#m5) — Bloqueio de acesso sem sessão | [Q5](questoes-hipoteses.md#q5) | Confidencialidade | 2ª via, histórico de consumo | % |
+| [M6](#m6) — Consistência de dados estáveis | [Q6](questoes-hipoteses.md#q6) | Integridade / Não repúdio (indicador indireto) | Nada Consta | % |
+| [M7](#m7) — Mediana do tempo de resposta | [Q7](questoes-hipoteses.md#q7) | Comportamento temporal | Login/cadastro, indicadores de continuidade | s por fluxo |
+| [M8](#m8) — Percentil 90 do tempo de resposta | [Q8](questoes-hipoteses.md#q8) | Comportamento temporal | Login/cadastro, indicadores de continuidade | s por fluxo |
+| [M9](#m9) — Reconhecimento da finalidade da tela | [Q9](questoes-hipoteses.md#q9) | Reconhecimento da adequação | Nada Consta, indicadores de continuidade | % |
+| [M10](#m10) — Tarefas de operação concluídas | [Q10](questoes-hipoteses.md#q10) | Operabilidade | 2ª via, histórico de consumo | % |
+| [M11](#m11) — Disponibilidade nas verificações agendadas | [Q11](questoes-hipoteses.md#q11) | Disponibilidade | 2ª via, Nada Consta | % por função |
+| [M12](#m12) — Itens de autenticidade e responsabilização atendidos | [Q12](questoes-hipoteses.md#q12) | Autenticidade e Responsabilização | Login/cadastro | % |
+| [M13](#m13) — Documentos com autenticidade verificável | [Q13](questoes-hipoteses.md#q13) | Integridade / Não repúdio | Nada Consta | % |
+| [M14](#m14) — Razão de tempo entre pico e fora de pico | [Q14](questoes-hipoteses.md#q14) | Capacidade | 2ª via (PDF), histórico de consumo (gráfico) | razão por fluxo |
+ 
+_Fonte: Equipe Radia Perlman, 2026._
 
 ## Escalas de avaliação
 
 Adotamos quatro níveis para classificar os resultados: insatisfatório, mínimo aceitável, alvo e excelente. Como M1 a M4 expressam proporções de situações bem-sucedidas, usam a mesma escala. Em M5, exigimos bloqueio em todas as verificações; M6 tem limites próprios, alinhados à hipótese H6. Para os tempos de resposta, M7 e M8, valores menores são preferíveis.
 
+**Tabela 2 —** Escalas de pontuação das métricas
+
 | Métrica | Insatisfatório | Mínimo aceitável | Alvo | Excelente |
 |---|---|---|---|---|
-| **M1 a M4** | abaixo de 60% | de 60% a menos de 80% | de 80% a menos de 95% | 95% ou mais |
-| **M5** | abaixo de 100% | não se aplica | não se aplica | 100% |
+| **M1, M2, M3, M4, M9, M10, M12** | abaixo de 60% | de 60% a menos de 80% | de 80% a menos de 95% | 95% ou mais |
+| **M5, M13** | abaixo de 100% | não se aplica | não se aplica | 100% |
 | **M6** | abaixo de 80% | de 80% a menos de 95% | de 95% a menos de 100% | 100% |
 | **M7** | acima de 5 s | acima de 3 s até 5 s | acima de 2 s até 3 s | até 2 s |
 | **M8** | acima de 8 s | acima de 5 s até 8 s | acima de 3 s até 5 s | até 3 s |
+| **M14** | acima de 2,0 | acima de 1,5 até 2,0 | acima de 1,2 até 1,5 | até 1,2 |
+
+_Fonte: Equipe Radia Perlman, 2026._
 
 ### Fundamentação dos limites
 
@@ -36,9 +46,13 @@ As faixas estabelecem níveis de comparação para a avaliação exploratória. 
 
 | Métricas | Critério adotado |
 |---|---|
-| M1–M4 | A faixa **Alvo** começa em 80%, valor também previsto nas hipóteses H1–H4. Resultados abaixo de 60% indicam que a situação avaliada não foi atendida em uma parcela expressiva das tentativas; 95% ou mais caracteriza desempenho próximo da totalidade dos casos. |
-| M5–M6 | Para M5, qualquer exposição efetiva de dados protegidos torna o resultado insatisfatório. Na M6, o **Alvo** começa em 95%, em concordância com H6; a classificação não equivale a uma verificação da integridade interna do sistema. |
-| M7–M8 | Os limites das hipóteses são mediana de até 3 segundos e P90 de até 5 segundos por fluxo. As faixas adicionais distinguem respostas mais rápidas e situações de lentidão acentuada. |
+| M1–M4, M9, M10, M12 | A faixa **Alvo** começa em 80%, valor também previsto nas hipóteses H1–H4. Resultados abaixo de 60% indicam que a situação avaliada não foi atendida em uma parcela expressiva das tentativas; 95% ou mais caracteriza desempenho próximo da totalidade dos casos. |
+| M5, M13 | Qualquer exposição de dados protegidos (M5) ou documento sem autenticidade verificável (M13) torna o resultado insatisfatório. |
+| M6, M11 | O **Alvo** começa em 95%, valor de H6 e H11. As quantidades mínimas (20 comparações e 21 verificações) foram definidas para que essa faixa seja alcançável. |
+| M7, M8 | Os limites das hipóteses são mediana de até 3 segundos e P90 de até 5 segundos por fluxo. As faixas adicionais distinguem respostas mais rápidas e situações de lentidão acentuada. |
+| M14 | O **Alvo** admite degradação de até 50% no pico (razão 1,5); até 20% (1,2) é considerado excelente; acima do dobro (2,0), insatisfatório. |
+ 
+_Fonte: Equipe Radia Perlman, 2026._
 
 Esses valores foram definidos para o estudo e não correspondem a limites da ISO/IEC 25010:2011 nem a metas contratuais da Neoenergia. Como ainda não dispomos de uma linha de base empírica do produto, registraremos a justificativa e a aprovação dos limites antes de iniciar os testes. Depois disso, não os modificaremos em função dos resultados obtidos. As hipóteses estão em [Questões e hipóteses](questoes-hipoteses.md).
 
@@ -173,6 +187,91 @@ A M8 complementa a mediana ao observar as respostas mais demoradas. Seu cálculo
 
 Como teremos poucas observações por fluxo, o percentil 90 pode variar com um único tempo mais alto. Por isso, analisaremos M8 junto da mediana e da quantidade de timeouts.
 
+## M9 — Reconhecimento da finalidade da tela { #m9 }
+ 
+A M9 verifica se os usuários reconhecem de imediato que as telas do Nada Consta e dos indicadores de continuidade são apropriadas para suas necessidades de informação.
+ 
+| Campo | Especificação |
+|---|---|
+| Questão e hipótese | [Q9/H9](questoes-hipoteses.md#q9) |
+| Cálculo | `M9 = 100 × K / N`; **K** = telas cuja finalidade foi reconhecida corretamente; **N** = apresentações de tela elegíveis. |
+| Fonte | Fichas de observação com a resposta de cada participante. |
+| Coleta | O avaliador abre a tela e o participante a observa por até 30 segundos, sem interagir. Em seguida, responde a uma pergunta padronizada de múltipla escolha ("Para que serve esta tela?"), com quatro alternativas definidas antes da coleta. |
+| Quantidade mínima | Cinco participantes e dez apresentações (duas por participante). |
+| Sucesso e exclusões | Sucesso é escolher a alternativa correta sem ajuda. Apresentações em que a tela não carregou corretamente ficam fora do cálculo. |
+| Interpretação | Quanto maior, melhor; escala da Tabela 2. H9 é sustentada com **M9 ≥ 80%**. |
+ 
+## M10 — Tarefas de operação concluídas { #m10 }
+ 
+A M10 verifica se os usuários conseguem operar a emissão de 2ª via e o histórico de consumo até o resultado esperado.
+ 
+| Campo | Especificação |
+|---|---|
+| Questão e hipótese | [Q10/H10](questoes-hipoteses.md#q10) |
+| Cálculo | `M10 = 100 × O / N`; **O** = tarefas concluídas sem erro e sem ajuda; **N** = tarefas de operação elegíveis. |
+| Fonte | Fichas de observação de tarefas. |
+| Coleta | Cada tarefa começa na tela da função, mesmo que o participante tenha precisado de ajuda para localizá-la na M1. As instruções são iguais para todos. |
+| Quantidade mínima | Cinco participantes e dez tarefas elegíveis (duas por participante). |
+| Sucesso e exclusões | Sucesso significa obter o resultado indicado em até **cinco minutos**, sem ajuda e sem erro de operação que obrigue a recomeçar a tarefa. Tarefas interrompidas por falha do sistema ficam fora do cálculo. |
+| Interpretação | Quanto maior, melhor; escala da Tabela 2. H10 é sustentada com **M10 ≥ 80%**. |
+ 
+## M11 — Disponibilidade nas verificações agendadas { #m11 }
+ 
+A M11 estima a proporção de tempo em que a emissão de 2ª via e o Nada Consta permanecem operacionais, por meio de verificações distribuídas em dias e horários diferentes.
+ 
+| Campo | Especificação |
+|---|---|
+| Questão e hipótese | [Q11/H11](questoes-hipoteses.md#q11) |
+| Cálculo | `M11(f) = 100 × D(f) / N(f)`, em que **f** identifica a função; **D(f)** = verificações com a função operacional; **N(f)** = verificações elegíveis da função. |
+| Fonte | Planilha de verificações com data, horário, função, resultado e evidência. |
+| Coleta | Três verificações por dia (manhã, tarde e noite), durante sete dias consecutivos. Em cada verificação, autenticar-se e acionar a função: a 2ª via é considerada operacional quando a lista de faturas é exibida; o Nada Consta, quando a tela de emissão fica pronta para uso. |
+| Quantidade mínima | Vinte e uma verificações por função. |
+| Sucesso e exclusões | Sucesso é a função ficar operacional em até 30 segundos. Falhas comprovadamente locais (por exemplo, outros sites também inacessíveis) são excluídas. Manutenções anunciadas pela concessionária contam como indisponibilidade, com registro do aviso. |
+| Interpretação | Quanto maior, melhor; escala específica de M11, aplicada **a cada função**. H11 é sustentada quando **M11(f) ≥ 95% nas duas funções**. Para o julgamento de G2, usar a pior classificação entre elas. |
+ 
+## M12 — Itens de autenticidade e responsabilização atendidos { #m12 }
+ 
+A M12 verifica, por meio de itens observáveis pelo usuário comum, se a identidade alegada pode ser comprovada e se as ações são associadas ao titular.
+ 
+| Campo | Especificação |
+|---|---|
+| Questão e hipótese | [Q12/H12](questoes-hipoteses.md#q12) |
+| Cálculo | `M12 = 100 × A / N`; **A** = itens atendidos; **N** = itens elegíveis. |
+| Itens | **A1** — credencial incorreta é rejeitada; **A2** — a mensagem de falha não indica qual credencial está incorreta; **A3** — a sessão expira após inatividade (observação de até 60 minutos); **A4** — o cadastro exige comprovação de vínculo ou identidade (por exemplo, dados do titular ou confirmação por e-mail ou SMS), observada sem concluir o cadastro; **R1** — o sistema exibe ou notifica o registro de acesso (por exemplo, último acesso ou aviso de novo login); **R2** — as emissões geram identificador ou protocolo associado ao titular. |
+| Fonte | Checklist dos itens com evidência de cada verificação. |
+| Coleta | Verificar cada item duas vezes, em dias diferentes, com a conta autorizada. Em A1 e A2, usar no máximo uma tentativa incorreta por verificação, para não bloquear a conta. |
+| Quantidade mínima | Cinco dos seis itens elegíveis. |
+| Sucesso e exclusões | O item é atendido quando as duas verificações forem positivas. Se as verificações divergirem, o item é inconclusivo e sai do denominador, com justificativa. Não serão feitos testes de força bruta nem uso de contas de terceiros. |
+| Interpretação | Quanto maior, melhor; escala da Tabela 2. H12 é sustentada com **M12 ≥ 80%**. |
+ 
+## M13 — Documentos com autenticidade verificável { #m13 }
+ 
+A M13 avalia os mecanismos que previnem a modificação não autorizada do relatório de Nada Consta e comprovam sua emissão, como prevê a Fase 1.
+ 
+| Campo | Especificação |
+|---|---|
+| Questão e hipótese | [Q13/H13](questoes-hipoteses.md#q13) |
+| Cálculo | `M13 = 100 × W / N`; **W** = documentos com autenticidade verificada; **N** = documentos emitidos elegíveis. |
+| Fonte | Registro de cada emissão, do mecanismo encontrado e do resultado da verificação, sem publicar o documento. |
+| Coleta | Emitir o relatório com a conta autorizada (as emissões da M6 podem ser reutilizadas). Para cada documento, verificar **(a)** se possui mecanismo de comprovação (código de autenticação, QR code ou assinatura digital) e **(b)** se o mecanismo, usado no canal oficial indicado no documento ou no leitor de PDF, confirma a autenticidade e os mesmos dados. |
+| Quantidade mínima | Cinco documentos emitidos. |
+| Sucesso e exclusões | O documento é adequado quando atende (a) **e** (b). Não serão submetidos documentos alterados aos canais de validação. Se a conta não permitir a emissão (por exemplo, por existir débito), o resultado é inconclusivo. |
+| Interpretação | Julgamento binário: **M13 = 100%** sustenta H13 e recebe **Excelente**; **M13 < 100%** recebe **Insatisfatório**. |
+ 
+## M14 — Razão de tempo entre pico e fora de pico { #m14 }
+ 
+A M14 avalia como a geração de PDF e a renderização de gráficos se comportam nos períodos de maior demanda natural, sem geração de carga artificial.
+ 
+| Campo | Especificação |
+|---|---|
+| Questão e hipótese | [Q14/H14](questoes-hipoteses.md#q14) |
+| Cálculo | `M14(f) = mediana no pico / mediana fora do pico`, para cada fluxo **f**. As medianas são calculadas como na M7, incluindo a regra de timeouts. |
+| Fonte | Registros brutos de tempo, identificados por fluxo e janela. |
+| Coleta | As janelas de pico (por exemplo, dias úteis em horário comercial, próximos ao vencimento das faturas) e fora de pico (por exemplo, fim da noite) serão definidas e justificadas no Plano de Avaliação (Fase 3), antes da coleta. Usar o mesmo navegador, dispositivo e conexão nas duas janelas. |
+| Quantidade mínima | Dez execuções válidas por fluxo em cada janela. |
+| Sucesso e exclusões | As medianas absolutas de cada janela também serão informadas. Se a mediana no pico for um timeout, a razão não é calculada e o fluxo é classificado como **Insatisfatório**. |
+| Interpretação | Quanto menor, melhor; escala específica de M14, aplicada **a cada fluxo**. H14 é sustentada quando **M14(f) ≤ 1,5 em C-F1 e C-F2**. Para o julgamento de G4, usar a pior classificação entre os fluxos. |
+
 ## Registro dos resultados
 
 Guardaremos os valores necessários para refazer cada cálculo: contagens de casos adequados e elegíveis ou lista de durações, além de funcionalidade, data, ambiente, exclusões e evidências. Quando não houver observações suficientes, registraremos **inconclusivo**, sem atribuir nota zero. Os detalhes da coleta estão no [protocolo](protocolo-coleta.md), e a consolidação dos resultados, nos [critérios de julgamento](criterios-julgamento.md).
@@ -184,3 +283,4 @@ Guardaremos os valores necessários para refazer cada cálculo: contagens de cas
 | 1.0 | 14/10/2026 | Criação do documento das métricas | Beatriz Figueiredo dos Santos |
 | 1.1 | 17/10/2026 | Reestruturação do documento | Arthur de Lima Sobreira |
 | 1.2 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |
+| 1.3 | 13/11/2026 | Inclusão de M9–M14| Beatriz Figueiredo dos Santos |
