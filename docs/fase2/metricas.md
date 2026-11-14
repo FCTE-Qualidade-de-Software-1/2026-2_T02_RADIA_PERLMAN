@@ -25,7 +25,7 @@ _Fonte: Equipe Radia Perlman, 2026._
 
 ## Escalas de avaliação
 
-Adotamos quatro níveis para classificar os resultados: insatisfatório, mínimo aceitável, alvo e excelente. Como M1 a M4 expressam proporções de situações bem-sucedidas, usam a mesma escala. Em M5, exigimos bloqueio em todas as verificações; M6 tem limites próprios, alinhados à hipótese H6. Para os tempos de resposta, M7 e M8, valores menores são preferíveis.
+Adotamos quatro níveis para classificar os resultados: insatisfatório, mínimo aceitável, alvo e excelente. Como M1 a M4, M9, M10 e M12 expressam proporções de situações bem-sucedidas, usam a mesma escala. Em M5 e M13, exigimos 100% das verificações; M6 e M11 têm limites próprios, alinhados às hipóteses H6 e H11. Para os tempos de resposta, M7 e M8, e para a razão entre pico e fora de pico, M14, valores menores são preferíveis.
 
 **Tabela 2 —** Escalas de pontuação das métricas
 
@@ -33,7 +33,7 @@ Adotamos quatro níveis para classificar os resultados: insatisfatório, mínimo
 |---|---|---|---|---|
 | **M1, M2, M3, M4, M9, M10, M12** | abaixo de 60% | de 60% a menos de 80% | de 80% a menos de 95% | 95% ou mais |
 | **M5, M13** | abaixo de 100% | não se aplica | não se aplica | 100% |
-| **M6** | abaixo de 80% | de 80% a menos de 95% | de 95% a menos de 100% | 100% |
+| **M6, M11** | abaixo de 80% | de 80% a menos de 95% | de 95% a menos de 100% | 100% |
 | **M7** | acima de 5 s | acima de 3 s até 5 s | acima de 2 s até 3 s | até 2 s |
 | **M8** | acima de 8 s | acima de 5 s até 8 s | acima de 3 s até 5 s | até 3 s |
 | **M14** | acima de 2,0 | acima de 1,5 até 2,0 | acima de 1,2 até 1,5 | até 1,2 |
@@ -46,7 +46,7 @@ As faixas estabelecem níveis de comparação para a avaliação exploratória. 
 
 | Métricas | Critério adotado |
 |---|---|
-| M1–M4, M9, M10, M12 | A faixa **Alvo** começa em 80%, valor também previsto nas hipóteses H1–H4. Resultados abaixo de 60% indicam que a situação avaliada não foi atendida em uma parcela expressiva das tentativas; 95% ou mais caracteriza desempenho próximo da totalidade dos casos. |
+| M1–M4, M9, M10, M12 | A faixa **Alvo** começa em 80%, valor também previsto nas hipóteses H1–H4, H9, H10 e H12. Resultados abaixo de 60% indicam que a situação avaliada não foi atendida em uma parcela expressiva das tentativas; 95% ou mais caracteriza desempenho próximo da totalidade dos casos. |
 | M5, M13 | Qualquer exposição de dados protegidos (M5) ou documento sem autenticidade verificável (M13) torna o resultado insatisfatório. |
 | M6, M11 | O **Alvo** começa em 95%, valor de H6 e H11. As quantidades mínimas (20 comparações e 21 verificações) foram definidas para que essa faixa seja alcançável. |
 | M7, M8 | Os limites das hipóteses são mediana de até 3 segundos e P90 de até 5 segundos por fluxo. As faixas adicionais distinguem respostas mais rápidas e situações de lentidão acentuada. |
@@ -227,7 +227,7 @@ A M11 estima a proporção de tempo em que a emissão de 2ª via e o Nada Consta
 | Coleta | Três verificações por dia (manhã, tarde e noite), durante sete dias consecutivos. Em cada verificação, autenticar-se e acionar a função: a 2ª via é considerada operacional quando a lista de faturas é exibida; o Nada Consta, quando a tela de emissão fica pronta para uso. |
 | Quantidade mínima | Vinte e uma verificações por função. |
 | Sucesso e exclusões | Sucesso é a função ficar operacional em até 30 segundos. Falhas comprovadamente locais (por exemplo, outros sites também inacessíveis) são excluídas. Manutenções anunciadas pela concessionária contam como indisponibilidade, com registro do aviso. |
-| Interpretação | Quanto maior, melhor; escala específica de M11, aplicada **a cada função**. H11 é sustentada quando **M11(f) ≥ 95% nas duas funções**. Para o julgamento de G2, usar a pior classificação entre elas. |
+| Interpretação | Quanto maior, melhor; escala de M6 e M11 na Tabela 2, aplicada **a cada função**. H11 é sustentada quando **M11(f) ≥ 95% nas duas funções**. Para o julgamento de G2, usar a pior classificação entre elas. |
  
 ## M12 — Itens de autenticidade e responsabilização atendidos { #m12 }
  

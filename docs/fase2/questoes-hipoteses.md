@@ -1,6 +1,6 @@
 # Questões e hipóteses
 
-Para detalhar os quatro objetivos GQM, formulamos oito questões de avaliação. Cada uma possui uma hipótese com o resultado esperado, definida antes da coleta. Os limites numéricos são critérios adotados para este estudo e precisam ter sua justificativa registrada; não foram estabelecidos pela ISO/IEC 25010 nem pela Neoenergia.
+Para detalhar os quatro objetivos GQM, formulamos quatorze questões de avaliação. Cada uma possui uma hipótese com o resultado esperado, definida antes da coleta. Os limites numéricos são critérios adotados para este estudo e precisam ter sua justificativa registrada; não foram estabelecidos pela ISO/IEC 25010 nem pela Neoenergia.
 
 
 **Tabela 1 —** Questões, hipóteses e métricas por objetivo
@@ -33,7 +33,7 @@ Para analisar a apreensibilidade, acompanharemos tarefas de localização de ser
 
 ### Q2 — Os formulários ajudam a corrigir entradas inválidas? { #q2 }
 
-Nos formulários acessíveis, vamos observar como a interface responde a entradas inválidas. Para considerar a resposta adequada, não basta impedir o avanço: é necessário que o usuário receba uma orientação compreensível sobre o erro. A frequência desses casos será expressa pela [M2](metricas.md#m2).
+Nos formulários de login e de cadastro, vamos observar como a interface responde a entradas inválidas. Para considerar a resposta adequada, não basta impedir o avanço: é necessário que o usuário receba uma orientação compreensível sobre o erro. A frequência desses casos será expressa pela [M2](metricas.md#m2).
 
 ### Q9 — Os usuários reconhecem de imediato se a tela atende à sua necessidade de informação? { #q9 }
  
@@ -47,7 +47,7 @@ Para analisar a operabilidade, os participantes executarão a emissão de 2ª vi
 
 ### Q3 — Com que frequência os fluxos são concluídos sem falhas visíveis? { #q3 }
 
-Vamos repetir os fluxos previstos e registrar travamentos, telas em branco ou erros inesperados. Calcularemos a [M3](metricas.md#m3) para cada fluxo; H3 exige pelo menos 80% de execuções sem falhas em todos aqueles que tiverem dados suficientes. A apresentação individual dos resultados permitirá identificar em quais funcionalidades ocorreram problemas.
+Vamos repetir os fluxos previstos do histórico de consumo e registrar travamentos, telas em branco ou erros inesperados. Calcularemos a [M3](metricas.md#m3) para cada fluxo; H3 exige pelo menos 80% de execuções sem falhas em todos aqueles que tiverem dados suficientes. A apresentação individual dos resultados permitirá identificar em quais fluxos ocorreram problemas.
 
 ### Q4 — É possível continuar a navegação após uma perda breve de conexão? { #q4 }
 
