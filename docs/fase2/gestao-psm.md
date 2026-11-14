@@ -7,7 +7,7 @@ hide:
 
 Além das medidas de qualidade da Agência Virtual da Neoenergia Brasília, acompanhamos o desenvolvimento do projeto por meio de indicadores baseados no PSM/CID.
 
-Diferentemente das métricas M1–M8, definidas por meio do [GQM](../fase2-especificacao.md) para avaliar a qualidade do produto, os indicadores PSM/CID são utilizados para acompanhar a gestão das atividades, o progresso das entregas e a distribuição de responsabilidades da equipe.
+Diferentemente das métricas M1–M14, definidas por meio do [GQM](../fase2-especificacao.md) para avaliar a qualidade do produto, os indicadores PSM/CID são utilizados para acompanhar a gestão das atividades, o progresso das entregas e a distribuição de responsabilidades da equipe.
 
 Para facilitar esse acompanhamento, implementamos uma coleta automatizada de dados utilizando GitHub Actions e um script Python.
 
@@ -186,3 +186,4 @@ Para a avaliação da Agência Virtual da Neoenergia Brasília, será utilizado 
 | 1.0 | 17/10/2026 | Criação do documento do PSM | Arthur de Lima Sobreira |
 | 1.1 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |
 | 1.2 | 26/10/2026 | Atualização dos indicadores, documentação da automação e registro da primeira apuração | [Isabella Choukaira](https://github.com/isabellachoukaira) |
+| 1.3 | 14/11/2026 | Alinhamento à Fase 1 | Beatriz Figueiredo dos Santos |
