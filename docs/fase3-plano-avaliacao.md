@@ -23,7 +23,7 @@ Para que a avaliação seja projetada de forma repetível e organizada, o trabal
 ### Atividade 2: Especificação e Preparação de Recursos
 * **Descrição:** Levantar e preparar a infraestrutura humana, de software e de hardware antes da coleta.
 * **Responsáveis Principais:** Arthur (Infraestrutura), Dara e Beatriz (Voluntários).
-* **Ações:** Confirmar a disponibilidade dos 5 voluntários leigos; validar as credenciais da conta real; padronizar o ambiente (navegador, dispositivo e conexão) para os testes de desempenho; e preparar o repositório seguro para evidências (sem exposição de dados sensíveis).
+* **Ações:** Confirmar a disponibilidade de cinco voluntários sem experiência recente com a Agência Virtual; validar as credenciais da conta real; padronizar o ambiente (navegador, dispositivo e conexão) para os testes de desempenho; e preparar o repositório seguro para evidências (sem exposição de dados sensíveis).
 
 ### Atividade 3: Elaboração do Cronograma de Execução (Sprint Final)
 * **Descrição:** Alocar os cenários de teste entre os 6 membros da equipe, respeitando restrições de horários de pico/fora de pico e dias distintos.
@@ -62,7 +62,16 @@ A tabela abaixo distribui as tarefas práticas de coleta (Fase 4), análise e re
 
 ---
 
-## 4. Entregáveis da Fase 3
+## 4. Documentos de apoio
+
+O plano consolidado é complementado pelos documentos operacionais abaixo:
+
+- [Recursos e ambiente de avaliação](fase3/recursos-ambiente.md): dispositivos, navegador, conexão, ferramentas, conta autorizada, participantes e limitações. A amostra por conveniência poderá incluir familiares, amigos e conhecidos dos integrantes, desde que não façam parte da equipe e atendam aos critérios de elegibilidade.
+- [Método e procedimentos de avaliação](fase3/metodo-procedimentos.md): roteiros U-01 a D-03 e instruções para obtenção das métricas M1–M14.
+- [Modelo de termo de consentimento](fase3/modelo-consentimento.md): minuta para revisão da docente e uso nas sessões com participantes externos.
+- [Cronograma de execução](fase3/cronograma.md): datas, responsáveis, janelas de medição e distribuição das atividades.
+
+## 5. Entregáveis da Fase 3
 
 Para que a **Fase 3** seja formalmente dada como concluída e a equipe autorizada a iniciar a coleta sistemática de dados (Fase 4), os seguintes artefatos devem constar no repositório:
 
@@ -71,11 +80,11 @@ Para que a **Fase 3** seja formalmente dada como concluída e a equipe autorizad
 3. **Cronograma Finalizado:** A tabela de *Sprint Final* aprovada por todos os membros.
 4. **Este Documento (Plano de Avaliação):** O artefato consolidado.
 
-## 5. Acompanhamento e Gestão (PSM/CID)
+## 6. Acompanhamento e Gestão (PSM/CID)
 
 Para garantir que o indicador **PSM-3 (Razão de esforço)** reflita com precisão o alto volume de trabalho desta etapa de *Sprint Final*, todas as atividades descritas no cronograma acima devem ser transformadas em *Issues* no GitHub. 
 
-Cada membro deve registrar suas horas estimadas e reais de execução, permitindo que a [automação desenvolvida pela equipe](gestao-psm_2.md) gere os gráficos de desempenho corretamente para a Entrega 2.
+Cada membro deve manter a estimativa na seção **Estimativa (horas)** e registrar as horas efetivamente trabalhadas na seção **Horas reais**, no corpo da Issue. A automação desenvolvida pela equipe lê esses campos do corpo das Issues; registros feitos somente nos comentários não entram no cálculo do PSM-3. A [documentação da gestão PSM/CID](fase2/gestao-psm.md) descreve o formato esperado.
 
 ---
 
@@ -89,3 +98,4 @@ Cada membro deve registrar suas horas estimadas e reais de execução, permitind
 | Versão | Data | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 1.0 | 15/11/2026 | Criação do Plano de Avaliação e cronograma ajustado | Dara Maria Barbosa de Sousa |
+| 1.1 | 15/11/2026 | Correção de referências, inclusão dos documentos operacionais e explicitação das pendências de amostragem | Arthur de Lima Sobreira |
