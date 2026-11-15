@@ -23,13 +23,29 @@ Antes de iniciar qualquer cenário, o avaliador deverá:
 
 As evidências deverão ser anonimizadas antes de serem incluídas no repositório. Não serão registrados senhas, CPF, endereço, número de unidade consumidora, valores financeiros, tokens ou documentos identificáveis.
 
+### 1.1. Preparação das sessões com participantes externos
+
+Antes de iniciar as sessões de M1, M9 e M10, a equipe deverá seguir a mesma sequência:
+
+1. Convidar pessoas externas à equipe — incluindo, se disponível, familiares, amigos e conhecidos dos integrantes — e aplicar a triagem descrita em [Recursos e ambiente de avaliação](recursos-ambiente.md#4-avaliadores-e-participantes). O vínculo pessoal com quem fez o convite não impede a participação; a amostra será de conveniência e terá como meta cinco participantes elegíveis.
+2. Confirmar que cada participante atende aos critérios de seleção e não utilizou a Agência Virtual nos últimos seis meses. Registrar somente a confirmação dos critérios e, quando aplicável, a categoria ampla do vínculo com quem fez o convite (familiar, amigo/conhecido ou sem vínculo prévio), sem incluir nome, grau de parentesco ou contato na ficha pública.
+3. Entregar ou apresentar o [modelo de termo de consentimento](modelo-consentimento.md), explicar a atividade e esclarecer dúvidas antes de solicitar a concordância. Não iniciar a sessão sem consentimento registrado.
+4. Atribuir um código de P01 a P05. Sempre que possível, a sessão deverá ser conduzida por um integrante diferente daquele que fez o convite. A relação entre código e identidade, caso seja necessária para organizar os horários, deverá ficar separada das fichas de coleta e não será publicada.
+5. Ler a mesma orientação inicial para todos e executar M1, M9 e M10 na sequência definida, sem sugerir caminhos ou respostas.
+6. Registrar respostas, conclusão das tarefas, tempos e ocorrências. O participante poderá interromper a sessão a qualquer momento; a interrupção deverá ser anotada sem pressioná-lo a continuar.
+7. Ao final, agradecer a participação e verificar se as fichas e eventuais evidências não contêm informações pessoais.
+
+O procedimento padrão não inclui gravação de voz ou imagem. Se houver necessidade de gravação de tela, a autorização deverá ser solicitada separadamente e será opcional. O arquivo não poderá conter rosto, voz, credenciais ou dados pessoais e não será publicado sem anonimização e conferência.
+
+A autorização do participante para a atividade não substitui a autorização do titular da conta da Agência Virtual. Antes de permitir que o participante interaja com uma sessão autenticada, a equipe deverá confirmar que o uso da conta foi autorizado e que não haverá exposição desnecessária de dados pessoais ou financeiros. Se essa condição não puder ser garantida, a tarefa não deverá ser executada com o voluntário e a limitação deverá ser registrada.
+
 ## 2. Roteiros de avaliação
 
 ### 2.1. U-01 — Localização de funcionalidades (M1)
 
 **Objetivo:** verificar se participantes conseguem localizar funções sem ajuda e na primeira tentativa.
 
-**Preparação:** confirmar cinco participantes voluntários que não façam parte da equipe e não tenham utilizado a Agência Virtual recentemente. Preparar duas tarefas de localização para cada participante, escolhidas entre segunda via de fatura, histórico de consumo e indicadores de continuidade. Definir previamente o destino correto de cada tarefa.
+**Preparação:** confirmar os cinco participantes conforme os critérios e o procedimento de recrutamento descritos na Seção 1.1. Verificar o consentimento antes de iniciar. Preparar duas tarefas de localização para cada participante, escolhidas entre segunda via de fatura, histórico de consumo e indicadores de continuidade. Definir previamente o destino correto de cada tarefa.
 
 **Execução:**
 
@@ -183,7 +199,7 @@ As evidências deverão ser anonimizadas antes de serem incluídas no repositór
 
 **Objetivo:** verificar se os participantes reconhecem a finalidade das telas do Nada Consta e dos indicadores de continuidade.
 
-**Preparação:** utilizar os mesmos cinco participantes previstos para M1 e preparar uma pergunta padronizada de múltipla escolha, com quatro alternativas definidas antes da coleta. Duas telas serão apresentadas a cada participante.
+**Preparação:** utilizar os mesmos cinco participantes que realizaram M1, com consentimento já registrado. Preparar uma pergunta padronizada de múltipla escolha, com quatro alternativas definidas antes da coleta. Duas telas serão apresentadas a cada participante.
 
 **Execução:**
 
@@ -202,7 +218,7 @@ As evidências deverão ser anonimizadas antes de serem incluídas no repositór
 
 **Objetivo:** observar se os participantes conseguem operar a emissão de segunda via e a alteração do período do gráfico de consumo até o resultado esperado.
 
-**Preparação:** utilizar os cinco participantes previstos para M1 e M9. Preparar instruções iguais para todos. Cada tarefa deverá começar na tela da função, sem contabilizar a localização realizada em M1.
+**Preparação:** utilizar os mesmos cinco participantes de M1 e M9, com consentimento já registrado. Preparar instruções iguais para todos. Cada tarefa deverá começar na tela da função, sem contabilizar a localização realizada em M1. Antes da sessão, confirmar que a conta utilizada pode ser apresentada ao participante sem expor dados pessoais ou financeiros sem autorização; se essa condição não for atendida, não executar a tarefa com o voluntário.
 
 **Execução:**
 
@@ -347,6 +363,7 @@ As datas não substituem os registros de horário efetivo. Para M12, deverão fi
 
 - [Plano consolidado da Fase 3](../fase3-plano-avaliacao.md)
 - [Recursos e ambiente de avaliação](recursos-ambiente.md)
+- [Modelo de termo de consentimento](modelo-consentimento.md)
 - [Cronograma de execução](cronograma.md)
 - [Métricas e pontuações](../fase2/metricas.md)
 - [Questões e hipóteses](../fase2/questoes-hipoteses.md)
@@ -359,3 +376,5 @@ As datas não substituem os registros de horário efetivo. Para M12, deverão fi
 |---|---|---|---|
 | 1.0 | 15/11/2026 | Criação do documento de método e procedimentos de avaliação | Arthur de Lima Sobreira |
 | 1.1 | 15/11/2026 | Ampliação dos roteiros para M1–M14 e alinhamento ao cronograma da Fase 4 | Arthur de Lima Sobreira |
+| 1.2 | 15/11/2026 | Inclusão do procedimento padronizado de recrutamento, consentimento e condução das sessões com participantes | Arthur de Lima Sobreira |
+| 1.3 | 15/11/2026 | Inclusão de familiares, amigos e conhecidos no recrutamento por conveniência e de cuidados para reduzir influência do convite | Arthur de Lima Sobreira |

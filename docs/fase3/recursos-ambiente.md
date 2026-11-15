@@ -68,7 +68,52 @@ Sempre que possível, cada sessão contará com três papéis:
 
 Os papéis podem ser acumulados quando a quantidade de integrantes não permitir essa divisão. A pessoa que executar uma tentativa deverá registrar essa condição. Nas repetições de M3, M7, M8 e M14, a equipe deverá manter o mesmo procedimento e, sempre que possível, o mesmo operador.
 
-As métricas M1, M9 e M10 dependem de participantes voluntários. O planejamento prevê cinco pessoas que não façam parte da equipe e que não tenham utilizado a Agência Virtual recentemente. Cada participante deverá receber as mesmas instruções, sem ajuda durante as tarefas. A previsão é realizar as sessões entre 17/11 e 19/11, conforme a disponibilidade dos voluntários, ainda a ser confirmada por Dara e Beatriz.
+As métricas M1, M9 e M10 dependem de participantes voluntários. O planejamento prevê cinco pessoas externas à equipe, que não tenham utilizado a Agência Virtual recentemente. Os mesmos participantes serão convidados para as três métricas, para evitar recrutamentos diferentes para tarefas que fazem parte da mesma sessão. Cada pessoa receberá as mesmas instruções e não deverá receber ajuda durante a execução.
+
+### 4.1. Critérios de seleção
+
+A seleção será feita por conveniência, entre pessoas que aceitarem o convite e atenderem aos seguintes critérios. Os convites poderão ser encaminhados pelos integrantes a familiares, amigos, conhecidos ou pessoas de sua rede de contatos. Ter vínculo familiar ou pessoal com um integrante não impede a participação, desde que a pessoa não faça parte da equipe do projeto e cumpra os demais critérios de elegibilidade.
+
+- não integrar a equipe do projeto;
+- ter 18 anos ou mais. A participação de menores não está prevista neste plano e só poderá ser considerada após orientação da docente e definição das autorizações necessárias;
+- conseguir utilizar um navegador e compreender instruções simples em português;
+- não ter utilizado a Agência Virtual da Neoenergia Brasília nos últimos seis meses. Esse intervalo é uma definição operacional proposta para tornar verificável a expressão “sem experiência recente” utilizada na Fase 2;
+- aceitar participar voluntariamente e registrar o consentimento antes do início das tarefas.
+
+A familiaridade geral com serviços digitais poderá variar entre os participantes. Essa informação será registrada apenas em categorias amplas (por exemplo: baixa, intermediária ou alta familiaridade), sem coletar dados pessoais desnecessários. Quando o convite tiver sido feito por um integrante, a equipe poderá registrar somente a categoria ampla do vínculo (familiar, amigo/conhecido ou sem vínculo prévio), sem nome ou grau de parentesco específico, para caracterizar a composição da amostra e reconhecer possíveis limitações. O objetivo é descrever o perfil geral da pequena amostra, não criar subgrupos para comparação.
+
+### 4.2. Recrutamento e confirmação
+
+O convite poderá ser encaminhado individualmente a familiares, amigos, conhecidos ou outras pessoas da rede de contatos dos integrantes, ou divulgado em canais acadêmicos, sem pressão para aceitar. O vínculo pessoal com quem fez o convite não cria obrigação de participação. Sempre que possível, a sessão deverá ser conduzida por outro integrante que não seja a pessoa responsável pelo convite, para reduzir constrangimentos e evitar influência sobre as respostas. A mensagem deverá informar que se trata de uma atividade acadêmica de avaliação da interface, apresentar uma estimativa de duração e esclarecer que a participação é voluntária.
+
+Antes de confirmar a sessão, um integrante fará uma triagem breve para verificar os critérios acima. Serão convidados participantes elegíveis até completar cinco confirmações. Se houver mais pessoas elegíveis do que vagas, a equipe poderá realizar um sorteio simples entre elas. Como se trata de uma amostra pequena, por conveniência e sem seleção probabilística da população, os resultados não deverão ser generalizados para todos os usuários da Agência Virtual.
+
+A previsão é realizar as sessões entre 17/11 e 19/11, conforme a disponibilidade dos participantes, ainda a ser confirmada por Dara e Beatriz. A equipe deverá registrar apenas o código do participante, a confirmação da elegibilidade e a data da sessão; nomes e contatos não deverão constar nas fichas públicas de coleta.
+
+O convite deverá apresentar a atividade de forma neutra, sem sugerir que o participante está sendo avaliado. Sugestão de texto:
+
+> Estamos realizando uma atividade acadêmica da disciplina Qualidade de Software 1 para observar a facilidade de uso de algumas telas da Agência Virtual da Neoenergia Brasília. A participação é voluntária e deve durar aproximadamente 20 a 30 minutos. Serão propostas tarefas simples de localização e utilização de funcionalidades. Não é uma prova do participante; queremos observar a interface. Você poderá interromper a participação quando quiser. Caso tenha interesse, faremos algumas perguntas rápidas para verificar se você atende aos critérios da atividade.
+
+A triagem deverá confirmar somente as condições necessárias. Familiares, amigos e conhecidos podem participar; o vínculo com um integrante não substitui nem dispensa os critérios abaixo:
+
+1. A pessoa tem 18 anos ou mais?
+2. A pessoa integra a equipe responsável pelo projeto? (Se sim, não será incluída como voluntária externa.)
+3. A pessoa utilizou a Agência Virtual da Neoenergia Brasília nos últimos seis meses? (Se sim, não atende ao critério de ausência de experiência recente.)
+4. A pessoa tem disponibilidade para participar de uma sessão entre 17/11 e 19/11?
+
+A equipe não deverá solicitar CPF, endereço, número de unidade consumidora ou informações de conta durante a triagem. A confirmação de disponibilidade não substitui o consentimento, que será solicitado antes da sessão. A pessoa convidada poderá recusar sem precisar justificar a decisão; o integrante responsável pelo convite não deverá insistir nem condicionar qualquer relação pessoal à participação.
+
+### 4.3. Consentimento e proteção dos participantes
+
+Antes das tarefas, o responsável deverá explicar o objetivo da atividade, o que será solicitado, quais dados serão anotados, como os resultados serão utilizados e que a pessoa poderá interromper sua participação a qualquer momento, sem precisar justificar a decisão. O consentimento deverá ser registrado antes do início da sessão, utilizando o [modelo de termo de consentimento](modelo-consentimento.md), após revisão e autorização da docente.
+
+A participação não exige gravação de voz ou imagem. O procedimento padrão será o registro manual das respostas, dos tempos e das ocorrências pelo observador. Se a equipe considerar necessária uma gravação de tela, deverá explicar sua finalidade e solicitar autorização específica e opcional, separada do consentimento para participar. A recusa à gravação não poderá impedir a participação. Não deverão ser gravados rosto, voz, credenciais ou dados pessoais.
+
+Os formulários de consentimento preenchidos deverão ser armazenados separadamente das fichas de coleta, em local com acesso restrito à equipe responsável. Eles não deverão ser enviados ao repositório público. No GitHub serão disponibilizados somente o modelo em branco e dados de coleta anonimizados, sem nomes, assinaturas, contatos ou outros identificadores. O prazo e o responsável pela guarda dos termos deverão ser definidos com a docente antes das sessões.
+
+O consentimento do participante não substitui a autorização do titular de eventual conta da Agência Virtual. Se uma tarefa exigir acesso a uma conta autenticada, a equipe deverá confirmar previamente que o uso da conta e a exposição das informações necessárias foram autorizados pelo titular. Sempre que possível, deverão ser ocultados dados pessoais e financeiros. Se não for possível proteger essas informações, a tarefa não deverá ser realizada com o voluntário; a limitação deverá ser registrada e a métrica tratada conforme a quantidade de observações efetivamente obtida.
+
+### 4.4. Amostra e tratamento da ausência de voluntários
 
 A amostra prevista é:
 
@@ -76,7 +121,7 @@ A amostra prevista é:
 - **M9:** os mesmos cinco participantes, com duas apresentações de tela por pessoa, totalizando dez apresentações;
 - **M10:** os mesmos cinco participantes, com duas tarefas de operação por pessoa, totalizando dez tarefas.
 
-Se não houver cinco participantes externos disponíveis, os integrantes poderão fazer uma análise exploratória para revisar os roteiros e identificar dificuldades. Essas observações deverão ser separadas dos dados das métricas e não serão contabilizadas como participação de usuários finais. Nesse cenário, M1, M9 e M10, assim como H1, H9 e H10, permanecerão inconclusivas por falta da amostra prevista.
+Se não houver cinco participantes externos disponíveis, a equipe poderá realizar uma análise exploratória interna para revisar os roteiros e identificar dificuldades. Essas observações deverão ser identificadas separadamente e não serão contabilizadas como participação de usuários finais. Se a quantidade de participantes externos ficar abaixo da prevista, a equipe deverá informar o número efetivamente obtido e avaliar as métricas conforme as regras da Fase 2, sem apresentar a amostra parcial como se estivesse completa. Na ausência de dados suficientes, M1, M9 e M10, assim como H1, H9 e H10, permanecerão inconclusivas.
 
 ## 5. Recursos específicos por métrica
 
@@ -122,7 +167,10 @@ Antes de iniciar uma sessão, a equipe deverá conferir:
 - [ ] A conta utilizada é própria ou possui autorização de uso.
 - [ ] O procedimento não exige alteração de dados ou confirmação de operação real.
 - [ ] A ferramenta de registro está funcionando, quando necessária.
+- [ ] O consentimento de cada participante foi registrado antes das tarefas.
+- [ ] A equipe confirmou que a sessão não expõe dados pessoais ou financeiros de uma conta real sem autorização específica.
 - [ ] Os arquivos de evidência não expõem dados pessoais ou credenciais.
+- [ ] Os termos preenchidos estão guardados fora do repositório público, com acesso restrito.
 - [ ] Os participantes externos necessários para M1, M9 e M10 foram confirmados, ou as métricas foram marcadas como dependentes dessa disponibilidade.
 - [ ] As quantidades mínimas e as divergências de M6 e M11 foram conferidas antes da coleta.
 
@@ -132,3 +180,5 @@ Antes de iniciar uma sessão, a equipe deverá conferir:
 |---|---|---|---|
 | 1.0 | 15/11/2026 | Criação do documento de recursos e ambiente de avaliação | Arthur de Lima Sobreira |
 | 1.1 | 15/11/2026 | Ampliação para M1–M14 e alinhamento ao cronograma da Fase 4 | Arthur de Lima Sobreira |
+| 1.2 | 15/11/2026 | Inclusão dos critérios de seleção, recrutamento, consentimento e proteção dos participantes | Arthur de Lima Sobreira |
+| 1.3 | 15/11/2026 | Esclarecimento de que familiares, amigos e conhecidos dos integrantes podem participar, com registro amplo do vínculo e cuidados para evitar pressão | Arthur de Lima Sobreira |

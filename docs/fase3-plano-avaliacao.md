@@ -66,8 +66,9 @@ A tabela abaixo distribui as tarefas práticas de coleta (Fase 4), análise e re
 
 O plano consolidado é complementado pelos documentos operacionais abaixo:
 
-- [Recursos e ambiente de avaliação](fase3/recursos-ambiente.md): dispositivos, navegador, conexão, ferramentas, conta autorizada, participantes e limitações.
+- [Recursos e ambiente de avaliação](fase3/recursos-ambiente.md): dispositivos, navegador, conexão, ferramentas, conta autorizada, participantes e limitações. A amostra por conveniência poderá incluir familiares, amigos e conhecidos dos integrantes, desde que não façam parte da equipe e atendam aos critérios de elegibilidade.
 - [Método e procedimentos de avaliação](fase3/metodo-procedimentos.md): roteiros U-01 a D-03 e instruções para obtenção das métricas M1–M14.
+- [Modelo de termo de consentimento](fase3/modelo-consentimento.md): minuta para revisão da docente e uso nas sessões com participantes externos.
 - [Cronograma de execução](fase3/cronograma.md): datas, responsáveis, janelas de medição e distribuição das atividades.
 
 ## 5. Entregáveis da Fase 3
