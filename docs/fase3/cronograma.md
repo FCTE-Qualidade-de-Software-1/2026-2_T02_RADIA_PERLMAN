@@ -27,13 +27,6 @@ Para que a automação dos indicadores de gestão continue refletindo com precis
 - É imprescindível que as *Issues* relativas a cada bloco de execução acima sejam abertas e estimadas antes do início das tarefas.
 - As horas reais trabalhadas devem ser registradas diariamente na seção **Horas reais**, no corpo de cada Issue, no formato esperado pelo script: `DD/MM/AAAA - Nome do integrante - X h`. O script `coletar_metricas_psm.py` lê esse campo do corpo da Issue; horas lançadas somente nos comentários não serão contabilizadas no **PSM-3 (Razão de esforço)**.
 
-## Histórico de Versões
-
-| Versão | Data | Descrição da Alteração | Autor(a) |
-|---|---|---|---|
-| 1.0 | 15/11/2026 | Criação do cronograma | Dara Maria Barbosa de Sousa |
-| 1.1 | 15/11/2026 | Esclarecimento da amostra da M11, do apontamento PSM-3 e das pendências metodológicas | Arthur de Lima Sobreira |
-
 ## Pendências de consistência antes da coleta
 
 - **M11:** a Fase 2 estabelece 21 verificações por função, enquanto este cronograma prevê 20. Antes de interpretar H11, a equipe deverá adicionar uma 21ª verificação por função ou formalizar a alteração da quantidade mínima nos documentos da Fase 2. A redução não deve ser descrita como estatisticamente equivalente sem análise que a sustente.
@@ -41,6 +34,9 @@ Para que a automação dos indicadores de gestão continue refletindo com precis
 - **M14:** registrar os horários exatos de início e fim das janelas de pico e fora de pico antes das medições. O cronograma indica 16/11 à noite e 17/11 em horário comercial, mas os horários efetivos e a justificativa deverão constar na planilha.
 - **M1, M9 e M10:** confirmar os cinco participantes externos. Se não houver voluntários, registrar essas métricas como inconclusivas; testes internos poderão ser usados somente para revisar os roteiros.
 
-## Registro das horas no PSM-3
+## Histórico de Versões
 
-O apontamento de esforço deverá ser feito no corpo da Issue, na seção `Horas reais`, e não apenas em comentários. Cada linha deverá seguir o padrão `DD/MM/AAAA - Nome do integrante - X h`, por exemplo: `16/11/2026 - Integrante - 1,5 h`. O script de coleta lê as seções `Estimativa (horas)` e `Horas reais` do corpo das Issues.
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 15/11/2026 | Criação do cronograma | Dara Maria Barbosa de Sousa |
+| 1.1 | 15/11/2026 | Esclarecimento da amostra da M11, do apontamento PSM-3 e das pendências metodológicas | Arthur de Lima Sobreira |

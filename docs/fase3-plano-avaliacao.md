@@ -5,7 +5,7 @@ hide:
 
 # Fase 3 — Plano de Avaliação
 
-Na [Fase 1](fase1-requisitos.md), estabelecemos os requisitos da avaliação e, na [Fase 2](fase2-especificacao.md), especificamos as métricas (GQM) e os indicadores de gestão (PSM/CID). O objetivo desta **Fase 3: Projetar a Avaliação** é organizar a execução da Fase 4, definindo os métodos exatos, preparando os recursos e estruturando o cronograma de ação da equipe (RAMOS, 2026).
+Na [Fase 1](fase1-requisitos.md), estabelecemos os requisitos da avaliação e, na [Fase 2](fase2-especificacao_2.md), especificamos as métricas (GQM) e os indicadores de gestão (PSM/CID). O objetivo desta **Fase 3: Projetar a Avaliação** é organizar a execução da Fase 4, definindo os métodos exatos, preparando os recursos e estruturando o cronograma de ação da equipe (RAMOS, 2026).
 
 Diante do prazo restrito para a entrega do relatório final e do artigo acadêmico (22/11/2026), este documento formaliza os ajustes metodológicos necessários para viabilizar a coleta e a análise de dados sem comprometer o rigor do modelo ISO/IEC 25010:2011.
 
@@ -39,9 +39,9 @@ Para que a avaliação seja projetada de forma repetível e organizada, o trabal
 
 A metodologia GQM e as normas da família SQuaRE permitem a adaptação do modelo de qualidade desde que devidamente documentada e justificada em função do contexto (ISO/IEC, 2011; RAMOS, 2026). 
 
-Para assegurar a viabilidade da entrega em 22/11/2026, aplicamos os seguintes ajustes ao [Protocolo de coleta](fase2/protocolo-coleta.md) originalmente definido na Fase 2:
+Para assegurar a viabilidade da entrega em 22/11/2026, aplicamos os seguintes ajustes ao [Protocolo de Coleta](protocolo-coleta_2.md) originalmente definido na Fase 2:
 
-1. **Ajuste na M11 (Disponibilidade):** O protocolo da Fase 2 exigia testes durante 7 dias com 3 verificações diárias (21 verificações por função). **Ajuste:** O cronograma passou a prever **5 dias (16/11 a 20/11), com 4 verificações diárias** (manhã, almoço, tarde e noite). Isso resulta em **20 verificações por função** — 40 registros considerando a 2ª via e o Nada Consta. A Fase 2, porém, estabeleceu 21 verificações por função. Portanto, a redução de uma observação não deve ser descrita como estatisticamente equivalente sem justificativa específica. Antes da coleta, a equipe deverá adicionar uma 21ª verificação por função ou formalizar a alteração da quantidade mínima nos documentos da Fase 2. A janela de cinco dias foi escolhida para reservar 21 e 22/11 à consolidação e à redação do relatório.
+1. **Ajuste na M11 (Disponibilidade):** O protocolo exigia testes durante 7 dias com 3 verificações diárias (21 amostras). **Ajuste:** A coleta foi condensada para **5 dias (16/11 a 20/11) com 4 verificações diárias** (manhã, almoço, fim da tarde e noite). Isso garante 20 verificações por função (amostra estatisticamente comparável ao planejado) e libera o fim de semana (21 e 22) exclusivamente para a consolidação e redação do relatório.
 2. **Ajuste nos Voluntários (M1, M9, M10):** As sessões de observação com os 5 voluntários foram estritamente agrupadas entre os dias **17/11 (Terça) e 19/11 (Quinta)**, evitando dependências externas nos dias finais do projeto.
 
 ---
@@ -52,7 +52,7 @@ A tabela abaixo distribui as tarefas práticas de coleta (Fase 4), análise e re
 
 | Data | Fase | Atividades Críticas e Alocação da Equipe |
 | :--- | :--- | :--- |
-| **15/11 (Dom.) e 16/11 (Seg.)** | **Fechamento Fase 3** | **Arthur:** Finalizar os roteiros exatos e criar as planilhas de anotação.<br>**Dara e Beatriz:** Confirmar os 5 voluntários para os dias 17, 18 ou 19.<br>**Toda a equipe:** Preparar o revezamento da **M11**; o monitoramento começa em 16/11 e segue até 20/11. |
+| **15/11 (Dom.) e 16/11 (Seg.)** | **Fechamento Fase 3** | **Arthur:** Finalizar os roteiros exatos e criar as planilhas de anotação.<br>**Dara e Beatriz:** Confirmar os 5 voluntários para os dias 17, 18 ou 19.<br>**Toda a equipe:** Iniciar as medições da **M11** (1º e 2º dia do monitoramento). |
 | **16/11 (Segunda)** | **Início Fase 4 (Coleta)** | **Tiago:** Executar o Bloco de Desempenho e Maturidade (M3, M7, M8 e **M14**) no período *"Fora de Pico"* (ex: fim da noite).<br>**Henrique e Isabella:** Executar a 1ª rodada do Bloco de Segurança (M2, M4, M5, M6, M12, M13). |
 | **17/11 (Terça)** | **Fase 4 (Coleta)** | **Arthur:** Executar o Bloco de Desempenho (M3, M7, M8 e **M14**) na janela de *"Pico"* (horário comercial).<br>**Henrique e Isabella:** Executar a 2ª rodada da **M12** (exigência de dias diferentes). |
 | **17, 18 e 19/11** | **Fase 4 (Coleta)** | **Dara e Beatriz:** Executar as sessões de observação com os voluntários (M1, M9, M10).<br>**Qualquer membro:** Continuar as marcações diárias da **M11**. |
