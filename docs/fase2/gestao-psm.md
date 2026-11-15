@@ -9,15 +9,15 @@ Além das medidas de qualidade da Agência Virtual da Neoenergia Brasília, acom
 
 Diferentemente das métricas M1–M8, definidas por meio do [GQM](../fase2-especificacao.md) para avaliar a qualidade do produto, os indicadores PSM/CID são utilizados para acompanhar a gestão das atividades, o progresso das entregas e a distribuição de responsabilidades da equipe.
 
-Para facilitar esse acompanhamento, implementamos uma coleta automatizada de dados utilizando GitHub Actions e um script Python.
+Para facilitar esse acompanhamento, implementamos uma coleta automatizada utilizando GitHub Actions, Python e a API do GitHub. A automação consulta as Issues das Entregas 1 e 2, calcula os indicadores PSM/CID e gera relatórios e gráficos individuais e consolidados, permitindo acompanhar a evolução do projeto.
 
 ## Indicadores de gestão
 
 | Categoria | Indicador | Cálculo | Fonte de dados | Uso dos resultados |
 |---|---|---|---|---|
-| Desempenho dos Processos | **PSM-1 — Retrabalho** | `100 × issues atualmente fechadas que já foram reabertas / issues atualmente fechadas` | Histórico de eventos das Issues do Milestone. | Identificar tarefas que precisaram retornar ao trabalho após terem sido consideradas concluídas. |
-| Calendário e Progresso | **PSM-2 — Progresso do marco** | `100 × issues concluídas / total de issues vinculadas ao marco` | Issues e Milestone do GitHub. | Acompanhar o percentual de conclusão das atividades previstas para a entrega. |
-| Recursos e Custos | **PSM-3 — Cobertura de atribuição de tarefas** | `100 × issues com pelo menos um responsável / total de issues vinculadas ao marco` | Campo *Assignees* das Issues. | Identificar atividades sem responsáveis definidos e apoiar a distribuição das tarefas. |
+| Desempenho dos Processos | **PSM-1 — Retrabalho** | `100 × Issues atualmente fechadas que já foram reabertas / Issues atualmente fechadas` | Histórico de eventos das Issues. | Identificar atividades concluídas que precisaram ser reabertas. |
+| Calendário e Progresso | **PSM-2 — Progresso do marco** | `100 × Issues concluídas / total de Issues do Milestone` | Estados das Issues e Milestones. | Acompanhar o percentual de conclusão das entregas. |
+| Recursos e Custos | **PSM-3 — Razão de esforço** | `Horas reais registradas / horas estimadas` | Campos de estimativa e horas reais no corpo das Issues. | Comparar o esforço realizado com o esforço planejado. |
 
 ### Considerações sobre os indicadores
 
@@ -27,17 +27,25 @@ Essa implementação representa uma fotografia acumulada das Issues atualmente c
 
 **PSM-2 — Progresso do marco:** considera como conjunto planejado as Issues atualmente vinculadas ao Milestone. Como a inclusão ou exclusão de Issues altera o denominador, mudanças no escopo devem ser registradas e consideradas na interpretação dos resultados. Para avaliações futuras, pretende-se estabelecer uma linha de base fixa.
 
-**PSM-3 — Cobertura de atribuição:** substitui a razão de esforço inicialmente prevista, devido às dificuldades de manter registros consistentes de horas estimadas e realizadas. O indicador utiliza informações disponíveis no GitHub e permite identificar tarefas sem responsáveis definidos.
+**PSM-3 — Razão de esforço:** compara o total de horas efetivamente registradas pela equipe com o total de horas estimadas para as atividades. As informações são extraídas automaticamente das seções `Estimativa (horas)` e `Horas reais` presentes no corpo das Issues.
 
-A cobertura de atribuição é uma medida adaptada ao contexto da equipe. Ela não representa o esforço efetivamente realizado, o equilíbrio da carga de trabalho nem os custos financeiros do projeto.
+O resultado é interpretado da seguinte forma:
 
-Quando um denominador for zero, o indicador será apresentado como não calculável, acompanhado de uma justificativa.
+- **Menor que 1:** o esforço registrado é inferior ao estimado.
+- **Igual a 1:** o esforço registrado corresponde ao estimado.
+- **Maior que 1:** o esforço registrado ultrapassa o estimado.
+
+O indicador deve ser interpretado considerando o andamento das atividades, pois Issues ainda em execução podem apresentar esforço parcial. Quando alguma Issue não possui estimativa válida, a razão de esforço do conjunto é apresentada como não calculável (`N/A`).
+
+Os registros de horas são informados manualmente pela equipe e interpretados como horas decimais. Por exemplo, `2,25 h` corresponde a 2 horas e 15 minutos.
 
 ## Automatização da coleta de métricas
 
-Para reduzir a necessidade de contagem manual das atividades, desenvolvemos uma automação utilizando **GitHub Actions**, **Python** e a **API do GitHub**.
+Para reduzir a coleta manual de informações, desenvolvemos uma automação utilizando **GitHub Actions**, **Python** e a **API do GitHub**.
 
-A automação consulta as Issues vinculadas ao Milestone definido, analisa seus estados, responsáveis e eventos históricos, calcula os indicadores e gera relatórios com os resultados.
+A automação consulta as Issues vinculadas aos Milestones `Entrega 1 — Fases 1 e 2` e `Entrega 2 — Fases 3 e 4`, identifica seus estados e eventos históricos e extrai as estimativas e os registros de horas presentes no corpo das Issues.
+
+Com essas informações, calcula os indicadores PSM-1, PSM-2 e PSM-3, além de gerar relatórios e gráficos separados por entrega e um consolidado do projeto.
 
 ### Estrutura da implementação
 
@@ -58,26 +66,51 @@ O arquivo `coletar_metricas_psm.py` realiza a consulta aos dados do repositório
 
 ### Funcionamento
 
-1. O GitHub Actions inicia a execução do workflow.
-2. O script consulta as Issues associadas ao Milestone da entrega.
-3. São coletadas informações sobre estado das Issues, responsáveis e eventos de reabertura.
-4. Os indicadores PSM-1, PSM-2 e PSM-3 são calculados automaticamente.
-5. Os resultados são disponibilizados nos logs e em arquivos gerados pela execução.
+1. O GitHub Actions inicia a execução manual ou agendada do workflow.
+2. O script consulta os Milestones das duas entregas por meio da API do GitHub.
+3. São coletados os estados das Issues, os eventos de fechamento e reabertura, as estimativas e os registros de horas reais.
+4. Os indicadores PSM-1, PSM-2 e PSM-3 são calculados para cada entrega.
+5. São gerados gráficos de horas registradas por dia, Issues concluídas ao longo do tempo e esforço por integrante.
+6. Os resultados das duas entregas são consolidados, evitando a duplicação de Issues.
+7. Os relatórios e gráficos são disponibilizados como artefatos do GitHub Actions.
 
-A automação permite execução manual e agendada, conforme a configuração do workflow.
+A automação permite acompanhar as entregas individualmente e visualizar os resultados gerais do projeto.rkflow.
 
 ### Arquivos gerados
 
-Ao final da execução, são disponibilizados dois arquivos:
+A automação gera relatórios em Markdown, dados estruturados em JSON e gráficos em PNG.
 
-- **`relatorio.md`:** apresenta os indicadores calculados, os dados utilizados e as limitações da medição.
-- **`metricas.json`:** armazena os resultados em formato estruturado, permitindo seu processamento posterior.
+Os resultados são organizados na pasta `relatorios/psm/`, com relatórios separados para cada entrega e um consolidado.
 
-Os arquivos são disponibilizados como artefatos do GitHub Actions.
+```text
+relatorios/psm/
+├── relatorio.md
+├── metricas.json
+├── entrega_1/
+│   ├── relatorio.md
+│   ├── metricas.json
+│   └── gráficos PNG
+├── entrega_2/
+│   ├── relatorio.md
+│   ├── metricas.json
+│   └── gráficos PNG
+└── consolidado/
+    ├── relatorio.md
+    ├── metricas.json
+    └── gráficos PNG
+```
 
-A automatização contempla a coleta e o cálculo dos indicadores. A interpretação dos resultados e a definição de ações de gestão continuam sob responsabilidade da equipe.
+São gerados três tipos de gráficos:
+
+- **Horas ao longo do tempo:** apresenta o esforço registrado por dia.
+- **Issues concluídas ao longo do tempo:** acompanha a evolução das atividades concluídas, considerando fechamentos e reaberturas.
+- **Esforço por integrante:** apresenta a soma das horas registradas por cada integrante.
+
+Os arquivos são disponibilizados como artefatos do GitHub Actions. A publicação automática desses resultados no GitHub Pages será realizada por meio da integração com o MkDocs.
 
 ## Primeira apuração automatizada
+
+> **Registro histórico:** esta apuração corresponde à versão inicial da automação, na qual o PSM-3 era representado pela cobertura de atribuição de tarefas. Posteriormente, esse indicador foi substituído pela razão de esforço. Os resultados abaixo foram preservados para documentar a evolução do acompanhamento do projeto e não devem ser comparados diretamente com o PSM-3 atual.
 
 A primeira coleta automatizada foi realizada em **26/10/2026, às 19h17 UTC (16h17, horário de Brasília)**.
 
@@ -131,6 +164,20 @@ Essa informação pode ser utilizada para revisar a distribuição das responsab
 
 As ações apresentadas são propostas decorrentes da análise dos resultados. Sua execução deverá ser registrada posteriormente, com responsáveis, prazos e evidências correspondentes.
 
+## Resultados automatizados das entregas
+
+A automação PSM/CID permite acompanhar os indicadores de gestão de cada entrega e do projeto como um todo.
+
+Os relatórios apresentam os valores atualizados de retrabalho, progresso e razão de esforço, além de gráficos sobre as horas registradas, a conclusão de Issues e a distribuição do esforço entre os integrantes.
+
+Os resultados serão disponibilizados em uma página específica da documentação, organizada em:
+
+- **Entrega 1:** indicadores e gráficos referentes às Fases 1 e 2.
+- **Entrega 2:** indicadores e gráficos referentes às Fases 3 e 4.
+- **Consolidado:** visão geral das duas entregas.
+
+A interpretação dos resultados, o registro de decisões e a definição de ações de melhoria permanecem sob responsabilidade da equipe.
+
 ## Registro e análise periódica
 
 As atividades do projeto são organizadas por meio de Issues, com responsáveis, status e vínculos com as entregas.
@@ -163,7 +210,9 @@ A implementação inicial automatiza a coleta e o cálculo das três métricas, 
 
 **Progresso:** o conjunto de Issues vinculadas ao Milestone pode sofrer alterações. Uma melhoria prevista é estabelecer uma linha de base fixa, permitindo comparar a execução com o planejamento original.
 
-**Cobertura de atribuição:** o indicador verifica a existência de responsáveis, mas não mede a carga de trabalho de cada integrante nem o esforço dedicado às atividades.
+**Razão de esforço:** depende do preenchimento correto das estimativas e dos registros de horas nas Issues. Quando alguma Issue não possui estimativa válida, o indicador consolidado é apresentado como `N/A`. Além disso, as horas registradas representam os apontamentos realizados pela equipe, podendo estar incompletas ou sofrer alterações posteriores.
+
+**Interpretação do esforço:** a razão de esforço não deve ser utilizada isoladamente para avaliar produtividade. É necessário considerar o estágio de execução das atividades, a complexidade das tarefas e eventuais mudanças de escopo.
 
 **Análise dos resultados:** a automação gera os dados quantitativos, mas a interpretação e as decisões de gestão ainda são registradas manualmente pela equipe.
 
@@ -186,3 +235,4 @@ Para a avaliação da Agência Virtual da Neoenergia Brasília, será utilizado 
 | 1.0 | 17/10/2026 | Criação do documento do PSM | Arthur de Lima Sobreira |
 | 1.1 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |
 | 1.2 | 26/10/2026 | Atualização dos indicadores, documentação da automação e registro da primeira apuração | [Isabella Choukaira](https://github.com/isabellachoukaira) |
+| 1.3 | 14/11/2026 | Atualização do PSM-3 para razão de esforço, coleta das duas entregas e documentação dos relatórios e gráficos automatizados | [Isabella Choukaira](https://github.com/isabellachoukaira) |

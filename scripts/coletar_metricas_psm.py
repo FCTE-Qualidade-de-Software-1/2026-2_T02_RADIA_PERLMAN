@@ -1,21 +1,26 @@
 #!/usr/bin/env python3
-"""Coleta PSM/CID de Issues do Milestone e gera relatório e gráficos."""
+"""Coleta PSM/CID de múltiplos milestones; horas no corpo das Issues."""
 import json
 import os
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from collections import defaultdict
-from datetime import datetime, date, timezone, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+
 API = 'https://api.github.com'
-TOKEN = os.environ.get('GH_TOKEN') or os.environ.get('GITHUB_TOKEN', '')
-REPO = os.environ.get('GITHUB_REPOSITORY', '')
-MILESTONE_TITLE = os.environ.get('PSM_MILESTONE', 'Entrega 1 — Fases 1 e 2')
-OUTPUT = Path(os.environ.get('PSM_OUTPUT_DIR', 'relatorios/psm'))
-TZ_BR = timezone(timedelta(hours=-3))
+TOKEN = os.getenv('GH_TOKEN') or os.getenv('GITHUB_TOKEN', '')
+REPO = os.getenv('GITHUB_REPOSITORY', '')
+TITLES = [s.strip() for s in os.getenv('PSM_MILESTONES', 'Entrega 1 — Fases 1 e 2;Entrega 2 — Fases 3 e 4').split(';') if s.strip()]
+OUTPUT = Path(os.getenv('PSM_OUTPUT_DIR', 'relatorios/psm'))
+HOURS_PATTERN = re.compile(r'^\s*[-*]?\s*(\d{1,2}/\d{1,2}/\d{4})\s*[-–]\s*(.+?)\s*[-–]\s*(\d+(?:[.,]\d+)?)\s*h\s*$', re.I)
 
 
 def get_json(path):
@@ -23,7 +28,8 @@ def get_json(path):
     headers = {'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'qs1-psm-metrics'}
     if TOKEN:
         headers['Authorization'] = f'Bearer {TOKEN}'
-    with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=30) as response:
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req, timeout=40) as response:
         return json.load(response)
 
 
@@ -40,252 +46,220 @@ def pages(path):
         page += 1
 
 
-def field(body, title):
-    """Extrai conteúdo sob heading Markdown ###, até o próximo heading."""
-    pattern = r'^\s*#{2,6}\s+' + re.escape(title) + r'\s*\r?\n(.*?)(?=^\s*#{1,6}\s+|\Z)'
-    match = re.search(pattern, body or '', re.I | re.M | re.S)
-    return match.group(1).strip() if match else None
+def field(body, name):
+    pattern = (
+        r'^\s*#{2,3}\s+' + re.escape(name) +
+        r'\s*\n(.*?)(?=^\s*#{1,6}\s+|\Z)'
+    )
+
+    match = re.search(
+        pattern,
+        body or '',
+        re.I | re.M | re.S
+    )
+
+    return match.group(1).strip() if match else ''
 
 
-def parse_estimate(body):
-    raw = field(body, 'Estimativa (horas)')
-    if raw is None:
-        return None
-    match = re.fullmatch(r'\s*(\d+(?:[.,]\d+)?)\s*(?:h|horas?)?\s*', raw, re.I)
-    if not match:
-        return None
-    return float(match.group(1).replace(',', '.'))
-
-
-def parse_actual(body):
-    raw = field(body, 'Horas reais')
-    if raw is None or not raw.strip():
-        return [], []
-    entries, invalid = [], []
-    pattern = re.compile(r'^\s*(?:[-*]\s*)?(\d{1,2}/\d{1,2}/\d{4})\s*[-–]\s*(.+?)\s*[-–]\s*(\d+(?:[.,]\d+)?)\s*h\s*$', re.I)
-    for line in raw.splitlines():
-        if not line.strip() or line.strip() in ('—', '-', '_No response_'):
+def parse_hours(issue):
+    body = issue.get('body') or ''
+    estimate_text = field(body, 'Estimativa (horas)').replace(',', '.').strip()
+    try:
+        estimate = float(re.fullmatch(r'(\d+(?:\.\d+)?)\s*h?', estimate_text, re.I).group(1))
+    except (AttributeError, ValueError):
+        estimate = None
+    entries, errors = [], []
+    for line in field(body, 'Horas reais').splitlines():
+        if not line.strip() or line.strip() in ('-', '*'):
             continue
-        match = pattern.fullmatch(line.strip())
-        if not match:
-            invalid.append(line.strip())
+        m = HOURS_PATTERN.fullmatch(line)
+        if not m:
+            errors.append(line.strip())
             continue
-        when, person, hours = match.groups()
+        raw_date, person, raw_hours = m.groups()
         try:
-            day = datetime.strptime(when, '%d/%m/%Y').date()
-            amount = float(hours.replace(',', '.'))
-            if amount <= 0 or day > datetime.now(TZ_BR).date():
-                raise ValueError('horas inválidas ou data futura')
-            entries.append({'data': day.isoformat(), 'integrante': person.strip(), 'horas': amount})
+            day = datetime.strptime(raw_date, '%d/%m/%Y').date().isoformat()
+            hours = float(raw_hours.replace(',', '.'))
+            if hours <= 0 or not person.strip():
+                raise ValueError('Horas ou integrante inválidos')
         except ValueError:
-            invalid.append(line.strip())
-    return entries, invalid
+            errors.append(line.strip())
+            continue
+        entries.append({'data': day, 'integrante': person.strip(), 'horas': hours, 'issue': issue['number']})
+    return estimate, entries, errors
 
 
-def parse_dt(value):
-    return datetime.fromisoformat(value.replace('Z', '+00:00')) if value else None
+def percent(a, b):
+    return round(a * 100 / b, 2) if b else None
 
 
-def closed_series(issues, events_by_issue, end_day):
-    """Reconstrói fechamentos líquidos por dia, inclusive reaberturas."""
-    changes = defaultdict(int)
+def ratio(a, b):
+    return round(a / b, 3) if b else None
+
+
+def plot_series(data, title, ylabel, filename):
+    fig, ax = plt.subplots(figsize=(10, 4.8))
+    if data:
+        keys = sorted(data)
+        ax.plot(keys, [data[k] for k in keys], marker='o')
+        ax.tick_params(axis='x', rotation=45)
+    else:
+        ax.text(.5, .5, 'Sem dados disponíveis', ha='center', va='center', transform=ax.transAxes)
+    ax.set(title=title, ylabel=ylabel)
+    ax.grid(axis='y', alpha=.3)
+    fig.tight_layout()
+    fig.savefig(filename, dpi=160)
+    plt.close(fig)
+
+
+def plot_bars(data, title, ylabel, filename):
+    fig, ax = plt.subplots(figsize=(10, 4.8))
+    if data:
+        keys = list(sorted(data, key=data.get, reverse=True))
+        ax.bar(keys, [data[k] for k in keys])
+        ax.tick_params(axis='x', rotation=35)
+    else:
+        ax.text(.5, .5, 'Sem dados disponíveis', ha='center', va='center', transform=ax.transAxes)
+    ax.set(title=title, ylabel=ylabel)
+    fig.tight_layout()
+    fig.savefig(filename, dpi=160)
+    plt.close(fig)
+
+
+def progress_history(issues, event_map):
+    """Série de issues concluídas por dia; reaberturas reduzem total."""
+    events = []
     for issue in issues:
-        number = issue['number']
-        events = sorted((e for e in events_by_issue[number] if e.get('event') in ('closed', 'reopened') and e.get('created_at')), key=lambda e: e['created_at'])
-        if events:
-            for e in events:
-                day = parse_dt(e['created_at']).astimezone(TZ_BR).date().isoformat()
-                changes[day] += 1 if e['event'] == 'closed' else -1
-        elif issue['state'] == 'closed' and issue.get('closed_at'):
-            day = parse_dt(issue['closed_at']).astimezone(TZ_BR).date().isoformat()
-            changes[day] += 1
-    start = min([parse_dt(i['created_at']).astimezone(TZ_BR).date() for i in issues] + [end_day])
-    days, values, count = [], [], 0
-    cursor = start
-    while cursor <= end_day:
-        count += changes[cursor.isoformat()]
-        days.append(cursor.isoformat())
-        values.append(count)
-        cursor += timedelta(days=1)
-    return days, values
+        for ev in event_map[issue['number']]:
+            if ev.get('event') in ('closed', 'reopened') and ev.get('created_at'):
+                events.append((ev['created_at'][:10], issue['number'], ev['event']))
+    events.sort()
+    state = set()
+    history = {}
+    for day, number, action in events:
+        if action == 'closed':
+            state.add(number)
+        else:
+            state.discard(number)
+        history[day] = len(state)
+    return history
 
 
-def make_charts(records, issues, events_by_issue, end_day):
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-    plt.rcParams.update({'figure.dpi': 130, 'font.size': 10})
-    by_day = defaultdict(float)
-    by_person = defaultdict(float)
-    for r in records:
-        by_day[r['data']] += r['horas']
-        by_person[r['integrante']] += r['horas']
-    dates, completed = closed_series(issues, events_by_issue, end_day)
-    def save(name):
-        plt.tight_layout()
-        plt.savefig(OUTPUT / name, bbox_inches='tight')
-        plt.close()
-    # Série diária, inclusive dias sem registro.
-    hours = [by_day.get(day, 0) for day in dates]
-    plt.figure(figsize=(11, 4.4))
-    plt.bar(range(len(dates)), hours)
-    step = max(1, len(dates) // 10)
-    plt.xticks(range(0, len(dates), step), [dates[i][5:] for i in range(0, len(dates), step)], rotation=35)
-    plt.title('Horas registradas por dia (Milestone)')
-    plt.ylabel('Horas')
-    plt.xlabel('Data (MM-DD)')
-    save('horas_ao_longo_do_tempo.png')
-    plt.figure(figsize=(11, 4.4))
-    plt.plot(range(len(dates)), completed, marker='.', markersize=3)
-    plt.xticks(range(0, len(dates), step), [dates[i][5:] for i in range(0, len(dates), step)], rotation=35)
-    plt.title('Issues concluídas ao longo do tempo (saldo após reaberturas)')
-    plt.ylabel('Issues concluídas')
-    plt.xlabel('Data (MM-DD)')
-    save('issues_concluidas_ao_longo_do_tempo.png')
-    names = sorted(by_person, key=lambda p: (-by_person[p], p.lower()))
-    plt.figure(figsize=(max(7, len(names) * 1.1), 4.5))
-    if names:
-        plt.bar(names, [by_person[p] for p in names])
-        plt.xticks(rotation=30, ha='right')
-    else:
-        plt.text(.5, .5, 'Sem registros de horas', ha='center', va='center', transform=plt.gca().transAxes)
-    plt.title('Horas realizadas por integrante')
-    plt.ylabel('Horas')
-    save('esforco_por_integrante.png')
-    # Comparação por Issue; sem estimativa não é tratada como zero.
-    pairs = [(i['number'], i['estimativa'], i['horas']) for i in issues if i['estimativa'] is not None]
-    plt.figure(figsize=(max(8, len(pairs) * .65), 4.8))
-    if pairs:
-        xs = list(range(len(pairs)))
-        plt.bar([x - .2 for x in xs], [p[1] for p in pairs], width=.4, label='Estimado')
-        plt.bar([x + .2 for x in xs], [p[2] for p in pairs], width=.4, label='Realizado')
-        plt.xticks(xs, [f'#{p[0]}' for p in pairs], rotation=45)
-        plt.legend()
-    else:
-        plt.text(.5, .5, 'Nenhuma estimativa válida', ha='center', va='center', transform=plt.gca().transAxes)
-    plt.title('Esforço estimado x realizado por Issue (com estimativa)')
-    plt.ylabel('Horas')
-    save('estimado_vs_realizado_por_issue.png')
+def evaluate(title, issues, event_map, folder):
+    folder.mkdir(parents=True, exist_ok=True)
+    reopened, reopened_closed, entries, missing, invalid = [], [], [], [], []
+    estimate_total = 0.0
+    for issue in issues:
+        n = issue['number']
+        if any(ev.get('event') == 'reopened' for ev in event_map[n]):
+            reopened.append(n)
+            if issue['state'] == 'closed':
+                reopened_closed.append(n)
+        estimate, logs, errors = parse_hours(issue)
+        if estimate is None:
+            missing.append(n)
+        else:
+            estimate_total += estimate
+        entries.extend(logs)
+        if errors:
+            invalid.append({'issue': n, 'linhas': errors})
+    closed = sum(i['state'] == 'closed' and i.get('state_reason') != 'not_planned' for i in issues)
+    closed_for_rework = sum(i['state'] == 'closed' for i in issues)
+    real_total = sum(e['horas'] for e in entries)
+    effort = ratio(real_total, estimate_total) if not missing else None
+    daily, people = defaultdict(float), defaultdict(float)
+    for e in entries:
+        daily[e['data']] += e['horas']
+        people[e['integrante']] += e['horas']
+    progress = progress_history(issues, event_map)
+    plot_series(daily, f'Horas registradas por dia — {title}', 'Horas', folder / 'horas_ao_longo_do_tempo.png')
+    plot_series(progress, f'Issues concluídas ao longo do tempo — {title}', 'Issues concluídas', folder / 'issues_concluidas_ao_longo_do_tempo.png')
+    plot_bars(people, f'Esforço por integrante — {title}', 'Horas', folder / 'esforco_por_integrante.png')
+    metric = {
+        'milestone': title, 'total_issues': len(issues), 'issues_concluidas': closed,
+        'psm_1_retrabalho_pct': percent(len(reopened_closed), closed_for_rework),
+        'psm_2_progresso_pct': percent(closed, len(issues)),
+        'psm_3_razao_esforco': effort,
+        'horas_estimadas': round(estimate_total, 2), 'horas_reais': round(real_total, 2),
+        'issues_sem_estimativa': missing, 'linhas_de_horas_invalidas': invalid,
+        'issues_reabertas': reopened, 'issues_reabertas_atualmente_fechadas': reopened_closed,
+        'horas_por_integrante': dict(sorted(people.items())), 'horas_por_dia': dict(sorted(daily.items())),
+        'issues_concluidas_por_dia': progress, 'registros_horas': entries,
+    }
+    (folder / 'metricas.json').write_text(json.dumps(metric, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    def fmt(x, suffix=''):
+        return 'N/A' if x is None else f'{x:.2f}{suffix}'
+    report = f'''# Relatório automático PSM/CID — {title}
+
+- **Repositório:** `{REPO}`
+- **Coleta (UTC):** {datetime.now(timezone.utc).isoformat()}
+
+| Indicador | Resultado |
+|---|---:|
+| PSM-1 — Retrabalho (fotografia atual) | {fmt(metric['psm_1_retrabalho_pct'], '%')} |
+| PSM-2 — Progresso | {fmt(metric['psm_2_progresso_pct'], '%')} |
+| PSM-3 — Razão de esforço (horas reais / estimadas) | {fmt(effort)} |
+
+- **Issues:** {len(issues)}; concluídas: {closed}
+- **Horas estimadas:** {estimate_total:.2f} h; **reais:** {real_total:.2f} h
+- **Issues sem estimativa válida:** {', '.join('#'+str(n) for n in missing) or 'Nenhuma'}
+- **Issues com linhas de horas inválidas:** {', '.join('#'+str(i['issue']) for i in invalid) or 'Nenhuma'}
+- **Issues reabertas:** {', '.join('#'+str(n) for n in reopened) or 'Nenhuma'}
+
+## Gráficos
+
+![Horas ao longo do tempo](horas_ao_longo_do_tempo.png)
+
+![Issues concluídas ao longo do tempo](issues_concluidas_ao_longo_do_tempo.png)
+
+![Esforço por integrante](esforco_por_integrante.png)
+
+## Limitações
+
+- O PSM-1 considera apenas issues atualmente fechadas que já foram reabertas; não é uma taxa por período.
+- O PSM-2 usa a composição atual do Milestone, não uma linha de base fixa.
+- O PSM-3 fica N/A se alguma Issue não tiver estimativa válida. Horas reais ausentes são tratadas como zero registrado, **não** como prova de ausência de trabalho.
+- Datas de horas são as informadas manualmente no corpo das Issues. Registros podem ser alterados e devem ser conferidos pela equipe.
+- O gráfico de conclusão usa eventos de fechamento e reabertura do GitHub; não mede horas de produtividade.
+'''
+    (folder / 'relatorio.md').write_text(report, encoding='utf-8')
+    return metric
 
 
 def main():
     if not TOKEN:
         raise ValueError('Defina GH_TOKEN (ou GITHUB_TOKEN)')
     if not REPO or '/' not in REPO:
-        raise ValueError('Defina GITHUB_REPOSITORY como organizacao/repositorio')
-    milestone_list = list(pages(f'/repos/{REPO}/milestones?state=all'))
-    milestone = next((m for m in milestone_list if m['title'] == MILESTONE_TITLE), None)
-    if milestone is None:
-        found = ', '.join(m['title'] for m in milestone_list) or '(nenhum)'
-        raise ValueError(f'Milestone {MILESTONE_TITLE!r} não encontrado. Disponíveis: {found}')
-    issues = [i for i in pages(f'/repos/{REPO}/issues?state=all&milestone={milestone["number"]}&sort=created&direction=asc') if 'pull_request' not in i]
-    planned = len(issues)
-    closed = sum(i['state'] == 'closed' and i.get('state_reason') != 'not_planned' for i in issues)
-    assigned = sum(bool(i.get('assignees')) for i in issues)
-    reopened, reopened_closed, events_by_issue = [], [], {}
-    entries, invalid_lines, missing_estimates, per_issue = [], {}, [], []
-    for issue in issues:
-        number = issue['number']
-        events = list(pages(f'/repos/{REPO}/issues/{number}/events'))
-        events_by_issue[number] = events
-        if any(e.get('event') == 'reopened' for e in events):
-            reopened.append(number)
-            if issue['state'] == 'closed':
-                reopened_closed.append(number)
-        estimate = parse_estimate(issue.get('body'))
-        actual, invalid = parse_actual(issue.get('body'))
-        if estimate is None:
-            missing_estimates.append(number)
-        if invalid:
-            invalid_lines[str(number)] = invalid
-        for row in actual:
-            entries.append({'issue': number, **row})
-        issue['estimativa'] = estimate
-        issue['horas'] = round(sum(x['horas'] for x in actual), 3)
-        per_issue.append({'issue': number, 'titulo': issue.get('title', ''), 'estimativa_horas': estimate, 'realizado_horas': issue['horas'], 'registros': len(actual), 'linhas_invalidas': invalid})
-    estimated = sum(i['estimativa'] for i in issues if i['estimativa'] is not None)
-    realized = sum(x['horas'] for x in entries)
-    # Não publicar indicador potencialmente enganoso se falta estimativa ou há linhas inválidas.
-    valid_effort = not missing_estimates and not invalid_lines and estimated > 0
-    ratio = round(realized / estimated, 3) if valid_effort else None
-    now = datetime.now(timezone.utc)
-    metrics = {
-        'coletado_em_utc': now.isoformat(), 'repositorio': REPO, 'milestone': MILESTONE_TITLE,
-        'total_issues': planned, 'issues_fechadas_atualmente': closed, 'issues_com_responsavel': assigned,
-        'issues_reabertas_historicamente': reopened, 'issues_fechadas_atualmente_que_foram_reabertas': reopened_closed,
-        'psm_1_retrabalho_pct': round(100 * len(reopened_closed) / closed, 2) if closed else None,
-        'psm_2_progresso_pct': round(100 * closed / planned, 2) if planned else None,
-        'psm_3_razao_esforco': ratio, 'horas_estimadas': round(estimated, 3), 'horas_realizadas': round(realized, 3),
-        'issues_sem_estimativa': missing_estimates, 'linhas_horas_invalidas': invalid_lines,
-        'horas_por_issue': per_issue, 'registros_horas': entries,
-    }
+        raise ValueError('Defina GITHUB_REPOSITORY')
+    milestones = list(pages(f'/repos/{REPO}/milestones?state=all'))
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    (OUTPUT / 'metricas.json').write_text(json.dumps(metrics, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    make_charts(entries, issues, events_by_issue, now.astimezone(TZ_BR).date())
-    def pct(x):
-        return 'N/A' if x is None else f'{x:.2f}%'
-    def h(x):
-        return f'{x:.2f} h'
-    report = f'''# Relatório automático PSM/CID
-
-- **Repositório:** `{REPO}`
-- **Milestone:** {MILESTONE_TITLE}
-- **Coleta (UTC):** {metrics['coletado_em_utc']}
-
-| Indicador | Numerador | Denominador | Resultado |
-|---|---:|---:|---:|
-| PSM-1 — Retrabalho* | {len(reopened_closed)} | {closed} | {pct(metrics['psm_1_retrabalho_pct'])} |
-| PSM-2 — Progresso | {closed} | {planned} | {pct(metrics['psm_2_progresso_pct'])} |
-| PSM-3 — Razão de esforço | {h(realized)} | {h(estimated)} | {f'{ratio:.3f}' if ratio is not None else 'N/A (dados incompletos)'} |
-
-**Issues com reabertura histórica:** {', '.join('#'+str(n) for n in reopened) or 'Nenhuma'}.
-
-**Issues atualmente fechadas que foram reabertas:** {', '.join('#'+str(n) for n in reopened_closed) or 'Nenhuma'}.
-
-## Qualidade dos dados
-
-- Issues sem estimativa válida: {', '.join('#'+str(n) for n in missing_estimates) or 'Nenhuma'}.
-- Issues com linhas inválidas no campo Horas reais: {', '.join('#'+n for n in invalid_lines) or 'Nenhuma'}.
-- Registros de horas válidos: {len(entries)}.
-- Total de horas realizadas válidas: {h(realized)}.
-
-## Esforço por Issue
-
-| Issue | Estimado | Realizado | Registros |
-|---|---:|---:|---:|
-'''
-    for i in per_issue:
-        report += f"| [#{i['issue']}](https://github.com/{REPO}/issues/{i['issue']}) | {h(i['estimativa_horas']) if i['estimativa_horas'] is not None else 'Não informado'} | {h(i['realizado_horas'])} | {i['registros']} |\n"
-    report += '''
-## Gráficos
-
-![Horas registradas por dia](horas_ao_longo_do_tempo.png)
-
-![Issues concluídas ao longo do tempo](issues_concluidas_ao_longo_do_tempo.png)
-
-![Esforço por integrante](esforco_por_integrante.png)
-
-![Estimado versus realizado por Issue](estimado_vs_realizado_por_issue.png)
-
-## Definições e limites
-
-- Escopo: Issues do Milestone, excluindo Pull Requests.
-- PSM-1: fotografia acumulada de Issues atualmente fechadas que já foram reabertas. **Não** é taxa por período; Issues reabertas ainda abertas não entram no numerador.
-- PSM-2: proporção de Issues atualmente fechadas como concluídas. Milestone atual não é uma linha de base imutável.
-- PSM-3: soma de horas realizadas / soma de horas estimadas das Issues do Milestone. É **N/A** se faltar qualquer estimativa, houver linhas inválidas ou o total estimado for zero. Horas realizadas não registradas não podem ser detectadas automaticamente.
-- Registros de horas são lidos do campo `### Horas reais` do corpo atual das Issues. Datas declaradas pelos integrantes são usadas no gráfico; edições posteriores podem alterar séries históricas.
-- As datas do gráfico de Issues concluídas vêm dos eventos de fechamento e reabertura do GitHub, no fuso de Brasília.
-- Gráficos de horas mostram **esforço registrado**, não produtividade individual nem qualidade do trabalho.
-- Atualizar manualmente interpretação, decisões e evidências no documento da disciplina.
-'''
-    if invalid_lines:
-        report += '\n### Linhas de horas não reconhecidas\n\n'
-        for n, lines in invalid_lines.items():
-            for line in lines:
-                report += f'- Issue #{n}: `{line}`\n'
-    (OUTPUT / 'relatorio.md').write_text(report, encoding='utf-8')
-    print(report)
-
+    all_issues, all_events, summaries = [], {}, []
+    for idx, title in enumerate(TITLES, 1):
+        milestone = next((m for m in milestones if m['title'] == title), None)
+        if milestone is None:
+            print(f'AVISO: Milestone {title!r} não encontrado; ignorado.', file=sys.stderr)
+            continue
+        issues = [i for i in pages(f'/repos/{REPO}/issues?state=all&milestone={milestone["number"]}&sort=created&direction=asc') if 'pull_request' not in i]
+        event_map = {i['number']: list(pages(f'/repos/{REPO}/issues/{i["number"]}/events')) for i in issues}
+        summary = evaluate(title, issues, event_map, OUTPUT / f'entrega_{idx}')
+        summaries.append(summary)
+        all_issues.extend(issues)
+        all_events.update(event_map)
+        print(f'{title}: {len(issues)} issues; {summary["horas_reais"]} h reais')
+    if not summaries:
+        raise ValueError('Nenhum dos Milestones configurados foi encontrado')
+    # Consolidado: somente issues únicas, sem somar porcentagens.
+    unique = {i['number']: i for i in all_issues}
+    consolidated = evaluate('Consolidado das entregas', list(unique.values()), all_events, OUTPUT / 'consolidado')
+    index = {'coletado_em_utc': datetime.now(timezone.utc).isoformat(), 'repositorio': REPO, 'entregas': summaries, 'consolidado': consolidated}
+    (OUTPUT / 'metricas.json').write_text(json.dumps(index, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    lines = ['# PSM/CID — Entregas', '', '| Escopo | Issues | Progresso | Horas previstas | Horas registradas | Razão esforço |', '|---|---:|---:|---:|---:|---:|']
+    for s in summaries + [consolidated]:
+        f = lambda x: 'N/A' if x is None else str(x)
+        lines.append(f'| {s["milestone"]} | {s["total_issues"]} | {f(s["psm_2_progresso_pct"])}% | {s["horas_estimadas"]} | {s["horas_reais"]} | {f(s["psm_3_razao_esforco"])} |')
+    lines += ['', 'Relatórios detalhados nas pastas `entrega_1/`, `entrega_2/` e `consolidado/` (se os marcos existirem).', '']
+    (OUTPUT / 'relatorio.md').write_text('\n'.join(lines), encoding='utf-8')
+    print('\n'.join(lines))
 
 if __name__ == '__main__':
     try:
