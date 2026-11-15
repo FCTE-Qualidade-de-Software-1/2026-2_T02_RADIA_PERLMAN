@@ -32,7 +32,9 @@ nav:
           - "Entrega 1": fase2/psm/entrega_1/relatorio.md
           - "Entrega 2": fase2/psm/entrega_2/relatorio.md
           - "Consolidado": fase2/psm/consolidado/relatorio.md
-  - "Fase 3": fase3-projeto.md
+  - "Fase 3": 
+    - Plano de Avaliação: fase3-plano-avaliacao.md
+    - Cronograma de execução: fase3/cronograma.md
   - "Fase 4": fase4-execucao.md
 
 markdown_extensions:
