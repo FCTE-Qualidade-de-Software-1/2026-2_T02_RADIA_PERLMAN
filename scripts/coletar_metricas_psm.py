@@ -47,7 +47,17 @@ def pages(path):
 
 
 def field(body, name):
-    match = re.search(r'^###\s*' + re.escape(name) + r'\s*\n(.*?)(?=^###\s|\Z)', body or '', re.I | re.M | re.S)
+    pattern = (
+        r'^\s*#{2,3}\s+' + re.escape(name) +
+        r'\s*\n(.*?)(?=^\s*#{1,6}\s+|\Z)'
+    )
+
+    match = re.search(
+        pattern,
+        body or '',
+        re.I | re.M | re.S
+    )
+
     return match.group(1).strip() if match else ''
 
 
@@ -250,7 +260,6 @@ def main():
     lines += ['', 'Relatórios detalhados nas pastas `entrega_1/`, `entrega_2/` e `consolidado/` (se os marcos existirem).', '']
     (OUTPUT / 'relatorio.md').write_text('\n'.join(lines), encoding='utf-8')
     print('\n'.join(lines))
-
 
 if __name__ == '__main__':
     try:
