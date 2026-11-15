@@ -27,6 +27,11 @@ nav:
       - Rastreabilidade Fase 1–2: fase2/rastreabilidade.md
       - Protocolo de coleta: fase2/protocolo-coleta.md
       - Gestão PSM/CID: fase2/gestao-psm.md
+      - "Resultados PSM/CID":
+          - "Visão geral": fase2/psm/index.md
+          - "Entrega 1": fase2/psm/entrega_1/relatorio.md
+          - "Entrega 2": fase2/psm/entrega_2/relatorio.md
+          - "Consolidado": fase2/psm/consolidado/relatorio.md
   - "Fase 3": fase3-projeto.md
   - "Fase 4": fase4-execucao.md
 
