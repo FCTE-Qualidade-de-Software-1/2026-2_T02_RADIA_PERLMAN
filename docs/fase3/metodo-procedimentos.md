@@ -251,7 +251,6 @@ A autorização do participante para a atividade não substitui a autorização 
 
 **Resultado esperado no cronograma atual:** vinte verificações por função (quarenta registros no total, considerando as duas funções). Manutenções anunciadas pela concessionária contam como indisponibilidade, com registro do aviso; falhas comprovadamente locais podem ser excluídas com justificativa.
 
-**Pendência de amostra:** a Fase 2 estabelece vinte e uma verificações por função. O cronograma atual produz vinte. A equipe deverá adicionar uma verificação por função ou formalizar e documentar a alteração da quantidade mínima na Fase 2 antes de interpretar H11. Sem essa decisão, o resultado deverá ser apresentado como desvio em relação ao plano original, e não como cumprimento integral da amostra prevista.
 
 ### 2.12. S-03 — Itens de autenticidade e responsabilização (M12)
 
