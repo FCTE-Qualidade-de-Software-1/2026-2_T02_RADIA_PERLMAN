@@ -24,7 +24,7 @@ _Fonte: Equipe Radia Perlman, 2026._
 | **Com o propósito de** | avaliar |
 | **Com respeito a** | usabilidade: apreensibilidade, proteção contra erros do usuário, reconhecimento da adequação e operabilidade |
 | **Do ponto de vista de** | usuários finais: clientes residenciais e corporativos do Distrito Federal, de cidadãos leigos a pessoas com alto conhecimento em informática |
-| **No contexto de** | uso da Agência Virtual em produção, pelo navegador web, por cidadãos com níveis muito diferentes de conhecimento em informática, que precisam resolver seus serviços de energia sem auxílio externo. Nos testes, esse contexto é reproduzido com participantes voluntários sem experiência recente com o serviço, que usam a conta autorizada de uma unidade consumidora de Taguatinga, sem ajuda do avaliador e sem alterar informações da conta |
+| **No contexto de** | uso da Agência Virtual em produção, pelo navegador web, por cidadãos com níveis muito diferentes de conhecimento em informática, que precisam resolver seus serviços de energia sem auxílio externo. Nos testes, esse contexto é reproduzido com participantes voluntários sem experiência recente com o serviço, que usam a conta autorizada de uma unidade consumidora, sem ajuda do avaliador e sem alterar informações da conta |
  
 **Funcionalidades e tarefas:** login e cadastro (entradas inválidas nos formulários); segunda via de fatura e histórico de consumo (localizar a função, emitir a 2ª via e alterar o período do gráfico); relatório de Nada Consta e indicadores de continuidade (reconhecer a finalidade da tela). A distribuição segue os procedimentos de avaliação do [modelo de qualidade](../fase1/modelo-qualidade.md) da Fase 1.
 
@@ -37,7 +37,7 @@ O objetivo se desdobra em [Q1](questoes-hipoteses.md#q1)(localização de funç�
 | Foco (quatro subcaracterísticas de usabilidade) | Ramo “Usabilidade” do modelo adaptado ([modelo de qualidade](../fase1/modelo-qualidade.md)) |
 | Funcionalidades e tarefas | Procedimentos de avaliação: proteção contra erros no Login/Cadastro; operabilidade e apreensibilidade na Emissão de 2ª via e no Histórico de Consumo; reconhecimento da adequação no Relatório de Nada Consta e nos Indicadores de Continuidade |
 | Ponto de vista | Parte interessada “usuários finais” ([requisitos de avaliação](../fase1-requisitos.md)) e perfil dos usuários ([produto avaliado](../fase1/produto-avaliado.md)) |
-| Contexto (uso sem auxílio, conhecimento heterogêneo, navegador, conta de Taguatinga) | Justificativa da ênfase da usabilidade; interfaces e dependências; ambiente e massa de dados |
+| Contexto (uso sem auxílio, conhecimento heterogêneo, navegador, conta disponivel) | Justificativa da ênfase da usabilidade; interfaces e dependências; ambiente e massa de dados |
 | Propósito (avaliar) | Propósito da avaliação: identificar pontos de melhoria do portal |
 | Prioridade | Ênfase 5 (máxima) na seleção e priorização das características |
 | ODS | ODS 7 (usabilidade no Login e na 2ª via), ODS 12 (apreensibilidade no Histórico de Consumo) e ODS 16 (reconhecimento da adequação no Nada Consta e nos Indicadores de Continuidade), conforme o [alinhamento aos ODS](../fase1/alinhamento-ods.md) |
@@ -89,7 +89,7 @@ O objetivo se desdobra em [Q1](questoes-hipoteses.md#q1)(localização de funç�
 | **Com o propósito de** | avaliar |
 | **Com respeito a** | segurança: confidencialidade, integridade / não repúdio, autenticidade e responsabilização |
 | **Do ponto de vista de** | usuários finais: clientes residenciais e corporativos do Distrito Federal |
-| **No contexto de** | uso autenticado da Agência Virtual em produção, com acesso a dados cadastrais e financeiros e emissão de documentos comprobatórios, observado apenas pelos recursos disponíveis ao usuário comum. Nos testes, esse contexto é reproduzido com a conta autorizada da unidade consumidora de Taguatinga: verificação do login e do cadastro, encerramento de sessão seguido de nova tentativa de acesso e emissão repetida do relatório de Nada Consta, sem testes de invasão, uso de contas de terceiros ou alteração de registros |
+| **No contexto de** | uso autenticado da Agência Virtual em produção, com acesso a dados cadastrais e financeiros e emissão de documentos comprobatórios, observado apenas pelos recursos disponíveis ao usuário comum. Nos testes, esse contexto é reproduzido com a conta autorizada: verificação do login e do cadastro, encerramento de sessão seguido de nova tentativa de acesso e emissão repetida do relatório de Nada Consta, sem testes de invasão, uso de contas de terceiros ou alteração de registros |
  
 **Funcionalidades e tarefas:** login e cadastro (itens de autenticidade e responsabilização); segunda via de fatura e histórico de consumo (acesso após o logout); relatório de Nada Consta (consistência entre emissões e comprovação de autenticidade). Os indicadores de continuidade ficam fora deste objetivo, por serem dados de transparência pública, conforme a nota de escopo do [modelo de qualidade](../fase1/modelo-qualidade.md) da Fase 1.
 
@@ -103,7 +103,7 @@ O objetivo se desdobra em [Q12](questoes-hipoteses.md#q12) (autenticação e ras
 | Foco (três subcaracterísticas de segurança) | Ramo “Segurança” do modelo adaptado ([modelo de qualidade](../fase1/modelo-qualidade.md)) |
 | Funcionalidades e tarefas | Procedimentos de avaliação: autenticidade e responsabilização no Login/Cadastro; confidencialidade na Emissão de 2ª via e no Histórico de Consumo; integridade e não repúdio no Relatório de Nada Consta; nota de escopo que retira os Indicadores de Continuidade |
 | Ponto de vista | Parte interessada “usuários finais”, que exige uma interface segura ([requisitos de avaliação](../fase1-requisitos.md)) |
-| Contexto (dados sensíveis e financeiros, observação externa, conta de Taguatinga) | Justificativa da ênfase da segurança; justificativa da adaptação do modelo (testes de caixa-preta em produção); ambiente e massa de dados |
+| Contexto (dados sensíveis e financeiros, observação externa, conta autorizada) | Justificativa da ênfase da segurança; justificativa da adaptação do modelo (testes de caixa-preta em produção); ambiente e massa de dados |
 | Propósito (avaliar) | Propósito da avaliação: identificar pontos de melhoria do portal |
 | Prioridade | Ênfase 5 (máxima) na seleção e priorização das características |
 | ODS | ODS 16 (integridade / não repúdio no Nada Consta), conforme o [alinhamento aos ODS](../fase1/alinhamento-ods.md) |

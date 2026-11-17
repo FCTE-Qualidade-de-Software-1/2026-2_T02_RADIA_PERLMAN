@@ -20,7 +20,7 @@
 * **Interfaces e Dependências:** A aplicação opera estritamente através de interfaces gráficas de usuário (GUI) baseadas na Web, exigindo como requisito de software o uso de navegadores de internet padrão (browsers). Arquiteturalmente, as operações do sistema possuem forte dependência de integração com o banco de dados corporativo da Neoenergia (back-end) para validar credenciais, recuperar históricos de medição de energia e atestar status de pagamentos em tempo real.
 
 
-* **Ambiente e Massa de Dados:** Para estabelecer um ambiente de avaliação válido, serão utilizados dados reais de uma unidade consumidora localizada em Taguatinga. Esta massa de dados disponível e fidedigna é essencial para agilizar a avaliação sem causar impactos ou simular falsos positivos.
+* **Ambiente e Massa de Dados:** Para estabelecer um ambiente de avaliação válido, serão utilizados dados reais de uma unidade consumidora. Esta massa de dados disponível e fidedigna é essencial para agilizar a avaliação sem causar impactos ou simular falsos positivos.
 
 
 * **Perfil dos Usuários e Nível de Conhecimento:** O ambiente no qual o produto está inserido abrange a população do Distrito Federal. O sistema exige a interação de usuários com níveis altamente heterogêneos de conhecimento em informática e no domínio do serviço. Tal variação exige forte ênfase na Engenharia Humana durante a avaliação.
