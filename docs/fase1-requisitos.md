@@ -16,7 +16,7 @@ A definição clara dos envolvidos é fundamental, pois os objetivos e os requis
 * **Requisitante (Equipe de Avaliação):** Estudantes da disciplina de Qualidade de Software da Universidade de Brasília (UnB). Atuam como uma equipe de avaliação independente (representando a "comunidade de software" e "laboratórios de avaliação"), cuja necessidade é aplicar, identificar e validar métodos empíricos de avaliação da qualidade, aumentando a credibilidade das técnicas estudadas em cenários reais.
 
 
-* **Usuários Finais (Clientes residenciais e corporativos):** São os cidadãos do Distrito Federal que utilizam a plataforma para gerenciar serviços de energia. A sua principal necessidade é ter confiança no produto, além de exigir uma interface clara e segura. Essa necessidade influencia diretamente a atribuição de **ênfase máxima (5) para Usabilidade e Segurança** em nosso modelo de avaliação.
+* **Usuários Finais (Clientes residenciais e corporativos):** São os cidadãos do Distrito Federal que utilizam a plataforma para gerenciar serviços de energia. A sua principal necessidade é ter confiança no produto, além de exigir uma interface clara e segura. Essa necessidade influencia diretamente a atribuição de **ênfase máxima (5) para Capacidade de Interação e Segurança** em nosso modelo de avaliação.
 
 
 

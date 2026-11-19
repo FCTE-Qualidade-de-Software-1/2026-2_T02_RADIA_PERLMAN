@@ -19,10 +19,10 @@ A Engenharia de Software é definida como a aplicação de uma abordagem sistem�
 
 Segundo Garvin (1984), a qualidade pode ser analisada através de cinco visões principais: transcendental, do usuário, da manufatura, do produto e baseada em valor. Este projeto norteia-se primordialmente pelas seguintes perspectivas:
 
-* **Visão do Usuário:** Avalia o grau em que o produto atende às necessidades e expectativas dos usuários, abrangendo elementos como a usabilidade.
+* **Visão do Usuário:** Avalia o grau em que o produto atende às necessidades e expectativas dos usuários, abrangendo elementos como a capacidade de interação.
 * **Visão do Produto:** Explora as relações causais entre propriedades internas e externas, assumindo que a qualidade pode ser avaliada de maneira objetiva por meio de atributos mensuráveis.
 
-Para padronizar a avaliação, o projeto adota a família de normas **SQuaRE (Software product Quality Requirements and Evaluation)**. Utiliza-se o modelo de qualidade de produto **ISO/IEC 25010**, que categoriza as propriedades do software em características e subcaracterísticas mensuráveis, como eficiência de desempenho, usabilidade, confiabilidade e segurança.
+Para padronizar a avaliação, o projeto adota a família de normas **SQuaRE (Software product Quality Requirements and Evaluation)**. Utiliza-se o modelo de qualidade de produto **ISO/IEC 25010**, que categoriza as propriedades do software em características e subcaracterísticas mensuráveis, como eficiência de desempenho, capacidade de interação, confiabilidade e segurança.
 
 ## O Processo de Avaliação
 
@@ -42,7 +42,7 @@ Abaixo estão os integrantes responsáveis por conduzir este processo de avalia�
 | Foto | Nome | GitHub |
 |:---:|---|---|
 | <img src="https://github.com/arthor13.png" width="50" style="border-radius: 50%;"> | Arthur de Lima Sobreira | [@arthor13](https://github.com/arthor13) |
-| <img src="https://github.com/BeatrizSant.png" width="50" style="border-radius: 50%;"> | Beatriz Figueiredo dos Santos| [@BeatrizSant](https://github.com/BeatrizSant) |
+| <img src="https://github.com/BeatrizSants.png" width="50" style="border-radius: 50%;"> | Beatriz Figueiredo dos Santos| [@BeatrizSants](https://github.com/BeatrizSants) |
 | <img src="https://github.com/daramariabs.png" width="50" style="border-radius: 50%;"> | Dara Maria Barbosa de Sousa | [@daramariabs](https://github.com/daramariabs) |
 | <img src="https://github.com/henryqma.png" width="50" style="border-radius: 50%;"> | Henrique Martins Alencar | [@henryqma](https://github.com/henryqma) |
 | <img src="https://github.com/isabellachoukaira.png" width="50" style="border-radius: 50%;"> | Isabella Mendes Choukaira | [@isabellachoukaira](https://github.com/isabellachoukaira) |

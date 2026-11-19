@@ -10,7 +10,7 @@ Abaixo apresenta-se a estrutura em árvore do modelo de qualidade adaptado para 
 
 ```mermaid
 graph LR
-    A[Qualidade do Produto<br>ISO/IEC 25010 Adaptada] --> B[Usabilidade]
+    A[Qualidade do Produto<br>ISO/IEC 25010 Adaptada] --> B[Capacidade de Interação]
     A --> C[Confiabilidade]
     A --> D[Segurança]
     A --> E[Eficiência de Desempenho]
@@ -47,10 +47,10 @@ A tabela a seguir consolida as prioridades e suas justificativas:
 
 | Característica (ISO/IEC 25010) | Ênfase (1 a 5) | Nível de Prioridade | Justificativa da Atribuição |
 | --- | --- | --- | --- |
-| **Usabilidade** | **5** | Máxima | A Agência Virtual atende a toda a população do DF, cujo nível de conhecimento em informática é altamente variável. O sistema deve ser intuitivo para garantir que cidadãos leigos consigam operá-lo sem auxílio externo, evitando a superlotação no atendimento presencial.|
+| **Capacidade de Interação** | **5** | Máxima | A Agência Virtual atende a toda a população do DF, cujo nível de conhecimento em informática é altamente variável. O sistema deve ser intuitivo para garantir que cidadãos leigos consigam operá-lo sem auxílio externo, evitando a superlotação no atendimento presencial.|
 | **Segurança** | **5** | Máxima | O portal processa e expõe dados sensíveis (cadastrais, endereços) e informações financeiras (faturamento). A garantia da confidencialidade e integridade é mandatória para evitar fraudes, acessos indevidos e adequar-se às legislações. |
 | **Confiabilidade** | **4** | Alta | A indisponibilidade impede os clientes de realizarem pagamentos no prazo. A tolerância a falhas é crucial para que, diante de um erro de comunicação ou dado inválido, o sistema informe o usuário de forma clara sem corromper a sessão. |
-| **Eficiência de Desempenho** | **4** | Alta | O tempo de resposta afeta diretamente a percepção de usabilidade. A geração de relatórios e gráficos de consumo exige processamento que não deve exceder limites aceitáveis de espera para garantir a fluidez da navegação. |
+| **Eficiência de Desempenho** | **4** | Alta | O tempo de resposta afeta diretamente a percepção de capacidade de cnteração. A geração de relatórios e gráficos de consumo exige processamento que não deve exceder limites aceitáveis de espera para garantir a fluidez da navegação. |
 | **Manutenibilidade, Portabilidade e Compatibilidade** | **1** | Nenhuma | A avaliação limita-se a uma abordagem externa (caixa-preta), impossibilitando a medição de atributos de código-fonte, infraestrutura ou arquitetura interna pelos avaliadores. |
 
 _Fonte: Equipe Radia Perlman, 2026_
@@ -61,7 +61,7 @@ _Fonte: Equipe Radia Perlman, 2026_
 
 Abaixo estão detalhados os procedimentos de avaliação por característica, pontuados em uma escala de ênfase de 1 a 5, com o mapeamento explícito das funcionalidades do escopo escolhidas para cada teste:
 
-* **Usabilidade (Ênfase 5):** Capacidade do portal de ser usado com eficácia, eficiência e satisfação no contexto de uso.
+* **Capacidade de Interação (Ênfase 5):** Capacidade do portal de ser usado com eficácia, eficiência e satisfação no contexto de uso.
     * *Proteção contra erros do usuário:* **Funcionalidade avaliada:** Login/Cadastro. Inserir intencionalmente formatos inválidos no formulário para verificar se o sistema protege o usuário e orienta a correção antes do envio dos dados.
     * *Operabilidade e Apreensibilidade:* **Funcionalidades avaliadas:** Emissão de 2ª via e Histórico de Consumo. Executar a navegação até as faturas de energia e gerar o gráfico de consumo, medindo se os atributos do sistema o tornam fácil de operar e controlar por usuários leigos.
     * *Reconhecimento da adequação:* **Funcionalidades avaliadas:** Relatório de Nada Consta e Indicadores de Continuidade. Avaliar se as telas permitem que o usuário reconheça imediatamente que as funções são apropriadas e suficientes para suas necessidades de informação.
