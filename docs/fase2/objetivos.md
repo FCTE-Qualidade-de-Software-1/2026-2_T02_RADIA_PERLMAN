@@ -1,6 +1,6 @@
 # Objetivos de medição
 
-Na [Fase 1](../fase1-requisitos.md), definimos que a avaliação abrangeria cinco funcionalidades da Agência Virtual da Neoenergia Brasília: login e cadastro, segunda via de fatura, histórico de consumo, relatório de Nada Consta e indicadores de continuidade. Selecionamos usabilidade (ênfase 5), confiabilidade (4), segurança (5) e eficiência de desempenho (4), com base na ISO/IEC 25010:2011. Nosso propósito é identificar dificuldades de uso e oportunidades de melhoria nesses serviços.
+Na [Fase 1](../fase1-requisitos.md), definimos que a avaliação abrangeria cinco funcionalidades da Agência Virtual da Neoenergia Brasília: login e cadastro, segunda via de fatura, histórico de consumo, relatório de Nada Consta e indicadores de continuidade. Selecionamos capacidade de interação (ênfase 5), confiabilidade (4), segurança (5) e eficiência de desempenho (4), com base na ISO/IEC 25010:2011. Nosso propósito é identificar dificuldades de uso e oportunidades de melhoria nesses serviços.
 
 Para orientar as medições, formulamos quatro objetivos pelo método *Goal–Question–Metric* (GQM). Cada objetivo é descrito com o *template* do GQM (BASILI; CALDIERA; ROMBACH, 1994): objeto de análise, propósito, foco de qualidade, ponto de vista e contexto. Em seguida, indicamos as funcionalidades e tarefas observadas, a origem de cada elemento na Fase 1 e o *abstraction sheet* do objetivo. A observação será feita pela interface web, conforme o acesso disponível aos usuários.
 
@@ -9,20 +9,20 @@ Para orientar as medições, formulamos quatro objetivos pelo método *Goal–Qu
  
 | Objetivo | Característica (ênfase) | Subcaracterísticas | Questões | Métricas |
 |---|---|---|---|---|
-| [G1](#g1) | Usabilidade (5) | Apreensibilidade, proteção contra erros, reconhecimento da adequação, operabilidade | Q1, Q2, Q9, Q10 | M1, M2, M9, M10 |
+| [G1](#g1) | Capacidade de Interação (5) | Apreensibilidade, proteção contra erros, reconhecimento da adequação, operabilidade | Q1, Q2, Q9, Q10 | M1, M2, M9, M10 |
 | [G2](#g2) | Confiabilidade (4) | Maturidade, disponibilidade, tolerância a falhas / recuperabilidade | Q3, Q4, Q11 | M3, M4, M11 |
 | [G3](#g3) | Segurança (5) | Confidencialidade, integridade / não repúdio, autenticidade e responsabilização | Q5, Q6, Q12, Q13 | M5, M6, M12, M13 |
 | [G4](#g4) | Eficiência de desempenho (4) | Comportamento temporal, capacidade | Q7, Q8, Q14 | M7, M8, M14 |
  
 _Fonte: Equipe Radia Perlman, 2026._
 
-## G1 — Usabilidade { #g1 }
+## G1 — Capacidade de Interação { #g1 }
 
 | Campo | Descrição |
 |---|---|
 | **Analisar** | a Agência Virtual da Neoenergia Brasília |
 | **Com o propósito de** | avaliar |
-| **Com respeito a** | usabilidade: apreensibilidade, proteção contra erros do usuário, reconhecimento da adequação e operabilidade |
+| **Com respeito a** | capacidade de interação: apreensibilidade, proteção contra erros do usuário, reconhecimento da adequação e operabilidade |
 | **Do ponto de vista de** | usuários finais: clientes residenciais e corporativos do Distrito Federal, de cidadãos leigos a pessoas com alto conhecimento em informática |
 | **No contexto de** | uso da Agência Virtual em produção, pelo navegador web, por cidadãos com níveis muito diferentes de conhecimento em informática, que precisam resolver seus serviços de energia sem auxílio externo. Nos testes, esse contexto é reproduzido com participantes voluntários sem experiência recente com o serviço, que usam a conta autorizada de uma unidade consumidora, sem ajuda do avaliador e sem alterar informações da conta |
  
@@ -34,19 +34,19 @@ O objetivo se desdobra em [Q1](questoes-hipoteses.md#q1)(localização de funç�
  
 | Elemento do objetivo | Origem na Fase 1 |
 |---|---|
-| Foco (quatro subcaracterísticas de usabilidade) | Ramo “Usabilidade” do modelo adaptado ([modelo de qualidade](../fase1/modelo-qualidade.md)) |
+| Foco (quatro subcaracterísticas de capacidade de interação) | Ramo “Capacidade de Interação” do modelo adaptado ([modelo de qualidade](../fase1/modelo-qualidade.md)) |
 | Funcionalidades e tarefas | Procedimentos de avaliação: proteção contra erros no Login/Cadastro; operabilidade e apreensibilidade na Emissão de 2ª via e no Histórico de Consumo; reconhecimento da adequação no Relatório de Nada Consta e nos Indicadores de Continuidade |
 | Ponto de vista | Parte interessada “usuários finais” ([requisitos de avaliação](../fase1-requisitos.md)) e perfil dos usuários ([produto avaliado](../fase1/produto-avaliado.md)) |
-| Contexto (uso sem auxílio, conhecimento heterogêneo, navegador, conta disponivel) | Justificativa da ênfase da usabilidade; interfaces e dependências; ambiente e massa de dados |
+| Contexto (uso sem auxílio, conhecimento heterogêneo, navegador, conta disponivel) | Justificativa da ênfase da capacidade de interação; interfaces e dependências; ambiente e massa de dados |
 | Propósito (avaliar) | Propósito da avaliação: identificar pontos de melhoria do portal |
 | Prioridade | Ênfase 5 (máxima) na seleção e priorização das características |
-| ODS | ODS 7 (usabilidade no Login e na 2ª via), ODS 12 (apreensibilidade no Histórico de Consumo) e ODS 16 (reconhecimento da adequação no Nada Consta e nos Indicadores de Continuidade), conforme o [alinhamento aos ODS](../fase1/alinhamento-ods.md) |
+| ODS | ODS 7 (capacidade de interação no Login e na 2ª via), ODS 12 (apreensibilidade no Histórico de Consumo) e ODS 16 (reconhecimento da adequação no Nada Consta e nos Indicadores de Continuidade), conforme o [alinhamento aos ODS](../fase1/alinhamento-ods.md) |
  
 ### Abstraction sheet
  
 | Objeto | Propósito | Foco da qualidade | Ponto de vista |
 |---|---|---|---|
-| Agência Virtual (5 funcionalidades) | Avaliar | Usabilidade (quatro subcaracterísticas) | Usuários finais |
+| Agência Virtual (5 funcionalidades) | Avaliar | Capacidade de Interação (quatro subcaracterísticas) | Usuários finais |
 
 ## G2 — Confiabilidade { #g2 }
 

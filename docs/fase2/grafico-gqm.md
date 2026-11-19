@@ -7,7 +7,7 @@ Organizamos no diagrama os quatro objetivos definidos a partir da Fase 1. De cad
 flowchart LR
     subgraph N1["Objetivos"]
         direction TB
-        G1["G1 — Usabilidade"]
+        G1["G1 — Capacidade de Interação"]
         G2["G2 — Confiabilidade"]
         G3["G3 — Segurança"]
         G4["G4 — Eficiência de desempenho"]

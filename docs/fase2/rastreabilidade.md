@@ -6,10 +6,10 @@ Na Fase 1, definimos como propósito identificar oportunidades de melhoria na Ag
 
 | Característica | Ênfase | Subcaracterística | Objetivo | Questão e hipótese | Métrica |
 |---|---:|---|---|---|---|
-| Usabilidade | 5 | Apreensibilidade | [G1](objetivos.md#g1) | [Q1/H1](questoes-hipoteses.md#q1) | [M1](metricas.md#m1) — localização sem ajuda. |
-| Usabilidade | 5 | Proteção contra erros | [G1](objetivos.md#g1) | [Q2/H2](questoes-hipoteses.md#q2) | [M2](metricas.md#m2) — validação de entradas inválidas. |
-| Usabilidade | 5 | Reconhecimento da adequação | [G1](objetivos.md#g1) | [Q9/H9](questoes-hipoteses.md#q9) | [M9](metricas.md#m9) — reconhecimento da finalidade da tela. |
-| Usabilidade | 5 | Operabilidade | [G1](objetivos.md#g1) | [Q10/H10](questoes-hipoteses.md#q10) | [M10](metricas.md#m10) — tarefas de operação concluídas sem erro e sem ajuda. |
+| Capacidade de Interação | 5 | Apreensibilidade | [G1](objetivos.md#g1) | [Q1/H1](questoes-hipoteses.md#q1) | [M1](metricas.md#m1) — localização sem ajuda. |
+| Capacidade de Interação | 5 | Proteção contra erros | [G1](objetivos.md#g1) | [Q2/H2](questoes-hipoteses.md#q2) | [M2](metricas.md#m2) — validação de entradas inválidas. |
+| Capacidade de Interação | 5 | Reconhecimento da adequação | [G1](objetivos.md#g1) | [Q9/H9](questoes-hipoteses.md#q9) | [M9](metricas.md#m9) — reconhecimento da finalidade da tela. |
+| Capacidade de Interação | 5 | Operabilidade | [G1](objetivos.md#g1) | [Q10/H10](questoes-hipoteses.md#q10) | [M10](metricas.md#m10) — tarefas de operação concluídas sem erro e sem ajuda. |
 | Confiabilidade | 4 | Maturidade | [G2](objetivos.md#g2) | [Q3/H3](questoes-hipoteses.md#q3) | [M3](metricas.md#m3) — execuções sem falhas por fluxo. |
 | Confiabilidade | 4 | Disponibilidade | [G2](objetivos.md#g2) | [Q11/H11](questoes-hipoteses.md#q11) | [M11](metricas.md#m11) — disponibilidade nas verificações agendadas, por função. |
 | Confiabilidade | 4 | Tolerância a falhas / Recuperabilidade | [G2](objetivos.md#g2) | [Q4/H4](questoes-hipoteses.md#q4) | [M4](metricas.md#m4) — retomada e recuperação após interrupção local. |
@@ -21,7 +21,7 @@ Na Fase 1, definimos como propósito identificar oportunidades de melhoria na Ag
 | Eficiência de desempenho | 4 | Comportamento temporal | [G4](objetivos.md#g4) | [Q8/H8](questoes-hipoteses.md#q8) | [M8](metricas.md#m8) — percentil 90 por fluxo. |
 | Eficiência de desempenho | 4 | Capacidade | [G4](objetivos.md#g4) | [Q14/H14](questoes-hipoteses.md#q14) | [M14](metricas.md#m14) — razão de tempo entre pico e fora de pico, por fluxo. |
 
-Usabilidade e segurança têm ênfase 5 na Fase 1; confiabilidade e eficiência de desempenho, ênfase 4. Essa diferença orientará a prioridade das recomendações, não a fórmula dos indicadores.
+Capacidade de Interação e segurança têm ênfase 5 na Fase 1; confiabilidade e eficiência de desempenho, ênfase 4. Essa diferença orientará a prioridade das recomendações, não a fórmula dos indicadores.
 
 ## 2. Aplicação das métricas às funcionalidades
 
@@ -60,8 +60,8 @@ O [alinhamento aos ODS](../fase1/alinhamento-ods.md) da Fase 1 associa três obj
  
 | ODS | Foco indicado na Fase 1 | Objetivos | Métricas |
 |---|---|---|---|
-| ODS 7 — Energia limpa e acessível | Confiabilidade (disponibilidade) e usabilidade nas tarefas de Login e 2ª via | [G1](objetivos.md#g1), [G2](objetivos.md#g2) | [M2](metricas.md#m2) (login e cadastro), [M1](metricas.md#m1) e [M10](metricas.md#m10) (2ª via), [M11](metricas.md#m11) (disponibilidade da 2ª via) |
-| ODS 12 — Consumo e produção responsáveis | Usabilidade (apreensibilidade) e eficiência de desempenho no Histórico de Consumo | [G1](objetivos.md#g1), [G4](objetivos.md#g4) | [M1](metricas.md#m1) (localização do histórico), [M14](metricas.md#m14) (renderização do gráfico) |
+| ODS 7 — Energia limpa e acessível | Confiabilidade (disponibilidade) e capacidade de interação nas tarefas de Login e 2ª via | [G1](objetivos.md#g1), [G2](objetivos.md#g2) | [M2](metricas.md#m2) (login e cadastro), [M1](metricas.md#m1) e [M10](metricas.md#m10) (2ª via), [M11](metricas.md#m11) (disponibilidade da 2ª via) |
+| ODS 12 — Consumo e produção responsáveis | Capacidade de Interação (apreensibilidade) e eficiência de desempenho no Histórico de Consumo | [G1](objetivos.md#g1), [G4](objetivos.md#g4) | [M1](metricas.md#m1) (localização do histórico), [M14](metricas.md#m14) (renderização do gráfico) |
 | ODS 16 — Paz, justiça e instituições eficazes | Segurança (integridade / não repúdio) e reconhecimento da adequação no Nada Consta e nos Indicadores de Continuidade | [G1](objetivos.md#g1), [G3](objetivos.md#g3) | [M6](metricas.md#m6) e [M13](metricas.md#m13) (Nada Consta), [M9](metricas.md#m9) (reconhecimento das telas) |
 
 ## Histórico de Versões

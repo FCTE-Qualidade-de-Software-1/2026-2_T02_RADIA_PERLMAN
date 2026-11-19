@@ -7,7 +7,7 @@
     3. Histórico de consumo
     4. Relatório de Nada Consta
     5. Indicadores de continuidade
-* **Perfil dos Usuários:** População em geral do Distrito Federal, abrangendo desde cidadãos leigos até usuários com alto conhecimento em informática. Tal heterogeneidade exige forte ênfase na Engenharia Humana e Usabilidade (Galin, 2018).
+* **Perfil dos Usuários:** População em geral do Distrito Federal, abrangendo desde cidadãos leigos até usuários com alto conhecimento em informática. Tal heterogeneidade exige forte ênfase na Engenharia Humana e Capacidade de Interação (Galin, 2018).
 
 * **Descrição e Módulos do Sistema:** O escopo do sistema submetido à avaliação é composto por múltiplas funções e janelas de interação de dados, logicamente estruturadas nos seguintes módulos principais:
 

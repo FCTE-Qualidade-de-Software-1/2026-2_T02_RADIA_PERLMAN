@@ -25,7 +25,7 @@ Para detalhar os quatro objetivos GQM, formulamos quatorze questões de avaliaç
  
 _Fonte: Equipe Radia Perlman, 2026._
 
-## G1 — Usabilidade
+## G1 — Capacidade de Interação
 
 ### Q1 — Os usuários conseguem localizar as funções sem auxílio? { #q1 }
 

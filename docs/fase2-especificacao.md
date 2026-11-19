@@ -29,7 +29,7 @@ A especificação reúne quatro objetivos (G1–G4), quatorze questões (Q1–Q1
 
 | Característica | Ênfase da Fase 1 | Subcaracterísticas | Objetivo GQM |
 |---|:---:|---|---|
-| Usabilidade | 5 | Apreensibilidade, proteção contra erros do usuário, reconhecimento da adequação e operabilidade | [G1](fase2/objetivos.md#g1) |
+| Capacidade de Interação | 5 | Apreensibilidade, proteção contra erros do usuário, reconhecimento da adequação e operabilidade | [G1](fase2/objetivos.md#g1) |
 | Confiabilidade | 4 | Maturidade, disponibilidade e tolerância a falhas / recuperabilidade | [G2](fase2/objetivos.md#g2) |
 | Segurança | 5 | Confidencialidade, integridade / não repúdio, autenticidade e responsabilização, conforme as evidências acessíveis externamente | [G3](fase2/objetivos.md#g3) |
 | Eficiência de desempenho | 4 | Comportamento temporal e capacidade | [G4](fase2/objetivos.md#g4) |
