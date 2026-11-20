@@ -1,0 +1,39 @@
+{
+  "milestone": "Entrega 1 — Fases 1 e 2",
+  "total_issues": 11,
+  "issues_concluidas": 11,
+  "psm_1_retrabalho_pct": 9.09,
+  "psm_2_progresso_pct": 100.0,
+  "psm_3_razao_esforco": null,
+  "horas_estimadas": 0.0,
+  "horas_reais": 0,
+  "issues_sem_estimativa": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "linhas_de_horas_invalidas": [],
+  "issues_reabertas": [
+    5
+  ],
+  "issues_reabertas_atualmente_fechadas": [
+    5
+  ],
+  "horas_por_integrante": {},
+  "horas_por_dia": {},
+  "issues_concluidas_por_dia": {
+    "2026-10-19": 6,
+    "2026-10-26": 7,
+    "2026-11-08": 9,
+    "2026-11-13": 11
+  },
+  "registros_horas": []
+}

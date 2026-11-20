@@ -1,0 +1,1721 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto da disciplina de Qualidade de Software">
+      
+      
+      
+      
+        <link rel="prev" href="../../fase3-plano-avaliacao/">
+      
+      
+        <link rel="next" href="../metodo-procedimentos/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Recursos e ambiente - Processo de Avaliação de Produto de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#recursos-e-ambiente-de-avaliacao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-header__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Processo de Avaliação de Produto de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Recursos e ambiente
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase1-requisitos/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase2-especificacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../fase3-plano-avaliacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fase4-execucao/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fase 4
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-nav__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Processo de Avaliação de Produto de Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propósito da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/produto-avaliado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Produto Avaliado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/modelo-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade de Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/alinhamento-ods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alinhamento aos Objetivos de Desenvolvimento Sustentável (ODS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2-especificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Especificação da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objetivos de medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/questoes-hipoteses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Questões e hipóteses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/metricas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Métricas e pontuações
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/grafico-gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráfico GQM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/criterios-julgamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critérios de julgamento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rastreabilidade Fase 1–2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/protocolo-coleta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocolo de coleta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/gestao-psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestão PSM/CID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resultados PSM/CID
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Resultados PSM/CID
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/psm/entrega_1/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entrega 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/psm/entrega_2/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entrega 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/psm/consolidado/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consolidado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3-plano-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de Avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Recursos e ambiente
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos e ambiente
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ambiente-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Ambiente de execução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ferramentas-de-apoio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Ferramentas de apoio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dados-de-teste-e-condicoes-de-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Dados de teste e condições de acesso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-avaliadores-e-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Avaliadores e participantes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Avaliadores e participantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-criterios-de-selecao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Critérios de seleção
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-recrutamento-e-confirmacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Recrutamento e confirmação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-consentimento-e-protecao-dos-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Consentimento e proteção dos participantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-amostra-e-tratamento-da-ausencia-de-voluntarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Amostra e tratamento da ausência de voluntários
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-recursos-especificos-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Recursos específicos por métrica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-limitacoes-do-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Limitações do ambiente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-verificacao-antes-da-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Verificação antes da coleta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metodo-procedimentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Método e procedimentos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronograma de execução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase4-execucao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ambiente-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Ambiente de execução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ferramentas-de-apoio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Ferramentas de apoio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dados-de-teste-e-condicoes-de-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Dados de teste e condições de acesso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-avaliadores-e-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Avaliadores e participantes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Avaliadores e participantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-criterios-de-selecao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Critérios de seleção
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-recrutamento-e-confirmacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Recrutamento e confirmação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-consentimento-e-protecao-dos-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Consentimento e proteção dos participantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-amostra-e-tratamento-da-ausencia-de-voluntarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Amostra e tratamento da ausência de voluntários
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-recursos-especificos-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Recursos específicos por métrica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-limitacoes-do-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Limitações do ambiente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-verificacao-antes-da-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Verificação antes da coleta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="recursos-e-ambiente-de-avaliacao">Recursos e ambiente de avaliação<a class="headerlink" href="#recursos-e-ambiente-de-avaliacao" title="Permanent link">&para;</a></h1>
+<p>A avaliação será realizada na Agência Virtual da Neoenergia Brasília, por meio da interface web disponível aos usuários. Como a equipe não possui acesso ao código-fonte, aos bancos de dados ou aos recursos administrativos da concessionária, as observações ficarão restritas ao comportamento apresentado durante a navegação.</p>
+<p>Este documento reúne os recursos necessários para executar os procedimentos descritos em <a href="../metodo-procedimentos/">Método e procedimentos de avaliação</a>. As condições foram definidas a partir do escopo da <a href="../../fase1/produto-avaliado/">Fase 1</a>, das métricas e do <a href="../../fase2/protocolo-coleta/">Protocolo de coleta da Fase 2</a>, além do cronograma da equipe.</p>
+<h2 id="1-ambiente-de-execucao">1. Ambiente de execução<a class="headerlink" href="#1-ambiente-de-execucao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Especificação para a avaliação</th>
+<th>Registro necessário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Produto</td>
+<td>Agência Virtual da Neoenergia Brasília, acessada pelo endereço utilizado pela equipe durante a coleta.</td>
+<td>URL, data e horário de acesso.</td>
+</tr>
+<tr>
+<td>Dispositivo</td>
+<td>Notebook ou computador de mesa com teclado e mouse ou touchpad. Recomenda-se pelo menos 8 GB de RAM e resolução de 1366 × 768 ou superior; esses valores são referências operacionais do estudo, não requisitos oficiais da Neoenergia.</td>
+<td>Modelo, processador, memória RAM, resolução e sistema operacional.</td>
+</tr>
+<tr>
+<td>Navegador</td>
+<td>Versão estável e atualizada do Chrome, Firefox ou Edge. A equipe deverá escolher um navegador de referência antes das medições de desempenho e manter a mesma versão durante cada série.</td>
+<td>Nome, versão, zoom e extensões habilitadas.</td>
+</tr>
+<tr>
+<td>Conexão</td>
+<td>Conexão de banda larga estável. Nas comparações de desempenho, utilizar a mesma rede e o mesmo tipo de conexão. Evitar VPN ou proxy; se forem necessários, registrar seu uso.</td>
+<td>Wi-Fi ou cabo, rede utilizada e oscilações observadas.</td>
+</tr>
+<tr>
+<td>Perfil do navegador</td>
+<td>Perfil dedicado à avaliação, sem extensões que interfiram na página. O salvamento automático de senhas deverá permanecer desativado.</td>
+<td>Identificação do perfil e configurações relevantes.</td>
+</tr>
+<tr>
+<td>Cronometragem</td>
+<td>Gravação de tela local com marcação temporal, preferencialmente a pelo menos 30 quadros por segundo. Se isso não estiver disponível, utilizar cronômetro com resolução de 0,1 segundo, mantendo o mesmo método em toda a série.</td>
+<td>Ferramenta, método, resolução e arquivos associados.</td>
+</tr>
+<tr>
+<td>Registro e consolidação</td>
+<td>Planilha ou arquivo CSV para registrar tentativas, horários, resultados, exclusões e evidências.</td>
+<td>Nome e versão do arquivo de coleta.</td>
+</tr>
+<tr>
+<td>Repositório</td>
+<td>Repositório Git da equipe para armazenar procedimentos, dados anonimizados e evidências que possam ser publicadas.</td>
+<td>Caminho dos arquivos e commit correspondente.</td>
+</tr>
+</tbody>
+</table>
+<p>O dispositivo principal será utilizado como referência para as medições de tempo. Caso seja necessário utilizar outro computador, navegador ou tipo de conexão, os resultados deverão ser identificados separadamente. Não serão reunidos tempos obtidos em ambientes diferentes sem que essa diferença seja registrada.</p>
+<p>Antes de cada sessão, os avaliadores deverão conferir se o relógio do dispositivo está correto, se a conexão está funcionando e se não há atualizações ou downloads em andamento que possam interferir na navegação.</p>
+<h2 id="2-ferramentas-de-apoio">2. Ferramentas de apoio<a class="headerlink" href="#2-ferramentas-de-apoio" title="Permanent link">&para;</a></h2>
+<p>Para esta avaliação, serão suficientes:</p>
+<ul>
+<li>navegador web para acessar a Agência Virtual;</li>
+<li>ferramenta de captura de tela ou gravação local, quando necessária para conferir etapas e tempos;</li>
+<li>cronômetro padronizado, caso não seja possível utilizar gravação com marcação temporal;</li>
+<li>planilha eletrônica para organizar os dados brutos e calcular percentuais, medianas e percentil 90;</li>
+<li>repositório Git para manter os procedimentos, as fichas de coleta e as evidências anonimizadas.</li>
+</ul>
+<p>A gravação deverá ser utilizada apenas quando necessária. Antes de publicar imagens ou vídeos, a equipe deverá verificar se aparecem nomes, CPF, endereço, número da unidade consumidora, valores de faturas, códigos de barras, QR Codes, tokens ou outras informações que permitam identificar uma pessoa ou conta. Quando não for possível ocultar esses dados com segurança, a evidência não deverá ser publicada; o resultado poderá ser registrado em uma ficha sem reproduzir a informação sensível.</p>
+<h2 id="3-dados-de-teste-e-condicoes-de-acesso">3. Dados de teste e condições de acesso<a class="headerlink" href="#3-dados-de-teste-e-condicoes-de-acesso" title="Permanent link">&para;</a></h2>
+<p>A avaliação utilizará páginas públicas e contas próprias ou cujo uso tenha sido expressamente autorizado pelo titular. A <a href="../../fase1/produto-avaliado/">Fase 1</a> prevê o uso de dados reais de uma unidade consumidora autorizada. Essa condição não autoriza a divulgação dos dados: a conta deverá ser acessada somente por integrante autorizado, e nenhuma informação que identifique o titular ou a unidade consumidora será publicada no repositório.</p>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>Condição de uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Páginas públicas</td>
+<td>Podem ser acessadas pelos integrantes da equipe sem autenticação.</td>
+</tr>
+<tr>
+<td>Páginas restritas</td>
+<td>Exigem conta própria ou autorização do titular. O responsável pela conta deverá realizar ou acompanhar a autenticação.</td>
+</tr>
+<tr>
+<td>Dados de fatura e consumo</td>
+<td>Serão consultados somente quando houver autorização. Nos registros, será anotado o resultado da comparação, sem copiar valores pessoais ou financeiros.</td>
+</tr>
+<tr>
+<td>Formulários</td>
+<td>Serão utilizados valores de teste não sensíveis e entradas inválidas apenas nas etapas em que a resposta possa ser observada sem concluir uma operação.</td>
+</tr>
+<tr>
+<td>Cadastro e alterações</td>
+<td>Não serão concluídos cadastros, alterações cadastrais, solicitações ou operações que possam produzir efeitos reais.</td>
+</tr>
+<tr>
+<td>Credenciais</td>
+<td>Senhas, tokens e códigos de autenticação não serão armazenados em planilhas, capturas de tela, vídeos ou arquivos do Git.</td>
+</tr>
+<tr>
+<td>Emissão de documentos</td>
+<td>Será realizada somente com conta autorizada e quando a emissão não causar alteração indevida. Os documentos não serão publicados no repositório.</td>
+</tr>
+</tbody>
+</table>
+<p>Se uma funcionalidade exigir dados ou permissões que a equipe não possui, o teste correspondente não deverá ser improvisado. A limitação será registrada e a métrica ficará inconclusiva quando não houver observações suficientes.</p>
+<h2 id="4-avaliadores-e-participantes">4. Avaliadores e participantes<a class="headerlink" href="#4-avaliadores-e-participantes" title="Permanent link">&para;</a></h2>
+<p>Os integrantes da equipe serão responsáveis por preparar o ambiente, executar os procedimentos técnicos, observar o comportamento da interface e registrar as evidências. Os avaliadores deverão saber navegar em páginas web, seguir o roteiro, identificar o resultado esperado e preencher a ficha de coleta. Para a M4, o operador também deverá conseguir interromper somente a conexão do dispositivo de teste.</p>
+<p>Sempre que possível, cada sessão contará com três papéis:</p>
+<table>
+<thead>
+<tr>
+<th>Papel</th>
+<th>Responsabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operador</td>
+<td>Executar as etapas previstas no roteiro, sem improvisar ações durante a medição.</td>
+</tr>
+<tr>
+<td>Observador</td>
+<td>Acompanhar a execução, conferir o resultado esperado e identificar ocorrências.</td>
+</tr>
+<tr>
+<td>Registrador</td>
+<td>Preencher a ficha de coleta e relacionar os dados às evidências.</td>
+</tr>
+</tbody>
+</table>
+<p>Os papéis podem ser acumulados quando a quantidade de integrantes não permitir essa divisão. A pessoa que executar uma tentativa deverá registrar essa condição. Nas repetições de M3, M7, M8 e M14, a equipe deverá manter o mesmo procedimento e, sempre que possível, o mesmo operador.</p>
+<p>As métricas M1, M9 e M10 dependem de participantes voluntários. O planejamento prevê cinco pessoas externas à equipe, que não tenham utilizado a Agência Virtual recentemente. Os mesmos participantes serão convidados para as três métricas, para evitar recrutamentos diferentes para tarefas que fazem parte da mesma sessão. Cada pessoa receberá as mesmas instruções e não deverá receber ajuda durante a execução.</p>
+<h3 id="41-criterios-de-selecao">4.1. Critérios de seleção<a class="headerlink" href="#41-criterios-de-selecao" title="Permanent link">&para;</a></h3>
+<p>A seleção será feita por conveniência, entre pessoas que aceitarem o convite e atenderem aos seguintes critérios. Os convites poderão ser encaminhados pelos integrantes a familiares, amigos, conhecidos ou pessoas de sua rede de contatos. Ter vínculo familiar ou pessoal com um integrante não impede a participação, desde que a pessoa não faça parte da equipe do projeto e cumpra os demais critérios de elegibilidade.</p>
+<ul>
+<li>não integrar a equipe do projeto;</li>
+<li>ter 18 anos ou mais. A participação de menores não está prevista neste plano e só poderá ser considerada após orientação da docente e definição das autorizações necessárias;</li>
+<li>conseguir utilizar um navegador e compreender instruções simples em português;</li>
+<li>não ter utilizado a Agência Virtual da Neoenergia Brasília nos últimos seis meses. Esse intervalo é uma definição operacional proposta para tornar verificável a expressão “sem experiência recente” utilizada na Fase 2;</li>
+<li>aceitar participar voluntariamente e registrar o consentimento antes do início das tarefas.</li>
+</ul>
+<p>A familiaridade geral com serviços digitais poderá variar entre os participantes. Essa informação será registrada apenas em categorias amplas (por exemplo: baixa, intermediária ou alta familiaridade), sem coletar dados pessoais desnecessários. Quando o convite tiver sido feito por um integrante, a equipe poderá registrar somente a categoria ampla do vínculo (familiar, amigo/conhecido ou sem vínculo prévio), sem nome ou grau de parentesco específico, para caracterizar a composição da amostra e reconhecer possíveis limitações. O objetivo é descrever o perfil geral da pequena amostra, não criar subgrupos para comparação.</p>
+<h3 id="42-recrutamento-e-confirmacao">4.2. Recrutamento e confirmação<a class="headerlink" href="#42-recrutamento-e-confirmacao" title="Permanent link">&para;</a></h3>
+<p>O convite poderá ser encaminhado individualmente a familiares, amigos, conhecidos ou outras pessoas da rede de contatos dos integrantes, ou divulgado em canais acadêmicos, sem pressão para aceitar. O vínculo pessoal com quem fez o convite não cria obrigação de participação. Sempre que possível, a sessão deverá ser conduzida por outro integrante que não seja a pessoa responsável pelo convite, para reduzir constrangimentos e evitar influência sobre as respostas. A mensagem deverá informar que se trata de uma atividade acadêmica de avaliação da interface, apresentar uma estimativa de duração e esclarecer que a participação é voluntária.</p>
+<p>Antes de confirmar a sessão, um integrante fará uma triagem breve para verificar os critérios acima. Serão convidados participantes elegíveis até completar cinco confirmações. Se houver mais pessoas elegíveis do que vagas, a equipe poderá realizar um sorteio simples entre elas. Como se trata de uma amostra pequena, por conveniência e sem seleção probabilística da população, os resultados não deverão ser generalizados para todos os usuários da Agência Virtual.</p>
+<p>A previsão é realizar as sessões entre 17/11 e 19/11, conforme a disponibilidade dos participantes, ainda a ser confirmada por Dara e Beatriz. A equipe deverá registrar apenas o código do participante, a confirmação da elegibilidade e a data da sessão; nomes e contatos não deverão constar nas fichas públicas de coleta.</p>
+<p>O convite deverá apresentar a atividade de forma neutra, sem sugerir que o participante está sendo avaliado. Sugestão de texto:</p>
+<blockquote>
+<p>Estamos realizando uma atividade acadêmica da disciplina Qualidade de Software 1 para observar a facilidade de uso de algumas telas da Agência Virtual da Neoenergia Brasília. A participação é voluntária e deve durar aproximadamente 20 a 30 minutos. Serão propostas tarefas simples de localização e utilização de funcionalidades. Não é uma prova do participante; queremos observar a interface. Você poderá interromper a participação quando quiser. Caso tenha interesse, faremos algumas perguntas rápidas para verificar se você atende aos critérios da atividade.</p>
+</blockquote>
+<p>A triagem deverá confirmar somente as condições necessárias. Familiares, amigos e conhecidos podem participar; o vínculo com um integrante não substitui nem dispensa os critérios abaixo:</p>
+<ol>
+<li>A pessoa tem 18 anos ou mais?</li>
+<li>A pessoa integra a equipe responsável pelo projeto? (Se sim, não será incluída como voluntária externa.)</li>
+<li>A pessoa utilizou a Agência Virtual da Neoenergia Brasília nos últimos seis meses? (Se sim, não atende ao critério de ausência de experiência recente.)</li>
+<li>A pessoa tem disponibilidade para participar de uma sessão entre 17/11 e 19/11?</li>
+</ol>
+<p>A equipe não deverá solicitar CPF, endereço, número de unidade consumidora ou informações de conta durante a triagem. A confirmação de disponibilidade não substitui o consentimento, que será solicitado antes da sessão. A pessoa convidada poderá recusar sem precisar justificar a decisão; o integrante responsável pelo convite não deverá insistir nem condicionar qualquer relação pessoal à participação.</p>
+<h3 id="43-consentimento-e-protecao-dos-participantes">4.3. Consentimento e proteção dos participantes<a class="headerlink" href="#43-consentimento-e-protecao-dos-participantes" title="Permanent link">&para;</a></h3>
+<p>Antes das tarefas, o responsável deverá explicar o objetivo da atividade, o que será solicitado, quais dados serão anotados, como os resultados serão utilizados e que a pessoa poderá interromper sua participação a qualquer momento, sem precisar justificar a decisão. O consentimento deverá ser registrado antes do início da sessão, utilizando o <a href="../modelo-consentimento/">modelo de termo de consentimento</a>, após revisão e autorização da docente.</p>
+<p>A participação não exige gravação de voz ou imagem. O procedimento padrão será o registro manual das respostas, dos tempos e das ocorrências pelo observador. Se a equipe considerar necessária uma gravação de tela, deverá explicar sua finalidade e solicitar autorização específica e opcional, separada do consentimento para participar. A recusa à gravação não poderá impedir a participação. Não deverão ser gravados rosto, voz, credenciais ou dados pessoais.</p>
+<p>Os formulários de consentimento preenchidos deverão ser armazenados separadamente das fichas de coleta, em local com acesso restrito à equipe responsável. Eles não deverão ser enviados ao repositório público. No GitHub serão disponibilizados somente o modelo em branco e dados de coleta anonimizados, sem nomes, assinaturas, contatos ou outros identificadores. O prazo e o responsável pela guarda dos termos deverão ser definidos com a docente antes das sessões.</p>
+<p>O consentimento do participante não substitui a autorização do titular de eventual conta da Agência Virtual. Se uma tarefa exigir acesso a uma conta autenticada, a equipe deverá confirmar previamente que o uso da conta e a exposição das informações necessárias foram autorizados pelo titular. Sempre que possível, deverão ser ocultados dados pessoais e financeiros. Se não for possível proteger essas informações, a tarefa não deverá ser realizada com o voluntário; a limitação deverá ser registrada e a métrica tratada conforme a quantidade de observações efetivamente obtida.</p>
+<h3 id="44-amostra-e-tratamento-da-ausencia-de-voluntarios">4.4. Amostra e tratamento da ausência de voluntários<a class="headerlink" href="#44-amostra-e-tratamento-da-ausencia-de-voluntarios" title="Permanent link">&para;</a></h3>
+<p>A amostra prevista é:</p>
+<ul>
+<li><strong>M1:</strong> cinco participantes e, no mínimo, dez oportunidades de localização;</li>
+<li><strong>M9:</strong> os mesmos cinco participantes, com duas apresentações de tela por pessoa, totalizando dez apresentações;</li>
+<li><strong>M10:</strong> os mesmos cinco participantes, com duas tarefas de operação por pessoa, totalizando dez tarefas.</li>
+</ul>
+<p>Se não houver cinco participantes externos disponíveis, a equipe poderá realizar uma análise exploratória interna para revisar os roteiros e identificar dificuldades. Essas observações deverão ser identificadas separadamente e não serão contabilizadas como participação de usuários finais. Se a quantidade de participantes externos ficar abaixo da prevista, a equipe deverá informar o número efetivamente obtido e avaliar as métricas conforme as regras da Fase 2, sem apresentar a amostra parcial como se estivesse completa. Na ausência de dados suficientes, M1, M9 e M10, assim como H1, H9 e H10, permanecerão inconclusivas.</p>
+<h2 id="5-recursos-especificos-por-metrica">5. Recursos específicos por métrica<a class="headerlink" href="#5-recursos-especificos-por-metrica" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Recursos e condições específicos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1 — Localização de funcionalidades</td>
+<td>Cinco participantes voluntários, roteiro de tarefas, observador e ficha individual. Duas oportunidades por participante, sem orientação durante a tentativa.</td>
+</tr>
+<tr>
+<td>M2 — Tratamento de entradas inválidas</td>
+<td>Formulários acessíveis, lista de entradas sintaticamente inválidas e ficha para registrar mensagem, impedimento e orientação. Não enviar dados sensíveis nem concluir operações.</td>
+</tr>
+<tr>
+<td>M3 — Execuções sem falhas</td>
+<td>Fluxos do histórico de consumo definidos antes da coleta, dispositivo e navegador registrados, roteiro de execução e ficha de ocorrências. Dez execuções elegíveis por fluxo, distribuídas em pelo menos dois períodos.</td>
+</tr>
+<tr>
+<td>M4 — Retomada da conexão</td>
+<td>Dispositivo cuja conexão possa ser interrompida sem afetar outros usuários da rede, cronômetro e fluxo de consulta que não altere dados. Cinco tentativas seguras.</td>
+</tr>
+<tr>
+<td>M5 — Bloqueio sem sessão</td>
+<td>Conta própria ou autorizada, acesso prévio a páginas restritas e procedimento de encerramento de sessão. Cinco verificações, preferencialmente em pelo menos duas páginas.</td>
+</tr>
+<tr>
+<td>M6 — Consistência de informações</td>
+<td>Conta autorizada, referência estável e ficha de comparação. Há uma divergência entre a quantidade mínima de <code>metricas.md</code> (cinco comparações) e a de <code>protocolo-coleta.md</code> (vinte); a equipe deverá harmonizar os documentos antes da coleta. Até essa decisão, recomenda-se reservar capacidade para vinte comparações.</td>
+</tr>
+<tr>
+<td>M7 — Mediana do tempo de resposta</td>
+<td>Dispositivo e navegador de referência, conexão registrada, ferramenta de cronometragem e definição prévia dos eventos inicial e final de cada fluxo. Dez durações válidas por fluxo.</td>
+</tr>
+<tr>
+<td>M8 — Percentil 90 do tempo de resposta</td>
+<td>Os mesmos registros válidos da M7, com lista ordenada das durações e indicação do posto utilizado no cálculo do P90.</td>
+</tr>
+<tr>
+<td>M9 — Reconhecimento da finalidade da tela</td>
+<td>Cinco participantes, telas de Nada Consta e de indicadores de continuidade, pergunta padronizada com quatro alternativas e ficha de resposta. Dez apresentações no total.</td>
+</tr>
+<tr>
+<td>M10 — Tarefas de operação concluídas</td>
+<td>Cinco participantes, instruções padronizadas e ficha de observação para emissão da 2ª via e alteração do período do gráfico de consumo. Dez tarefas no total, com limite de cinco minutos por tarefa.</td>
+</tr>
+<tr>
+<td>M11 — Disponibilidade</td>
+<td>A programação atual prevê quatro verificações diárias (manhã, almoço, tarde e noite), de 16/11 a 20/11, para a 2ª via e o Nada Consta: vinte verificações por função. A Fase 2, porém, estabelece vinte e uma por função; essa diferença precisa ser resolvida antes de considerar H11 sustentada conforme a regra original.</td>
+</tr>
+<tr>
+<td>M12 — Autenticidade e responsabilização</td>
+<td>Conta autorizada e checklist dos itens A1–A4, R1 e R2. Cada item deverá ser verificado duas vezes, em dias diferentes; pelo menos cinco dos seis itens precisam ser elegíveis. A verificação de expiração de sessão exige até sessenta minutos de inatividade.</td>
+</tr>
+<tr>
+<td>M13 — Autenticidade dos documentos</td>
+<td>Conta autorizada, cinco relatórios de Nada Consta e acesso ao mecanismo ou canal oficial de verificação indicado no documento. Os documentos não serão publicados.</td>
+</tr>
+<tr>
+<td>M14 — Razão de tempo entre pico e fora de pico</td>
+<td>Dispositivo, navegador e conexão iguais nas duas janelas. Dez execuções válidas por fluxo C-F1 (PDF da 2ª via) e C-F2 (gráfico do histórico) em cada janela. As janelas e seus horários exatos deverão ser registrados antes da coleta.</td>
+</tr>
+</tbody>
+</table>
+<p>As fórmulas, os limites das hipóteses e os critérios de julgamento permanecem os definidos na <a href="../../fase2/metricas/">Fase 2</a> e em seus <a href="../../fase2/criterios-julgamento/">critérios de julgamento</a>. Este documento não altera esses valores. As divergências de quantidade identificadas para M6 e M11 precisam ser resolvidas e documentadas pela equipe antes da coleta.</p>
+<h2 id="6-limitacoes-do-ambiente">6. Limitações do ambiente<a class="headerlink" href="#6-limitacoes-do-ambiente" title="Permanent link">&para;</a></h2>
+<p>A avaliação possui limitações que deverão acompanhar a interpretação dos resultados:</p>
+<ul>
+<li>O produto é mantido por uma organização externa. A equipe não possui acesso ao código-fonte, aos bancos de dados, aos logs internos ou à infraestrutura da concessionária.</li>
+<li>As medidas serão obtidas pela interface web e representam o comportamento observado nas condições registradas. Não permitem afirmar como os componentes internos estão implementados.</li>
+<li>A M4 verifica a retomada da navegação após uma interrupção local no dispositivo de teste; não representa um teste de recuperação dos servidores da Neoenergia.</li>
+<li>A M5 observa o bloqueio de páginas restritas após o encerramento da sessão; não substitui uma auditoria de segurança ou um teste de invasão.</li>
+<li>A M6 verifica a consistência de informações apresentadas em consultas comparáveis; não comprova a integridade do banco de dados.</li>
+<li>M7, M8 e M14 serão calculadas com quantidade limitada de observações e sem teste de carga. Os resultados não deverão ser apresentados como desempenho sob alta concorrência.</li>
+<li>A quantidade e a disponibilidade de contas autorizadas podem limitar os fluxos executáveis.</li>
+<li>A ausência de voluntários externos impede o julgamento de M1, M9 e M10 conforme a amostra prevista.</li>
+<li>A redução da janela de M11 diminui a quantidade de observações em relação ao planejamento da Fase 2 e deve ser apresentada como limitação, caso não seja feita uma verificação adicional por função.</li>
+</ul>
+<h2 id="7-verificacao-antes-da-coleta">7. Verificação antes da coleta<a class="headerlink" href="#7-verificacao-antes-da-coleta" title="Permanent link">&para;</a></h2>
+<p>Antes de iniciar uma sessão, a equipe deverá conferir:</p>
+<ul>
+<li>[ ] O dispositivo, o navegador e a conexão foram registrados.</li>
+<li>[ ] O fluxo e a métrica que serão avaliados foram identificados.</li>
+<li>[ ] A conta utilizada é própria ou possui autorização de uso.</li>
+<li>[ ] O procedimento não exige alteração de dados ou confirmação de operação real.</li>
+<li>[ ] A ferramenta de registro está funcionando, quando necessária.</li>
+<li>[ ] O consentimento de cada participante foi registrado antes das tarefas.</li>
+<li>[ ] A equipe confirmou que a sessão não expõe dados pessoais ou financeiros de uma conta real sem autorização específica.</li>
+<li>[ ] Os arquivos de evidência não expõem dados pessoais ou credenciais.</li>
+<li>[ ] Os termos preenchidos estão guardados fora do repositório público, com acesso restrito.</li>
+<li>[ ] Os participantes externos necessários para M1, M9 e M10 foram confirmados, ou as métricas foram marcadas como dependentes dessa disponibilidade.</li>
+<li>[ ] As quantidades mínimas e as divergências de M6 e M11 foram conferidas antes da coleta.</li>
+</ul>
+<h2 id="historico-de-versoes">Histórico de Versões<a class="headerlink" href="#historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição da Alteração</th>
+<th>Autor(a)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>15/11/2026</td>
+<td>Criação do documento de recursos e ambiente de avaliação</td>
+<td>Arthur de Lima Sobreira</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>15/11/2026</td>
+<td>Ampliação para M1–M14 e alinhamento ao cronograma da Fase 4</td>
+<td>Arthur de Lima Sobreira</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>15/11/2026</td>
+<td>Inclusão dos critérios de seleção, recrutamento, consentimento e proteção dos participantes</td>
+<td>Arthur de Lima Sobreira</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>15/11/2026</td>
+<td>Esclarecimento de que familiares, amigos e conhecidos dos integrantes podem participar, com registro amplo do vínculo e cuidados para evitar pressão</td>
+<td>Arthur de Lima Sobreira</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

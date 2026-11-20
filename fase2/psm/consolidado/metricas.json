@@ -1,0 +1,222 @@
+{
+  "milestone": "Consolidado das entregas",
+  "total_issues": 26,
+  "issues_concluidas": 17,
+  "psm_1_retrabalho_pct": 5.88,
+  "psm_2_progresso_pct": 65.38,
+  "psm_3_razao_esforco": null,
+  "horas_estimadas": 68.0,
+  "horas_reais": 50.33,
+  "issues_sem_estimativa": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "linhas_de_horas_invalidas": [],
+  "issues_reabertas": [
+    5
+  ],
+  "issues_reabertas_atualmente_fechadas": [
+    5
+  ],
+  "horas_por_integrante": {
+    "Arthur": 11.0,
+    "Beatriz": 10.73,
+    "Dara": 5.0,
+    "Henrique": 5.1,
+    "Isabella": 13.5,
+    "Thiago": 4.0,
+    "Tiago": 1.0
+  },
+  "horas_por_dia": {
+    "2026-11-13": 3.25,
+    "2026-11-14": 8.129999999999999,
+    "2026-11-15": 15.0,
+    "2026-11-16": 5.5,
+    "2026-11-17": 9.4,
+    "2026-11-18": 2.7,
+    "2026-11-19": 4.55,
+    "2026-11-20": 1.8
+  },
+  "issues_concluidas_por_dia": {
+    "2026-10-19": 6,
+    "2026-10-26": 7,
+    "2026-11-08": 9,
+    "2026-11-13": 11,
+    "2026-11-15": 12,
+    "2026-11-16": 15,
+    "2026-11-18": 17
+  },
+  "registros_horas": [
+    {
+      "data": "2026-11-14",
+      "integrante": "Arthur",
+      "horas": 1.5,
+      "issue": 14
+    },
+    {
+      "data": "2026-11-15",
+      "integrante": "Arthur",
+      "horas": 3.0,
+      "issue": 14
+    },
+    {
+      "data": "2026-11-14",
+      "integrante": "Arthur",
+      "horas": 1.0,
+      "issue": 15
+    },
+    {
+      "data": "2026-11-15",
+      "integrante": "Arthur",
+      "horas": 1.5,
+      "issue": 15
+    },
+    {
+      "data": "2026-11-15",
+      "integrante": "Dara",
+      "horas": 4.0,
+      "issue": 16
+    },
+    {
+      "data": "2026-11-15",
+      "integrante": "Isabella",
+      "horas": 1.5,
+      "issue": 17
+    },
+    {
+      "data": "2026-11-16",
+      "integrante": "Isabella",
+      "horas": 3.5,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-17",
+      "integrante": "Dara",
+      "horas": 1.0,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-17",
+      "integrante": "Henrique",
+      "horas": 2.5,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-17",
+      "integrante": "Isabella",
+      "horas": 1.5,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-17",
+      "integrante": "Beatriz",
+      "horas": 4.4,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-18",
+      "integrante": "Beatriz",
+      "horas": 1.7,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-18",
+      "integrante": "Isabella",
+      "horas": 1.0,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-19",
+      "integrante": "Henrique",
+      "horas": 0.3,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-19",
+      "integrante": "Arthur",
+      "horas": 2.0,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-20",
+      "integrante": "Henrique",
+      "horas": 0.8,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-20",
+      "integrante": "Tiago",
+      "horas": 1.0,
+      "issue": 18
+    },
+    {
+      "data": "2026-11-19",
+      "integrante": "Arthur",
+      "horas": 2.0,
+      "issue": 19
+    },
+    {
+      "data": "2026-11-13",
+      "integrante": "Isabella",
+      "horas": 2.0,
+      "issue": 23
+    },
+    {
+      "data": "2026-11-14",
+      "integrante": "Isabella",
+      "horas": 2.5,
+      "issue": 23
+    },
+    {
+      "data": "2026-11-15",
+      "integrante": "Thiago",
+      "horas": 2.0,
+      "issue": 24
+    },
+    {
+      "data": "2026-11-16",
+      "integrante": "Thiago",
+      "horas": 2.0,
+      "issue": 24
+    },
+    {
+      "data": "2026-11-19",
+      "integrante": "Beatriz",
+      "horas": 0.25,
+      "issue": 25
+    },
+    {
+      "data": "2026-11-13",
+      "integrante": "Beatriz",
+      "horas": 1.25,
+      "issue": 26
+    },
+    {
+      "data": "2026-11-14",
+      "integrante": "Beatriz",
+      "horas": 3.13,
+      "issue": 26
+    },
+    {
+      "data": "2026-11-15",
+      "integrante": "Henrique",
+      "horas": 1.5,
+      "issue": 31
+    },
+    {
+      "data": "2026-11-15",
+      "integrante": "Isabella",
+      "horas": 1.5,
+      "issue": 32
+    }
+  ]
+}
