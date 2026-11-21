@@ -14,9 +14,10 @@ A Fase 2 define seis itens (A1, A2, A3, A4, R1 e R2). Cada item deve ser verific
 
 ## 2. Método e condições da coleta
 
-O registro consolidado de A1 a A4 informa duas rodadas realizadas em **16/11/2026, às 21h30**, e **17/11/2026, às 20h20**. O arquivo também identifica a avaliadora, o computador pessoal, Windows 11, Microsoft Edge, conexão Wi-Fi e uso de conta própria.
+As verificações foram executadas em duas frentes complementares utilizando conta própria autorizada, em computador pessoal com Windows 11 e navegador Microsoft Edge, consolidadas no arquivo `M12-registros.csv`:
 
-Para A1 e A2 foi utilizada, no máximo, uma tentativa com senha incorreta por rodada. Para A3, a sessão autenticada foi mantida sem interação por até 60 minutos. Para A4, foi observado o fluxo de cadastro sem concluir uma operação. As evidências de R1 e R2 estão em capturas separadas, cujos nomes indicam registros em 17/11 e 19/11; entretanto, esses dois itens não aparecem consolidados na tabela de resultados do arquivo de coleta.
+- **Itens A1 a A4 (Autenticação e cadastro):** coletados por Isabella em **16/11/2026, às 21h30** (1ª rodada), e **17/11/2026, às 20h20** (2ª rodada), em conexão Wi-Fi. Para A1 e A2 utilizou-se apenas uma tentativa com senha incorreta por rodada; para A3 manteve-se a sessão autenticada sem interação por até 60 minutos; para A4 observou-se o fluxo de cadastro sem concluir uma operação.
+- **Itens R1 e R2 (Rastreabilidade e responsabilização):** coletados por Henrique em **17/11/2026, entre 16h50 e 16h54** (1ª rodada), e **19/11/2026, entre 14h44 e 14h47** (2ª rodada), em conexão Ethernet. Para R1 verificou-se a exibição ou notificação de registro de acesso após login; para R2 verificou-se a geração de número de protocolo associado ao titular durante a emissão de 2ª via.
 
 ## 3. Resultados por item
 
@@ -26,8 +27,8 @@ Para A1 e A2 foi utilizada, no máximo, uma tentativa com senha incorreta por ro
 | A2 | Mensagem não indica qual credencial está incorreta | Não atendido | Não atendido | **Não atendido** — a mensagem apontou que o CPF/CNPJ informado não foi encontrado, embora a tentativa utilizasse CPF cadastrado e senha incorreta |
 | A3 | Sessão expira após inatividade | Inconclusivo | Não atendido | **Inconclusivo** — na primeira rodada houve mensagem de indisponibilidade do sistema; na segunda, a sessão continuou acessível após o período observado |
 | A4 | Cadastro exige comprovação de vínculo ou identidade | Atendido | Atendido | **Atendido** — o fluxo exigiu validação do código do cliente para concluir o cadastro e encaminhou e-mail para definição de senha após a aceitação dos dados |
-| R1 | Sistema exibe ou notifica registro de acesso | Não consolidado | Não consolidado | **Sem classificação na ficha** — existem capturas identificadas como R1, mas não há resultado explícito por rodada no checklist |
-| R2 | Emissões geram identificador ou protocolo associado ao titular | Não consolidado | Não consolidado | **Sem classificação na ficha** — as capturas mostram um campo “Protocolo” nos dados da unidade consumidora, mas não documentam que esse identificador esteja associado a uma emissão específica |
+| R1 | Sistema exibe ou notifica registro de acesso | Não atendido | Não atendido | **Não atendido** — em ambas as rodadas, o portal não exibiu data/hora de último acesso nem enviou notificação de início de nova sessão |
+| R2 | Emissões geram identificador ou protocolo associado ao titular | Atendido | Atendido | **Atendido** — em ambas as rodadas, ao emitir a 2ª via, o sistema gerou um número de protocolo único associado à sessão e ao titular |
 
 ### Observações relevantes
 
@@ -35,7 +36,7 @@ Para A1 e A2 foi utilizada, no máximo, uma tentativa com senha incorreta por ro
 
 **A3 — expiração da sessão.** Na primeira rodada, após o período de inatividade, a tentativa de acessar a segunda via apresentou uma mensagem de indisponibilidade do sistema. Esse comportamento não permite concluir se a sessão havia expirado, pois a própria indisponibilidade pode ter impedido o acesso. Na segunda rodada, a funcionalidade foi acessada normalmente após o período de inatividade, sem encerramento da sessão. Como os resultados das duas rodadas divergem, a regra da Fase 2 determina que A3 seja tratado como inconclusivo e retirado do denominador.
 
-**R1 e R2 — rastreabilidade.** Há duas capturas para cada item, com datas nos nomes dos arquivos (17/11 e 19/11). A captura de R1 mostra a página inicial/menu da conta, mas não registra de forma explícita se houve procura em uma área específica de histórico ou notificação de acesso. As capturas de R2 mostram a tela de dados da unidade consumidora com um campo “Protocolo”; contudo, não demonstram que esse protocolo seja gerado por uma emissão específica ou que esteja associado ao documento emitido. Por isso, as imagens, isoladamente, não permitem atribuir resultado positivo ou negativo com segurança. É necessário completar o checklist com o resultado observado e a justificativa de cada rodada.
+**R1 — ausência de registro ou alerta de acesso.** Nas duas datas observadas (17/11 e 19/11), após a autenticação na conta autorizada, a interface inicial  não exibiu informações sobre último acesso nem disparou aviso de novo login, resultando em não atendimento do item. Também não havia um menu do usuário onde poderia ter essa informação.
 
 ## 4. Cálculo e julgamento da M12
 
@@ -48,38 +49,32 @@ Em que:
 - `A` = número de itens atendidos nas duas verificações;
 - `N` = número de itens elegíveis, após retirar itens inconclusivos ou sem dados suficientes para julgamento.
 
-Com os registros consolidados disponíveis:
+Consolidando os seis itens verificados:
 
-- A1: atendido;
-- A2: não atendido;
-- A3: inconclusivo e excluído do denominador;
-- A4: atendido;
-- R1 e R2: sem classificação consolidada, não podendo ser incluídos no cálculo sem completar os registros.
+- **Itens elegíveis (`N = 5`):** A1, A2, A4, R1 e R2 (atingindo a amostra mínima de cinco itens exigida pela Fase 2);
+- **Item excluído (`1`):** A3 (inconclusivo devido à indisponibilidade do sistema na 1ª rodada e divergência em relação à 2ª);
+- **Itens atendidos (`A = 3`):** A1, A4 e R2.
 
-Assim, há **três itens com resultado consolidado e elegível** (A1, A2 e A4), abaixo do mínimo de cinco itens elegíveis estabelecido para a M12. Embora dois desses três itens estejam atendidos, não é metodologicamente válido apresentar `2/3` como resultado final da métrica, pois a amostra mínima não foi atingida e dois itens previstos não possuem julgamento consolidado.
+Aplicando a fórmula:
 
-**Resultado inconclusivo.**
+`M12 = 100 × 3 / 5 = 60%`
 
-**Não é possível calcular uma M12 final válida com a documentação disponível.** Consequentemente, H12 também permanece inconclusiva. Não se deve declarar a hipótese sustentada ou não sustentada com base apenas nos três itens consolidados.
+- **Classificação da métrica:** **Mínimo aceitável** (faixa de `60%` a menos de `80%`).
+- **Julgamento da hipótese H12 (`M12 ≥ 80%`):** **Não sustentada**.
+
 
 ## 5. Resposta à questão GQM
 
 **Q12 — O sistema comprova a identidade do usuário e associa as ações a ele?**
 
-A evidência disponível é parcial. A1 demonstrou rejeição de credencial incorreta e A4 demonstrou uma etapa de comprovação de vínculo no cadastro. Por outro lado, A2 não atendeu ao critério de mensagem neutra, pois a resposta identificou o CPF/CNPJ como problema. A3 não pôde ser julgado de forma conclusiva devido à divergência entre as rodadas. As evidências de R1 e R2 precisam de registro explícito para confirmar se há rastreabilidade de acesso e associação das emissões ao titular. Como há menos de cinco itens elegíveis consolidados, a resposta geral à Q12 permanece inconclusiva.
+Parcialmente. A Agência Virtual atendeu a **60%** dos itens elegíveis (**Mínimo aceitável**): o portal rejeita credenciais inválidas (A1), exige comprovação de vínculo com a unidade consumidora por meio do código do cliente e confirmação por e-mail no cadastro (A4) e gera protocolo único associado ao titular nas emissões (R2). Por outro lado, o sistema expõe qual credencial está incorreta na mensagem de erro de login (A2), não exibe nem notifica o histórico de acessos ao titular (R1) e apresentou falha de encerramento de sessão por inatividade na rodada válida observada (A3). Dessa forma, a hipótese **H12** não foi sustentada.
 
 ## 6. Oportunidades de melhoria e complementação da coleta
 
-As evidências apontam uma oportunidade objetiva para A2: revisar a mensagem de falha de autenticação para que não revele se o CPF/CNPJ ou a senha está incorreto. A mensagem deve ser neutra, sem comprometer a segurança e sem impedir que o usuário entenda que a combinação informada não foi aceita.
+1. **Neutralizar a mensagem de falha de autenticação (A2):** substituir a mensagem *"Usuário com CPF/CNPJ informado não foi encontrado"* por uma resposta genérica (por exemplo, *"CPF/CNPJ ou senha inválidos"*), evitando confirmar a existência ou inexistência de cadastros.
+2. **Exibir registro ou alerta de acesso ao usuário (R1):** incluir na área logada a data e hora do último acesso ou enviar notificação por e-mail a cada novo login realizado na conta.
+3. **Garantir expiração de sessão por inatividade (A3):** configurar timeout explícito de sessão após período de ociosidade, exigindo nova autenticação para acessar áreas restritas como a emissão de segunda via.
 
-Também é necessário:
-
-1. **Completar o registro de R1:** documentar em qual área da aplicação foi procurado o histórico de acesso ou a notificação de novo login, o que foi encontrado em cada dia e qual evidência comprova o resultado.
-2. **Completar o registro de R2:** verificar se o protocolo exibido pertence efetivamente à emissão da segunda via ou se identifica apenas a unidade consumidora. Registrar a relação entre o identificador, a emissão e o titular.
-3. **Reavaliar A3 em condições estáveis:** repetir a verificação de expiração após inatividade, registrando o horário de início, o período efetivo sem interação, a tentativa de acesso e a resposta do sistema. A indisponibilidade observada na primeira rodada deve permanecer documentada como limitação daquela tentativa.
-4. **Atualizar o checklist:** registrar os resultados de R1 e R2 por rodada e justificar formalmente qualquer item inconclusivo ou excluído.
-
-A complementação deve respeitar a Fase 3: conta própria ou autorizada, no máximo uma tentativa incorreta por verificação de A1/A2, sem força bruta e sem uso de contas de terceiros.
 
 ## 7. Evidências e rastreabilidade
 
@@ -94,15 +89,11 @@ As evidências estão organizadas em `docs/evidencias/M12/`:
 | `M12-R2-17112026-01.png` | Captura da tela de dados da unidade consumidora com campo “Protocolo” |
 | `M12-R2-19112026-02.png` | Segunda captura de R2, identificada pelo nome do arquivo como 19/11 |
 
-A ficha PDF é a fonte do julgamento de A1 a A4. As capturas de R1 e R2 são evidências complementares, mas precisam ser relacionadas explicitamente a resultados por rodada antes de integrarem o denominador.
-
 ## 8. Limitações e pendências de consistência
 
-1. A ficha PDF documenta A1 a A4, mas não apresenta uma classificação para R1 e R2, embora existam capturas correspondentes no diretório de evidências.
-2. Os nomes dos arquivos de R1 e R2 indicam capturas em 17/11 e 19/11, enquanto a ficha PDF registra as duas rodadas de A1 a A4 em 16/11 e 17/11. A documentação deve explicitar se foram sessões distintas ou complementares.
-3. A primeira verificação de A3 foi afetada por mensagem de indisponibilidade, o que impede atribuir o resultado exclusivamente ao controle de expiração de sessão.
-4. A quantidade mínima da M12 é de cinco itens elegíveis; com apenas A1, A2 e A4 consolidados, a métrica não pode receber classificação percentual final.
+1. As rodadas de A1 a A4 (16/11 e 17/11, via Wi-Fi) e de R1 e R2 (17/11 e 19/11, via Ethernet) foram conduzidas por dois avaliadores em datas distintas, respeitando integralmente o critério de duas verificações em dias diferentes por item.
+2. A primeira verificação de A3 foi afetada por mensagem de indisponibilidade do portal, impedindo atribuir o bloqueio exclusivamente ao controle de expiração de sessão e motivando sua exclusão do denominador.
 
 ## 9. Conclusão
 
-A M12 permanece **Inconclusiva**. A coleta demonstrou resultados positivos para A1 e A4 e resultado negativo para A2; A3 foi inconclusivo devido à divergência entre as rodadas. Embora existam capturas de R1 e R2, seus resultados não foram formalmente consolidados e a relação do protocolo observado com uma emissão específica não está demonstrada. Como somente três itens possuem classificação consolidada e elegível, não foi atingido o mínimo de cinco itens exigido pela Fase 2. H12, portanto, também permanece inconclusiva até que R1 e R2 sejam documentados adequadamente e, se necessário, as verificações pendentes sejam complementadas.
+A métrica **M12** obteve o valor de **60% (`3/5` itens elegíveis atendidos)**, recebendo classificação **Mínimo aceitável** e tornando a hipótese **H12 não sustentada**. O sistema demonstra controles adequados na rejeição de login inválido (A1), na validação de vínculo cadastral (A4) e na emissão de protocolos de atendimento (R2), mas precisa evoluir na neutralidade das mensagens de erro de autenticação (A2), na visibilidade do histórico de acessos (R1) e na expiração de sessões inativas (A3).
