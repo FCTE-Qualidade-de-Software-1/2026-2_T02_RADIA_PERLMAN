@@ -76,11 +76,11 @@ Os dados brutos e as capturas anonimizadas estão organizados em `docs/evidencia
 
 | Arquivo | Registro |
 |---|---|
-| [M4-R02-20112026-01.png](docs\evidencias\M4\M4-R02-20112026-01.png) | Captura anonimizada da retomada concluída na 1ª tentativa (19h29, retomada em 18 s) |
-| [M4-R02-20112026-02.png](docs\evidencias\M4\M4-R02-20112026-02.png) | Captura anonimizada da retomada concluída na 2ª tentativa (19h31, retomada em 20 s) |
-| [M4-R02-20112026-03.png](docs\evidencias\M4\M4-R02-20112026-03.png) | Captura anonimizada da retomada concluída na 3ª tentativa (19h33, retomada em 19 s) |
-| [M4-R02-20112026-04.png](docs\evidencias\M4\M4-R02-20112026-04.png) | Captura anonimizada da retomada concluída na 4ª tentativa (19h35, retomada em 23 s) |
-| [M4-R02-20112026-05.png](docs\evidencias\M4\M4-R02-20112026-05.png) | Captura anonimizada da retomada concluída na 5ª tentativa (19h36, retomada em 22 s) |
+| [`M4-R02-20112026-01.png`](../../evidencias/M4/M4-R02-20112026-01.png) | Captura anonimizada da retomada concluída na 1ª tentativa (19h29, retomada em 18 s) |
+| [`M4-R02-20112026-02.png`](../../evidencias/M4/M4-R02-20112026-02.png) | Captura anonimizada da retomada concluída na 2ª tentativa (19h31, retomada em 20 s) |
+| [`M4-R02-20112026-03.png`](../../evidencias/M4/M4-R02-20112026-03.png) | Captura anonimizada da retomada concluída na 3ª tentativa (19h33, retomada em 19 s) |
+| [`M4-R02-20112026-04.png`](../../evidencias/M4/M4-R02-20112026-04.png) | Captura anonimizada da retomada concluída na 4ª tentativa (19h35, retomada em 23 s) |
+| [`M4-R02-20112026-05.png`](../../evidencias/M4/M4-R02-20112026-05.png) | Captura anonimizada da retomada concluída na 5ª tentativa (19h36, retomada em 22 s) |
 
 ## 8. Limitações e pendências de consistência
 
