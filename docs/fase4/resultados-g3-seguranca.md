@@ -4,6 +4,48 @@ Esta página apresenta os resultados do objetivo G3, que avalia a autenticação
 
 As fórmulas, as faixas de pontuação e as quantidades mínimas são as definidas em [Métricas](../fase2/metricas.md) e nos [Critérios de julgamento](../fase2/criterios-julgamento.md). Os dados brutos estão relacionados em [Dados brutos e evidências](dados-brutos.md).
 
+## M5 — Bloqueio de acesso a páginas restritas
+
+**Questão Q5:** Páginas restritas permanecem protegidas depois do logout?
+
+**Hipótese H5:** 100% das verificações sem sessão ativa impedirão o acesso utilizável a dados protegidos.
+
+**Fórmula:** `M5 = 100 × B / N`, em que **B** = verificações sem acesso utilizável a informação protegida; **N** = verificações elegíveis realizadas sem sessão ativa.
+
+A coleta foi realizada por Isabella em 16/11/2026, às 21h, no cenário S-01. Foi utilizada uma conta própria em computador pessoal com Windows 11, Microsoft Edge e conexão Wi-Fi. Após o logout, foram executadas ações de retorno à página anterior, atualização e reabertura dos endereços de duas páginas restritas.
+
+**Tabela 1 — Verificações da M5**
+
+| ID | Página restrita | Ação após logout | Resultado observado | Adequada? |
+|---|---|---|---|---:|
+| M5-S01-20261116-01 | Segunda via | Botão voltar do navegador | Permaneceu na página de login, sem permitir retornar à conta | 1 |
+| M5-S01-20261116-02 | Segunda via | Atualizar página | Permaneceu na tela de login, sem recuperar o acesso à área restrita | 1 |
+| M5-S01-20261116-03 | Segunda via | Abrir novamente o endereço da segunda via | Permaneceu na página de login, sem permitir retornar à conta | 1 |
+| M5-S01-20261116-04 | Histórico de consumo | Botão voltar do navegador | Permaneceu na página de login, sem retornar à área restrita | 1 |
+| M5-S01-20261116-05 | Histórico de consumo | Reabrir o endereço | Permaneceu na página de login, sem permitir acesso ao conteúdo protegido | 1 |
+| **Total** | **Duas páginas** | **Cinco verificações** | **Nenhuma exposição utilizável observada** | **5/5** |
+
+A quantidade mínima definida para a métrica é de cinco verificações, preferencialmente distribuídas por pelo menos duas páginas restritas. A coleta atingiu esse mínimo.
+
+**Cálculo:** `M5 = 100 × 5 / 5 = 100%`.
+
+**Classificação:** **Excelente** (100% de bloqueios corretos).
+
+**Resultado da hipótese:** **H5 sustentada**, pois todas as verificações impediram o acesso utilizável a dados protegidos sem sessão ativa.
+
+**Análise:**
+
+- Nas cinco verificações, o sistema permaneceu na página de login e não permitiu retornar à área restrita.
+- Foram avaliadas as páginas de segunda via e histórico de consumo, com ações distintas do navegador.
+- O resultado representa o comportamento observável nas páginas e condições testadas; não comprova a implementação interna do controle de sessão.
+- **Resposta a Q5:** sim, nas condições avaliadas. As cinco verificações impediram o retorno utilizável às páginas restritas após o logout.
+
+**Recomendações:** preservar a exigência de autenticação em acessos diretos, manter o bloqueio após ações de voltar e atualizar e repetir periodicamente as verificações em outras funcionalidades protegidas. Em futuras coletas, distinguir também conteúdo antigo mantido em cache de acesso efetivo aos dados.
+
+**Evidências:** [CSV de registros](../dados-coleta/M5/M5-registros.csv) e [ficha consolidada](../evidencias/M5/M5-S01-16112026-01.png).
+
+**Limitações:** o resultado se restringe às duas páginas testadas, à conta própria e ao ambiente registrado. A coleta não constitui auditoria de segurança, teste de invasão ou verificação de todos os endpoints da aplicação.
+
 ## M6 — Consistência de informações estáveis
 
 As medições da M6, vinculadas ao cenário S-02, foram realizadas em 17/11/2026, entre 17h12 e 17h15. Foram emitidas cinco vias consecutivas da Declaração de Quitação Anual de Débitos (Nada Consta) na mesma sessão autenticada, sem alterações cadastrais no intervalo. Sete campos estáveis (`C01` a `C07`) das Emissões 2, 3, 4 e 5 foram comparados com a Emissão 1 de referência, totalizando 28 comparações elegíveis, além de três campos dinâmicos (`D01` a `D03`) excluídos por variarem a cada documento gerado.
@@ -41,34 +83,64 @@ A consistência observada na M6 refere-se exclusivamente à estabilidade visual 
 
 ## M12 — Itens de autenticidade e responsabilização atendidos
 
-As medições da M12, vinculadas ao cenário S-03, foram executadas em duas rodadas por item em dias distintos: os itens `A1` a `A4` foram verificados em 16/11/2026 (21h30) e 17/11/2026 (20h20), enquanto os itens `R1` e `R2` foram verificados em 17/11/2026 (16h50–16h54) e 19/11/2026 (14h44–14h47).
+**Questão Q12:** O sistema comprova a identidade do usuário e associa as ações a ele?
 
-**Tabela 2 — Resultados por item de verificação**
+**Hipótese H12:** ao menos 80% dos itens de verificação de autenticidade e responsabilização serão atendidos.
 
-| Item | Verificação prevista | 1ª rodada | 2ª rodada | Resultado consolidado | Situação |
-|---|---|---|---|---|---|
-| `A1` | Credencial incorreta é rejeitada | Atendido | Atendido | Atendido | Elegível |
-| `A2` | Mensagem não indica qual credencial está incorreta | Não atendido | Não atendido | Não atendido | Elegível |
-| `A3` | Sessão expira após inatividade | Inconclusivo | Não atendido | Inconclusivo | Excluído |
-| `A4` | Cadastro exige comprovação de vínculo ou identidade | Atendido  | Atendido  | Atendido | Elegível |
-| `R1` | Sistema exibe ou notifica registro de acesso | Não atendido | Não atendido | Não atendido | Elegível |
-| `R2` | Emissões geram identificador ou protocolo associado ao titular | Atendido  | Atendido  | Atendido | Elegível |
+**Fórmula:** `M12 = 100 × A / N`, em que **A** = número de itens atendidos nas duas verificações; **N** = número de itens elegíveis, após retirar itens inconclusivos ou sem dados suficientes para julgamento.
 
-_Fonte: [M12-registros.csv](../dados-coleta/M12/M12-registros.csv), Equipe Radia Perlman, 2026._
+A coleta foi realizada em duas frentes, utilizando conta própria autorizada, computador pessoal com Windows 11 e Microsoft Edge. Os itens A1 a A4 foram verificados por Isabella em 16/11/2026, às 21h30, e 17/11/2026, às 20h20, via Wi-Fi. Os itens R1 e R2 foram verificados por Henrique em 17/11/2026, entre 16h50 e 16h54, e 19/11/2026, entre 14h44 e 14h47, via Ethernet.
 
-Dos seis itens previstos, três foram atendidos nas duas rodadas (`A1`, `A4` e `R2`). O item `A2` falhou por exibir a mensagem *“Usuário com CPF/CNPJ informado não foi encontrado”* mesmo diante de CPF cadastrado e senha incorreta, revelando qual credencial falhou. O item `R1` falhou por não apresentar registro de último acesso nem notificação de novo login. Já o item `A3` foi retirado do denominador como inconclusivo devido à mensagem de indisponibilidade do portal na primeira rodada, divergindo da permanência da sessão observada após 60 minutos na segunda rodada.
+A Fase 2 define seis itens (A1, A2, A3, A4, R1 e R2), cada um verificado duas vezes em dias diferentes. Um item só é considerado atendido quando as duas verificações são positivas. Quando os resultados divergem, o item é inconclusivo e sai do denominador, com justificativa. A métrica exige pelo menos cinco itens elegíveis.
 
-Com cinco itens elegíveis (`N = 5`), atingindo o mínimo exigido pela Fase 2, o cálculo da métrica foi:
+**Tabela 2 — Resultado por item**
 
-- **M12:** `M12 = 100 × A / N = 100 × 3 / 5 = 60%`.
+| Item | Verificação | 1ª rodada | 2ª rodada | Resultado consolidado |
+|---|---|---|---|---|
+| A1 | Credencial incorreta é rejeitada | Atendido | Atendido | **Atendido** — o sistema rejeitou a autenticação nas duas rodadas |
+| A2 | Mensagem não indica qual credencial está incorreta | Não atendido | Não atendido | **Não atendido** — a mensagem apontou que o CPF/CNPJ informado não foi encontrado, embora a tentativa utilizasse CPF cadastrado e senha incorreta |
+| A3 | Sessão expira após inatividade | Inconclusivo | Não atendido | **Inconclusivo** — a primeira rodada apresentou indisponibilidade do sistema; na segunda, a sessão continuou acessível após o período observado |
+| A4 | Cadastro exige comprovação de vínculo ou identidade | Atendido | Atendido | **Atendido** — o fluxo exigiu validação do código do cliente e encaminhou e-mail para definição de senha após a aceitação dos dados |
+| R1 | Sistema exibe ou notifica registro de acesso | Não atendido | Não atendido | **Não atendido** — não foi exibida data/hora do último acesso nem enviada notificação de novo login |
+| R2 | Emissões geram identificador ou protocolo associado ao titular | Atendido | Atendido | **Atendido** — foi gerado número de protocolo único associado à sessão e ao titular nas duas emissões |
 
-A classificação consolidada da M12 é **Mínimo aceitável** (faixa de 60% a menos de 80%). A hipótese H12, que exige pelo menos 80% dos itens elegíveis atendidos, **não foi sustentada**.
+**Observações sobre os itens:**
 
-### Ambiente e evidências
+- **A2 — exposição da credencial incorreta:** nas duas rodadas, foi utilizado CPF cadastrado com senha incorreta. A mensagem “Usuário com CPF/CNPJ informado não foi encontrado” aponta especificamente o CPF/CNPJ como problema e, por isso, não atende ao critério de mensagem neutra.
+- **A3 — expiração da sessão:** na primeira rodada, a mensagem de indisponibilidade impediu distinguir expiração da sessão de instabilidade do portal. Na segunda rodada, a funcionalidade permaneceu acessível após o período de inatividade. Como os resultados não permitem uma conclusão consistente nas duas verificações, A3 foi considerado inconclusivo e retirado do denominador, conforme a regra da Fase 2.
+- **A4 — comprovação de vínculo:** o sistema permitiu preencher os dados, mas não concluiu o cadastro com código do cliente incorreto. Com os dados aceitos, encaminhou e-mail para definição de senha. A interpretação de atendimento foi mantida conforme o registro de coleta.
+- **R1 — registro de acesso:** nas duas datas, a interface não exibiu informações sobre o último acesso nem notificou o início de nova sessão.
+- **R2 — protocolo:** nas duas emissões observadas, foi gerado um número de protocolo único associado ao titular.
 
-A coleta foi realizada em computadores pessoais com sistema operacional Windows 11, navegador Microsoft Edge e conta própria autorizada, utilizando conexão Wi-Fi nas verificações de `A1` a `A4` e conexão cabeada (Ethernet) nas verificações de `R1` e `R2`.
+**Cálculo e julgamento:**
 
-Os registros visuais e documentais incluem a [ficha consolidada de A1 a A4](../evidencias/M12/M12-A1-A4-17112026-01.pdf), a [captura de erro de login (A1/A2)](../evidencias/M12/M12-A1-A2-17112026-02.png), os registros de ausência de aviso de acesso em R1 ([1ª rodada](../evidencias/M12/M12-R1-17112026-01.png) e [2ª rodada](../evidencias/M12/M12-R1-19112026-02.png)) e as capturas de geração de protocolo em R2 ([1ª rodada](../evidencias/M12/M12-R2-17112026-01.png) e [2ª rodada](../evidencias/M12/M12-R2-19112026-02.png)). A análise detalhada consta na [documentação de coleta da M12](../dados-coleta/M12/M12-resultados.md).
+- **Itens elegíveis (`N = 5`):** A1, A2, A4, R1 e R2.
+- **Item excluído (`1`):** A3, inconclusivo devido à indisponibilidade na primeira rodada e à divergência em relação à segunda.
+- **Itens atendidos (`A = 3`):** A1, A4 e R2.
+
+`M12 = 100 × 3 / 5 = 60%`
+
+**Classificação:** **Mínimo aceitável** (de 60% a menos de 80%).
+
+**Resultado da hipótese:** **H12 não sustentada**, pois M12 = 60%, abaixo do limite de 80%. A quantidade mínima de cinco itens elegíveis foi atingida.
+
+**Análise:**
+
+- O sistema rejeitou a autenticação com credenciais incorretas (A1), exigiu validação do código do cliente para concluir o cadastro (A4) e gerou protocolo nas emissões (R2).
+- A mensagem de login indicou qual credencial estaria incorreta (A2), contrariando o critério de neutralidade.
+- Não foi observado registro ou notificação de acesso ao titular (R1).
+- A3 permaneceu inconclusivo e foi excluído do cálculo; portanto, não deve ser descrito como uma falha confirmada nem contabilizado entre os itens não atendidos.
+- **Resposta a Q12:** parcialmente. Três dos cinco itens elegíveis foram atendidos (60%), resultado Mínimo aceitável. A hipótese H12 não foi sustentada.
+
+**Oportunidades de melhoria:**
+
+1. Substituir a mensagem “Usuário com CPF/CNPJ informado não foi encontrado” por uma resposta genérica, como “CPF/CNPJ ou senha inválidos”.
+2. Exibir a data e hora do último acesso ou enviar notificação de novo login ao titular.
+3. Repetir a verificação de expiração de sessão após inatividade em condições estáveis, para esclarecer o resultado inconclusivo de A3 e, se necessário, complementar a coleta.
+
+**Evidências:** [CSV de registros](../dados-coleta/M12/M12-registros.csv), [ficha consolidada A1 a A4](../evidencias/M12/M12-A1-A4-17112026-01.pdf), [captura de login A1/A2](../evidencias/M12/M12-A1-A2-17112026-02.png), [R1 — 17/11](../evidencias/M12/M12-R1-17112026-01.png), [R1 — 19/11](../evidencias/M12/M12-R1-19112026-02.png), [R2 — 17/11](../evidencias/M12/M12-R2-17112026-01.png) e [R2 — 19/11](../evidencias/M12/M12-R2-19112026-02.png).
+
+**Limitações:** A3 não pôde ser julgado por divergência entre as rodadas, sendo retirado do denominador. A conclusão da M12 limita-se aos comportamentos observados e não representa auditoria da implementação interna de autenticação, sessão ou trilhas de auditoria.
 
 ## M13 — Documentos com autenticidade verificável
 
@@ -107,3 +179,4 @@ Os registros visuais incluem a [página inicial indicada no link](../evidencias/
 |---|---|---|---|
 | 1.0 | 21/11/2026 | Criação da estrutura da página | Beatriz |
 | 1.1 | 22/11/2026 | Inclusão dos cálculos e resultados de M6, M12 e M13 | Henrique |
+| 1.2 | 22/11/2026 | Inclusão dos cálculos e resultados de M5, e melhora da M12 | Isabella |
