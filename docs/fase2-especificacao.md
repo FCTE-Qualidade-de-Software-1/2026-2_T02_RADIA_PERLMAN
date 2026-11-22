@@ -11,7 +11,7 @@ Organizamos as medições em duas frentes. Para avaliar a qualidade da Agência 
 | GQM | Agência Virtual da Neoenergia Brasília | M1–M14 | Responder às questões de qualidade e orientar recomendações de melhoria. |
 | PSM/CID | Execução do projeto acadêmico | PSM-1 a PSM-3 | Acompanhar retrabalho, progresso e esforço; registrar as decisões de gestão. |
 
-As métricas do produto serão calculadas durante a avaliação. Já os indicadores de gestão serão atualizados com base nas atividades registradas no repositório, inclusive durante a preparação das entregas. Detalhamos esse acompanhamento na página [PSM/CID](fase2/gestao-psm.md).
+As métricas do produto serão calculadas durante a avaliação. Já os indicadores de gestão serão atualizados com base nas atividades registradas no repositório, inclusive durante a preparação das entregas. Detalhamos esse acompanhamento na página [Gestão do Projeto](gestaoProjeto/index.md).
 
 ## Estrutura GQM
 
