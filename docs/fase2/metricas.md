@@ -48,7 +48,7 @@ As faixas estabelecem níveis de comparação para a avaliação exploratória. 
 |---|---|
 | M1–M4, M9, M10, M12 | A faixa **Alvo** começa em 80%, valor também previsto nas hipóteses H1–H4, H9, H10 e H12. Resultados abaixo de 60% indicam que a situação avaliada não foi atendida em uma parcela expressiva das tentativas; 95% ou mais caracteriza desempenho próximo da totalidade dos casos. |
 | M5, M13 | Qualquer exposição de dados protegidos (M5) ou documento sem autenticidade verificável (M13) torna o resultado insatisfatório. |
-| M6, M11 | O **Alvo** começa em 95%, valor de H6 e H11. As quantidades mínimas (20 comparações e 21 verificações) foram definidas para que essa faixa seja alcançável. |
+| M6, M11 | O **Alvo** começa em 95%, valor de H6 e H11. As quantidades mínimas (20 comparações para M6 e 16 verificações por função para M11) delimitam o escopo da coleta para avaliação dessa faixa. |
 | M7, M8 | Os limites das hipóteses são mediana de até 3 segundos e P90 de até 5 segundos por fluxo. As faixas adicionais distinguem respostas mais rápidas e situações de lentidão acentuada. |
 | M14 | O **Alvo** admite degradação de até 50% no pico (razão 1,5); até 20% (1,2) é considerado excelente; acima do dobro (2,0), insatisfatório. |
  
@@ -149,7 +149,7 @@ Na M6, compararemos informações que deveriam permanecer estáveis entre duas c
 | Cálculo | `M6 = 100 × C / N`; **C** = comparações consistentes; **N** = comparações elegíveis da mesma referência. |
 | Fonte | Checklist de campos comparados, sem transcrever valores pessoais ou financeiros. |
 | Coleta | Selecionar registros estáveis, consultá-los duas vezes na mesma sessão e assinalar “igual”, “divergente” ou “não comparável”. Antes de classificar uma divergência como falha, verificar se houve atualização legítima. |
-| Quantidade mínima | Cinco comparações válidas. |
+| Quantidade mínima | Vinte comparações válidas. |
 | Sucesso e exclusões | Sucesso corresponde a valores iguais para a mesma referência, sem atualização no intervalo. Campos dinâmicos e referências incomparáveis são excluídos com justificativa. |
 | Interpretação | Quanto maior, melhor; na escala específica de M6, o nível **Alvo** começa em 95%, limite também exigido por H6. |
 
@@ -224,8 +224,8 @@ A M11 estima a proporção de tempo em que a emissão de 2ª via e o Nada Consta
 | Questão e hipótese | [Q11/H11](questoes-hipoteses.md#q11) |
 | Cálculo | `M11(f) = 100 × D(f) / N(f)`, em que **f** identifica a função; **D(f)** = verificações com a função operacional; **N(f)** = verificações elegíveis da função. |
 | Fonte | Planilha de verificações com data, horário, função, resultado e evidência. |
-| Coleta | Três verificações por dia (manhã, tarde e noite), durante sete dias consecutivos. Em cada verificação, autenticar-se e acionar a função: a 2ª via é considerada operacional quando a lista de faturas é exibida; o Nada Consta, quando a tela de emissão fica pronta para uso. |
-| Quantidade mínima | Vinte e uma verificações por função. |
+| Coleta | Quatro verificações por dia (manhã, almoço, tarde e noite), durante quatro dias consecutivos. Em cada verificação, autenticar-se e acionar a função: a 2ª via é considerada operacional quando a lista de faturas é exibida; o Nada Consta, quando a tela de emissão fica pronta para uso. |
+| Quantidade mínima | Dezesseis verificações por função. |
 | Sucesso e exclusões | Sucesso é a função ficar operacional em até 30 segundos. Falhas comprovadamente locais (por exemplo, outros sites também inacessíveis) são excluídas. Manutenções anunciadas pela concessionária contam como indisponibilidade, com registro do aviso. |
 | Interpretação | Quanto maior, melhor; escala de M6 e M11 na Tabela 2, aplicada **a cada função**. H11 é sustentada quando **M11(f) ≥ 95% nas duas funções**. Para o julgamento de G2, usar a pior classificação entre elas. |
  
@@ -283,4 +283,5 @@ Guardaremos os valores necessários para refazer cada cálculo: contagens de cas
 | 1.0 | 14/10/2026 | Criação do documento das métricas | Beatriz Figueiredo dos Santos |
 | 1.1 | 17/10/2026 | Reestruturação do documento | Arthur de Lima Sobreira |
 | 1.2 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |
-| 1.3 | 13/11/2026 | Inclusão de M9–M14| Beatriz Figueiredo dos Santos |
+| 1.3 | 13/11/2026 | Inclusão de M9–M14 | Beatriz Figueiredo dos Santos |
+| 1.4 | 21/11/2026 | Alinhamento das amostras mínimas de M6 (20 comparações) e M11 (16 verificações por função em 4 dias) com a Fase 3 | Dara Maria Barbosa de Sousa |

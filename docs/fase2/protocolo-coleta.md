@@ -23,7 +23,7 @@ Para relacionar as observações sem identificar participantes, atribuiremos um 
 | Evidência | Referência ao registro anonimizado, imagem de tela ou anotação utilizada. |
 | Ocorrências | Falhas observadas e medidas tomadas para interromper um cenário, quando necessário. |
 
-**Quantidades mínimas:** prevemos cinco participantes e dez tarefas válidas para M1; dez apresentações de tela para M9 e dez tarefas de operação para M10; dez entradas inválidas para M2; dez execuções por fluxo em M3; cinco interrupções para M4; cinco verificações, distribuídas entre as páginas de segunda via e de histórico de consumo, para M5; vinte comparações para M6; dez durações válidas por fluxo para M7 e M8; vinte e uma verificações por função para M11; cinco dos seis itens elegíveis para M12; cinco documentos emitidos para M13; e dez execuções válidas por fluxo, em cada janela, para M14.. Essas quantidades delimitam o estudo exploratório, não uma amostra representativa dos consumidores.
+**Quantidades mínimas:** prevemos cinco participantes e dez tarefas válidas para M1; dez apresentações de tela para M9 e dez tarefas de operação para M10; dez entradas inválidas para M2; dez execuções por fluxo em M3; cinco interrupções para M4; cinco verificações, distribuídas entre as páginas de segunda via e de histórico de consumo, para M5; vinte comparações para M6; dez durações válidas por fluxo para M7 e M8; dezesseis verificações por função para M11; cinco dos seis itens elegíveis para M12; cinco documentos emitidos para M13; e dez execuções válidas por fluxo, em cada janela, para M14. Essas quantidades delimitam o estudo exploratório, não uma amostra representativa dos consumidores.
 
 ## 3. Cenários de coleta
 
@@ -39,7 +39,7 @@ Para relacionar as observações sem identificar participantes, atribuiremos um 
 | D-02 | M8 | Ordenar os mesmos tempos da M7 e selecionar o P90. | Lista ordenada, posição do percentil e valor final. |
 | U-03 | M9 | Apresentar as telas de Nada Consta e de indicadores de continuidade por até 30 segundos, sem interação, e aplicar a pergunta de múltipla escolha. | Tela, participante codificado e alternativa escolhida. |
 | U-04 | M10 | Solicitar a emissão da 2ª via e a alteração do período do gráfico de consumo, a partir da tela de cada função. | Tarefa, participante codificado, conclusão em até cinco minutos, erro de operação ou ajuda. |
-| R-03 | M11 | Verificar a 2ª via e o Nada Consta três vezes por dia (manhã, tarde e noite), durante sete dias consecutivos. | Data, horário, função, operacional em até 30 s ou não, e evidência. |
+| R-03 | M11 | Verificar a 2ª via e o Nada Consta quatro vezes por dia (manhã, almoço, tarde e noite), durante quatro dias consecutivos. | Data, horário, função, operacional em até 30 s ou não, e evidência. |
 | S-03 | M12 | Verificar os itens A1–A4, R1 e R2 no login e no cadastro, duas vezes, em dias diferentes. | Item, verificação, atendido ou não, e evidência. |
 | S-04 | M13 | Emitir o relatório de Nada Consta e usar o mecanismo de comprovação no canal oficial indicado no documento. | Emissão, mecanismo encontrado e resultado da verificação. |
 | D-03 | M14 | Medir a geração do PDF da 2ª via (C-F1) e a renderização do gráfico de consumo (C-F2) em janelas de pico e fora de pico. | Durações por fluxo e janela, medianas e razão. |
@@ -50,7 +50,7 @@ As fichas de [Métricas](metricas.md) detalham o critério de sucesso de cada ce
 
 Antes das medições de tempo, definiremos para cada fluxo o evento inicial e o momento em que o conteúdo principal estiver pronto para uso. Não utilizaremos automaticamente o evento `load` do navegador como término da contagem, pois ele pode não coincidir com a disponibilidade da interface.
 
-Prevemos uma execução de aquecimento, que não entrará no cálculo, seguida de dez medições válidas por fluxo, preferencialmente em dois períodos. Registraremos navegador, dispositivo, rede e condição de cache para comparar situações semelhantes, sem juntar tempos obtidos em ambientes distintos.Para M14, repetiremos o procedimento nas janelas de pico e fora de pico definidas na Fase 3, com dez medições válidas por fluxo em cada janela e o mesmo navegador, dispositivo e conexão.
+Prevemos uma execução de aquecimento, que não entrará no cálculo, seguida de dez medições válidas por fluxo, preferencialmente em dois períodos. Registraremos navegador, dispositivo, rede e condição de cache para comparar situações semelhantes, sem juntar tempos obtidos em ambientes distintos. Para M14, repetiremos o procedimento nas janelas de pico e fora de pico definidas na Fase 3, com dez medições válidas por fluxo em cada janela e o mesmo navegador, dispositivo e conexão.
 
 Podemos medir os intervalos por gravação de interação com marcação temporal ou outro método de cronometragem documentado. Antes de publicar qualquer registro visual, ocultaremos dados da conta. Se a tela não ficar utilizável em até trinta segundos, anotaremos um timeout, sem lançar trinta segundos como duração concluída. Também apresentaremos a quantidade de timeouts, pois considerar apenas as execuções bem-sucedidas poderia distorcer a avaliação.
 
@@ -67,3 +67,4 @@ Após a coleta, vamos conferir os casos elegíveis, aplicar as fórmulas de M1�
 | 1.0 | 17/10/2026 | Criação do documento dos protocolos de coleta | Arthur de Lima Sobreira |
 | 1.1 | 20/10/2026 | Revisão e versionamento | Henrique Martins Alencar |
 | 1.2 | 14/11/2026 | Alinhamento à Fase 1 | Beatriz Figueiredo dos Santos |
+| 1.3 | 21/11/2026 | Alinhamento da amostra e periodicidade de M11 (16 verificações por função em 4 dias) com a Fase 3 | Dara Maria Barbosa de Sousa |

@@ -155,7 +155,7 @@ A autorização do participante para a atividade não substitui a autorização 
 
 **Resultado esperado:** os campos estáveis da mesma referência apresentam os mesmos valores nas duas consultas, desde que não tenha ocorrido atualização legítima.
 
-**Quantidade:** há uma divergência na documentação da Fase 2: `metricas.md` estabelece cinco comparações válidas, enquanto `protocolo-coleta.md` estabelece vinte. A equipe deverá harmonizar esses dois documentos antes da coleta. Até a decisão, recomenda-se preparar a planilha para vinte comparações, por ser o requisito mais conservador, sem tratar essa escolha como alteração já aprovada da métrica.
+**Quantidade mínima:** vinte comparações válidas.
 
 ### 2.7. D-01 — Mediana do tempo de resposta (M7)
 
@@ -237,7 +237,7 @@ A autorização do participante para a atividade não substitui a autorização 
 
 **Objetivo:** verificar se a segunda via e o Nada Consta ficam operacionais nos horários definidos.
 
-**Preparação:** organizar revezamento entre os integrantes. O cronograma atual prevê quatro verificações por dia — manhã, almoço, tarde e noite — durante cinco dias consecutivos, de 16/11 a 20/11. Em cada horário, as duas funções deverão ser verificadas separadamente.
+**Preparação:** organizar revezamento entre os integrantes. O planejamento prevê quatro verificações por dia — manhã, almoço, tarde e noite — durante quatro dias consecutivos, de 17/11 a 20/11. Em cada horário, as duas funções deverão ser verificadas separadamente.
 
 **Execução:**
 
@@ -247,10 +247,9 @@ A autorização do participante para a atividade não substitui a autorização 
 4. Para o Nada Consta, verificar se a tela de emissão fica pronta para uso em até trinta segundos.
 5. Registrar o resultado e uma evidência que não exponha dados da conta.
 6. Se houver suspeita de falha local, verificar a conectividade por outro acesso público e registrar a justificativa antes de excluir a observação.
-7. Repetir nos quatro horários previstos, durante os cinco dias.
+7. Repetir nos quatro horários previstos, durante os quatro dias.
 
-**Resultado esperado no cronograma atual:** vinte verificações por função (quarenta registros no total, considerando as duas funções). Manutenções anunciadas pela concessionária contam como indisponibilidade, com registro do aviso; falhas comprovadamente locais podem ser excluídas com justificativa.
-
+**Resultado esperado:** dezesseis verificações por função (trinta e dois registros no total, considerando as duas funções). Manutenções anunciadas pela concessionária contam como indisponibilidade, com registro do aviso; falhas comprovadamente locais podem ser excluídas com justificativa.
 
 ### 2.12. S-03 — Itens de autenticidade e responsabilização (M12)
 
@@ -341,22 +340,21 @@ Os dados brutos deverão ser preservados antes do cálculo das métricas. As pla
 
 A execução seguirá o [Cronograma da Fase 4](cronograma.md):
 
-- **16/11:** início da M11, primeira rodada de M2, M4, M5, M6, M12 e M13, além das medições fora de pico de M3, M7, M8 e M14.
-- **17/11:** segunda rodada de M12, medições em horário de pico e início das sessões com voluntários.
+- **16/11:** primeira rodada de M2, M4, M5, M6, M12 e M13, além das medições fora de pico de M3, M7, M8 e M14.
+- **17/11:** segunda rodada de M12, medições em horário de pico, início da M11 e início das sessões com voluntários.
 - **17/11 a 19/11:** sessões de M1, M9 e M10, conforme disponibilidade dos participantes.
-- **16/11 a 20/11:** verificações diárias da M11.
+- **17/11 a 20/11:** verificações diárias da M11 (4 turnos por dia).
 - **21/11:** conferência dos dados, exclusões, cálculos e aplicação dos critérios de julgamento.
 - **22/11:** consolidação do relatório e do artigo.
 
 As datas não substituem os registros de horário efetivo. Para M12, deverão ficar comprovados os dois dias diferentes. Para M14, deverão ser registrados os horários exatos das janelas de pico e fora de pico.
 
-## 5. Pendências de consistência antes da coleta
+## 5. Definições consolidadas para a coleta
 
-1. **M11:** o plano da Fase 2 estabelece 21 verificações por função, enquanto o cronograma da Fase 3 prevê 20. A equipe precisa adicionar uma verificação por função ou aprovar e registrar a alteração da quantidade mínima nos documentos da Fase 2. Não afirmar equivalência estatística sem análise que a sustente.
-2. **M6:** `metricas.md` estabelece cinco comparações válidas, enquanto `protocolo-coleta.md` estabelece vinte. A equipe precisa escolher uma quantidade e harmonizar os dois documentos antes de iniciar S-02.
-3. **M1, M9 e M10:** confirmar a disponibilidade dos cinco participantes externos. Se não houver a amostra, registrar as três métricas como inconclusivas; a análise interna será apenas exploratória.
-4. **M14:** registrar os horários exatos das janelas e manter dispositivo, navegador e conexão iguais nas duas medições.
-5. **M13:** confirmar se a conta autorizada permite emitir os cinco documentos previstos. Se não permitir, registrar a limitação e não substituir por documentos de outra conta sem autorização.
+1. **M11 e M6:** quantidades mínimas alinhadas à Fase 2, sendo 16 verificações por função em 4 dias (17/11 a 20/11) para M11 e 20 comparações válidas para M6.
+2. **M1, M9 e M10:** cinco participantes externos confirmados para a execução das sessões de usabilidade.
+3. **M14:** horários exatos das janelas de pico e fora de pico definidos e mantidos com o mesmo dispositivo, navegador e conexão nas duas medições.
+4. **M13:** disponibilidade de emissão dos cinco documentos de Nada Consta confirmada na conta autorizada.
 
 ## Documentos relacionados
 
@@ -377,3 +375,4 @@ As datas não substituem os registros de horário efetivo. Para M12, deverão fi
 | 1.1 | 15/11/2026 | Ampliação dos roteiros para M1–M14 e alinhamento ao cronograma da Fase 4 | Arthur de Lima Sobreira |
 | 1.2 | 15/11/2026 | Inclusão do procedimento padronizado de recrutamento, consentimento e condução das sessões com participantes | Arthur de Lima Sobreira |
 | 1.3 | 15/11/2026 | Inclusão de familiares, amigos e conhecidos no recrutamento por conveniência e de cuidados para reduzir influência do convite | Arthur de Lima Sobreira |
+| 1.4 | 21/11/2026 | Alinhamento das amostras de M11 e M6 com a Fase 2 e consolidação das definições de coleta | Dara Maria Barbosa de Sousa |

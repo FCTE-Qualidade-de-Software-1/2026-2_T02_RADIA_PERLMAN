@@ -1,5 +1,9 @@
 site_name: Processo de Avaliação de Produto de Software
 site_description: Documentação do projeto da disciplina de Qualidade de Software
+repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_RADIA_PERLMAN
+repo_name: Equipe Radia Perlman (GitHub)
+copyright: "Equipe Radia Perlman — Qualidade de Software 2026.2 | Última atualização: 21/11/2026"
+
 theme:
   name: material
   language: pt-BR
@@ -8,8 +12,10 @@ theme:
   palette:
     primary: custom
     accent: amber
+
 extra_css:
   - stylesheets/extra.css
+
 nav:
   - Visão Geral: index.md
   - "Fase 1":
@@ -26,12 +32,6 @@ nav:
       - Critérios de julgamento: fase2/criterios-julgamento.md
       - Rastreabilidade Fase 1–2: fase2/rastreabilidade.md
       - Protocolo de coleta: fase2/protocolo-coleta.md
-      - Gestão PSM/CID: fase2/gestao-psm.md
-      - "Resultados PSM/CID":
-          - "Visão geral": fase2/psm/index.md
-          - "Entrega 1": fase2/psm/entrega_1/relatorio.md
-          - "Entrega 2": fase2/psm/entrega_2/relatorio.md
-          - "Consolidado": fase2/psm/consolidado/relatorio.md
   - "Fase 3":
       - Plano de Avaliação: fase3-plano-avaliacao.md
       - Recursos e ambiente: fase3/recursos-ambiente.md
@@ -48,6 +48,13 @@ nav:
           - "G4 — Eficiência de desempenho": fase4/resultados-g4-desempenho.md
       - Julgamento e conclusões: fase4/julgamento-conclusoes.md
       - Ação de melhoria: fase4/acao-melhoria.md
+  - "Gestão": 
+      - PSM/CID: fase2/gestao-psm.md
+      - "Resultados PSM/CID":
+          - "Visão geral": fase2/psm/index.md
+          - "Entrega 1": fase2/psm/entrega_1/relatorio.md
+          - "Entrega 2": fase2/psm/entrega_2/relatorio.md
+          - "Consolidado": fase2/psm/consolidado/relatorio.md
   - "IA Generativa": ia-generativa.md
 
 markdown_extensions:
@@ -68,4 +75,3 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  

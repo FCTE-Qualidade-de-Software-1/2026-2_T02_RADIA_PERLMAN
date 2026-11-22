@@ -27,7 +27,43 @@ As fórmulas, as faixas de pontuação e as quantidades mínimas são as definid
  
 ## 2. M2 — Tratamento de entradas inválidas
 
-[preencher]
+**Questão Q2:** Os formulários ajudam a corrigir entradas inválidas?
+
+**Hipótese H2:** ao menos 80% das entradas inválidas serão sinalizadas antes do envio, com orientação para a correção.
+
+**Fórmula:** `M2 = 100 × V / N`, em que **V** = tentativas inválidas tratadas adequadamente e **N** = tentativas inválidas elegíveis. Uma tentativa só é considerada adequada quando a interface impede ou sinaliza o erro **e** apresenta orientação compreensível para a correção.
+
+**Dados da coleta:** a avaliação foi realizada por Isabella em 16/11/2026, às 18h40, no cenário U-02. Foram registrados onze casos (T01 a T11); T09 foi excluído conforme a ficha de coleta, restando dez tentativas elegíveis.
+
+**Tabela — Consolidação das tentativas da M2**
+
+| Classificação | Tentativas | Registros |
+|---|---:|---|
+| Adequadas | 4 | T06, T07, T08 e T11 |
+| Inadequadas | 6 | T01, T02, T03, T04, T05 e T10 |
+| Excluída | 1 | T09 |
+| **Total registrado** | **11** | **10 elegíveis + 1 excluída** |
+
+**Cálculo:** `M2 = 100 × 4 / 10 = 40%`.
+
+**Classificação:** **Insatisfatório** (abaixo de 60%).
+
+**Resultado da hipótese:** **H2 não sustentada** (M2 = 40%, abaixo do requisito de 80%).
+
+**Análise:**
+
+- **Ausência de orientação específica no cadastro.** Em T01, T02 e T03, o campo CPF ficou destacado em vermelho, mas não apresentou mensagem explicativa que indicasse o problema ou como corrigi-lo.
+- **Campo obrigatório sem instrução.** Em T04, o campo vazio impediu o prosseguimento, porém não houve orientação textual para o usuário.
+- **Mensagens genéricas.** Em T05 e T10, a interface exibiu “Realize o procedimento de segurança”, sem indicar qual informação precisava ser corrigida.
+- **Respostas adequadas.** T06, T07 e T08 apresentaram avisos relacionados ao preenchimento do CPF/CNPJ no login. Em T11, foi exibida a mensagem “Senha é obrigatória”. Esses quatro registros atenderam ao critério definido para a métrica.
+- **Interpretação.** O destaque visual de um campo ou o bloqueio do avanço, isoladamente, não garantem que o usuário compreenda o erro. A métrica exige também uma orientação clara e útil para a correção.
+- **Resposta a Q2:** parcialmente. Quatro das dez tentativas elegíveis foram tratadas adequadamente (40%). Nas demais, faltou mensagem explicativa ou foi apresentada uma mensagem genérica, sem indicação clara do dado a corrigir. Portanto, os formulários não atingiram a hipótese H2.
+
+**Oportunidades de melhoria:** apresentar mensagens textuais junto aos campos inválidos; diferenciar campos obrigatórios de valores em formato incorreto; substituir mensagens genéricas por instruções específicas que não exponham informações sensíveis; e padronizar o feedback entre cadastro e login.
+
+**Evidências:** a [ficha consolidada da M2](../evidencias/M2/M2-Tabela-16112026-03.png) reúne os onze registros, as classificações e a elegibilidade. As [capturas das entradas inválidas — parte 1](../evidencias/M2/M2-U02-16112026-01.png) e [parte 2](../evidencias/M2/M2-U02-16112026-02.png) ilustram as respostas observadas. Os dados individuais estão no [CSV da M2](../dados-coleta/M2/M2-registros.csv), e o procedimento e a consolidação estão descritos no [registro individual da coleta](../dados-coleta/M2/M2-resultados.md).
+
+**Limitações:** a coleta representa os campos e fluxos acessíveis nas condições observadas em 16/11/2026. Não foram realizados envios que pudessem concluir operações ou alterar dados. A métrica avalia o feedback perceptível ao usuário, não a implementação interna da validação. O registro T09 foi excluído conforme a ficha original e não integra o denominador.
  
 ## 3. M9 — Reconhecimento da finalidade da tela
  
@@ -91,4 +127,5 @@ As hipóteses H1, H9 e H10 foram sustentadas, mas as análises acima mostram pon
 | Versão | Data | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 1.0 | 21/11/2026 | Análise de M1, M9 e M10 a partir das fichas P01 a P05 | Beatriz |
-| 1.1 | 22/11/2026 | Inclusão da seção de oportunidades de melhoria (pré-sugestões OM-01 a OM-04) e ligação com a página Ação de melhoria; correção de frase incompleta na análise de M10 | Beatriz |
+| 1.1 | 22/11/2026 | Análise da M2| Isabella |
+| 1.2 | 22/11/2026 | Inclusão da seção de oportunidades de melhoria (pré-sugestões OM-01 a OM-04) e ligação com a página Ação de melhoria; correção de frase incompleta na análise de M10 | Beatriz |
