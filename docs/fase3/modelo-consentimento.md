@@ -1,6 +1,11 @@
+---
+hide:
+  - toc
+---
+
 # Modelo de termo de consentimento para participação na avaliação
 
-> **Minuta para revisão da docente antes do uso.** Este modelo foi preparado para registrar a concordância de pessoas convidadas a participar das tarefas de avaliação da interface da Agência Virtual da Neoenergia Brasília. A equipe deverá preencher os campos indicados e confirmar com a docente se o procedimento atende às orientações institucionais aplicáveis antes de convidar participantes. Este documento não substitui eventual autorização ética ou institucional que venha a ser exigida.
+> **Modelo utilizado na avaliação.** Este documento foi preparado para registrar a concordância de pessoas convidadas a participar das tarefas de avaliação da interface da Agência Virtual da Neoenergia Brasília. O repositório público mantém apenas o modelo em branco; os termos assinados são arquivados separadamente com acesso restrito à equipe.
 
 ## 1. Sobre a atividade
 
@@ -34,7 +39,7 @@ A equipe poderá registrar:
 
 Não serão solicitados CPF, senha, endereço, número de unidade consumidora ou outros dados pessoais desnecessários. As fichas de coleta serão identificadas pelo código do participante. Os resultados poderão ser apresentados no relatório acadêmico e na documentação do projeto de forma agregada ou anonimizada.
 
-Os termos preenchidos serão guardados separadamente das fichas de coleta, em local com acesso restrito à equipe responsável, e não serão publicados no repositório Git. O prazo de guarda será definido pela equipe com orientação da docente: **[informar prazo e responsável pela guarda]**. O repositório público receberá somente o modelo em branco e dados sem identificação pessoal.
+Os termos preenchidos serão guardados separadamente das fichas de coleta, em local com acesso restrito à equipe responsável, e não serão publicados no repositório Git. O prazo de guarda é **até o final da disciplina de Qualidade de Software 1, sob a responsabilidade de Beatriz Figueiredo dos Santos e Dara Maria Barbosa de Sousa**. O repositório público receberá somente o modelo em branco e dados sem identificação pessoal.
 
 A participação nesta atividade não autoriza, por si só, o acesso a uma conta de consumidor. Caso alguma tarefa exija uma sessão autenticada, a equipe deverá obter também a autorização do titular da conta e evitar a exposição de informações pessoais ou financeiras.
 
@@ -50,9 +55,9 @@ O procedimento padrão não prevê gravação de voz ou imagem. Caso a equipe co
 
 ## 6. Contato para dúvidas
 
-Responsável pela atividade: **[nome do integrante responsável]**  
-E-mail ou contato: **[inserir contato institucional ou do projeto]**  
-Docente responsável pela disciplina: **[nome e contato institucional, se orientado pela docente]**
+- **Responsável pela atividade:** Beatriz Figueiredo dos Santos e Dara Maria Barbosa de Sousa
+- **E-mail ou contato:** Equipe Radia Perlman (Projeto Acadêmico - UnB)
+- **Docente responsável pela disciplina:** Profa. Cristiane Soares Ramos (Engenharia de Software - FGA/UnB)
 
 ## 7. Declaração de consentimento
 
@@ -68,6 +73,12 @@ Código atribuído pela equipe: __________
 
 ---
 
-**Orientação para a equipe:** preencher os campos pendentes e submeter esta minuta à docente antes do recrutamento. Guardar cada termo preenchido fora do repositório público, com acesso restrito. Não inserir neste arquivo nomes, assinaturas ou contatos de participantes.
+**Orientação para a equipe:** guardar cada termo preenchido fora do repositório público, com acesso restrito. Não inserir neste arquivo nomes, assinaturas ou contatos de participantes.
 
-**Versão 1.1 — 15/11/2026:** esclarece que familiares, amigos e conhecidos dos integrantes podem receber convite, sem obrigação de participar, e que o vínculo amplo poderá ser registrado para caracterizar a amostra.
+## Histórico de Versões
+
+| Versão | Data | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 1.0 | 15/11/2026 | Criação do modelo de termo de consentimento | Arthur de Lima Sobreira |
+| 1.1 | 15/11/2026 | Esclarecimento sobre convite a familiares, amigos e conhecidos e registro amplo do vínculo | Arthur de Lima Sobreira |
+| 1.2 | 21/11/2026 | Preenchimento dos metadados institucionais (guarda, responsáveis, contato e docente) e remoção de marcadores de minuta | Dara Maria Barbosa de Sousa |

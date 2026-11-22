@@ -11,7 +11,7 @@ O objeto de estudo deste projeto é a **Agência Virtual da Neoenergia Brasília
 !!! info "Artigo Técnico-Acadêmico (Em Andamento)"
     Toda a documentação, os testes e os dados levantados ao longo das fases detalhadas neste site servem como base empírica para a redação de um **Artigo Científico**. A primeira versão do artigo, consolidando o escopo e as métricas das **Fases 1 e 2**, já está disponível para leitura. O laudo final de qualidade será publicado nesta seção ao término da Fase 4.
     
-    [Acessar a 1ª Versão do Artigo (Fases 1 e 2)](./artigo/QSW1_2026_2_T02_Equipe_Radia_Perlman_v1.pdf) <!-- Substitua a # pelo link do seu Google Docs ou PDF -->
+    [Acessar a 1ª Versão do Artigo (Fases 1 e 2)](./artigo/QSW1_2026_2_T02_Equipe_Radia_Perlman_v1.pdf)
 
 ## Fundamentação Teórica
 
@@ -30,7 +30,7 @@ Para que a qualidade do produto seja mensurada de forma sistemática e repetíve
 
 1. **[Fase 1 - Estabelecer requisitos de avaliação:](fase1-requisitos.md)** Etapa de definição do propósito da avaliação, identificação do tipo de produto (escopo) e especificação do modelo de qualidade aplicável (ISO/IEC 25010).
 2. **[Fase 2 - Especificar a avaliação:](fase2-especificacao.md)** Fase destinada a selecionar as métricas, estabelecer os níveis de pontuação e definir os critérios para o julgamento da qualidade.
-3. **[Fase 3 - Projetar a avaliação:](fase3-projeto.md)** Etapa de consolidação do plano de avaliação, detalhando os recursos, os métodos e o cronograma para execução.
+3. **[Fase 3 - Projetar a avaliação:](fase3-plano-avaliacao.md)** Etapa de consolidação do plano de avaliação, detalhando os recursos, os métodos e o cronograma para execução.
 4. **[Fase 4 - Executar a avaliação:](fase4-execucao.md)** Fase prática onde são obtidas as medidas, comparados os resultados com os critérios estabelecidos e julgada a qualidade final do software, culminando no relatório de avaliação.
 
 ---
@@ -41,17 +41,19 @@ Abaixo estão os integrantes responsáveis por conduzir este processo de avalia�
 
 | Foto | Nome | GitHub |
 |:---:|---|---|
-| <img src="https://github.com/arthor13.png" width="50" style="border-radius: 50%;"> | Arthur de Lima Sobreira | [@arthor13](https://github.com/arthor13) |
-| <img src="https://github.com/BeatrizSants.png" width="50" style="border-radius: 50%;"> | Beatriz Figueiredo dos Santos| [@BeatrizSants](https://github.com/BeatrizSants) |
-| <img src="https://github.com/daramariabs.png" width="50" style="border-radius: 50%;"> | Dara Maria Barbosa de Sousa | [@daramariabs](https://github.com/daramariabs) |
-| <img src="https://github.com/henryqma.png" width="50" style="border-radius: 50%;"> | Henrique Martins Alencar | [@henryqma](https://github.com/henryqma) |
-| <img src="https://github.com/isabellachoukaira.png" width="50" style="border-radius: 50%;"> | Isabella Mendes Choukaira | [@isabellachoukaira](https://github.com/isabellachoukaira) |
-| <img src="https://github.com/TiagoSTdeLyra.png" width="50" style="border-radius: 50%;"> | Tiago Scherrer Tavares de Lyra | [@TiagoSTdeLyra](https://github.com/TiagoSTdeLyra) |
+| <img src="https://github.com/arthor13.png" alt="Foto de Arthur de Lima Sobreira" width="50" style="border-radius: 50%;"> | Arthur de Lima Sobreira | [@arthor13](https://github.com/arthor13) |
+| <img src="https://github.com/BeatrizSants.png" alt="Foto de Beatriz Figueiredo dos Santos" width="50" style="border-radius: 50%;"> | Beatriz Figueiredo dos Santos | [@BeatrizSants](https://github.com/BeatrizSants) |
+| <img src="https://github.com/daramariabs.png" alt="Foto de Dara Maria Barbosa de Sousa" width="50" style="border-radius: 50%;"> | Dara Maria Barbosa de Sousa | [@daramariabs](https://github.com/daramariabs) |
+| <img src="https://github.com/henryqma.png" alt="Foto de Henrique Martins Alencar" width="50" style="border-radius: 50%;"> | Henrique Martins Alencar | [@henryqma](https://github.com/henryqma) |
+| <img src="https://github.com/isabellachoukaira.png" alt="Foto de Isabella Mendes Choukaira" width="50" style="border-radius: 50%;"> | Isabella Mendes Choukaira | [@isabellachoukaira](https://github.com/isabellachoukaira) |
+| <img src="https://github.com/TiagoSTdeLyra.png" alt="Foto de Tiago Scherrer Tavares de Lyra" width="50" style="border-radius: 50%;"> | Tiago Scherrer Tavares de Lyra | [@TiagoSTdeLyra](https://github.com/TiagoSTdeLyra) |
 
 ## Histórico de Versões
+
 | Versão | Data | Descrição da Alteração | Autor(a) |
 |:---:|:---:|---|---|
 | 1.0 | 16/10/2026 | Criação da visão geral do projeto | Dara Maria Barbosa de Sousa |
 | 1.1 | 26/10/2026 | Inclusão do Artigo Acadêmico como escopo final e revisão textual | Dara Maria Barbosa de Sousa |
+| 1.2 | 21/11/2026 | Correção do link da Fase 3, inclusão de texto alternativo nas fotos da equipe e limpeza de comentários | Dara Maria Barbosa de Sousa |
 
 ---

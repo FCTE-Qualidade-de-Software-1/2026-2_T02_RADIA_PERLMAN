@@ -132,17 +132,17 @@ Se não houver cinco participantes externos disponíveis, a equipe poderá reali
 | M3 — Execuções sem falhas | Fluxos do histórico de consumo definidos antes da coleta, dispositivo e navegador registrados, roteiro de execução e ficha de ocorrências. Dez execuções elegíveis por fluxo, distribuídas em pelo menos dois períodos. |
 | M4 — Retomada da conexão | Dispositivo cuja conexão possa ser interrompida sem afetar outros usuários da rede, cronômetro e fluxo de consulta que não altere dados. Cinco tentativas seguras. |
 | M5 — Bloqueio sem sessão | Conta própria ou autorizada, acesso prévio a páginas restritas e procedimento de encerramento de sessão. Cinco verificações, preferencialmente em pelo menos duas páginas. |
-| M6 — Consistência de informações | Conta autorizada, referência estável e ficha de comparação. Há uma divergência entre a quantidade mínima de `metricas.md` (cinco comparações) e a de `protocolo-coleta.md` (vinte); a equipe deverá harmonizar os documentos antes da coleta. Até essa decisão, recomenda-se reservar capacidade para vinte comparações. |
+| M6 — Consistência de informações | Conta autorizada, referência estável e ficha de comparação. Vinte comparações válidas. |
 | M7 — Mediana do tempo de resposta | Dispositivo e navegador de referência, conexão registrada, ferramenta de cronometragem e definição prévia dos eventos inicial e final de cada fluxo. Dez durações válidas por fluxo. |
 | M8 — Percentil 90 do tempo de resposta | Os mesmos registros válidos da M7, com lista ordenada das durações e indicação do posto utilizado no cálculo do P90. |
 | M9 — Reconhecimento da finalidade da tela | Cinco participantes, telas de Nada Consta e de indicadores de continuidade, pergunta padronizada com quatro alternativas e ficha de resposta. Dez apresentações no total. |
 | M10 — Tarefas de operação concluídas | Cinco participantes, instruções padronizadas e ficha de observação para emissão da 2ª via e alteração do período do gráfico de consumo. Dez tarefas no total, com limite de cinco minutos por tarefa. |
-| M11 — Disponibilidade | A programação atual prevê quatro verificações diárias (manhã, almoço, tarde e noite), de 16/11 a 20/11, para a 2ª via e o Nada Consta: vinte verificações por função. A Fase 2, porém, estabelece vinte e uma por função; essa diferença precisa ser resolvida antes de considerar H11 sustentada conforme a regra original. |
+| M11 — Disponibilidade | Quatro verificações diárias (manhã, almoço, tarde e noite), de 17/11 a 20/11, para a 2ª via e o Nada Consta, totalizando dezesseis verificações por função (32 registros no total). |
 | M12 — Autenticidade e responsabilização | Conta autorizada e checklist dos itens A1–A4, R1 e R2. Cada item deverá ser verificado duas vezes, em dias diferentes; pelo menos cinco dos seis itens precisam ser elegíveis. A verificação de expiração de sessão exige até sessenta minutos de inatividade. |
 | M13 — Autenticidade dos documentos | Conta autorizada, cinco relatórios de Nada Consta e acesso ao mecanismo ou canal oficial de verificação indicado no documento. Os documentos não serão publicados. |
 | M14 — Razão de tempo entre pico e fora de pico | Dispositivo, navegador e conexão iguais nas duas janelas. Dez execuções válidas por fluxo C-F1 (PDF da 2ª via) e C-F2 (gráfico do histórico) em cada janela. As janelas e seus horários exatos deverão ser registrados antes da coleta. |
 
-As fórmulas, os limites das hipóteses e os critérios de julgamento permanecem os definidos na [Fase 2](../fase2/metricas.md) e em seus [critérios de julgamento](../fase2/criterios-julgamento.md). Este documento não altera esses valores. As divergências de quantidade identificadas para M6 e M11 precisam ser resolvidas e documentadas pela equipe antes da coleta.
+As fórmulas, os limites das hipóteses e os critérios de julgamento permanecem os definidos na [Fase 2](../fase2/metricas.md) e em seus [critérios de julgamento](../fase2/criterios-julgamento.md). Este documento está totalmente alinhado a essas definições.
 
 ## 6. Limitações do ambiente
 
@@ -156,7 +156,6 @@ A avaliação possui limitações que deverão acompanhar a interpretação dos 
 - M7, M8 e M14 serão calculadas com quantidade limitada de observações e sem teste de carga. Os resultados não deverão ser apresentados como desempenho sob alta concorrência.
 - A quantidade e a disponibilidade de contas autorizadas podem limitar os fluxos executáveis.
 - A ausência de voluntários externos impede o julgamento de M1, M9 e M10 conforme a amostra prevista.
-- A redução da janela de M11 diminui a quantidade de observações em relação ao planejamento da Fase 2 e deve ser apresentada como limitação, caso não seja feita uma verificação adicional por função.
 
 ## 7. Verificação antes da coleta
 
@@ -172,7 +171,7 @@ Antes de iniciar uma sessão, a equipe deverá conferir:
 - [ ] Os arquivos de evidência não expõem dados pessoais ou credenciais.
 - [ ] Os termos preenchidos estão guardados fora do repositório público, com acesso restrito.
 - [ ] Os participantes externos necessários para M1, M9 e M10 foram confirmados, ou as métricas foram marcadas como dependentes dessa disponibilidade.
-- [ ] As quantidades mínimas e as divergências de M6 e M11 foram conferidas antes da coleta.
+- [ ] As quantidades mínimas definidas na Fase 2 foram conferidas antes da coleta.
 
 ## Histórico de Versões
 
@@ -182,3 +181,4 @@ Antes de iniciar uma sessão, a equipe deverá conferir:
 | 1.1 | 15/11/2026 | Ampliação para M1–M14 e alinhamento ao cronograma da Fase 4 | Arthur de Lima Sobreira |
 | 1.2 | 15/11/2026 | Inclusão dos critérios de seleção, recrutamento, consentimento e proteção dos participantes | Arthur de Lima Sobreira |
 | 1.3 | 15/11/2026 | Esclarecimento de que familiares, amigos e conhecidos dos integrantes podem participar, com registro amplo do vínculo e cuidados para evitar pressão | Arthur de Lima Sobreira |
+| 1.4 | 21/11/2026 | Alinhamento das amostras de M11 (16 verificações por função em 4 dias) e M6 (20 comparações válidas) com a Fase 2 | Dara Maria Barbosa de Sousa |
