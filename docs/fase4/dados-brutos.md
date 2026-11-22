@@ -10,15 +10,15 @@ Esta página relaciona cada métrica aos arquivos de dados e às evidências da 
 |---|---|---|---|---|---|
 | G1 | M1, M9, M10 | U-01, U-03, U-04 | Roteiro de coleta de usabilidade com voluntários (fichas P01 a P05): [inserir link] | Fichas anonimizadas. | [G1 — Usabilidade](resultados-g1-usabilidade.md) |
 | G1 | M2 | U-02 | [inserir link] | [preencher] | [G1 — Usabilidade](resultados-g1-usabilidade.md) |
-| G2 | M3 | R-01 | [inserir link] | [preencher] | [G2 — Confiabilidade](resultados-g2-confiabilidade.md) |
+| G2 | M3 | R-01 | [CSV](../dados-coleta/M3/M3-resultados.csv) · [registro da coleta](../dados-coleta/M3/M3-resultados.md) | [Capturas M3](../evidencias/M3/historicoConsumo-19112026-01-arthur.jpeg) · [falha observada](../evidencias/M3/segundaVia-19112026-erro-01-arthur.jpeg) | [G2 — Confiabilidade](resultados-g2-confiabilidade.md) |
 | G2 | M4 | R-02 | [inserir link] | [preencher] | [G2 — Confiabilidade](resultados-g2-confiabilidade.md) |
 | G2 | M11 | R-03 | [inserir link] | [preencher] | [G2 — Confiabilidade](resultados-g2-confiabilidade.md) |
 | G3 | M5 | S-01 | [inserir link] | [preencher] | [G3 — Segurança](resultados-g3-seguranca.md) |
 | G3 | M6 | S-02 | [inserir link] | [preencher] | [G3 — Segurança](resultados-g3-seguranca.md) |
 | G3 | M12 | S-03 | [inserir link] | [preencher] | [G3 — Segurança](resultados-g3-seguranca.md) |
 | G3 | M13 | S-04 | [inserir link] | [preencher] | [G3 — Segurança](resultados-g3-seguranca.md) |
-| G4 | M7, M8 | D-01, D-02 | [inserir link] | [preencher] | [G4 — Eficiência de desempenho](resultados-g4-desempenho.md) |
-| G4 | M14 | D-03 | [inserir link] | [preencher] | [G4 — Eficiência de desempenho](resultados-g4-desempenho.md) |
+| G4 | M7, M8 | D-01, D-02 | [CSV M7](../dados-coleta/M7/M7-registros.csv) · [CSV M8](../dados-coleta/M8/M8-registros.csv) | [Login](../evidencias/M7-M8/login-20261119-sucesso.jpeg) · [erro HTTP 403](../evidencias/M7-M8/WhatsApp%20Image%202026-11-19%20at%2009.14.28.jpeg) · [indicadores](../evidencias/M7-M8/indicadores-continuidade-20261119-sem-historico.jpeg) · [PDF](../evidencias/M7-M8/segundaVia-pdf-20261119.jpeg) | [G4 — Eficiência de desempenho](resultados-g4-desempenho.md) |
+| G4 | M14 | D-03 | [CSV do pico](../dados-coleta/M14/M14-registros.csv) · [registro da coleta](../dados-coleta/M14/M14-resultados.md) | [PDF, janela de pico](../evidencias/M14/segundaVia-pdf-pico-20261119-arthur.jpeg) | [G4 — Eficiência de desempenho](resultados-g4-desempenho.md) |
 
 _Fonte: Equipe Radia Perlman, 2026._
 
@@ -35,3 +35,4 @@ Conforme [Recursos e ambiente](../fase3/recursos-ambiente.md) e o [modelo de ter
 | Versão | Data | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 1.0 | 21/11/2026 | Criação da estrutura da página | Beatriz |
+| 1.1 | 22/11/2026 | Inclusão dos vínculos de dados e evidências de M3, M7, M8 e M14 | Arthur de Lima Sobreira |
