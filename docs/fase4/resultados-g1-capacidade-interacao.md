@@ -1,8 +1,8 @@
-# Resultados de G1 — Usabilidade
+# Resultados de G1 — Capacidade de Interação
 
 Esta página apresenta os resultados do objetivo G1 obtidos com voluntários (M1, M9 e M10). A M2 (tratamento de entradas inválidas) é coletada pela equipe, sem voluntários.
 
-As fórmulas, as faixas de pontuação e as quantidades mínimas são as definidas em [Métricas](../fase2/metricas.md) e nos [Critérios de julgamento](../fase2/criterios-julgamento.md). Os dados brutos estão nas fichas do roteiro de coleta de usabilidade.
+As fórmulas, as faixas de pontuação e as quantidades mínimas são as definidas em [Métricas](../fase2/metricas.md) e nos [Critérios de julgamento](../fase2/criterios-julgamento.md). Os dados brutos estão nas fichas do roteiro de coleta de capacidade de interação.
 
 ## 1. M1 — Localização de funcionalidades
  
@@ -109,9 +109,23 @@ As fórmulas, as faixas de pontuação e as quantidades mínimas são as definid
 - **Ícone de impressão.** P02 usou 190 s, quase dois terços do limite. Chegou à tela correta, mas demorou a perceber que o ícone de impressora, que não tem rótulo.
 - **Resposta a Q10:** sim, para a emissão da 2ª via. Todos os participantes concluíram T3 sem erro e sem ajuda, ainda que um deles tenha demorado a identificar o comando de impressão.
  
+ 
+## 5. Oportunidades de melhoria
+
+As hipóteses H1, H9 e H10 foram sustentadas, mas as análises acima mostram pontos em que o usuário hesitou, demorou ou errou mesmo com a métrica dentro da meta. Esta seção reúne essas observações como **pré-sugestões de melhoria**.
+
+
+| ID | Pré-sugestão | Evidência | Métrica de origem | Prioridade |
+|---|---|---|---|---|
+| **OM-01** | Reformular a funcionalidade **Indicadores de Continuidade**: deixar clara a finalidade da tela, usar linguagem do dia a dia em vez das siglas e mostrar os dados sem exigir que o usuário abra mês a mês | Tela B reconhecida por 3 de 5 participantes (60%); os 2 erros escolheram "histórico de consumo"; 2 dos 3 acertos vieram com pedido de repetição | M9 | **Alta** |
+| **OM-02** | Dar rótulo de texto ao ícone de impressora da 2ª via (ex.: "Baixar PDF") | P02 levou 190 s na T3 até perceber que o ícone gerava o PDF | M10 | Média |
+| **OM-03** | Tornar a tela inicial mais clara, com acesso às funções por rótulos visíveis em vez do botão verde sem texto | P03 e P04 relataram que a tela inicial "não é nada intuitiva" | M1 (perguntas abertas) | Média |
+| **OM-04** | Dar ao Histórico de consumo um título e um gráfico que confirmem ao usuário que ele chegou ao lugar certo | P04 concluiu a T2 sem saber se tinha acertado; a tela tem só uma tabela estática, o que também impediu a tarefa T4 | M1 / M10 | Baixa | 
+
 ## Histórico de Versões
 
 | Versão | Data | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 1.0 | 21/11/2026 | Análise de M1, M9 e M10 a partir das fichas P01 a P05 | Beatriz |
 | 1.1 | 22/11/2026 | Análise da M2| Isabella |
+| 1.2 | 22/11/2026 | Inclusão da seção de oportunidades de melhoria (pré-sugestões OM-01 a OM-04) e ligação com a página Ação de melhoria; correção de frase incompleta na análise de M10 | Beatriz |
