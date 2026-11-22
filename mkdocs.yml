@@ -48,8 +48,12 @@ nav:
           - "G4 — Eficiência de desempenho": fase4/resultados-g4-desempenho.md
       - Julgamento e conclusões: fase4/julgamento-conclusoes.md
       - Ação de melhoria: fase4/acao-melhoria.md
-  - "Gestão": 
-      - PSM/CID: fase2/gestao-psm.md
+  - "Gestão do projeto":
+      - Visão geral da gestão: gestaoProjeto/index.md
+      - Planejamento e cronograma: gestaoProjeto/planejamento-cronograma.md
+      - Organização das atividades: gestaoProjeto/organizacao-atividades.md
+      - Plano de medição PSM/CID: gestaoProjeto/plano-medicao-psm.md
+      - Automação do PSM: gestaoProjeto/automacao-psm.md
       - "Resultados PSM/CID":
           - "Visão geral": fase2/psm/index.md
           - "Entrega 1": fase2/psm/entrega_1/relatorio.md

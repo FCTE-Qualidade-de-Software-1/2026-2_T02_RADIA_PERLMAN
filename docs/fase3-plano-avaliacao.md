@@ -5,7 +5,7 @@ hide:
 
 # Fase 3 — Plano de Avaliação
 
-Na [Fase 1](fase1-requisitos.md), estabelecemos os requisitos da avaliação e, na [Fase 2](fase2-especificacao_2.md), especificamos as métricas (GQM) e os indicadores de gestão (PSM/CID). O objetivo desta **Fase 3: Projetar a Avaliação** é organizar a execução da Fase 4, definindo os métodos exatos, preparando os recursos e estruturando o cronograma de ação da equipe (RAMOS, 2026).
+Na [Fase 1](fase1-requisitos.md), estabelecemos os requisitos da avaliação e, na [Fase 2](fase2-especificacao.md), especificamos as métricas (GQM) e os indicadores de gestão (PSM/CID). O objetivo desta **Fase 3: Projetar a Avaliação** é organizar a execução da Fase 4, definindo os métodos exatos, preparando os recursos e estruturando o cronograma de ação da equipe (RAMOS, 2026).
 
 Diante do prazo restrito para a entrega do relatório final e do artigo acadêmico (22/11/2026), este documento formaliza os ajustes metodológicos necessários para viabilizar a coleta e a análise de dados sem comprometer o rigor do modelo ISO/IEC 25010:2011.
 
@@ -39,7 +39,7 @@ Para que a avaliação seja projetada de forma repetível e organizada, o trabal
 
 A metodologia GQM e as normas da família SQuaRE permitem a adaptação do modelo de qualidade desde que devidamente documentada e justificada em função do contexto (ISO/IEC, 2011; RAMOS, 2026). 
 
-Para assegurar a viabilidade da entrega em 22/11/2026, aplicamos os seguintes ajustes ao [Protocolo de Coleta](protocolo-coleta_2.md) originalmente definido na Fase 2:
+Para assegurar a viabilidade da entrega em 22/11/2026, aplicamos os seguintes ajustes ao [Protocolo de Coleta](fase2/protocolo-coleta.md) originalmente definido na Fase 2:
 
 1. **Ajuste na M11 (Disponibilidade):** O protocolo exigia testes durante 7 dias com 3 verificações diárias (21 amostras). **Ajuste:** A coleta foi condensada para **5 dias (16/11 a 20/11) com 4 verificações diárias** (manhã, almoço, fim da tarde e noite). Isso garante 20 verificações por função (amostra estatisticamente comparável ao planejado) e libera o fim de semana (21 e 22) exclusivamente para a consolidação e redação do relatório.
 2. **Ajuste nos Voluntários (M1, M9, M10):** As sessões de observação com os 5 voluntários foram estritamente agrupadas entre os dias **17/11 (Terça) e 19/11 (Quinta)**, evitando dependências externas nos dias finais do projeto.
