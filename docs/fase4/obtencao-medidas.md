@@ -8,7 +8,7 @@ Esta página registra como a coleta foi executada em relação ao [Plano de Aval
 
 | Bloco | Cenários e métricas | Responsáveis | Data prevista | Data efetiva | Situação |
 |---|---|---|---|---|---|
-| 1 — Usabilidade com voluntários | U-01 (M1), U-03 (M9), U-04 (M10) | Beatriz e Dara | 17/11 a 19/11 | 17/11 e 18/11 | Concluído (5 participantes) |
+| 1 — Capacidade de Interação com voluntários | U-01 (M1), U-03 (M9), U-04 (M10) | Beatriz e Dara | 17/11 a 19/11 | 17/11 e 18/11 | Concluído (5 participantes) |
 | 2 — Testes funcionais e segurança | U-02 (M2), R-02 (M4), S-01 (M5), S-02 (M6), S-03 (M12), S-04 (M13) | Henrique e Isabella | 16/11 e 17/11 | [preencher] | [preencher] |
 | 3 — Desempenho fora de pico | R-01 (M3), D-01 (M7), D-02 (M8), D-03 (M14) | Tiago | 16/11 (noite) | [preencher] | [preencher] |
 | 4 — Desempenho no pico | R-01 (M3), D-01 (M7), D-02 (M8), D-03 (M14) | Arthur | 17/11 (horário comercial) | [preencher] | [preencher] |

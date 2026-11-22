@@ -8,8 +8,8 @@ Esta página relaciona cada métrica aos arquivos de dados e às evidências da 
 
 | Objetivo | Métrica | Cenário | Arquivo de dados | Evidências | Página de resultados |
 |---|---|---|---|---|---|
-| G1 | M1, M9, M10 | U-01, U-03, U-04 | Roteiro de coleta de usabilidade com voluntários (fichas P01 a P05): [inserir link] | Fichas anonimizadas. | [G1 — Usabilidade](resultados-g1-usabilidade.md) |
-| G1 | M2 | U-02 | [inserir link] | [preencher] | [G1 — Usabilidade](resultados-g1-usabilidade.md) |
+| G1 | M1, M9, M10 | U-01, U-03, U-04 | Roteiro de coleta de capacidade de interação com voluntários (fichas P01 a P05): [inserir link] | Fichas anonimizadas. | [G1 — Capacidade de Interação](resultados-g1-capacidade-interacao.md) |
+| G1 | M2 | U-02 | [inserir link] | [preencher] | [G1 — Capacidade de Interação](resultados-g1-capacidade-interacao.md) |
 | G2 | M3 | R-01 | [inserir link] | [preencher] | [G2 — Confiabilidade](resultados-g2-confiabilidade.md) |
 | G2 | M4 | R-02 | [inserir link] | [preencher] | [G2 — Confiabilidade](resultados-g2-confiabilidade.md) |
 | G2 | M11 | R-03 | [inserir link] | [preencher] | [G2 — Confiabilidade](resultados-g2-confiabilidade.md) |

@@ -10,7 +10,7 @@ Conforme os critérios da Fase 2, cada objetivo recebe o menor nível entre suas
 
 | Objetivo | Característica (ênfase) | Métricas | Nível | Hipóteses sustentadas | Página |
 |---|---|---|---|---|---|
-| G1 | Usabilidade (5) | M1, M2, M9, M10 |  | H1, H9, H10 | [G1](resultados-g1-usabilidade.md) |
+| G1 | Capacidade de Interação (5) | M1, M2, M9, M10 |  | H1, H9, H10 | [G1](resultados-g1-capacidade-interacao.md) |
 | G2 | Confiabilidade (4) | M3, M4, M11 |  | | [G2](resultados-g2-confiabilidade.md) |
 | G3 | Segurança (5) | M5, M6, M12, M13 |  |  | [G3](resultados-g3-seguranca.md) |
 | G4 | Eficiência de desempenho (4) | M7, M8, M14 |  |  | [G4](resultados-g4-desempenho.md) |
