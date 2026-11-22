@@ -26,7 +26,7 @@ O cálculo foi realizado por fluxo, sem reunir as duas funcionalidades em um per
 
 A classificação consolidada da M3 corresponde ao menor nível entre os fluxos: **Alvo**. A hipótese H3, que exige pelo menos 80% de execuções sem falha em cada fluxo elegível com amostra mínima, foi **sustentada** nos dois fluxos avaliados.
 
-## Ambiente e evidências
+### Ambiente e evidências
 
 A coleta foi realizada em um Dell Inspiron 15 3511 (Intel Core i5-1135G7, 8 GB de RAM), Fedora Linux 44 (Sway Spin), Mozilla Firefox e conexão Wi-Fi de 5 GHz, sem VPN. Os horários e as condições de cada execução constam do arquivo de dados brutos.
 
@@ -34,9 +34,42 @@ Os registros visuais incluem a abertura do histórico e a emissão da segunda vi
 
 O resultado da M3 descreve os fluxos e períodos observados. O julgamento integral de G2 depende também das métricas M4 e M11, analisadas separadamente.
 
+## M4 — Retomada após interrupção local da conexão
+
+As medições da M4, vinculadas ao cenário R-02, foram realizadas em 20/11/2026, entre 19h29 e 19h36. Foram executadas cinco tentativas independentes de interrupção local da conexão (por 5 segundos) durante a consulta de leitura do relatório de Nada Consta, sem envio de formulários ou alteração de dados cadastrais.
+
+**Tabela 2 — Resultados das tentativas de retomada**
+
+| Tentativa | Horário | Desconexão local | Ação manual | Tempo de retomada | Resultado observado | Classificação |
+|---|---:|---:|---:|---:|---|---|
+| `M4-R02-20112026-01` | 19:29 | 5 s | Nenhuma | 18 s | Retomada automática dentro de 30 s | Sucesso |
+| `M4-R02-20112026-02` | 19:31 | 5 s | Nenhuma | 20 s | Retomada automática dentro de 30 s | Sucesso |
+| `M4-R02-20112026-03` | 19:33 | 5 s | Nenhuma | 19 s | Retomada automática dentro de 30 s | Sucesso |
+| `M4-R02-20112026-04` | 19:35 | 5 s | Nenhuma | 23 s | Retomada automática dentro de 30 s | Sucesso |
+| `M4-R02-20112026-05` | 19:36 | 5 s | Nenhuma | 22 s | Retomada automática dentro de 30 s | Sucesso |
+
+_Fonte: [M4-registros.csv](../dados-coleta/M4/M4-registros.csv), Equipe Radia Perlman, 2026._
+
+Nas cinco tentativas, ao desativar a interface de rede local por 5 segundos, o navegador sinalizou momentaneamente a perda de conexão, mas retomou automaticamente o carregamento após o restabelecimento da rede, concluindo a consulta sem encerrar a sessão autenticada nem reiniciar a jornada do usuário. Os tempos totais de retomada variaram entre 18 s e 23 s (média de 20,4 s e mediana de 20,0 s), todos abaixo do limite máximo de 30 segundos estipulado no protocolo.
+
+O cálculo da métrica considerou todas as cinco tentativas elegíveis:
+
+- **M4:** `M4 = 100 × R / N = 100 × 5 / 5 = 100%`.
+
+A classificação consolidada da M4 é **Excelente** (faixa de 95% ou mais). A hipótese H4, que exige pelo menos 80% das interrupções locais com retomada bem-sucedida, foi **sustentada**.
+
+### Ambiente e evidências
+
+A coleta foi realizada em um computador pessoal (desktop), sistema operacional Windows 11, navegador Microsoft Edge (versão `157.0.4341.60`, com cache padrão habilitado) e conexão cabeada (Ethernet), utilizando conta própria autorizada. Os horários e metadados completos de cada execução constam do arquivo de dados brutos.
+
+Os registros visuais incluem as capturas anonimizadas da conclusão de cada uma das cinco tentativas ([execução 01](../evidencias/M4/M4-R02-20112026-01.png), [execução 02](../evidencias/M4/M4-R02-20112026-02.png), [execução 03](../evidencias/M4/M4-R02-20112026-03.png), [execução 04](../evidencias/M4/M4-R02-20112026-04.png) e [execução 05](../evidencias/M4/M4-R02-20112026-05.png)). O detalhamento completo da análise e das limitações está disponível na [documentação de coleta da M4](../dados-coleta/M4/M4-resultados.md).
+
+O resultado da M4 reflete a recuperabilidade observada no ambiente cliente (interação entre o navegador de referência e a aplicação web) em consulta de leitura, não avaliando isoladamente mecanismos de tolerância a falhas nos servidores.
+
 ## Histórico de Versões
 
 | Versão | Data | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 1.0 | 21/11/2026 | Criação da estrutura da página | Beatriz |
 | 1.1 | 22/11/2026 | Inclusão dos cálculos e resultados da M3 | Arthur de Lima Sobreira |
+| 1.2 | 22/11/2026 | Inclusão de cálculos e resultados da M4 | Henrique |
