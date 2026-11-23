@@ -46,3 +46,41 @@ As evidências são as mesmas vinculadas às observações de origem da M7 e per
 | Navegador | Mozilla Firefox, versão mais recente disponível na data da coleta |
 | Conexão | Wi-Fi 5 GHz |
 | VPN | Não utilizada |
+
+## Coleta fora de pico (20/11/2026)
+
+Os registros de tempo da M7 coletados por Tiago em 20/11/2026, na janela fora de pico, também são a base da M8. Foram reutilizadas as 30 durações (dez por fluxo) dos registros individuais da M7, sem novas execuções, e o arquivo `M8-registros.csv` mantém o identificador de origem (`id_origem_m7`) de cada uma. Os registros deste turno são apresentados separadamente dos de 19/11/2026.
+
+### Percentil 90 por fluxo
+
+Método do posto mais próximo: `posto = ceil(0,90 × n) = ceil(0,90 × 10) = 9`. O P90 é o nono valor da lista ordenada.
+
+| Fluxo | Valores em ordem crescente (s) | P90 (s) | Faixa (escala M8) | H8 (até 5 s) |
+|---|---|---:|---|---|
+| F1 — Login | 2,21; 2,23; 2,29; 2,34; 2,44; 2,56; 2,57; 3,42; 3,60; 3,78 | **3,60** | Alvo | Atendida |
+| F2 — Indicadores de continuidade | 2,29; 2,69; 2,84; 2,85; 3,73; 3,87; 3,89; 5,70; 7,99; 11,71 | **7,99** | Mínimo aceitável | Não atendida |
+| F3 — PDF da segunda via | 2,99; 3,24; 3,24; 3,49; 3,52; 4,17; 4,32; 4,45; 4,60; 5,28 | **4,60** | Alvo | Atendida |
+
+Com dez durações por fluxo, uma única duração alta altera o P90. Nos indicadores de continuidade, o P90 de 7,99 s fica abaixo de uma duração de 11,71 s.
+
+### Evidências
+
+As evidências são as mesmas da M7 fora de pico e estão em `docs/evidencias/M7-M8/`:
+
+| Arquivo | Registro |
+|---|---|
+| `login-20261120-fora-pico-tiago.png` | Página inicial após o login, fora de pico |
+| `segundaVia-pdf-20261120-fora-pico-tiago.png` | PDF da segunda via disponibilizado fora de pico |
+
+### Ambiente de execução
+
+| Campo | Registro |
+|---|---|
+| Avaliador | Tiago |
+| Data da coleta | 20/11/2026, a partir das 03:41 |
+| Janela de coleta | Fora de pico |
+| Dispositivo | Predator Helios Neo 16 — Intel Core Ultra 9 — 32 GB RAM |
+| Sistema operacional | Windows 11 |
+| Navegador | Google Chrome, versão mais recente disponível na data da coleta; número exato não registrado |
+| Conexão | Wi-Fi 5 GHz |
+| VPN | Não utilizada |

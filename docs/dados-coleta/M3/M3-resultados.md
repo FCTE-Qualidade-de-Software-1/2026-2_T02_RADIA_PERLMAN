@@ -78,3 +78,52 @@ As capturas de sucesso registram o comportamento observado em cada fluxo e perí
 | Conexão | Wi-Fi 5 GHz |
 | Condição da conexão | Estável, conforme informado pelo avaliador |
 | VPN | Não utilizada |
+
+## 6. Execuções fora de pico (20/11/2026)
+
+As mesmas execuções de R-01 foram realizadas por Tiago na janela fora de pico, em 20/11/2026, a partir das 03:41. Foram avaliados os dois fluxos da seção 1, com dez execuções por fluxo e as mesmas condições iniciais, ações e resultados esperados. Os horários individuais das execuções não foram registrados.
+
+### 6.1 Resultados
+
+| Fluxo | Período | Execuções | Sem falha | Com falha |
+|---|---|---:|---:|---:|
+| R01-F1 — Abertura do Histórico de Consumo | Madrugada | 10 | 10 | 0 |
+| R01-F2 — Emissão de segunda via | Madrugada | 10 | 10 | 0 |
+
+### 6.2 Cálculo da M3 fora de pico
+
+**R01-F1 — Abertura do Histórico de Consumo**
+
+`M3(F1) = 100 × 10 / 10 = 100%`
+
+**R01-F2 — Emissão de segunda via**
+
+`M3(F2) = 100 × 10 / 10 = 100%`
+
+Os resultados fora de pico são mantidos separados dos resultados de 19/11/2026 e por fluxo. Em ambos os fluxos, o critério de H3 (M3(f) ≥ 80%) foi atendido nesta janela. A falha registrada às 08:46 de 19/11/2026 não se repetiu.
+
+### 6.3 Registro das execuções e evidências
+
+As vinte execuções fora de pico estão registradas individualmente no arquivo `M3-resultados.csv`, com os identificadores `M3-R01-F1-20261120-01` a `M3-R01-F2-20261120-10`.
+
+As capturas estão organizadas em `docs/evidencias/M3/`:
+
+| Arquivo | Registro |
+|---|---|
+| `historicoConsumo-20112026-01-tiago.png` | Tabela do Histórico de Consumo fora de pico |
+| `segundaVia-20112026-01-tiago.png` | Segunda via emitida fora de pico |
+
+As capturas são representativas das execuções, e não existe uma captura para cada execução. Dados pessoais foram cobertos nas imagens.
+
+### 6.4 Ambiente de execução
+
+| Campo | Registro |
+|---|---|
+| Avaliador | Tiago |
+| Data da coleta | 20/11/2026, a partir das 03:41 |
+| Janela de coleta | Fora de pico |
+| Dispositivo | Predator Helios Neo 16 — Intel Core Ultra 9 — 32 GB RAM |
+| Sistema operacional | Windows 11 |
+| Navegador | Google Chrome, versão mais recente disponível na data da coleta; número exato não registrado |
+| Conexão | Wi-Fi 5 GHz |
+| VPN | Não utilizada |
