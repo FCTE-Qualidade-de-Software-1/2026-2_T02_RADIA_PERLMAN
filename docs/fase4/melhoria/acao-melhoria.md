@@ -1,4 +1,4 @@
-# Ação de melhoria
+# Justificativa
  
 > **Projeto:** Avaliação de Qualidade de Software — Agência Virtual Neoenergia Brasília  
 > **Origem:** [Resultados de G1 — Capacidade de Interação](../resultados-g1-capacidade-interacao.md), oportunidade **OM-01**  
