@@ -1,0 +1,33 @@
+id_teste,data,horario,avaliador,turno,funcionalidade,operacional_30s,situacao,evidencia,observacao
+M11-R03-17112026-01,17/11/2026,09:10,Dara Maria Barbosa de Sousa,Manhã,2ª Via,Sim,Elegível,docs/evidencias/M11/segundavia-1711-01-dara.png,-
+M11-R03-17112026-02,17/11/2026,09:11,Dara Maria Barbosa de Sousa,Manhã,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-1711-01-dara.png,-
+M11-R03-17112026-03,17/11/2026,12:45,Dara Maria Barbosa de Sousa,Almoço,2ª Via,Sim,Elegível,docs/evidencias/M11/segundavia-1711-02-dara.png,-
+M11-R03-17112026-04,17/11/2026,12:48,Dara Maria Barbosa de Sousa,Almoço,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-1711-02-dara.png,-
+M11-R03-17112026-05,17/11/2026,16:00,Dara Maria Barbosa de Sousa,Tarde,2ª Via,Não,Elegível,"docs/evidencias/M11/tela_erro-1711-03-dara.png; docs/evidencias/M11/indisponivel-1711-03-dara.png","Tela com ícone amarelo e botão 'ok'; após clicar ficou carregando por cerca de dois minutos."
+M11-R03-17112026-06,17/11/2026,16:00,Dara Maria Barbosa de Sousa,Tarde,Nada Consta,Não,Elegível,"docs/evidencias/M11/tela_erro-1711-03-dara.png; docs/evidencias/M11/indisponivel-1711-03-dara.png","Tela com ícone amarelo e botão 'ok'; após clicar ficou carregando por cerca de dois minutos."
+M11-R03-17112026-07,17/11/2026,21:00,Dara Maria Barbosa de Sousa,Noite,2ª Via,Não,Elegível,docs/evidencias/M11/tela_erro-1711-04-dara.png,"Não foi possível fazer login na plataforma; mensagem de erro exibida."
+M11-R03-17112026-08,17/11/2026,21:00,Dara Maria Barbosa de Sousa,Noite,Nada Consta,Não,Elegível,docs/evidencias/M11/tela_erro-1711-04-dara.png,"Não foi possível fazer login na plataforma; mensagem de erro exibida."
+M11-R03-18112026-01,18/11/2026,09:50,Isabella Mendes Choukaira,Manhã,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-18112026-01-isabella.png,-
+M11-R03-18112026-02,18/11/2026,09:55,Isabella Mendes Choukaira,Manhã,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-18112026-01-isabella.png,-
+M11-R03-18112026-03,18/11/2026,12:00,Isabella Mendes Choukaira,Almoço,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-18112026-02-isabella.png,-
+M11-R03-18112026-04,18/11/2026,12:10,Isabella Mendes Choukaira,Almoço,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-18112026-02-isabella.png,-
+M11-R03-18112026-05,18/11/2026,17:50,Isabella Mendes Choukaira,Tarde,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-18112026-03-isabella.png,-
+M11-R03-18112026-06,18/11/2026,17:55,Isabella Mendes Choukaira,Tarde,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-18112026-03-isabella.png,-
+M11-R03-18112026-07,18/11/2026,22:38,Isabella Mendes Choukaira,Noite,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-18112026-04-isabella.png,-
+M11-R03-18112026-08,18/11/2026,22:39,Isabella Mendes Choukaira,Noite,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-18112026-04-isabella.png,-
+M11-R03-19112026-01,19/11/2026,08:29,Arthur de Lima Sobreira,Manhã,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-19112026-01-arthur.png,-
+M11-R03-19112026-02,19/11/2026,08:32,Arthur de Lima Sobreira,Manhã,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-19112026-01-arthur.png,"Mensagem de ausência de fatura aberta; comportamento esperado devido à situação da conta."
+M11-R03-19112026-03,19/11/2026,12:59,Arthur de Lima Sobreira,Almoço,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-19112026-02-arthur.png,"Mensagem de ausência de fatura aberta; comportamento esperado devido à situação da conta."
+M11-R03-19112026-04,19/11/2026,13:00,Arthur de Lima Sobreira,Almoço,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-19112026-02-arthur.png,-
+M11-R03-19112026-05,19/11/2026,15:35,Arthur de Lima Sobreira,Tarde,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-19112026-03-arthur.png,"Mensagem de ausência de fatura aberta; comportamento esperado devido à situação da conta."
+M11-R03-19112026-06,19/11/2026,15:35,Arthur de Lima Sobreira,Tarde,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-19112026-03-arthur.png,-
+M11-R03-19112026-07,19/11/2026,19:45,Arthur de Lima Sobreira,Noite,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-19112026-04-arthur.png,"Mensagem de ausência de fatura aberta; comportamento esperado devido à situação da conta."
+M11-R03-19112026-08,19/11/2026,19:46,Arthur de Lima Sobreira,Noite,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-19112026-04-arthur.png,-
+M11-R03-20112026-01,20/11/2026,10:01,Henrique Martins Alencar,Manhã,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-20112026-01-henrique.png,-
+M11-R03-20112026-02,20/11/2026,10:02,Henrique Martins Alencar,Manhã,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-20112026-01-henrique.png,-
+M11-R03-20112026-03,20/11/2026,12:41,Henrique Martins Alencar,Almoço,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-20112026-02-henrique.png,-
+M11-R03-20112026-04,20/11/2026,12:40,Henrique Martins Alencar,Almoço,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-20112026-02-henrique.png,-
+M11-R03-20112026-05,20/11/2026,16:18,Henrique Martins Alencar,Tarde,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-20112026-03-henrique.png,-
+M11-R03-20112026-06,20/11/2026,16:17,Henrique Martins Alencar,Tarde,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-20112026-03-henrique.png,-
+M11-R03-20112026-07,20/11/2026,19:51,Henrique Martins Alencar,Noite,2ª Via,Sim,Elegível,docs/evidencias/M11/segundaVia-20112026-04-henrique.png,-
+M11-R03-20112026-08,20/11/2026,19:50,Henrique Martins Alencar,Noite,Nada Consta,Sim,Elegível,docs/evidencias/M11/nadaconsta-20112026-04-henrique.png,-
