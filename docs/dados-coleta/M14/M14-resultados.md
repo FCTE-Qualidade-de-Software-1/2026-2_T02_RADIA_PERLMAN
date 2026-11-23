@@ -83,7 +83,7 @@ A mediana do pico, registrada acima, é de 4,015 s. Assim:
 
 `M14(C-F1) = 4,015 / 3,005 ≈ 1,34`
 
-Essa razão está na faixa Alvo da escala M14 (acima de 1,2 até 1,5) e atende o limite de H14 (até 1,5) para o C-F1. O fluxo C-F2 (gráfico do histórico de consumo) não teve medição de tempo, então a H14 não pode ser julgada por inteiro. A comparação usa avaliadores e dias diferentes (Arthur em 19/11/2026 e Tiago em 20/11/2026).
+Essa razão está na faixa Alvo da escala M14 (acima de 1,2 até 1,5) e atende o limite de H14 (até 1,5) para o C-F1. A comparação usa avaliadores e dias diferentes (Arthur em 19/11/2026 e Tiago em 20/11/2026).
 
 ### Evidência
 
