@@ -47,7 +47,9 @@ nav:
           - "G3 — Segurança": fase4/resultados-g3-seguranca.md
           - "G4 — Eficiência de desempenho": fase4/resultados-g4-desempenho.md
       - Julgamento e conclusões: fase4/julgamento-conclusoes.md
-      - Ação de melhoria: fase4/acao-melhoria.md
+      - Ação de melhoria: 
+           - "Justificativa": fase4/melhoria/acao-melhoria.md
+           - "Plano de validação": fase4/melhoria/plano-validacao.md
   - "Gestão do projeto":
       - Visão geral da gestão: gestaoProjeto/index.md
       - Planejamento e cronograma: gestaoProjeto/planejamento-cronograma.md
