@@ -50,6 +50,7 @@ Centralizar as duas telas em **uma única página**, que responda em poucos segu
 | P8 | Siglas como rótulo principal; explicação no rodapé | Nome do dia a dia como rótulo, sigla entre parênteses e uma seção de ajuda expansível |
 | P9 | Números fora do padrão pt-BR ("7.00", "0.0000") | Horas em "h min", contagens em "vezes", vírgula decimal |
 | P10 | Limite e Apurado sem interpretação | Valor e limite lado a lado, com card destacado quando acima do limite, e linha do limite no gráfico|
+| P11 | Ausência de opções para exportar, imprimir ou salvar os dados apresentados | Ações de exportação em CSV e de impressão/salvamento em PDF, identificadas por texto |
 
 
 ### 4.3 Requisitos funcionais
@@ -60,11 +61,11 @@ Centralizar as duas telas em **uma única página**, que responda em poucos segu
 | RF-02 | Manter o título "Indicadores de Continuidade" e acrescentar subtítulo em linguagem simples sobre faltas de energia, sem a palavra "histórico" | P1, P2 |
 | RF-03 | Mostrar, para o mês selecionado, o valor e o limite de cada indicador, destacando o valor acima do limite | P9, P10 |
 | RF-04 | Permitir escolher o indicador exibido no gráfico | P5, P8 |
-| RF-05 | Permitir escolher o período por mês inicial ("De") e final ("até") | P5, T4 |
+| RF-05 | Permitir escolher o período por mês inicial ("De") e final ("até") | P5 |
 | RF-06 | Destacar meses acima do limite com cor, ícone e padrão visual | P6 |
 | RF-07 | Atualizar cartões ao selecionar um mês, sem trocar de página, sempre informando o mês; ocultá-lo na visualização em tabela | P7 |
-| RF-08 | Oferecer visualização em tabela equivalente ao gráfico | P4, P11, RNF-01 |
-| RF-09 | Exportar os dados em CSV e imprimir/salvar em PDF, com ações identificadas por texto | OM-02 |
+| RF-08 | Oferecer visualização em tabela equivalente ao gráfico | P5 |
+| RF-09 | Exportar os dados em CSV e imprimir/salvar em PDF, com ações identificadas por texto | P11  |
 | RF-10 | Reunir em uma seção de ajuda a explicação das siglas e da compensação | P8 |
 
 ### 4.4 Requisitos não funcionais

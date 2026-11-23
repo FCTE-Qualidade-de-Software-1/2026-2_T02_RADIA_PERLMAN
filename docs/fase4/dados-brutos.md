@@ -8,7 +8,7 @@ Esta página relaciona cada métrica aos arquivos de dados e às evidências da 
 
 | Objetivo | Métrica | Cenário | Arquivo de dados | Evidências | Página de resultados |
 |---|---|---|---|---|---|
-| G1 | M1, M9, M10 | U-01, U-03, U-04 | Roteiro de coleta de usabilidade com voluntários (fichas P01 a P05) | [Fichas anonimizadas](../evidencias/M1-M9-M10/Coleta-das-métricas-com-voluntários.pdf) | [G1 — Capacidade de Interação](resultados-g1-capacidade-interacao.md) |
+| G1 | M1, M9, M10 | U-01, U-03, U-04 | Roteiro de coleta de capacidade de interação com voluntários (fichas P01 a P05) | [Fichas anonimizadas](../evidencias/M1-M9-M10/Coleta-das-métricas-com-voluntários.pdf) | [G1 — Capacidade de Interação](resultados-g1-capacidade-interacao.md) |
 | G1 | M2 | U-02 | [CSV](../dados-coleta/M2/M2-registros.csv) · [registro da coleta](../dados-coleta/M2/M2-resultados.md) | [Ficha consolidada](../evidencias/M2/M2-Tabela-16112026-03.png) · [capturas 1](../evidencias/M2/M2-U02-16112026-01.png) · [capturas 2](../evidencias/M2/M2-U02-16112026-02.png) | [G1 — Capacidade de Interação](resultados-g1-capacidade-interacao.md) |
 | G2 | M3 | R-01 | [CSV](../dados-coleta/M3/M3-resultados.csv) · [registro da coleta](../dados-coleta/M3/M3-resultados.md) | [Capturas M3](../evidencias/M3/historicoConsumo-19112026-01-arthur.jpeg) · [falha observada](../evidencias/M3/segundaVia-19112026-erro-01-arthur.jpeg) | [G2 — Confiabilidade](resultados-g2-confiabilidade.md) |
 | G2 | M4 | R-02 | [CSV](../dados-coleta/M4/M4-registros.csv) · [Registro da coleta](../dados-coleta/M4/M4-resultados.md) | [Retomada após interrupção](../evidencias/M4/M4-R02-20112026-01.png) | [G2 — Confiabilidade](resultados-g2-confiabilidade.md) |
