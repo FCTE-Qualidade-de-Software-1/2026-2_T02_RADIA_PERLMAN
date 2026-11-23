@@ -32,8 +32,6 @@ A coleta foi realizada em um Dell Inspiron 15 3511 (Intel Core i5-1135G7, 8 GB d
 
 Os registros visuais incluem a abertura do histórico e a emissão da segunda via em ambos os períodos, além da [mensagem de indisponibilidade às 08:46](../evidencias/M3/segundaVia-19112026-erro-01-arthur.jpeg). As capturas representativas estão relacionadas na [documentação de coleta da M3](../dados-coleta/M3/M3-resultados.md).
 
-O resultado da M3 descreve os fluxos e períodos observados. O julgamento integral de G2 depende também das métricas M4 e M11, analisadas separadamente.
-
 ## M4 — Retomada após interrupção local da conexão
 
 As medições da M4, vinculadas ao cenário R-02, foram realizadas em 20/11/2026, entre 19h29 e 19h36. Foram executadas cinco tentativas independentes de interrupção local da conexão (por 5 segundos) durante a consulta de leitura do relatório de Nada Consta, sem envio de formulários ou alteração de dados cadastrais.
@@ -66,6 +64,52 @@ Os registros visuais incluem as capturas anonimizadas da conclusão de cada uma 
 
 O resultado da M4 reflete a recuperabilidade observada no ambiente cliente (interação entre o navegador de referência e a aplicação web) em consulta de leitura, não avaliando isoladamente mecanismos de tolerância a falhas nos servidores.
 
+## M11 — Disponibilidade nas verificações agendadas
+
+As medições da M11, vinculadas ao cenário R-03, foram realizadas em revezamento pela equipe entre **17/11/2026 e 20/11/2026**, com quatro verificações diárias (manhã, almoço, tarde e noite) para as funcionalidades **2ª Via** e **Nada Consta**, totalizando **16 verificações elegíveis por função** (32 registros no total), conforme definido nas Fases 2 e 3.
+
+**Tabela 3 — Resultados de disponibilidade por dia e função**
+
+| Data | Avaliador(a) | 2ª Via (Sucesso / Total) | Nada Consta (Sucesso / Total) | Ocorrências observadas |
+|---|---|---:|---:|---|
+| 17/11/2026 | Dara Maria Barbosa de Sousa | 2 / 4 | 2 / 4 | Indisponibilidade na tarde (16:00, erro e carregamento por ~2 min) e na noite (21:00, erro no login) |
+| 18/11/2026 | Isabella Mendes Choukaira | 4 / 4 | 4 / 4 | Sem falhas observáveis |
+| 19/11/2026 | Arthur de Lima Sobreira | 4 / 4 | 4 / 4 | Sem falhas (mensagem de ausência de fatura aberta na 2ª via, esperada para a conta) |
+| 20/11/2026 | Henrique Martins Alencar | 4 / 4 | 4 / 4 | Sem falhas observáveis |
+| **Total** | **Equipe Radia Perlman** | **14 / 16** | **14 / 16** | **4 indisponibilidades (2 por função) no dia 17/11** |
+
+_Fonte: [M11-registros.csv](../dados-coleta/M11/M11-registros.csv), Equipe Radia Perlman, 2026._
+
+**Tabela 4 — Consolidação da M11 por função**
+
+| Função | Operacional em ≤ 30 s (D) | Elegíveis (N) | M11 = 100 × D/N | Classificação |
+|---|---:|---:|---:|---|
+| 2ª Via | 14 | 16 | **87,5%** | Mínimo aceitável |
+| Nada Consta | 14 | 16 | **87,5%** | Mínimo aceitável |
+
+O cálculo foi realizado separadamente por função:
+
+- **2ª Via:** `M11(2ª via) = 100 × 14 / 16 = 87,5%`.
+- **Nada Consta:** `M11(Nada Consta) = 100 × 14 / 16 = 87,5%`.
+
+Na escala específica de M11 (Tabela 2 de [Métricas](../fase2/metricas.md)), valores entre 80% e menos de 95% correspondem ao nível **Mínimo aceitável**. A hipótese **H11**, que exige pelo menos 95% de disponibilidade em ambas as funções, **não foi sustentada**.
+
+### Análise e evidências
+
+- As indisponibilidades concentraram-se em **17/11/2026**: às 16h00, o portal exibiu alerta de erro com carregamento contínuo superior a 2 minutos; às 21h00, a plataforma impediu a autenticação com mensagem de erro, inviabilizando o acesso às duas funcionalidades.
+- Nos dias 18/11, 19/11 e 20/11, ambas as funcionalidades responderam dentro do limite de 30 segundos em todos os turnos avaliados.
+- Os registros completos constam no [CSV da M11](../dados-coleta/M11/M11-registros.csv), com capturas anonimizadas armazenadas em `docs/evidencias/M11/`, incluindo os registros de erro de 17/11 ([erro 16h00](../evidencias/M11/tela_erro-1711-03-dara.png), [indisponibilidade 16h00](../evidencias/M11/indisponivel-1711-03-dara.png) e [erro login 21h00](../evidencias/M11/tela_erro-1711-04-dara.png)).
+
+## Síntese do objetivo G2
+
+| Métrica | Classificação | Hipótese |
+|---|---|---|
+| M3 — Execuções sem falhas observáveis | Alvo | H3 sustentada |
+| M4 — Retomada após interrupção local | Excelente | H4 sustentada |
+| M11 — Disponibilidade nas verificações agendadas | Mínimo aceitável | H11 não sustentada |
+
+Conforme a regra de consolidação da Fase 2 (menor nível entre as métricas do objetivo), o objetivo **G2 — Confiabilidade** recebe classificação **Mínimo aceitável**, com **H3 e H4 sustentadas** e **H11 não sustentada**.
+
 ## Histórico de Versões
 
 | Versão | Data | Descrição da Alteração | Autor(a) |
@@ -73,3 +117,4 @@ O resultado da M4 reflete a recuperabilidade observada no ambiente cliente (inte
 | 1.0 | 21/11/2026 | Criação da estrutura da página | Beatriz |
 | 1.1 | 22/11/2026 | Inclusão dos cálculos e resultados da M3 | Arthur de Lima Sobreira |
 | 1.2 | 22/11/2026 | Inclusão de cálculos e resultados da M4 | Henrique |
+| 1.3 | 23/11/2026 | Inclusão dos cálculos e resultados da M11 e síntese final de G2 | Dara Maria Barbosa de Sousa |
