@@ -19,6 +19,7 @@ Esta página relaciona cada métrica aos arquivos de dados e às evidências da 
 | G3 | M13 | S-04 | [CSV](../dados-coleta/M13/M13-registros.csv) · [Registro da coleta](../dados-coleta/M13/M13-resultados.md) | [Link indicado](../evidencias/M13/M13-17112026-01.png) · [Menu de serviços](../evidencias/M13/M13-17112026-02.png) | [G3 — Segurança](resultados-g3-seguranca.md) |
 | G4 | M7, M8 | D-01, D-02 | [CSV M7](../dados-coleta/M7/M7-registros.csv) · [CSV M8](../dados-coleta/M8/M8-registros.csv) | [Login](../evidencias/M7-M8/login-20261119-sucesso.jpeg) · [erro HTTP 403](../evidencias/M7-M8/WhatsApp%20Image%202026-11-19%20at%2009.14.28.jpeg) · [indicadores](../evidencias/M7-M8/indicadores-continuidade-20261119-sem-historico.jpeg) · [PDF](../evidencias/M7-M8/segundaVia-pdf-20261119.jpeg) | [G4 — Eficiência de desempenho](resultados-g4-desempenho.md) |
 | G4 | M14 | D-03 | [CSV do pico](../dados-coleta/M14/M14-registros.csv) · [registro da coleta](../dados-coleta/M14/M14-resultados.md) | [PDF, janela de pico](../evidencias/M14/segundaVia-pdf-pico-20261119-arthur.jpeg) | [G4 — Eficiência de desempenho](resultados-g4-desempenho.md) |
+| G2, G4 | M3, M7, M8, M14 (fora de pico) | R-01, D-01, D-02, D-03 | [M3](../dados-coleta/M3/M3-resultados.csv) · [M7](../dados-coleta/M7/M7-registros.csv) · [M8](../dados-coleta/M8/M8-registros.csv) · [M14](../dados-coleta/M14/M14-registros.csv) | [Histórico de consumo](../evidencias/M3/historicoConsumo-20112026-01-tiago.png) · [Segunda via](../evidencias/M3/segundaVia-20112026-01-tiago.png) · [Login](../evidencias/M7-M8/login-20261120-fora-pico-tiago.png) · [PDF da segunda via](../evidencias/M7-M8/segundaVia-pdf-20261120-fora-pico-tiago.png) | [G2 — Confiabilidade](resultados-g2-confiabilidade.md) · [G4 — Eficiência de desempenho](resultados-g4-desempenho.md) |
 
 _Fonte: Equipe Radia Perlman, 2026._
 
@@ -40,3 +41,4 @@ Conforme [Recursos e ambiente](../fase3/recursos-ambiente.md) e o [modelo de ter
 | 1.3 | 22/11/2026 | Inclusão dos vínculos de dados e evidências de M2, M5| Isabella |
 | 1.4 | 22/11/2026 | Inclusão dos vínculos de dados e evidências de M1, M9 e M10| Beatriz |
 | 1.5 | 23/11/2026 | Inclusão dos vínculos de dados e evidências da M11 | Dara Maria Barbosa de Sousa |
+| 1.6 | 24/11/2026 | Inclusão dos vínculos de dados e evidências de M3, M7, M8 e M14 fora de pico | Tiago |

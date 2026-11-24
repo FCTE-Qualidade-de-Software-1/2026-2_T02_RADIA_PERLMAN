@@ -84,6 +84,42 @@ _Fonte: [M14-registros.csv](../dados-coleta/M14/M14-registros.csv) e [captura de
 
 Com os registros apresentados até aqui, o julgamento de **G4 permanece inconclusivo**, pois a M14 ainda depende das medições fora de pico para o cálculo da razão e sua classificação. Os resultados de M7 e M8 descrevem a janela de pico observada, sem extrapolação para todos os períodos de uso da Agência Virtual. O PDF da segunda via integra os resultados complementares de M7 e M8, além da coleta de M14.
 
+## Resultados na janela fora de pico (20/11/2026)
+
+As mesmas métricas foram coletadas por Tiago em 20/11/2026, a partir das 03:41, na janela fora de pico, com dez durações concluídas por fluxo, sem timeouts e sem ocorrências adicionais. Os fluxos e os eventos inicial e final são os mesmos da coleta de pico. Esta seção complementa a síntese acima, que considera apenas a janela de pico.
+
+**Tabela 6 — Durações fora de pico (s), na ordem de coleta**
+
+| Fluxo | Durações (s) |
+|---|---|
+| F1 — Login | 3,78; 2,57; 3,60; 2,21; 3,42; 2,34; 2,56; 2,44; 2,23; 2,29 |
+| F2 — Indicadores de continuidade | 3,87; 2,84; 5,70; 2,69; 7,99; 2,85; 2,29; 3,73; 3,89; 11,71 |
+| F3 — PDF da segunda via (complementar) | 4,17; 3,24; 4,60; 2,99; 3,52; 3,49; 3,24; 4,45; 5,28; 4,32 |
+
+**Tabela 7 — Mediana (M7) e P90 (M8) fora de pico**
+
+| Fluxo | Mediana (s) | Classificação M7 | P90 (s) | Classificação M8 |
+|---|---:|---|---:|---|
+| F1 — Login | **2,50** | Alvo | **3,60** | Alvo |
+| F2 — Indicadores de continuidade | **3,80** | Mínimo aceitável | **7,99** | Mínimo aceitável |
+| F3 — PDF da segunda via (complementar) | **3,85** | Mínimo aceitável | **4,60** | Alvo |
+
+_Fonte: [M7-registros.csv](../dados-coleta/M7/M7-registros.csv) e [M8-registros.csv](../dados-coleta/M8/M8-registros.csv), Equipe Radia Perlman, 2026._
+
+Com `n = 10`, a mediana é a média entre o 5º e o 6º valor ordenados, e o P90 é o 9º valor. Nesta janela, a H7 (mediana de até 3 s em todos os fluxos) foi atendida só pelo login e não foi sustentada. A H8 (P90 de até 5 s em todos os fluxos) foi atendida pelo login e pelo PDF, mas não pelos indicadores, cujo P90 de 7,99 s ficou acima do limite e abaixo de uma duração de 11,71 s. Assim, a H8 também não foi sustentada nesta janela.
+
+### M14 — C-F1 com a série fora de pico
+
+A série fora de pico do C-F1 (geração do PDF da segunda via) tem dez durações: 3,37; 2,54; 2,64; 3,87; 2,47; 3,80; 3,77; 3,67; 2,58 e 2,35 s. Ordenada, fica 2,35; 2,47; 2,54; 2,58; 2,64; 3,37; 3,67; 3,77; 3,80; 3,87, e a mediana é `(2,64 + 3,37) / 2 = 3,005 s`.
+
+Com a mediana do pico de 4,015 s (Tabela 4), a razão é `M14(C-F1) = 4,015 / 3,005 ≈ 1,34`. Essa razão está na faixa **Alvo** (acima de 1,2 até 1,5), e a H14 é atendida para o C-F1 (limite de 1,5). O C-F2 não foi coletado, pelo motivo descrito acima.
+
+_Fonte: [M14-registros.csv](../dados-coleta/M14/M14-registros.csv), Equipe Radia Perlman, 2026._
+
+### Ambiente e evidências das medições de 20/11/2026
+
+As medições fora de pico utilizaram um Predator Helios Neo 16 (Intel Core Ultra 9, 32 GB de RAM), Windows 11, Google Chrome e Wi-Fi de 5 GHz, sem VPN. A versão numérica do Chrome e a condição de cache não constam dos registros, e os horários individuais não foram registrados. As evidências são a [página inicial após o login](../evidencias/M7-M8/login-20261120-fora-pico-tiago.png) e o [PDF da segunda via](../evidencias/M7-M8/segundaVia-pdf-20261120-fora-pico-tiago.png), com dados pessoais cobertos, e estão relacionadas em [Dados brutos e evidências](dados-brutos.md).
+
 ## Ambiente e evidências das medições de 19/11/2026
 
 As medições de M7, M8 e M14 apresentadas acima utilizaram um Dell Inspiron 15 3511 (Intel Core i5-1135G7, 8 GB de RAM), Fedora Linux 44 (Sway Spin), Mozilla Firefox e Wi-Fi de 5 GHz, sem VPN. A versão numérica do Firefox e a condição de cache não constam dos registros. As evidências de M7 e M8 estão reunidas em `docs/evidencias/M7-M8/` e relacionadas em [Dados brutos e evidências](dados-brutos.md).
@@ -95,3 +131,4 @@ As medições de M7, M8 e M14 apresentadas acima utilizaram um Dell Inspiron 15 
 | 1.0 | 21/11/2026 | Criação da estrutura da página | Beatriz |
 | 1.1 | 22/11/2026 | Inclusão dos cálculos e resultados de M7, M8 e M14 | Arthur de Lima Sobreira |
 | 1.2 | 23/11/2026 | Inclusão da justificativa da ausência do fluxo C-F2 (interface em tabela estática, sem gráfico interativo) | Dara Maria Barbosa de Sousa |
+| 1.3 | 24/11/2026 | Inclusão dos resultados de M7, M8 e M14 fora de pico | Tiago |
