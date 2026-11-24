@@ -15,7 +15,7 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 | Integrante | Ferramentas Utilizadas | Principais Finalidades | Fases / Artefatos |
 |---|---|---|---|
 | **Arthur de Lima Sobreira** | *A preencher* | *A preencher* | *A preencher* |
-| **Beatriz Figueiredo dos Santos** | Claude (Anthropic) | Apoio na redação e estruturação de documentos (GitHub Pages e artigo no Overleaf), revisão de documentação e implementação do protótipo da ação de melhoria a partir das análises e decisões de design própias | Fases 2 e 4, roteiro de coleta com voluntários, protótipo, GitHub Pages e Artigo |
+| **Beatriz Figueiredo dos Santos** | Claude (Anthropic) | Apoio na redação e estruturação de documentos (GitHub Pages e artigo no Overleaf), revisão de documentação e implementação do protótipo da ação de melhoria a partir das análises e decisões de design próprias | Fases 2 e 4, roteiro de coleta com voluntários, protótipo, GitHub Pages e Artigo |
 | **Dara Maria Barbosa de Sousa** | Google Gemini | Revisão textual, padronização Markdown/Mermaid, verificação de consistência entre fases e apoio na consolidação de relatórios e Git | Fases 1, 2, 3, 4 e MkDocs |
 | **Henrique Martins Alencar** | Google Gemini | Revisão textual, padronização, organização, apoio no LaTeX e apoio no registro de resultados. | Fases 2, 4 e Artigo |
 | **Isabella Mendes Choukaira** | *A preencher* | *A preencher* | *A preencher* |
@@ -35,9 +35,12 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 ### 3.2. Beatriz Figueiredo dos Santos
 
 * **Ferramentas utilizadas:** Claude (Anthropic).
-* **Fases e artefatos apoiados:** *(ex.: Fase 2, Fase 4 — resultados de G1, protótipo da ação de melhoria e plano de validação)*
-* **Finalidade do uso:** *(descrever como a ferramenta foi usada: revisão de texto, apoio na estruturação HTML/CSS do protótipo, formatação, etc.)*
-* **Validação humana:** *(descrever como os dados, o código do protótipo e os textos foram revisados pela integrante)*
+* **Fases e artefatos apoiados:** Fase 2; Fase 4 (roteiro de coleta das métricas de capacidade de interação com voluntários, resultados de G1, protótipo funcional da tela de Indicadores de Continuidade, plano de validação e análise dos resultados da validação); documentação no GitHub Pages (MkDocs); e Artigo (Overleaf).
+* **Finalidade do uso:**    
+    * **Redação e estruturação de documentos:** utilizei a ferramenta como apoio na organização das páginas do MkDocs e do artigo no Overleaf, na estruturação de seções e tabelas em Markdown e na redação de textos a partir dos dados, das análises e das decisões que tomei.
+    * **Revisão de documentação:** usei a ferramenta para revisão ortográfica e de clareza, para verificar a consistência entre páginas (por exemplo, entre os resultados de G1, a justificativa da ação de melhoria e o plano de validação) e para corrigir numeração, links e referências.
+    * **Elaboração do protótipo:** defini o problema, a análise das telas atuais e a visão da solução (layout, textos, comportamento do gráfico e ajustes visuais), e a ferramenta implementou essas definições em HTML, CSS e JavaScript. Revisei cada versão e propus novos ajustes com base em análise própria e nos resultados das sessões com voluntários.
+* **Validação humana:**  Realizei a coleta com os voluntários, o registro das fichas, os tempos e os códigos de resultado sem uso de IA. Além do protótipo, revisei manualmente todos os textos redigidos com apoio da ferramenta e conferi as análises com as fichas e os dados coletados antes da publicação. Testei o protótipo a cada versão e decidi o que manter, remover ou alterar. Não inseri na ferramenta dados pessoais dos voluntários nem dados sensíveis da unidade consumidora; as capturas de tela utilizadas tiveram esses dados ocultados.
 
 ---
 
@@ -83,3 +86,4 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 | 1.1 | 24/11/2026 | Estruturação das diretrizes gerais, quadro resumo e seções de declaração individual por integrante | Dara Maria Barbosa de Sousa |
 | 1.2 | 24/11/2026 | Declaração individual de uso de IA | Henrique Martins Alencar |
 | 1.3 | 24/11/2026 | Correção de texto | Henrique Martins Alencar |
+| 1.4 | 24/11/2026 | Declaração individual de uso de IA | Beatriz Figueiredo dos Santos |
