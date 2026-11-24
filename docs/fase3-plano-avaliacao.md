@@ -79,7 +79,7 @@ Para que a **Fase 3** seja formalmente dada como concluída e a equipe autorizad
 
 Para garantir que o indicador **PSM-3 (Razão de esforço)** reflita com precisão o alto volume de trabalho desta etapa de *Sprint Final*, todas as atividades descritas no cronograma acima devem ser transformadas em *Issues* no GitHub. 
 
-Cada membro deve manter a estimativa na seção **Estimativa (horas)** e registrar as horas efetivamente trabalhadas na seção **Horas reais**, no corpo da Issue. A automação desenvolvida pela equipe lê esses campos do corpo das Issues; registros feitos somente nos comentários não entram no cálculo do PSM-3. A [documentação da gestão PSM/CID](fase2/gestao-psm.md) descreve o formato esperado.
+Cada membro deve manter a estimativa na seção **Estimativa (horas)** e registrar as horas efetivamente trabalhadas na seção **Horas reais**, no corpo da Issue. A automação desenvolvida pela equipe lê esses campos do corpo das Issues; registros feitos somente nos comentários não entram no cálculo do PSM-3. A [documentação da gestão PSM/CID](./gestaoProjeto/index.md) descreve o formato esperado.
 
 ---
 

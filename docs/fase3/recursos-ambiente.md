@@ -35,7 +35,7 @@ A gravação deverá ser utilizada apenas quando necessária. Antes de publicar 
 
 ## 3. Dados de teste e condições de acesso
 
-A avaliação utilizará páginas públicas e contas próprias ou cujo uso tenha sido expressamente autorizado pelo titular. A [Fase 1](../fase1/produto-avaliado.md) prevê o uso de dados reais de uma unidade consumidora autorizada. Essa condição não autoriza a divulgação dos dados: a conta deverá ser acessada somente por integrante autorizado, e nenhuma informação que identifique o titular ou a unidade consumidora será publicada no repositório.
+A avaliação utilizará páginas públicas e contas próprias ou cujo uso tenha sido expressamente autorizado pelo titular. A [Fase 1](../fase1-requisitos.md) prevê o uso de dados reais de uma unidade consumidora autorizada. Essa condição não autoriza a divulgação dos dados: a conta deverá ser acessada somente por integrante autorizado, e nenhuma informação que identifique o titular ou a unidade consumidora será publicada no repositório.
 
 | Situação | Condição de uso |
 |---|---|
