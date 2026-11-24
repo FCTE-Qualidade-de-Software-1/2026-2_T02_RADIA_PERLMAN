@@ -352,7 +352,7 @@ As datas não substituem os registros de horário efetivo. Para M12, deverão fi
 ## 5. Definições consolidadas para a coleta
 
 1. **M11 e M6:** quantidades mínimas alinhadas à Fase 2, sendo 16 verificações por função em 4 dias (17/11 a 20/11) para M11 e 20 comparações válidas para M6.
-2. **M1, M9 e M10:** cinco participantes externos confirmados para a execução das sessões de usabilidade.
+2. **M1, M9 e M10:** cinco participantes externos confirmados para a execução das sessões de capacidade de interação.
 3. **M14:** horários exatos das janelas de pico e fora de pico definidos e mantidos com o mesmo dispositivo, navegador e conexão nas duas medições.
 4. **M13:** disponibilidade de emissão dos cinco documentos de Nada Consta confirmada na conta autorizada.
 

@@ -33,7 +33,7 @@ Hoje a funcionalidade tem duas telas, e o usuário precisa ir e voltar a cada m�
 Centralizar as duas telas em **uma única página**, que responda em poucos segundos as três perguntas do usuário:
  
 1. **Para que serve esta página?** Texto explicativo em linguagem simples.
-2. **Está tudo bem com a minha energia?** Cartões de situação com texto e cor.
+2. **Está tudo bem com a minha energia?** Cartões do mês selecionado com o valor e o limite de cada indicador.
 3. **Quando e quanto fiquei sem energia?** Gráfico dinâmico por mês, com o limite permitido e o detalhe na mesma tela.
 
 ### 4.2 Problemas atuais
@@ -46,10 +46,11 @@ Centralizar as duas telas em **uma única página**, que responda em poucos segu
 | P4 | Colunas Mês e Ano redundantes | Eixo do gráfico com o mês abreviado e o ano agrupado|
 | P5 | Comparar meses exige até 12 idas e voltas | Todos os meses no gráfico; detalhe na mesma página |
 | P6 | Sem destaque para meses acima do limite | Coluna vermelha com hachura no gráfico |
-| P7 | A tela de detalhe não informa o mês | Período observado presente na tela |
+| P7 | A tela de detalhe não informa o mês | Nome do mês selecionado como título dos cartões e período escolhido sempre visível nos campos "De" e "até"  |
 | P8 | Siglas como rótulo principal; explicação no rodapé | Nome do dia a dia como rótulo, sigla entre parênteses e uma seção de ajuda expansível |
 | P9 | Números fora do padrão pt-BR ("7.00", "0.0000") | Horas em "h min", contagens em "vezes", vírgula decimal |
 | P10 | Limite e Apurado sem interpretação | Valor e limite lado a lado, com card destacado quando acima do limite, e linha do limite no gráfico|
+| P11 | Ausência de opções para exportar, imprimir ou salvar os dados apresentados | Ações de exportação em CSV e de impressão/salvamento em PDF, identificadas por texto |
 
 
 ### 4.3 Requisitos funcionais
@@ -60,11 +61,11 @@ Centralizar as duas telas em **uma única página**, que responda em poucos segu
 | RF-02 | Manter o título "Indicadores de Continuidade" e acrescentar subtítulo em linguagem simples sobre faltas de energia, sem a palavra "histórico" | P1, P2 |
 | RF-03 | Mostrar, para o mês selecionado, o valor e o limite de cada indicador, destacando o valor acima do limite | P9, P10 |
 | RF-04 | Permitir escolher o indicador exibido no gráfico | P5, P8 |
-| RF-05 | Permitir escolher o período por mês inicial ("De") e final ("até") | P5, T4 |
-| RF-06 | Destacar meses acima do limite com cor, ícone e padrão visual | P6 |
-| RF-07 | Atualizar cartões ao selecionar um mês, sem trocar de página, sempre informando o mês; ocultá-lo na visualização em tabela | P7 |
-| RF-08 | Oferecer visualização em tabela equivalente ao gráfico | P4, P11, RNF-01 |
-| RF-09 | Exportar os dados em CSV e imprimir/salvar em PDF, com ações identificadas por texto | OM-02 |
+| RF-05 | Permitir escolher o período por mês inicial ("De") e final ("até") | P5 |
+| RF-06 | Destacar meses acima do limite com cor e padrão visual | P6 |
+| RF-07 | Atualizar cartões ao selecionar um mês, sem trocar de página, sempre informando o mês; ocultá-los na visualização em tabela | P7 |
+| RF-08 | Oferecer visualização em tabela equivalente ao gráfico | P5 |
+| RF-09 | Exportar os dados em CSV e imprimir/salvar em PDF, com ações identificadas por texto | P11  |
 | RF-10 | Reunir em uma seção de ajuda a explicação das siglas e da compensação | P8 |
 
 ### 4.4 Requisitos não funcionais
@@ -77,7 +78,15 @@ Centralizar as duas telas em **uma única página**, que responda em poucos segu
 | RNF-04 | Independência de cor | Nenhuma informação transmitida apenas por cor |
 | RNF-05 | Consistência visual | Cores e tipografia da identidade atual da Agência Virtual |
 
-## 5. Referências
+## 5. Protótipo Funcional
+Nessa seção são apresentadas imagens da primeira versão do protótipo funcional, proposto como ação de melhoria.
+
+| Formato gráfico| Formato tabela |
+|---|---|
+| !["Protótipo — formato gráfico](../prototipo/img/prototipo-grafico.png) | ![Protótipo — formato tabela](../prototipo/img/prototipo-tabela.png) |
+
+
+## 6. Referências
 
 - Equipe do projeto. [Resultados de G1 — Capacidade de Interação](../resultados-g1-capacidade-interacao.md).
 - ANEEL. *PRODIST — Módulo 8: Qualidade do Fornecimento de Energia Elétrica.* Disponível em: <https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/prodist>
@@ -93,3 +102,5 @@ Centralizar as duas telas em **uma única página**, que responda em poucos segu
 | 1.1 | 22/11/2026 | Proposta inicial da ação de melhoria para a funcionalidade Indicadores de Continuidade | Beatriz |
 | 1.2 | 22/11/2026 | Implementação do protótipo | Beatriz |
 | 1.3 | 23/11/2026 | Atualização da página com os problemas da tela atual, os requisitos do protótipo, o link para o protótipo e as imagens da tela anterior | Beatriz |
+| 1.4 | 23/11/2026 | Adiciona imagens da primeira versão do protótipo | Beatriz |
+| 1.5 | 23/11/2026 | Implementação de mudanças no protótipo com base nos dados coletados| Beatriz |
