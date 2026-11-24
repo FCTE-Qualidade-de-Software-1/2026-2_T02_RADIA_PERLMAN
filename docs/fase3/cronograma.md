@@ -31,7 +31,7 @@ Para que a automação dos indicadores de gestão continue refletindo com precis
 
 - **M11 e M6:** quantidades amostrais alinhadas à Fase 2, com 16 verificações por função em 4 dias (17/11 a 20/11) para M11 e 20 comparações válidas para M6.
 - **M14:** janelas de pico (17/11, horário comercial) e fora de pico (16/11, período noturno) definidas com horários efetivos e justificativa registrados na planilha de coleta.
-- **M1, M9 e M10:** cinco participantes externos confirmados e agendados para as sessões de usabilidade.
+- **M1, M9 e M10:** cinco participantes externos confirmados e agendados para as sessões de capacidade de interação.
 
 ## Histórico de Versões
 

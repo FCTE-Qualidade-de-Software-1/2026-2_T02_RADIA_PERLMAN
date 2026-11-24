@@ -122,7 +122,7 @@ As hipóteses H1 e H9 foram sustentadas (enquanto H10 permaneceu inconclusiva), 
 | **OM-01** | Reformular a funcionalidade **Indicadores de Continuidade**: deixar clara a finalidade da tela, usar linguagem do dia a dia em vez das siglas e mostrar os dados sem exigir que o usuário abra mês a mês | Tela B reconhecida por 3 de 5 participantes (60%); os 2 erros escolheram "histórico de consumo"; 2 dos 3 acertos vieram com pedido de repetição | M9 | **Alta** |
 | **OM-02** | Dar rótulo de texto ao ícone de impressora da 2ª via (ex.: "Baixar PDF") | P02 levou 190 s na T3 até perceber que o ícone gerava o PDF | M10 | Média |
 | **OM-03** | Tornar a tela inicial mais clara, com acesso às funções por rótulos visíveis em vez do botão verde sem texto | P03 e P04 relataram que a tela inicial "não é nada intuitiva" | M1 (perguntas abertas) | Média |
-| **OM-04** | Dar ao Histórico de consumo um título e um gráfico que confirmem ao usuário que ele chegou ao lugar certo | P04 concluiu a T2 sem saber se tinha acertado; a tela tem só uma tabela estática, o que também impediu a tarefa T4 | M1 / M10 | Baixa | 
+| **OM-04** | Dar ao Histórico de consumo um título e um gráfico que confirmem ao usuário que ele chegou ao lugar certo | Impediu a tarefa T4 prevista para a M10|  M10 | Baixa | 
 
 ## Histórico de Versões
 
