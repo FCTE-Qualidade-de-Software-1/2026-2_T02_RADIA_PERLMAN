@@ -15,7 +15,7 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 | Integrante | Ferramentas Utilizadas | Principais Finalidades | Fases / Artefatos |
 |---|---|---|---|
 | **Arthur de Lima Sobreira** | *A preencher* | *A preencher* | *A preencher* |
-| **Beatriz Figueiredo dos Santos** | *A preencher* | *A preencher* | *A preencher* |
+| **Beatriz Figueiredo dos Santos** | Claude (Anthropic) | Apoio na redação e estruturação de documentos (GitHub Pages e artigo no Overleaf), revisão de documentação e implementação do protótipo da ação de melhoria a partir das análises e decisões de design própias | Fases 2 e 4, roteiro de coleta com voluntários, protótipo, GitHub Pages e Artigo |
 | **Dara Maria Barbosa de Sousa** | Google Gemini | Revisão textual, padronização Markdown/Mermaid, verificação de consistência entre fases e apoio na consolidação de relatórios e Git | Fases 1, 2, 3, 4 e MkDocs |
 | **Henrique Martins Alencar** | Google Gemini | Revisão textual, padronização, organização, apoio no LaTeX e apoio no registro de resultados. | Fases 2, 4 e Artigo |
 | **Isabella Mendes Choukaira** | *A preencher* | *A preencher* | *A preencher* |
@@ -34,7 +34,7 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 
 ### 3.2. Beatriz Figueiredo dos Santos
 
-* **Ferramentas utilizadas:** *(informar nome e versão/modelo, ou registrar "Não utilizou")*
+* **Ferramentas utilizadas:** Claude (Anthropic).
 * **Fases e artefatos apoiados:** *(ex.: Fase 2, Fase 4 — resultados de G1, protótipo da ação de melhoria e plano de validação)*
 * **Finalidade do uso:** *(descrever como a ferramenta foi usada: revisão de texto, apoio na estruturação HTML/CSS do protótipo, formatação, etc.)*
 * **Validação humana:** *(descrever como os dados, o código do protótipo e os textos foram revisados pela integrante)*
