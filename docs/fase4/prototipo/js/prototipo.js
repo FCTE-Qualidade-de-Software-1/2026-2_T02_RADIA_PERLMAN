@@ -365,7 +365,9 @@
     document.querySelector(".filtros").hidden = carregando || erro;
 
     var c = DADOS.cenarios[estado.cenario];
-    $("proto-rotulo-cenario").textContent = c ? c.rotulo : (carregando ? "Estado: carregando" : "Estado: dados indisponíveis");
+    // Com painel=0 (sessões com participantes), o cenário não é descrito, para não entregar respostas
+    $("proto-rotulo-cenario").textContent = params.get("painel") === "0" ? "" :
+      (c ? c.rotulo : (carregando ? "Estado: carregando" : "Estado: dados indisponíveis"));
     $("proto-cenario").value = estado.cenario;
 
     atualizarSeletor($("indicador"), "data-indicador", estado.indicador);
@@ -474,7 +476,7 @@
       estado.verTabela = !estado.verTabela;
       $("tabela-container").hidden = !estado.verTabela;
       $("grafico-area").hidden = estado.verTabela;
-      $("indicador").hidden = estado.verTabela;
+      $("indicador-grupo").hidden = estado.verTabela;
       $("grafico-instrucao").hidden = estado.verTabela;
       $("detalhe").hidden = estado.verTabela;
       this.setAttribute("aria-expanded", estado.verTabela ? "true" : "false");
