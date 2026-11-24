@@ -2,7 +2,7 @@
 
 Esta seção consolida os resultados da execução prática da avaliação de qualidade da **Agência Virtual da Neoenergia Brasília**, conduzida entre **16/11/2026 e 23/11/2026** conforme o [Plano de Avaliação](fase3-plano-avaliacao.md) definido na Fase 3 e os critérios estabelecidos na [Fase 2](fase2-especificacao.md).
 
-A coleta abrangeu os 14 indicadores definidos no modelo GQM (M1 a M14), distribuídos entre sessões moderadas com voluntários externos, testes funcionais e de segurança em conta autorizada, monitoramento contínuo de disponibilidade e medições de desempenho. Ao final da consolidação, a equipe também desenvolveu e validou um protótipo funcional para mitigar o principal gargalo de usabilidade identificado.
+A coleta abrangeu os 14 indicadores definidos no modelo GQM (M1 a M14), distribuídos entre sessões moderadas com voluntários externos, testes funcionais e de segurança em conta autorizada, monitoramento contínuo de disponibilidade e medições de desempenho. Ao final da consolidação, a equipe também desenvolveu e validou um protótipo funcional para mitigar o principal gargalo de capacidade de interação identificado.
 
 ## Síntese dos Resultados por Objetivo
 
