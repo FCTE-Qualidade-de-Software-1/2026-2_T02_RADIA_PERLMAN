@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 # Cronograma de Execução 
 
 Este documento define a alocação de tarefas e os prazos para a execução da Fase 4 (Execução da avaliação), com base nos 14 cenários de teste definidos no [Protocolo de coleta da Fase 2](../fase2/protocolo-coleta.md). Os procedimentos detalhados estão em [Método e procedimentos de avaliação](metodo-procedimentos.md), e os recursos necessários, em [Recursos e ambiente](recursos-ambiente.md).

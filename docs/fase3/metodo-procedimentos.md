@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 # Método e procedimentos de avaliação
 
 A avaliação será manual, de caixa-preta e baseada na observação do comportamento da Agência Virtual da Neoenergia Brasília pela interface web. Cada tentativa deverá seguir um roteiro definido antes da coleta, com condição inicial, ações, resultado esperado e informações a registrar.

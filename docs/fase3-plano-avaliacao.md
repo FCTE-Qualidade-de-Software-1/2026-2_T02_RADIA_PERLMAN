@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 # Fase 3 — Plano de Avaliação
 
 Na [Fase 1](fase1-requisitos.md), estabelecemos os requisitos da avaliação e, na [Fase 2](fase2-especificacao.md), especificamos as métricas (GQM) e os indicadores de gestão (PSM/CID). O objetivo desta **Fase 3: Projetar a Avaliação** é organizar a execução da Fase 4, definindo os métodos exatos, preparando os recursos e estruturando o cronograma de ação da equipe (RAMOS, 2026).

@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 # Modelo de termo de consentimento para participação na avaliação
 
 > **Modelo utilizado na avaliação.** Este documento foi preparado para registrar a concordância de pessoas convidadas a participar das tarefas de avaliação da interface da Agência Virtual da Neoenergia Brasília. O repositório público mantém apenas o modelo em branco; os termos assinados são arquivados separadamente com acesso restrito à equipe.

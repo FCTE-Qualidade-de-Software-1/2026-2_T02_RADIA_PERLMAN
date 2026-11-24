@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 # Recursos e ambiente de avaliação
 
 A avaliação será realizada na Agência Virtual da Neoenergia Brasília, por meio da interface web disponível aos usuários. Como a equipe não possui acesso ao código-fonte, aos bancos de dados ou aos recursos administrativos da concessionária, as observações ficarão restritas ao comportamento apresentado durante a navegação.

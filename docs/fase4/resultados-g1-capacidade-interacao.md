@@ -35,7 +35,7 @@ As fórmulas, as faixas de pontuação e as quantidades mínimas são as definid
 
 **Dados da coleta:** a avaliação foi realizada por Isabella em 16/11/2026, às 18h40, no cenário U-02. Foram registrados onze casos (T01 a T11); T09 foi excluído conforme a ficha de coleta, restando dez tentativas elegíveis.
 
-**Tabela — Consolidação das tentativas da M2**
+**Tabela 1 —** Consolidação das tentativas da M2
 
 | Classificação | Tentativas | Registros |
 |---|---:|---|
@@ -116,19 +116,48 @@ As fórmulas, as faixas de pontuação e as quantidades mínimas são as definid
 
 As hipóteses H1 e H9 foram sustentadas (enquanto H10 permaneceu inconclusiva), mas as análises acima mostram pontos em que o usuário hesitou, demorou ou errou mesmo com a métrica dentro da meta. Esta seção reúne essas observações como **pré-sugestões de melhoria**.
 
+**Tabela 2 —** Pré-sugestões de melhoria identificadas em G1
 
 | ID | Pré-sugestão | Evidência | Métrica de origem | Prioridade |
 |---|---|---|---|---|
 | **OM-01** | Reformular a funcionalidade **Indicadores de Continuidade**: deixar clara a finalidade da tela, usar linguagem do dia a dia em vez das siglas e mostrar os dados sem exigir que o usuário abra mês a mês | Tela B reconhecida por 3 de 5 participantes (60%); os 2 erros escolheram "histórico de consumo"; 2 dos 3 acertos vieram com pedido de repetição | M9 | **Alta** |
 | **OM-02** | Dar rótulo de texto ao ícone de impressora da 2ª via (ex.: "Baixar PDF") | P02 levou 190 s na T3 até perceber que o ícone gerava o PDF | M10 | Média |
 | **OM-03** | Tornar a tela inicial mais clara, com acesso às funções por rótulos visíveis em vez do botão verde sem texto | P03 e P04 relataram que a tela inicial "não é nada intuitiva" | M1 (perguntas abertas) | Média |
-| **OM-04** | Dar ao Histórico de consumo um título e um gráfico que confirmem ao usuário que ele chegou ao lugar certo | Impediu a tarefa T4 prevista para a M10|  M10 | Baixa | 
+| **OM-04** | Dar ao Histórico de consumo um título e um gráfico que confirmem ao usuário que ele chegou ao lugar certo | Impediu a tarefa T4 prevista para a M10 | M10 | Baixa |
+
+## 6. Síntese do objetivo G1
+
+**Tabela 3 —** Consolidação das métricas e hipóteses de G1
+
+| Métrica | Resultado | Classificação | Hipótese |
+|---|---|---|---|
+| M1 — Localização de funcionalidades | 100% (10/10) | Excelente | H1 sustentada |
+| M2 — Tratamento de entradas inválidas | 40% (4/10) | Insatisfatório | H2 não sustentada |
+| M9 — Reconhecimento da finalidade da tela | 80% (8/10) | Alvo | H9 sustentada |
+| M10 — Tarefas de operação concluídas | 100% em T3 (5/5)* | Inconclusiva | H10 inconclusiva |
+
+_*Nota: O percentual de 100% em M10 refere-se exclusivamente à tarefa executável T3 (n = 5), abaixo do mínimo de 10 tarefas previsto na Fase 2 em razão da exclusão de T4._
+
+```mermaid
+xychart-beta
+    title "G1 — Taxas Observadas vs. Meta das Hipóteses (80%)"
+    x-axis ["M1 (Localização)", "M2 (Entradas Inválidas)", "M9 (Finalidade)", "M10 (Apenas T3*)"]
+    y-axis "Percentual (%)" 0 --> 100
+    bar [100, 40, 80, 100]
+    line [80, 80, 80, 80]
+
+```
+
+*Figura 1 — Comparação entre os resultados obtidos nas métricas de Capacidade de Interação (G1) e o patamar mínimo exigido pelas hipóteses (80%).*
+
+Conforme a regra de consolidação definida nos [Critérios de julgamento](../fase2/criterios-julgamento.md) (menor nível entre as métricas conclusivas do objetivo), o objetivo **G1 — Capacidade de Interação** recebe classificação **Insatisfatório** (determinada pelo desempenho de M2 = 40%), com **H1 e H9 sustentadas**, **H2 não sustentada** e **H10 inconclusiva**.
 
 ## Histórico de Versões
 
 | Versão | Data | Descrição da Alteração | Autor(a) |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1.0 | 21/11/2026 | Análise de M1, M9 e M10 a partir das fichas P01 a P05 | Beatriz |
 | 1.1 | 22/11/2026 | Análise da M2 | Isabella |
 | 1.2 | 22/11/2026 | Inclusão da seção de oportunidades de melhoria (pré-sugestões OM-01 a OM-04) e ligação com a página Ação de melhoria; correção de frase incompleta na análise de M10 | Beatriz |
 | 1.3 | 23/11/2026 | Formalização de M10/H10 como inconclusiva devido à exclusão da T4 (ausência de gráfico interativo na interface) | Dara Maria Barbosa de Sousa |
+| 1.4 | 24/11/2026 | Inclusão do quadro de síntese final de G1, gráfico comparativo e numeração padronizada das tabelas (critério F4-C3) | Dara Maria Barbosa de Sousa |
