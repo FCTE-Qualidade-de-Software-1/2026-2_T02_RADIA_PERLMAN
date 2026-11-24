@@ -68,7 +68,7 @@ A coleta disponível da M14 contempla o fluxo **C-F1 — Geração do PDF da seg
 
 A mediana da janela de pico corresponde a `(3,99 + 4,04) / 2 = 4,015 s`.
 
-A razão prevista na Fase 2 é `M14(C-F1) = mediana no pico / mediana fora do pico`. Os registros disponíveis não incluem a série fora de pico. Assim, **não há valor calculável para a razão nem classificação para a M14**, e a hipótese H14 permanece **inconclusiva**. O fluxo C-F2, originalmente associado ao gráfico do histórico de consumo, não foi incluído na coleta aqui apresentada.
+A razão prevista na Fase 2 é `M14(C-F1) = mediana no pico / mediana fora do pico`. Os registros disponíveis não incluem a série fora de pico. Assim, **não há valor calculável para a razão nem classificação para a M14**, e a hipótese H14 permanece **inconclusiva**. O fluxo C-F2, originalmente associado ao gráfico do histórico de consumo, não foi incluído na coleta porque a interface real do portal apresenta apenas uma tabela estática de leituras e valores, não dispondo de gráfico interativo para renderização.
 
 _Fonte: [M14-registros.csv](../dados-coleta/M14/M14-registros.csv) e [captura de geração do PDF](../evidencias/M14/segundaVia-pdf-pico-20261119-arthur.jpeg), Equipe Radia Perlman, 2026._
 
@@ -94,3 +94,4 @@ As medições de M7, M8 e M14 apresentadas acima utilizaram um Dell Inspiron 15 
 |---|---|---|---|
 | 1.0 | 21/11/2026 | Criação da estrutura da página | Beatriz |
 | 1.1 | 22/11/2026 | Inclusão dos cálculos e resultados de M7, M8 e M14 | Arthur de Lima Sobreira |
+| 1.2 | 23/11/2026 | Inclusão da justificativa da ausência do fluxo C-F2 (interface em tabela estática, sem gráfico interativo) | Dara Maria Barbosa de Sousa |

@@ -97,22 +97,24 @@ As fórmulas, as faixas de pontuação e as quantidades mínimas são as definid
  
 **Fórmula:** `M10 = 100 × O / N`, em que **O** = tarefas concluídas sem erro e sem ajuda; **N** = tarefas de operação elegíveis.
  
-**Cálculo:** `M10 = 100 × 5 / 5 = 100%`.
+**Dados da coleta e exclusão da T4:** o protocolo da Fase 2 prevê duas tarefas por participante (total mínimo de 10 tarefas elegíveis): emissão da 2ª via (T3) e alteração do período do gráfico de consumo (T4). Durante a execução, constatou-se que a interface real do Histórico de Consumo exibe apenas uma **tabela estática**, sem gráfico interativo ou seletor de período. Por essa razão, a tarefa T4 foi excluída, restando apenas **5 tarefas elegíveis** (referentes à T3), abaixo da amostra mínima de 10 tarefas estabelecida na Fase 2.
+
+**Resultado descritivo (T3):** 5 de 5 participantes concluíram a emissão da 2ª via sem erro e sem ajuda (`100%` na tarefa executável).
  
-**Classificação:** **Excelente** (95% ou mais).
+**Classificação:** **Inconclusiva** (amostra elegível de 5 tarefas, inferior ao mínimo de 10 definido na Fase 2).
  
-**Resultado da hipótese:** **H10 sustentada** (M10 ≥ 80%, com a amostra mínima ajustada).
+**Resultado da hipótese:** **H10 inconclusiva** (não é possível sustentar ou refutar a hipótese sem atingir a amostra mínima prevista).
  
 **Análise:**
  
-- **Conclusão da tarefa.** Todos emitiram a 2ª via, sem ajuda e dentro do limite de 5 minutos. A mediana foi de 19 s.
-- **Ícone de impressão.** P02 usou 190 s, quase dois terços do limite. Chegou à tela correta, mas demorou a perceber que o ícone de impressora, que não tem rótulo.
-- **Resposta a Q10:** sim, para a emissão da 2ª via. Todos os participantes concluíram T3 sem erro e sem ajuda, ainda que um deles tenha demorado a identificar o comando de impressão.
- 
+- **Conclusão da tarefa executável (T3).** Todos os cinco participantes emitiram a 2ª via sem ajuda e dentro do limite de 5 minutos, com mediana de 19 s.
+- **Ícone de impressão.** P02 levou 190 s, quase dois terços do limite. Chegou à tela correta, mas demorou a perceber que o ícone de impressora — que não possui rótulo textual — era o comando para gerar o PDF.
+- **Impedimento metodológico (T4).** Conforme a regra de transparência dos critérios de julgamento, a amostra mínima não foi alterada após a coleta; a impossibilidade de executar T4 torna M10 e H10 formalmente inconclusivas.
+- **Resposta a Q10:** inconclusiva para o escopo completo planejado. Embora todos os participantes tenham concluído a emissão da 2ª via (T3) sem erro e sem ajuda, a ausência de gráfico interativo no Histórico de Consumo impediu a avaliação da segunda tarefa prevista (T4).
  
 ## 5. Oportunidades de melhoria
 
-As hipóteses H1, H9 e H10 foram sustentadas, mas as análises acima mostram pontos em que o usuário hesitou, demorou ou errou mesmo com a métrica dentro da meta. Esta seção reúne essas observações como **pré-sugestões de melhoria**.
+As hipóteses H1 e H9 foram sustentadas (enquanto H10 permaneceu inconclusiva), mas as análises acima mostram pontos em que o usuário hesitou, demorou ou errou mesmo com a métrica dentro da meta. Esta seção reúne essas observações como **pré-sugestões de melhoria**.
 
 
 | ID | Pré-sugestão | Evidência | Métrica de origem | Prioridade |
@@ -127,5 +129,6 @@ As hipóteses H1, H9 e H10 foram sustentadas, mas as análises acima mostram pon
 | Versão | Data | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 1.0 | 21/11/2026 | Análise de M1, M9 e M10 a partir das fichas P01 a P05 | Beatriz |
-| 1.1 | 22/11/2026 | Análise da M2| Isabella |
+| 1.1 | 22/11/2026 | Análise da M2 | Isabella |
 | 1.2 | 22/11/2026 | Inclusão da seção de oportunidades de melhoria (pré-sugestões OM-01 a OM-04) e ligação com a página Ação de melhoria; correção de frase incompleta na análise de M10 | Beatriz |
+| 1.3 | 23/11/2026 | Formalização de M10/H10 como inconclusiva devido à exclusão da T4 (ausência de gráfico interativo na interface) | Dara Maria Barbosa de Sousa |
