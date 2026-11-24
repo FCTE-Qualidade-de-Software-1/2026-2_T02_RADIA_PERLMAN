@@ -32,6 +32,23 @@ A coleta foi realizada em um Dell Inspiron 15 3511 (Intel Core i5-1135G7, 8 GB d
 
 Os registros visuais incluem a abertura do histórico e a emissão da segunda via em ambos os períodos, além da [mensagem de indisponibilidade às 08:46](../evidencias/M3/segundaVia-19112026-erro-01-arthur.jpeg). As capturas representativas estão relacionadas na [documentação de coleta da M3](../dados-coleta/M3/M3-resultados.md).
 
+### Execuções fora de pico (20/11/2026)
+
+Os mesmos dois fluxos de R-01 foram executados por Tiago na janela fora de pico, em 20/11/2026, a partir das 03:41, com dez execuções por fluxo e as mesmas condições iniciais, ações e resultados esperados.
+
+**Tabela 2 — Resultados por fluxo fora de pico**
+
+| Fluxo | Sem falha (E) | Elegíveis (N) | M3 = 100 × E/N |
+|---|---:|---:|---:|
+| F1 — Abertura do Histórico de Consumo | 10 | 10 | 100% |
+| F2 — Emissão de segunda via pelo histórico | 10 | 10 | 100% |
+
+_Fonte: [M3-resultados.csv](../dados-coleta/M3/M3-resultados.csv), Equipe Radia Perlman, 2026._
+
+Nesta janela, a H3 (M3(f) ≥ 80% em cada fluxo) foi atendida nos dois fluxos, e a falha registrada às 08:46 de 19/11/2026 não se repetiu. Os resultados fora de pico são apresentados separadamente da Tabela 1 e não alteram a síntese de G2 abaixo.
+
+A coleta fora de pico foi realizada em um Predator Helios Neo 16 (Intel Core Ultra 9, 32 GB de RAM), Windows 11, Google Chrome e Wi-Fi de 5 GHz, sem VPN. Os horários individuais das execuções não foram registrados. As capturas representativas são o [histórico de consumo](../evidencias/M3/historicoConsumo-20112026-01-tiago.png) e a [segunda via](../evidencias/M3/segundaVia-20112026-01-tiago.png), com dados pessoais cobertos.
+
 ## M4 — Retomada após interrupção local da conexão
 
 As medições da M4, vinculadas ao cenário R-02, foram realizadas em 20/11/2026, entre 19h29 e 19h36. Foram executadas cinco tentativas independentes de interrupção local da conexão (por 5 segundos) durante a consulta de leitura do relatório de Nada Consta, sem envio de formulários ou alteração de dados cadastrais.
@@ -118,3 +135,4 @@ Conforme a regra de consolidação da Fase 2 (menor nível entre as métricas do
 | 1.1 | 22/11/2026 | Inclusão dos cálculos e resultados da M3 | Arthur de Lima Sobreira |
 | 1.2 | 22/11/2026 | Inclusão de cálculos e resultados da M4 | Henrique |
 | 1.3 | 23/11/2026 | Inclusão dos cálculos e resultados da M11 e síntese final de G2 | Dara Maria Barbosa de Sousa |
+| 1.4 | 24/11/2026 | Inclusão dos resultados da M3 fora de pico | Tiago |

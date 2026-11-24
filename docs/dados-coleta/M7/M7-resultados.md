@@ -54,3 +54,51 @@ As capturas dos dois tipos de erro de login representam os comportamentos observ
 | Navegador | Mozilla Firefox, versão mais recente disponível na data da coleta |
 | Conexão | Wi-Fi 5 GHz |
 | VPN | Não utilizada |
+
+## Coleta fora de pico (20/11/2026)
+
+Registros da coleta realizada em 20/11/2026, a partir das 03:41, pelo avaliador Tiago, na janela fora de pico, nos mesmos três fluxos (M7-F1, M7-F2 e M7-F3), com os mesmos eventos inicial e final descritos acima. Foram registradas dez durações em cada fluxo, sem timeouts e sem ocorrências adicionais.
+
+### Durações registradas (s)
+
+| Fluxo | Durações (s) |
+|---|---|
+| M7-F1 — Login | 3,78; 2,57; 3,60; 2,21; 3,42; 2,34; 2,56; 2,44; 2,23; 2,29 |
+| M7-F2 — Indicadores de continuidade | 3,87; 2,84; 5,70; 2,69; 7,99; 2,85; 2,29; 3,73; 3,89; 11,71 |
+| M7-F3 — Geração do PDF da segunda via | 4,17; 3,24; 4,60; 2,99; 3,52; 3,49; 3,24; 4,45; 5,28; 4,32 |
+
+### Mediana por fluxo
+
+Com `n = 10`, a mediana corresponde à média entre o 5º e o 6º valor da série ordenada.
+
+| Fluxo | 5º valor (s) | 6º valor (s) | Mediana (s) | Faixa (escala M7) | H7 (até 3 s) |
+|---|---:|---:|---:|---|---|
+| M7-F1 — Login | 2,44 | 2,56 | **2,50** | Alvo | Atendida |
+| M7-F2 — Indicadores de continuidade | 3,73 | 3,87 | **3,80** | Mínimo aceitável | Não atendida |
+| M7-F3 — Geração do PDF da segunda via | 3,52 | 4,17 | **3,85** | Mínimo aceitável | Não atendida |
+
+### Registros individuais e evidências
+
+Os 30 registros fora de pico constam no arquivo `M7-registros.csv`, com os identificadores `M7-F1-20261120-01` a `M7-F3-20261120-10`. Os horários individuais não foram registrados.
+
+As capturas estão organizadas em `docs/evidencias/M7-M8/`:
+
+| Arquivo | Registro |
+|---|---|
+| `login-20261120-fora-pico-tiago.png` | Página inicial após o login, fora de pico |
+| `segundaVia-pdf-20261120-fora-pico-tiago.png` | PDF da segunda via disponibilizado fora de pico |
+
+Não há captura do fluxo de indicadores de continuidade nesta janela. Dados pessoais foram cobertos nas imagens.
+
+### Ambiente de execução
+
+| Campo | Registro |
+|---|---|
+| Avaliador | Tiago |
+| Data da coleta | 20/11/2026, a partir das 03:41 |
+| Janela de coleta | Fora de pico |
+| Dispositivo | Predator Helios Neo 16 — Intel Core Ultra 9 — 32 GB RAM |
+| Sistema operacional | Windows 11 |
+| Navegador | Google Chrome, versão mais recente disponível na data da coleta; número exato não registrado |
+| Conexão | Wi-Fi 5 GHz |
+| VPN | Não utilizada |
