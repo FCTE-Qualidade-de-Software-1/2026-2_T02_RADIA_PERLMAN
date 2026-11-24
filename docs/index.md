@@ -40,13 +40,13 @@ A coleta empírica ocorreu entre **16 e 20/11/2026**, com auditoria e consolida�
 
 | Objetivo | Característica (Ênfase) | Nível Obtido | Síntese dos Resultados |
 | :--- | :--- | :--- | :--- |
-| **G1** | Capacidade de Interação (5) | **Insatisfatório** | Localização sem ajuda atingiu 100% (**M1**), mas apenas 4 de 10 entradas inválidas orientaram a correção (**M2**: 40%). Reconhecimento atingiu 80% (**M9**), e a operação ficou inconclusiva após exclusão do gráfico inexistente (**M10**). |
-| **G2** | Confiabilidade (4) | **Mínimo aceitável** | Alta estabilidade nos fluxos (**M3**: Alvo) e 100% de retomada após queda breve de rede (**M4**), porém impactada por quatro indisponibilidades em 17/11 (**M11**: 87,5%). |
-| **G3** | Segurança (5) | **Insatisfatório** | Bloqueio pós-logout (**M5**: 100%) e consistência de dados (**M6**: 100%) atendidos, mas nenhum dos 5 comprovantes de Nada Consta pôde ser validado no portal ou via assinatura digital (**M13**: 0%, tolerância zero). |
-| **G4** | Eficiência de Desempenho (4) | **Inconclusivo** | Percentil 90 dentro do alvo no login e nos indicadores (**M8**), mediana do login em 3,425 s (**M7**: Mínimo aceitável) e descarte auditado da série fora de pico (**M14**: inconclusiva). |
+| [**G1**](./fase4/resultados-g1-capacidade-interacao.md) | Capacidade de Interação (5) | **Insatisfatório** | Localização sem ajuda atingiu 100% (**M1**), mas apenas 4 de 10 entradas inválidas orientaram a correção (**M2**: 40%). Reconhecimento atingiu 80% (**M9**), e a operação ficou inconclusiva após exclusão do gráfico inexistente (**M10**). |
+| [**G2**](./fase4/resultados-g2-confiabilidade.md) | Confiabilidade (4) | **Mínimo aceitável** | Alta estabilidade nos fluxos (**M3**: Alvo) e 100% de retomada após queda breve de rede (**M4**), porém impactada por quatro indisponibilidades em 17/11 (**M11**: 87,5%). |
+| [**G3**](./fase4/resultados-g3-seguranca.md) | Segurança (5) | **Insatisfatório** | Bloqueio pós-logout (**M5**: 100%) e consistência de dados (**M6**: 100%) atendidos, mas nenhum dos 5 comprovantes de Nada Consta pôde ser validado no portal ou via assinatura digital (**M13**: 0%, tolerância zero). |
+| [**G4**](./fase4/resultados-g4-desempenho.md) | Eficiência de Desempenho (4) | **Inconclusivo** | Percentil 90 dentro do alvo no login e nos indicadores (**M8**), mediana do login em 3,425 s (**M7**: Mínimo aceitável) e descarte auditado da série fora de pico (**M14**: inconclusiva). |
 
-* **Julgamento Global:** **Necessidade de melhorias prioritárias** (determinado pelos níveis *Insatisfatório* em G1 e G3, com registro explícito das métricas inconclusivas M10 e M14).
-* **Ação de Melhoria (`OM-01` / `AM-03`):** Desenvolvimento e validação (em 23/11/2026) de um **protótipo funcional** em página única para os **Indicadores de Continuidade** (WCAG 2.2 nível AA), resolvendo a ambiguidade da tela menos reconhecida na avaliação.
+* **[Julgamento Global](./fase4/julgamento-conclusoes.md):** **Necessidade de melhorias prioritárias** (determinado pelos níveis *Insatisfatório* em G1 e G3, com registro explícito das métricas inconclusivas M10 e M14).
+* **[Ação de Melhoria](./fase4/melhoria/acao-melhoria.md) (`OM-01` / `AM-03`):** Desenvolvimento e validação (em 23/11/2026) de um **protótipo funcional** em página única para os **Indicadores de Continuidade** (WCAG 2.2 nível AA), resolvendo a ambiguidade da tela menos reconhecida na avaliação.
 
 ---
 
