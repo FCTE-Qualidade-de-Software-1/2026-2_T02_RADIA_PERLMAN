@@ -18,7 +18,7 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 | **Beatriz Figueiredo dos Santos** | Claude (Anthropic) | Apoio na redação e estruturação de documentos (GitHub Pages e artigo no Overleaf), revisão de documentação e implementação do protótipo da ação de melhoria a partir das análises e decisões de design próprias | Fases 2 e 4, roteiro de coleta com voluntários, protótipo, GitHub Pages e Artigo |
 | **Dara Maria Barbosa de Sousa** | Google Gemini | Revisão textual, padronização Markdown/Mermaid, verificação de consistência entre fases e apoio na consolidação de relatórios e Git | Fases 1, 2, 3, 4 e MkDocs |
 | **Henrique Martins Alencar** | Google Gemini | Revisão textual, padronização, organização, apoio no LaTeX e apoio no registro de resultados. | Fases 2, 4 e Artigo |
-| **Isabella Mendes Choukaira** | *A preencher* | *A preencher* | *A preencher* |
+| **Isabella Mendes Choukaira**| ChatGPT (OpenAI) | Revisão textual, padronização e estruturação de documentos, apoio no desenvolvimento e na revisão dos scripts de automação PSM/CID, organização dos registros de coleta e consolidação dos resultados das métricas | Fases 2 e 4, Gestão do Projeto, PSM/CID e MkDocs |
 | **Tiago Scherrer Tavares de Lyra** | *A preencher* | *A preencher* | *A preencher* |
 
 ## 3. Declarações Individuais
@@ -64,10 +64,14 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 
 ### 3.5. Isabella Mendes Choukaira
 
-* **Ferramentas utilizadas:** *(informar nome e versão/modelo, ou registrar "Não utilizou")*
-* **Fases e artefatos apoiados:** *(ex.: Fase 2, Fase 4 — resultados de M2, M5 e M12)*
-* **Finalidade do uso:** *(descrever como a ferramenta foi usada: revisão de texto, formatação de tabelas, etc.)*
-* **Validação humana:** *(descrever como os registros de coleta e textos foram revisados pela integrante)*
+* **Ferramentas utilizadas:** ChatGPT (OpenAI).
+* **Fases e artefatos apoiados:** Fase 2 (PSM/CID), Fase 4 (`resultados-g1-usabilidade.md`, `resultados-g3-seguranca.md`, `julgamento-conclusoes.md` e registros de coleta das métricas M2, M5 e M12), gestão do projeto, scripts de automação PSM/CID, workflows do GitHub Actions e documentação no GitHub Pages (MkDocs).
+* **Finalidade do uso:**
+    * **Revisão e estruturação de documentos:** apoio na revisão textual, padronização de tabelas Markdown, organização das páginas do MkDocs e verificação de consistência entre os documentos.
+    * **Automação do PSM/CID:** apoio no desenvolvimento e na revisão dos scripts Python, na configuração dos workflows do GitHub Actions, na identificação e correção de erros e na integração dos relatórios e gráficos automatizados com o GitHub Pages.
+    * **Registro e análise dos resultados:** apoio na organização dos dados coletados, na estruturação das tabelas de resultados e na revisão das justificativas e classificações das métricas, com base nas evidências obtidas durante a execução dos testes.
+    * **Gestão do projeto:** apoio na estruturação das Issues, na elaboração das descrições de Pull Requests e na organização da documentação de planejamento e acompanhamento das atividades.
+* **Validação humana:** Os testes das métricas sob minha responsabilidade e a coleta das respectivas evidências foram realizados manualmente. As sugestões fornecidas pela ferramenta foram analisadas e revisadas considerando os critérios de avaliação definidos pela equipe e os resultados observados. Os scripts e workflows desenvolvidos com apoio da IA foram submetidos a testes de execução e verificações de funcionamento, com ajustes realizados conforme as necessidades do projeto.
 
 ---
 
@@ -87,3 +91,4 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 | 1.2 | 24/11/2026 | Declaração individual de uso de IA | Henrique Martins Alencar |
 | 1.3 | 24/11/2026 | Correção de texto | Henrique Martins Alencar |
 | 1.4 | 24/11/2026 | Declaração individual de uso de IA | Beatriz Figueiredo dos Santos |
+| 1.5 | 24/11/2026 | Declaração individual de uso de IA | Isabella Mendes Choukaira |
