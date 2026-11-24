@@ -101,11 +101,12 @@ Desvios corrigidos pelo próprio participante sem recomeçar a tarefa, como esco
 - "Alguma palavra ou tela deixou você em dúvida?"
 
 ### 1.7 Ficha de registro por participante
+
 #### Tabela P01
 
 | Identificador | Tarefa | Tempo | Código | Situação | Observações |
 |---|---|---|---|---|---|
-| M9-U03-20261123-P01-TB | Tela B — Indicadores de Continuidade (protótipo) Alternativa: A| 3 s | S | Elegível | Não demonstrou dúvida entre as alternativas |
+| M9-U03-20261123-P01-TB | Tela B — Indicadores de Continuidade (protótipo) Alternativa: A | 3 s | S | Elegível | Não demonstrou dúvida entre as alternativas |
 | M10-U04-20261123-P01-T4 | T4 — trocar o período | 7 s | S | Elegível | - |
 | M10-U04-20261123-P01-T5 | T5 — alternar entre tabela e gráfico | 17 s | S | Elegível | - |
 
@@ -115,18 +116,17 @@ Desvios corrigidos pelo próprio participante sem recomeçar a tarefa, como esco
 
 | Identificador | Tarefa | Tempo | Código | Situação | Observações |
 |---|---|---|---|---|---|
-| M9-U03-20261123-P02-TB | Tela B — Indicadores de Continuidade (protótipo) Alternativa: A| 90 s | S | Elegível | Solicitou que repetice as alternativas. P02 comentou ter ficado em dúvida entre A e D |
+| M9-U03-20261123-P02-TB | Tela B — Indicadores de Continuidade (protótipo) Alternativa: A | 90 s | S | Elegível | Solicitou que repetisse as alternativas. P02 comentou ter ficado em dúvida entre A e D |
 | M10-U04-20261123-P02-T4 | T4 — trocar o período | 14 s | S | Elegível | - |
 | M10-U04-20261123-P02-T5 | T5 — alternar entre tabela e gráfico | 108 s | S | Elegível | - |
 
-**Observações da entrevista:** Foi solicitado que P02 falasse com as próprias palavras o que achava ser a função da Tela B (protótipo). entrevistadora concluiu que P02 entendeu a função da página, mas as alternativas causaram dúvidas.
-
+**Observações da entrevista:** Foi solicitado que P02 falasse com as próprias palavras o que achava ser a função da Tela B (protótipo). A entrevistadora concluiu que P02 entendeu a função da página, mas as alternativas causaram dúvidas.
 
 ### 1.8 Critérios de aceite e amostra
 
 | Métrica | Fórmula | Critério de aceite |
 |---|---|---|
-| M9 | `100 × K / N` (telas reconhecidas / apresentações elegíveis) | **≥ 80%** (H9). |
+| M9 | `100 × K / N` (telas reconhecidas / apresentações elegíveis) | **≥ 80%** (H9) |
 | M10 | `100 × O / N` (tarefas concluídas sem erro e sem ajuda / tarefas elegíveis) | **≥ 80%** (H10) |
 
 ## 2. Resultados da validação 
@@ -143,7 +143,7 @@ Esta seção apresenta os resultados das sessões de 23/11/2026 com o protótipo
  
 **Classificação:** descritiva, **Excelente** (95% ou mais).
  
-**Resultado da hipótese:** *inconclusiva (apenas 2 apresentações; a Fase 4 usou 10).
+**Resultado da hipótese:** *inconclusiva* (apenas 2 apresentações; a Fase 4 usou 10).
  
 | Participante | Familiaridade digital | Alternativa | Código | Tempo | Observação |
 |---|---|---|---|---|---|
@@ -169,7 +169,7 @@ Esta seção apresenta os resultados das sessões de 23/11/2026 com o protótipo
  
 **Classificação:** descritiva, **Excelente** (95% ou mais).
  
-**Resultado da hipótese:** inconclusiva (apenas 4 tarefas; mínimo de 10).
+**Resultado da hipótese:** *inconclusiva* (apenas 4 tarefas; mínimo de 10).
  
 | Tarefa | P01 (familiaridade alta) | P02 (familiaridade baixa) | Sucessos |
 |---|---|---|---|
@@ -194,4 +194,5 @@ Esta seção apresenta os resultados das sessões de 23/11/2026 com o protótipo
 | Versão | Data | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 1.0 | 23/11/2026 | Criação da página de plano de validação | Beatriz |
-| 1.1 | 23/11/2026 | Adiciona dados de entrevistas d=com voluntários, análises da entrevistadora e sugestões de mudanças | Beatriz |
+| 1.1 | 23/11/2026 | Adiciona dados de entrevistas com voluntários, análises da entrevistadora e sugestões de mudanças | Beatriz |
+| 1.2 | 24/11/2026 | Correções ortográficas e de formatação | Dara Maria Barbosa de Sousa |

@@ -58,7 +58,7 @@ Nos fluxos de login e indicadores de continuidade, previstos na Fase 2, M8 receb
 
 ## M14 — Razão de tempo entre pico e fora de pico
 
-A coleta disponível da M14 contempla o fluxo **C-F1 — Geração do PDF da segunda via**, na janela de pico de 19/11/2026, entre 09:45 e 09:47. Foram registradas dez durações concluídas.
+A coleta válida da M14 contempla o fluxo **C-F1 — Geração do PDF da segunda via**, na janela de pico de 19/11/2026, entre 09:45 e 09:47. Foram registradas dez durações concluídas.
 
 **Tabela 4 — C-F1 na janela de pico**
 
@@ -68,13 +68,13 @@ A coleta disponível da M14 contempla o fluxo **C-F1 — Geração do PDF da seg
 
 A mediana da janela de pico corresponde a `(3,99 + 4,04) / 2 = 4,015 s`.
 
-A razão prevista na Fase 2 é `M14(C-F1) = mediana no pico / mediana fora do pico`. Os registros disponíveis não incluem a série fora de pico. Assim, **não há valor calculável para a razão nem classificação para a M14**, e a hipótese H14 permanece **inconclusiva**. O fluxo C-F2, originalmente associado ao gráfico do histórico de consumo, não foi incluído na coleta porque a interface real do portal apresenta apenas uma tabela estática de leituras e valores, não dispondo de gráfico interativo para renderização.
+A razão prevista na Fase 2 é `M14(C-F1) = mediana no pico / mediana fora do pico`. Os registros submetidos para a janela fora de pico (Bloco 3) foram descartados durante a auditoria de qualidade da equipe por não atenderem aos critérios de confiabilidade e evidenciamento do protocolo, permanecendo válidos apenas os dados da janela de pico (Bloco 4). Sem a linha de base fora de pico, **não há valor calculável para a razão**, e a métrica **M14** e a hipótese **H14** são declaradas definitivamente **inconclusivas**. Além disso, o fluxo C-F2, originalmente associado ao gráfico do histórico de consumo, não foi executado porque a interface real do portal apresenta apenas uma tabela estática de leituras e valores, não dispondo de gráfico interativo para renderização.
 
 _Fonte: [M14-registros.csv](../dados-coleta/M14/M14-registros.csv) e [captura de geração do PDF](../evidencias/M14/segundaVia-pdf-pico-20261119-arthur.jpeg), Equipe Radia Perlman, 2026._
 
-## Síntese dos resultados disponíveis para G4
+## Síntese dos resultados de G4
 
-**Tabela 5 — Resultados disponíveis**
+**Tabela 5 — Consolidação de G4**
 
 | Métrica | Classificação | Hipótese |
 |---|---|---|
@@ -82,7 +82,7 @@ _Fonte: [M14-registros.csv](../dados-coleta/M14/M14-registros.csv) e [captura de
 | M8 — P90 por fluxo (escopo da Fase 2) | Alvo | H8 sustentada |
 | M14 — Razão pico/fora de pico | Inconclusiva | H14 inconclusiva |
 
-Com os registros apresentados até aqui, o julgamento de **G4 permanece inconclusivo**, pois a M14 ainda depende das medições fora de pico para o cálculo da razão e sua classificação. Os resultados de M7 e M8 descrevem a janela de pico observada, sem extrapolação para todos os períodos de uso da Agência Virtual. O PDF da segunda via integra os resultados complementares de M7 e M8, além da coleta de M14.
+O julgamento final de **G4 — Eficiência de desempenho** encerra como **Inconclusivo**, em razão da ausência de dados auditados na janela fora de pico para o cálculo da razão da M14. Os resultados válidos de M7 e M8 descrevem o comportamento temporal observado na janela de pico de 19/11/2026, sem extrapolação para outros períodos de operação da Agência Virtual.
 
 ## Ambiente e evidências das medições de 19/11/2026
 
@@ -95,3 +95,4 @@ As medições de M7, M8 e M14 apresentadas acima utilizaram um Dell Inspiron 15 
 | 1.0 | 21/11/2026 | Criação da estrutura da página | Beatriz |
 | 1.1 | 22/11/2026 | Inclusão dos cálculos e resultados de M7, M8 e M14 | Arthur de Lima Sobreira |
 | 1.2 | 23/11/2026 | Inclusão da justificativa da ausência do fluxo C-F2 (interface em tabela estática, sem gráfico interativo) | Dara Maria Barbosa de Sousa |
+| 1.3 | 24/11/2026 | Formalização do status inconclusivo definitivo de M14 e G4 após descarte da série fora de pico (Bloco 3) na auditoria interna | Dara Maria Barbosa de Sousa |

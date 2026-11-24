@@ -2,7 +2,7 @@ site_name: Processo de Avaliação de Produto de Software
 site_description: Documentação do projeto da disciplina de Qualidade de Software
 repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_RADIA_PERLMAN
 repo_name: Equipe Radia Perlman (GitHub)
-copyright: "Equipe Radia Perlman — Qualidade de Software 2026.2 | Última atualização: 21/11/2026"
+copyright: "Equipe Radia Perlman — Qualidade de Software 2026.2 | Última atualização: 24/11/2026"
 
 theme:
   name: material
