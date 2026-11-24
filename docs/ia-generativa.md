@@ -17,7 +17,7 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 | **Arthur de Lima Sobreira** | *A preencher* | *A preencher* | *A preencher* |
 | **Beatriz Figueiredo dos Santos** | *A preencher* | *A preencher* | *A preencher* |
 | **Dara Maria Barbosa de Sousa** | Google Gemini | Revisão textual, padronização Markdown/Mermaid, verificação de consistência entre fases e apoio na consolidação de relatórios e Git | Fases 1, 2, 3, 4 e MkDocs |
-| **Henrique Martins Alencar** | *A preencher* | *A preencher* | *A preencher* |
+| **Henrique Martins Alencar** | Google Gemini | Revisão textual, padronização, organização, apoio no LaTeX e apoio no registro de resultados. | Fases 2, 4 e Artigo |
 | **Isabella Mendes Choukaira** | *A preencher* | *A preencher* | *A preencher* |
 | **Tiago Scherrer Tavares de Lyra** | *A preencher* | *A preencher* | *A preencher* |
 
@@ -52,10 +52,10 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 
 ### 3.4. Henrique Martins Alencar
 
-* **Ferramentas utilizadas:** *(informar nome e versão/modelo, ou registrar "Não utilizou")*
-* **Fases e artefatos apoiados:** *(ex.: Fase 2, Fase 4 — resultados de M4, M6, M12 e M13)*
-* **Finalidade do uso:** *(descrever como a ferramenta foi usada: revisão de texto, formatação de tabelas, etc.)*
-* **Validação humana:** *(descrever como os registros de coleta e textos foram revisados pelo integrante)*
+* **Ferramentas utilizadas:** Google Gemini
+* **Fases e artefatos apoiados:** Fase 2 (`objetivos.md`, `questoes-hipoteses.md`, `metricas.md`, `criterios-julgamento.md`), Fase 4 (`resultados-g2-confiabilidade.md`, `resultados-g3-seguranca.md`, `M4-resultados.md`, `M6-resultados.md`, `M12-resultados.md`, `M13-resultados.md`, `M6-regristros.csv`) e Artigo.
+* **Finalidade do uso:** Revisão ortográfica, revisão de formato, padronização e estruturação de documentos, verificação de consistência, apoio em linguagem LaTeX e preenchimento de planilha de registros extensa (`M6-registros.csv`).
+* **Validação humana:** Todas as sugestões da IA foram revisadas manualmente e utilizadas como oportunidade de melhoria antes da publicação no repositório.
 
 ---
 
@@ -81,3 +81,4 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 |---|---|---|---|
 | 1.0 | 21/11/2026 | Criação da página | Beatriz Figueiredo dos Santos |
 | 1.1 | 24/11/2026 | Estruturação das diretrizes gerais, quadro resumo e seções de declaração individual por integrante | Dara Maria Barbosa de Sousa |
+| 1.2 | 24/11/2036 | Declaração individual de uso de IA | Henrique Martins Alencar |
