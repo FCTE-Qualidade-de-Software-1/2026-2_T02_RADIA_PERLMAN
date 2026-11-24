@@ -33,11 +33,11 @@ Foram registradas cinco verificações elegíveis, distribuídas entre duas pág
 
 | ID | Página restrita | Ação após logout | Resultado observado | Adequada? |
 |---|---|---|---|---:|
-| M5-T01 | Segunda via | Botão voltar do navegador | Permaneceu na página de login, sem permitir retornar à conta | 1 |
-| M5-T02 | Segunda via | Atualizar página | Permaneceu na tela de login, sem recuperar o acesso à área restrita | 1 |
-| M5-T03 | Segunda via | Abrir novamente o endereço da segunda via | Permaneceu na página de login, sem permitir retornar à conta | 1 |
-| M5-T04 | Histórico de consumo | Botão voltar do navegador | Permaneceu na página de login, sem retornar à área restrita | 1 |
-| M5-T05 | Histórico de consumo | Reabrir o endereço | Permaneceu na tela de login, sem permitir acesso ao conteúdo protegido | 1 |
+| M5-S01-20261116-01 | Segunda via | Botão voltar do navegador | Permaneceu na página de login, sem permitir retornar à conta | 1 |
+| M5-S01-20261116-02 | Segunda via | Atualizar página | Permaneceu na tela de login, sem recuperar o acesso à área restrita | 1 |
+| M5-S01-20261116-03 | Segunda via | Abrir novamente o endereço da segunda via | Permaneceu na página de login, sem permitir retornar à conta | 1 |
+| M5-S01-20261116-04 | Histórico de consumo | Botão voltar do navegador | Permaneceu na página de login, sem retornar à área restrita | 1 |
+| M5-S01-20261116-05 | Histórico de consumo | Reabrir o endereço | Permaneceu na tela de login, sem permitir acesso ao conteúdo protegido | 1 |
 | **Total** | **Duas páginas** | **Cinco verificações** | **Nenhuma exposição observada** | **5/5** |
 
 A quantidade mínima definida na Fase 2 e detalhada na Fase 3 é de cinco verificações, preferencialmente distribuídas entre pelo menos duas páginas restritas. A coleta atingiu essa quantidade e incluiu a segunda via e o histórico de consumo.

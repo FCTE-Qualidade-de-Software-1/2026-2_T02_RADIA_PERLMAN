@@ -137,7 +137,7 @@ Conforme a regra de consolidação da Fase 2 (presença de métrica inconclusiva
 
 ## Ambiente e evidências das medições de 19/11/2026
 
-As medições de M7, M8 e M14 apresentadas acima utilizaram um Dell Inspiron 15 3511 (Intel Core i5-1135G7, 8 GB de RAM), Fedora Linux 44 (Sway Spin), Mozilla Firefox e Wi-Fi de 5 GHz, sem VPN. A versão numérica do Firefox e a condição de cache não constam dos registros. As evidências de M7 e M8 estão reunidas em `docs/evidencias/M7-M8/` e relacionadas em [Dados brutos e evidências](https://www.google.com/search?q=dados-brutos.md).
+As medições de M7, M8 e M14 apresentadas acima utilizaram um Dell Inspiron 15 3511 (Intel Core i5-1135G7, 8 GB de RAM), Fedora Linux 44 (Sway Spin), Mozilla Firefox e Wi-Fi de 5 GHz, sem VPN. A versão numérica do Firefox e a condição de cache não constam dos registros. As evidências de M7 e M8 estão reunidas em `docs/evidencias/M7-M8/` e relacionadas em [Dados brutos e evidências](./dados-brutos.md).
 
 ## Histórico de Versões
 
@@ -148,4 +148,5 @@ As medições de M7, M8 e M14 apresentadas acima utilizaram um Dell Inspiron 15 
 | 1.2 | 23/11/2026 | Inclusão da justificativa da ausência do fluxo C-F2 (interface em tabela estática, sem gráfico interativo) | Dara Maria Barbosa de Sousa |
 | 1.3 | 24/11/2026 | Formalização do status inconclusivo definitivo de M14 e G4 após descarte da série fora de pico (Bloco 3) na auditoria interna | Dara Maria Barbosa de Sousa |
 | 1.4 | 24/11/2026 | Explicitação das questões e hipóteses GQM (Q7, Q8 e Q14), respostas diretas às questões e gráfico comparativo dos tempos de resposta (critério F4-C3) | Dara Maria Barbosa de Sousa |
+| 1.5 | 24/11/2026 | Correção de links | Henrique Martins Alencar |
 

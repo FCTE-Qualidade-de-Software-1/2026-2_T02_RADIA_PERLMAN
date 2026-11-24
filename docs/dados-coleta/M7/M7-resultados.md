@@ -30,15 +30,15 @@ O arquivo `M7-registros.csv` contém as trinta durações informadas e as seis o
 
 ## Evidências
 
-As capturas estão organizadas em `docs/evidencias/M7/`.
+As capturas estão organizadas em `docs/evidencias/M7-M8/`.
 
 | Arquivo | Registro |
 |---|---|
-| `login-20261119-sucesso.png` | Login concluído e página inicial disponível |
-| `login-20261119-erro-solicitacao.png` | Mensagem de solicitação não concluída |
-| `login-20261119-erro-403.png` | Mensagem de erro no login com resposta HTTP 403 |
-| `indicadores-continuidade-20261119-sem-historico.png` | Mensagem apresentada na página de indicadores de continuidade |
-| `segundaVia-pdf-20261119.png` | PDF da segunda via disponibilizado |
+| `login-20261119-sucesso.jpeg` | Login concluído e página inicial disponível |
+| `login-20261119-erro-solicitacao.jpeg` | Mensagem de solicitação não concluída |
+| `login-20261119-erro-403.jpeg` | Mensagem de erro no login com resposta HTTP 403 |
+| `indicadores-continuidade-20261119-sem-historico.jpeg` | Mensagem apresentada na página de indicadores de continuidade |
+| `segundaVia-pdf-20261119.jpeg` | PDF da segunda via disponibilizado |
 
 As capturas dos dois tipos de erro de login representam os comportamentos observados nas seis ocorrências adicionais. Os registros individuais dessas ocorrências estão identificados no CSV.
 

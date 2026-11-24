@@ -58,11 +58,11 @@ As capturas estão organizadas em `docs/evidencias/M3/`:
 
 | Arquivo | Registro |
 |---|---|
-| `historicoConsumo-19112026-manha-arthur.png` | Abertura do Histórico de Consumo no período da manhã |
-| `historicoConsumo-19112026-tarde-arthur.png` | Abertura do Histórico de Consumo no período da tarde |
-| `segundaVia-19112026-manha-arthur.png` | Emissão de segunda via no período da manhã |
-| `segundaVia-19112026-tarde-arthur.png` | Emissão de segunda via no período da tarde |
-| `segundaVia-19112026-erro-01-arthur.png` | Mensagem de indisponibilidade apresentada às 08:46 |
+| `historicoConsumo-19112026-manha-arthur.jpeg` | Abertura do Histórico de Consumo no período da manhã |
+| `historicoConsumo-19112026-tarde-arthur.jpeg` | Abertura do Histórico de Consumo no período da tarde |
+| `segundaVia-19112026-manha-arthur.jpeg` | Emissão de segunda via no período da manhã |
+| `segundaVia-19112026-tarde-arthur.jpeg` | Emissão de segunda via no período da tarde |
+| `segundaVia-19112026-erro-01-arthur.jpeg` | Mensagem de indisponibilidade apresentada às 08:46 |
 
 As capturas de sucesso registram o comportamento observado em cada fluxo e período. A captura da mensagem de indisponibilidade documenta a falha registrada na quinta tentativa do fluxo R01-F2.
 

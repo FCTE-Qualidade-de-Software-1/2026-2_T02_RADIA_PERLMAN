@@ -24,10 +24,11 @@ Conforme as regras definidas em [Critérios de julgamento](fase2/criterios-julga
 * **[Resultados de G3 — Segurança](fase4/resultados-g3-seguranca.md):** análise de bloqueio pós-logout (M5), consistência de dados estáveis (M6), autenticidade e responsabilização (M12) e verificabilidade documental do Nada Consta (M13).
 * **[Resultados de G4 — Eficiência de Desempenho](fase4/resultados-g4-desempenho.md):** análise da mediana (M7) e do percentil 90 (M8) dos tempos de resposta, além da avaliação de capacidade entre janelas de pico e fora de pico (M14).
 * **[Julgamento e conclusões](fase4/julgamento-conclusoes.md):** síntese final da qualidade do produto, relação com o propósito estabelecido na Fase 1 e limitações do estudo.
-* **[Ação de melhoria](fase4/acao-melhoria.md) e [Plano de validação](fase4/plano-validacao.md):** especificação, protótipo funcional e testes exploratórios com usuários para a reformulação da tela de *Indicadores de Continuidade* (OM-01).
+* **[Ação de melhoria](fase4/melhoria/acao-melhoria.md) e [Plano de validação](fase4/melhoria/plano-validacao.md):** especificação, protótipo funcional e testes exploratórios com usuários para a reformulação da tela de *Indicadores de Continuidade* (OM-01).
 
 ## Histórico de Versões
 
 | Versão | Data | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 1.0 | 24/11/2026 | Criação da visão geral consolidada da Fase 4 | Dara Maria Barbosa de Sousa |
+| 1.1 | 24/11/2026 | Correção de links | Henrique Martins Alencar |
