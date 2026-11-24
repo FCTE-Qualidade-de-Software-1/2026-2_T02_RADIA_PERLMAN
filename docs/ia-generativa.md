@@ -53,7 +53,7 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 ### 3.4. Henrique Martins Alencar
 
 * **Ferramentas utilizadas:** Google Gemini
-* **Fases e artefatos apoiados:** Fase 2 (`objetivos.md`, `questoes-hipoteses.md`, `metricas.md`, `criterios-julgamento.md`), Fase 4 (`resultados-g2-confiabilidade.md`, `resultados-g3-seguranca.md`, `M4-resultados.md`, `M6-resultados.md`, `M12-resultados.md`, `M13-resultados.md`, `M6-regristros.csv`) e Artigo.
+* **Fases e artefatos apoiados:** Fase 2 (`objetivos.md`, `questoes-hipoteses.md`, `metricas.md`, `criterios-julgamento.md`), Fase 4 (`resultados-g2-confiabilidade.md`, `resultados-g3-seguranca.md`, `M4-resultados.md`, `M6-resultados.md`, `M12-resultados.md`, `M13-resultados.md`, `M6-registros.csv`) e Artigo.
 * **Finalidade do uso:** Revisão ortográfica, revisão de formato, padronização e estruturação de documentos, verificação de consistência, apoio em linguagem LaTeX e preenchimento de planilha de registros extensa (`M6-registros.csv`).
 * **Validação humana:** Todas as sugestões da IA foram revisadas manualmente e utilizadas como oportunidade de melhoria antes da publicação no repositório.
 
@@ -81,4 +81,5 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 |---|---|---|---|
 | 1.0 | 21/11/2026 | Criação da página | Beatriz Figueiredo dos Santos |
 | 1.1 | 24/11/2026 | Estruturação das diretrizes gerais, quadro resumo e seções de declaração individual por integrante | Dara Maria Barbosa de Sousa |
-| 1.2 | 24/11/2036 | Declaração individual de uso de IA | Henrique Martins Alencar |
+| 1.2 | 24/11/2026 | Declaração individual de uso de IA | Henrique Martins Alencar |
+| 1.3 | 24/11/2026 | Correção de texto | Henrique Martins Alencar |

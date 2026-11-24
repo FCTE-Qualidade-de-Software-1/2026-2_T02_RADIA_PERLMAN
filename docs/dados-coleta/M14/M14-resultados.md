@@ -33,7 +33,7 @@ O registro corresponde às execuções do fluxo de geração do PDF da segunda v
 
 ### Evidência
 
-`docs/evidencias/M14/segundaVia-pdf-pico-20261119-arthur.png`
+`docs/evidencias/M14/segundaVia-pdf-pico-20261119-arthur.jpeg`
 
 ### Ambiente de execução
 

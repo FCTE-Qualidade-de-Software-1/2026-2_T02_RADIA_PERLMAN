@@ -23,16 +23,16 @@ Os registros deste arquivo representam somente a coleta de Arthur na janela de p
 
 ## Evidências
 
-As evidências são as mesmas vinculadas às observações de origem da M7 e permanecem armazenadas em `docs/evidencias/M7/`.
+As evidências são as mesmas vinculadas às observações de origem da M7 e permanecem armazenadas em `docs/evidencias/M7-M8/`.
 
 | Arquivo | Registro |
 |---|---|
-| `login-20261119-sucesso.png` | Login concluído |
-| `login-20261119-erro-solicitacao.png` | Mensagem de solicitação não concluída |
-| `login-20261119-erro-403.png` | Erro no login com resposta HTTP 403 |
-| `login-20261119-captura-complementar.png` | Captura complementar do fluxo de login |
-| `indicadores-continuidade-20261119-sem-historico.png` | Resposta apresentada na página de indicadores de continuidade |
-| `segundaVia-pdf-20261119.png` | PDF da segunda via disponibilizado |
+| `login-20261119-sucesso.jpeg` | Login concluído |
+| `login-20261119-erro-solicitacao.jpeg` | Mensagem de solicitação não concluída |
+| `login-20261119-erro-403.jpeg` | Erro no login com resposta HTTP 403 |
+| `login-20261119-captura-complementar.jpeg` | Captura complementar do fluxo de login |
+| `indicadores-continuidade-20261119-sem-historico.jpeg` | Resposta apresentada na página de indicadores de continuidade |
+| `segundaVia-pdf-20261119.jpeg` | PDF da segunda via disponibilizado |
 
 ## Ambiente de execução
 
