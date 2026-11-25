@@ -19,7 +19,7 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 | **Dara Maria Barbosa de Sousa** | Google Gemini | Revisão textual, padronização Markdown/Mermaid, verificação de consistência entre fases e apoio na consolidação de relatórios e Git | Fases 1, 2, 3, 4 e MkDocs |
 | **Henrique Martins Alencar** | Google Gemini | Revisão textual, padronização, organização, apoio no LaTeX e apoio no registro de resultados. | Fases 2, 4 e Artigo |
 | **Isabella Mendes Choukaira**| ChatGPT (OpenAI) | Revisão textual, padronização e estruturação de documentos, apoio no desenvolvimento e na revisão dos scripts de automação PSM/CID, organização dos registros de coleta e consolidação dos resultados das métricas | Fases 2 e 4, Gestão do Projeto, PSM/CID e MkDocs |
-| **Tiago Scherrer Tavares de Lyra** | *A preencher* | *A preencher* | *A preencher* |
+| **Tiago Scherrer Tavares de Lyra** | Claude (Anthropic) | Apoio na redação, estruturação e formatação do artigo (Fases 1, 2 e 3) e, na Fase 4, na verificação de cálculos e na padronização de tabelas e documentos em Markdown | Artigo (Fases 1, 2 e 3), Fase 4 e GitHub Pages |
 
 ## 3. Declarações Individuais
 
@@ -77,10 +77,12 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 
 ### 3.6. Tiago Scherrer Tavares de Lyra
 
-* **Ferramentas utilizadas:** *(informar nome e versão/modelo, ou registrar "Não utilizou")*
-* **Fases e artefatos apoiados:** *(informar fases/artefatos em que atuou)*
-* **Finalidade do uso:** *(descrever como a ferramenta foi usada, ou registrar "Não utilizou")*
-* **Validação humana:** *(descrever como os conteúdos produzidos foram revisados pelo integrante)*
+* **Ferramentas utilizadas:** Claude (Anthropic).
+* **Fases e artefatos apoiados:** Artigo (Overleaf), com conteúdo das Fases 1, 2 e 3; Fase 4 (registros e resultados de M3, M7, M8 e M14 fora de pico); e documentação no GitHub Pages (MkDocs).
+* **Finalidade do uso:**
+    * **Artigo (Fases 1, 2 e 3):** apoio na redação, na estruturação e na formatação do artigo no modelo da SBC em LaTeX.
+    * **Fase 4 e GitHub Pages:** apoio na verificação dos cálculos das métricas (mediana, percentil 90 e razão entre pico e fora de pico) e na padronização de tabelas e documentos em Markdown e GitHub Pages.
+* **Validação humana:** executei as medições, cronometrei os tempos e forneci os valores. A ferramenta não gerou nem estimou dados de medição; ela apenas conferiu e formatou a partir dos valores que informei. Revisei os textos, as tabelas e os cálculos antes de usá-los e decidi o que manter, alterar ou descartar.
 
 ## Histórico de Versões
 
@@ -92,3 +94,4 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 | 1.3 | 24/11/2026 | Correção de texto | Henrique Martins Alencar |
 | 1.4 | 24/11/2026 | Declaração individual de uso de IA | Beatriz Figueiredo dos Santos |
 | 1.5 | 24/11/2026 | Declaração individual de uso de IA | Isabella Mendes Choukaira |
+| 1.6 | 24/11/2026 | Declaração individual de uso de IA | Tiago Scherrer Tavares de Lyra |
