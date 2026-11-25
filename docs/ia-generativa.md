@@ -14,7 +14,7 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 
 | Integrante | Ferramentas Utilizadas | Principais Finalidades | Fases / Artefatos |
 |---|---|---|---|
-| **Arthur de Lima Sobreira** | *A preencher* | *A preencher* | *A preencher* |
+| **Arthur de Lima Sobreira** | ChatGPT (OpenAI) | Revisão textual, estruturação e formatação de documentos em Markdown, além de apoio na consolidação e verificação dos cálculos das métricas | Fases 2, 3 e 4, GitHub Pages |
 | **Beatriz Figueiredo dos Santos** | Claude (Anthropic) | Apoio na redação e estruturação de documentos (GitHub Pages e artigo no Overleaf), revisão de documentação e implementação do protótipo da ação de melhoria a partir das análises e decisões de design próprias | Fases 2 e 4, roteiro de coleta com voluntários, protótipo, GitHub Pages e Artigo |
 | **Dara Maria Barbosa de Sousa** | Google Gemini | Revisão textual, padronização Markdown/Mermaid, verificação de consistência entre fases e apoio na consolidação de relatórios e Git | Fases 1, 2, 3, 4 e MkDocs |
 | **Henrique Martins Alencar** | Google Gemini | Revisão textual, padronização, organização, apoio no LaTeX e apoio no registro de resultados. | Fases 2, 4 e Artigo |
@@ -25,11 +25,10 @@ O uso de ferramentas de IA generativa neste projeto seguiu princípios de integr
 
 ### 3.1. Arthur de Lima Sobreira
 
-* **Ferramentas utilizadas:** *(informar nome e versão/modelo, ou registrar "Não utilizou")*
-* **Fases e artefatos apoiados:** *(ex.: Fase 2, Fase 3, Fase 4 — resultados de G2/G4)*
-* **Finalidade do uso:** *(descrever como a ferramenta foi usada: revisão de texto, formatação, apoio em scripts, etc.)*
-* **Validação humana:** *(descrever como os dados, cálculos e textos gerados foram revisados pelo integrante)*
-
+- **Ferramentas utilizadas:** ChatGPT (OpenAI).
+- **Fases e artefatos apoiados:** Fases 2, 3 e 4, incluindo a documentação dos procedimentos de avaliação e os resultados das métricas M3, M7, M8 e M14.
+- **Finalidade do uso:** Na Fase 2, utilizei a ferramenta principalmente para auxiliar na organização e revisão da documentação. Nas Fases 3 e 4, o apoio envolveu revisão textual, formatação de documentos em Markdown, estruturação de tabelas e consolidação dos resultados, incluindo a verificação de cálculos.
+- **Validação humana:** As sugestões de texto e organização da documentação foram revisadas por mim ao considerar as definições e os procedimentos que nós, como equipe, estabelecemos para a realização do trabalho. As medições e evidências foram obtidas durante a execução dos testes, e os cálculos foram conferidos com base nos dados coletados e nos critérios de avaliação do projeto.
 ---
 
 ### 3.2. Beatriz Figueiredo dos Santos
