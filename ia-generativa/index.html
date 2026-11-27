@@ -1,0 +1,2123 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto da disciplina de Qualidade de Software">
+      
+      
+      
+      
+        <link rel="prev" href="../fase2/psm/consolidado/relatorio/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>IA Generativa - Processo de Avaliação de Produto de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#declaracao-de-uso-de-inteligencia-artificial-generativa" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Processo de Avaliação de Produto de Software" class="md-header__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Processo de Avaliação de Produto de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IA Generativa
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_RADIA_PERLMAN" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Equipe Radia Perlman (GitHub)
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fase1-requisitos/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fase2-especificacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fase3-plano-avaliacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fase4-execucao/" class="md-tabs__link">
+          
+  
+  
+  Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../gestaoProjeto/" class="md-tabs__link">
+          
+  
+  
+  Gestão do projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  IA Generativa
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Processo de Avaliação de Produto de Software" class="md-nav__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Processo de Avaliação de Produto de Software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_RADIA_PERLMAN" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Equipe Radia Perlman (GitHub)
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase1-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propósito da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase1/produto-avaliado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Produto Avaliado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase1/modelo-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade de Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase1/alinhamento-ods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alinhamento aos Objetivos de Desenvolvimento Sustentável (ODS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2-especificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Especificação da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objetivos de medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/questoes-hipoteses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Questões e hipóteses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/metricas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Métricas e pontuações
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/grafico-gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráfico GQM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/criterios-julgamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critérios de julgamento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rastreabilidade Fase 1–2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/protocolo-coleta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocolo de coleta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase3-plano-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de Avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase3/recursos-ambiente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos e ambiente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase3/metodo-procedimentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Método e procedimentos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase3/cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronograma de execução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4-execucao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão geral da execução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/obtencao-medidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obtenção das medidas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/dados-brutos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dados brutos e evidências
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resultados GQM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Resultados GQM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/resultados-g1-capacidade-interacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G1 — Capacidade de Interação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/resultados-g2-confiabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G2 — Confiabilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/resultados-g3-seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G3 — Segurança
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/resultados-g4-desempenho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G4 — Eficiência de desempenho
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/julgamento-conclusoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Julgamento e conclusões
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ação de melhoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ação de melhoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/melhoria/acao-melhoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justificativa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/melhoria/plano-validacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de validação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gestão do projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Gestão do projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestaoProjeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão geral da gestão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestaoProjeto/planejamento-cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planejamento e cronograma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestaoProjeto/organizacao-atividades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organização das atividades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestaoProjeto/plano-medicao-psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de medição PSM/CID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestaoProjeto/automacao-psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automação do PSM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resultados PSM/CID
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Resultados PSM/CID
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/psm/entrega_1/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entrega 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/psm/entrega_2/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entrega 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/psm/consolidado/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consolidado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    IA Generativa
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    IA Generativa
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-diretrizes-gerais-da-equipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Diretrizes Gerais da Equipe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-quadro-resumo-por-integrante" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Quadro Resumo por Integrante
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-declaracoes-individuais" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Declarações Individuais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Declarações Individuais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-arthur-de-lima-sobreira" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Arthur de Lima Sobreira
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-beatriz-figueiredo-dos-santos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Beatriz Figueiredo dos Santos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-dara-maria-barbosa-de-sousa" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Dara Maria Barbosa de Sousa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-henrique-martins-alencar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Henrique Martins Alencar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-isabella-mendes-choukaira" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Isabella Mendes Choukaira
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-tiago-scherrer-tavares-de-lyra" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Tiago Scherrer Tavares de Lyra
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-diretrizes-gerais-da-equipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Diretrizes Gerais da Equipe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-quadro-resumo-por-integrante" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Quadro Resumo por Integrante
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-declaracoes-individuais" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Declarações Individuais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Declarações Individuais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-arthur-de-lima-sobreira" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Arthur de Lima Sobreira
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-beatriz-figueiredo-dos-santos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Beatriz Figueiredo dos Santos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-dara-maria-barbosa-de-sousa" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Dara Maria Barbosa de Sousa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-henrique-martins-alencar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Henrique Martins Alencar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-isabella-mendes-choukaira" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Isabella Mendes Choukaira
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-tiago-scherrer-tavares-de-lyra" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Tiago Scherrer Tavares de Lyra
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="declaracao-de-uso-de-inteligencia-artificial-generativa">Declaração de Uso de Inteligência Artificial Generativa<a class="headerlink" href="#declaracao-de-uso-de-inteligencia-artificial-generativa" title="Permanent link">&para;</a></h1>
+<p>Esta página registra, de forma transparente, como a equipe utilizou ferramentas de Inteligência Artificial (IA) generativa ao longo do desenvolvimento do projeto de avaliação da <strong>Agência Virtual da Neoenergia Brasília</strong> (Fases 1 a 4, documentação no MkDocs e artigo técnico-acadêmico).</p>
+<h2 id="1-diretrizes-gerais-da-equipe">1. Diretrizes Gerais da Equipe<a class="headerlink" href="#1-diretrizes-gerais-da-equipe" title="Permanent link">&para;</a></h2>
+<p>O uso de ferramentas de IA generativa neste projeto seguiu princípios de integridade acadêmica, rastreabilidade e proteção de dados:</p>
+<ul>
+<li><strong>Papel de apoio:</strong> as ferramentas foram empregadas exclusivamente como suporte para revisão textual, estruturação de documentos em Markdown/LaTeX, organização de tabelas e diagramas, apoio na prototipação visual e revisão de consistência entre artefatos.</li>
+<li><strong>Autoria e validação humana:</strong> todo o planejamento metodológico (GQM), a execução presencial e remota dos cenários de teste, a coleta de tempos e evidências, os cálculos estatísticos e o julgamento crítico da qualidade do produto foram conduzidos, conferidos e validados manualmente pelos integrantes da equipe.</li>
+<li><strong>Privacidade e segurança:</strong> nenhum dado sensível de consumidores (CPF, número de unidade consumidora, senhas, tokens, faturas ou documentos de Nada Consta) nem dados pessoais dos voluntários (nomes, contatos ou termos assinados) foram inseridos em ferramentas de IA.</li>
+</ul>
+<h2 id="2-quadro-resumo-por-integrante">2. Quadro Resumo por Integrante<a class="headerlink" href="#2-quadro-resumo-por-integrante" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Integrante</th>
+<th>Ferramentas Utilizadas</th>
+<th>Principais Finalidades</th>
+<th>Fases / Artefatos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Arthur de Lima Sobreira</strong></td>
+<td>ChatGPT (OpenAI)</td>
+<td>Revisão textual, estruturação e formatação de documentos em Markdown, além de apoio na consolidação e verificação dos cálculos das métricas</td>
+<td>Fases 2, 3 e 4, GitHub Pages</td>
+</tr>
+<tr>
+<td><strong>Beatriz Figueiredo dos Santos</strong></td>
+<td>Claude (Anthropic)</td>
+<td>Apoio na redação e estruturação de documentos (GitHub Pages e artigo no Overleaf), revisão de documentação e implementação do protótipo da ação de melhoria a partir das análises e decisões de design próprias</td>
+<td>Fases 2 e 4, roteiro de coleta com voluntários, protótipo, GitHub Pages e Artigo</td>
+</tr>
+<tr>
+<td><strong>Dara Maria Barbosa de Sousa</strong></td>
+<td>Google Gemini</td>
+<td>Revisão textual, padronização Markdown/Mermaid, verificação de consistência entre fases e apoio na consolidação de relatórios e Git</td>
+<td>Fases 1, 2, 3, 4 e MkDocs</td>
+</tr>
+<tr>
+<td><strong>Henrique Martins Alencar</strong></td>
+<td>Google Gemini</td>
+<td>Revisão textual, padronização, organização, apoio no LaTeX e apoio no registro de resultados.</td>
+<td>Fases 2, 4 e Artigo</td>
+</tr>
+<tr>
+<td><strong>Isabella Mendes Choukaira</strong></td>
+<td>ChatGPT (OpenAI)</td>
+<td>Revisão textual, padronização e estruturação de documentos, apoio no desenvolvimento e na revisão dos scripts de automação PSM/CID, organização dos registros de coleta e consolidação dos resultados das métricas</td>
+<td>Fases 2 e 4, Gestão do Projeto, PSM/CID e MkDocs</td>
+</tr>
+<tr>
+<td><strong>Tiago Scherrer Tavares de Lyra</strong></td>
+<td>Claude (Anthropic)</td>
+<td>Apoio na redação, estruturação e formatação do artigo (Fases 1, 2 e 3) e, na Fase 4, na verificação de cálculos e na padronização de tabelas e documentos em Markdown</td>
+<td>Artigo (Fases 1, 2 e 3), Fase 4 e GitHub Pages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-declaracoes-individuais">3. Declarações Individuais<a class="headerlink" href="#3-declaracoes-individuais" title="Permanent link">&para;</a></h2>
+<h3 id="31-arthur-de-lima-sobreira">3.1. Arthur de Lima Sobreira<a class="headerlink" href="#31-arthur-de-lima-sobreira" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ferramentas utilizadas:</strong> ChatGPT (OpenAI).</li>
+<li><strong>Fases e artefatos apoiados:</strong> Fases 2, 3 e 4, incluindo a documentação dos procedimentos de avaliação e os resultados das métricas M3, M7, M8 e M14.</li>
+<li><strong>Finalidade do uso:</strong> Na Fase 2, utilizei a ferramenta principalmente para auxiliar na organização e revisão da documentação. Nas Fases 3 e 4, o apoio envolveu revisão textual, formatação de documentos em Markdown, estruturação de tabelas e consolidação dos resultados, incluindo a verificação de cálculos.</li>
+<li><strong>Validação humana:</strong> As sugestões de texto e organização da documentação foram revisadas por mim ao considerar as definições e os procedimentos que nós, como equipe, estabelecemos para a realização do trabalho. As medições e evidências foram obtidas durante a execução dos testes, e os cálculos foram conferidos com base nos dados coletados e nos critérios de avaliação do projeto.</li>
+</ul>
+<hr />
+<h3 id="32-beatriz-figueiredo-dos-santos">3.2. Beatriz Figueiredo dos Santos<a class="headerlink" href="#32-beatriz-figueiredo-dos-santos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ferramentas utilizadas:</strong> Claude (Anthropic).</li>
+<li><strong>Fases e artefatos apoiados:</strong> Fase 2; Fase 4 (roteiro de coleta das métricas de capacidade de interação com voluntários, resultados de G1, protótipo funcional da tela de Indicadores de Continuidade, plano de validação e análise dos resultados da validação); documentação no GitHub Pages (MkDocs); e Artigo (Overleaf).</li>
+<li><strong>Finalidade do uso:</strong>    <ul>
+<li><strong>Redação e estruturação de documentos:</strong> utilizei a ferramenta como apoio na organização das páginas do MkDocs e do artigo no Overleaf, na estruturação de seções e tabelas em Markdown e na redação de textos a partir dos dados, das análises e das decisões que tomei.</li>
+<li><strong>Revisão de documentação:</strong> usei a ferramenta para revisão ortográfica e de clareza, para verificar a consistência entre páginas (por exemplo, entre os resultados de G1, a justificativa da ação de melhoria e o plano de validação) e para corrigir numeração, links e referências.</li>
+<li><strong>Elaboração do protótipo:</strong> defini o problema, a análise das telas atuais e a visão da solução (layout, textos, comportamento do gráfico e ajustes visuais), e a ferramenta implementou essas definições em HTML, CSS e JavaScript. Revisei cada versão e propus novos ajustes com base em análise própria e nos resultados das sessões com voluntários.</li>
+</ul>
+</li>
+<li><strong>Validação humana:</strong>  Realizei a coleta com os voluntários, o registro das fichas, os tempos e os códigos de resultado sem uso de IA. Além do protótipo, revisei manualmente todos os textos redigidos com apoio da ferramenta e conferi as análises com as fichas e os dados coletados antes da publicação. Testei o protótipo a cada versão e decidi o que manter, remover ou alterar. Não inseri na ferramenta dados pessoais dos voluntários nem dados sensíveis da unidade consumidora; as capturas de tela utilizadas tiveram esses dados ocultados.</li>
+</ul>
+<hr />
+<h3 id="33-dara-maria-barbosa-de-sousa">3.3. Dara Maria Barbosa de Sousa<a class="headerlink" href="#33-dara-maria-barbosa-de-sousa" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ferramentas utilizadas:</strong> Google Gemini.</li>
+<li><strong>Fases e artefatos apoiados:</strong> Fase 1 (<code>produto-avaliado.md</code>, <code>modelo-qualidade.md</code>, <code>alinhamento-ods.md</code>), Fase 2 (<code>metricas.md</code>, <code>protocolo-coleta.md</code>), Fase 3 (<code>cronograma.md</code>, <code>metodo-procedimentos.md</code>, <code>recursos-ambiente.md</code>, <code>modelo-consentimento.md</code>), Fase 4 (<code>fase4-execucao.md</code>, <code>obtencao-medidas.md</code>, <code>resultados-g2-confiabilidade.md</code>, <code>julgamento-conclusoes.md</code>) e configuração do site (<code>index.md</code>, <code>mkdocs.yml</code>).</li>
+<li><strong>Finalidade do uso:</strong> Revisão ortográfica e de clareza textual, padronização de tabelas Markdown e diagramas Mermaid, verificação cruzada de consistência amostral entre as Fases 2 e 3, consolidação das tabelas de resultados.</li>
+<li><strong>Validação humana:</strong> Todas as verificações práticas coletadas, os cálculos das métricas, a auditoria dos registros brutos e as decisões metodológicas foram executados e conferidos manualmente antes da publicação no repositório.</li>
+</ul>
+<hr />
+<h3 id="34-henrique-martins-alencar">3.4. Henrique Martins Alencar<a class="headerlink" href="#34-henrique-martins-alencar" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ferramentas utilizadas:</strong> Google Gemini</li>
+<li><strong>Fases e artefatos apoiados:</strong> Fase 2 (<code>objetivos.md</code>, <code>questoes-hipoteses.md</code>, <code>metricas.md</code>, <code>criterios-julgamento.md</code>), Fase 4 (<code>resultados-g2-confiabilidade.md</code>, <code>resultados-g3-seguranca.md</code>, <code>M4-resultados.md</code>, <code>M6-resultados.md</code>, <code>M12-resultados.md</code>, <code>M13-resultados.md</code>, <code>M6-registros.csv</code>) e Artigo.</li>
+<li><strong>Finalidade do uso:</strong> Revisão ortográfica, revisão de formato, padronização e estruturação de documentos, verificação de consistência, apoio em linguagem LaTeX e preenchimento de planilha de registros extensa (<code>M6-registros.csv</code>).</li>
+<li><strong>Validação humana:</strong> Todas as sugestões da IA foram revisadas manualmente e utilizadas como oportunidade de melhoria antes da publicação no repositório.</li>
+</ul>
+<hr />
+<h3 id="35-isabella-mendes-choukaira">3.5. Isabella Mendes Choukaira<a class="headerlink" href="#35-isabella-mendes-choukaira" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ferramentas utilizadas:</strong> ChatGPT (OpenAI).</li>
+<li><strong>Fases e artefatos apoiados:</strong> Fase 2 (PSM/CID), Fase 4 (<code>resultados-g1-usabilidade.md</code>, <code>resultados-g3-seguranca.md</code>, <code>julgamento-conclusoes.md</code> e registros de coleta das métricas M2, M5 e M12), gestão do projeto, scripts de automação PSM/CID, workflows do GitHub Actions e documentação no GitHub Pages (MkDocs).</li>
+<li><strong>Finalidade do uso:</strong><ul>
+<li><strong>Revisão e estruturação de documentos:</strong> apoio na revisão textual, padronização de tabelas Markdown, organização das páginas do MkDocs e verificação de consistência entre os documentos.</li>
+<li><strong>Automação do PSM/CID:</strong> apoio no desenvolvimento e na revisão dos scripts Python, na configuração dos workflows do GitHub Actions, na identificação e correção de erros e na integração dos relatórios e gráficos automatizados com o GitHub Pages.</li>
+<li><strong>Registro e análise dos resultados:</strong> apoio na organização dos dados coletados, na estruturação das tabelas de resultados e na revisão das justificativas e classificações das métricas, com base nas evidências obtidas durante a execução dos testes.</li>
+<li><strong>Gestão do projeto:</strong> apoio na estruturação das Issues, na elaboração das descrições de Pull Requests e na organização da documentação de planejamento e acompanhamento das atividades.</li>
+</ul>
+</li>
+<li><strong>Validação humana:</strong> Os testes das métricas sob minha responsabilidade e a coleta das respectivas evidências foram realizados manualmente. As sugestões fornecidas pela ferramenta foram analisadas e revisadas considerando os critérios de avaliação definidos pela equipe e os resultados observados. Os scripts e workflows desenvolvidos com apoio da IA foram submetidos a testes de execução e verificações de funcionamento, com ajustes realizados conforme as necessidades do projeto.</li>
+</ul>
+<hr />
+<h3 id="36-tiago-scherrer-tavares-de-lyra">3.6. Tiago Scherrer Tavares de Lyra<a class="headerlink" href="#36-tiago-scherrer-tavares-de-lyra" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ferramentas utilizadas:</strong> Claude (Anthropic).</li>
+<li><strong>Fases e artefatos apoiados:</strong> Artigo (Overleaf), com conteúdo das Fases 1, 2 e 3; Fase 4 (registros e resultados de M3, M7, M8 e M14 fora de pico); e documentação no GitHub Pages (MkDocs).</li>
+<li><strong>Finalidade do uso:</strong><ul>
+<li><strong>Artigo (Fases 1, 2 e 3):</strong> apoio na redação, na estruturação e na formatação do artigo no modelo da SBC em LaTeX.</li>
+<li><strong>Fase 4 e GitHub Pages:</strong> apoio na verificação dos cálculos das métricas (mediana, percentil 90 e razão entre pico e fora de pico) e na padronização de tabelas e documentos em Markdown e GitHub Pages.</li>
+</ul>
+</li>
+<li><strong>Validação humana:</strong> executei as medições, cronometrei os tempos e forneci os valores. A ferramenta não gerou nem estimou dados de medição; ela apenas conferiu e formatou a partir dos valores que informei. Revisei os textos, as tabelas e os cálculos antes de usá-los e decidi o que manter, alterar ou descartar.</li>
+</ul>
+<h2 id="historico-de-versoes">Histórico de Versões<a class="headerlink" href="#historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição da Alteração</th>
+<th>Autor(a)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>21/11/2026</td>
+<td>Criação da página</td>
+<td>Beatriz Figueiredo dos Santos</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>24/11/2026</td>
+<td>Estruturação das diretrizes gerais, quadro resumo e seções de declaração individual por integrante</td>
+<td>Dara Maria Barbosa de Sousa</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>24/11/2026</td>
+<td>Declaração individual de uso de IA</td>
+<td>Henrique Martins Alencar</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>24/11/2026</td>
+<td>Correção de texto</td>
+<td>Henrique Martins Alencar</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>24/11/2026</td>
+<td>Declaração individual de uso de IA</td>
+<td>Beatriz Figueiredo dos Santos</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>24/11/2026</td>
+<td>Declaração individual de uso de IA</td>
+<td>Isabella Mendes Choukaira</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td>24/11/2026</td>
+<td>Declaração individual de uso de IA</td>
+<td>Tiago Scherrer Tavares de Lyra</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Equipe Radia Perlman — Qualidade de Software 2026.2 | Última atualização: 24/11/2026
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

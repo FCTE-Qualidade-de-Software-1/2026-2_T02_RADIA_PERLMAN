@@ -1,0 +1,2485 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto da disciplina de Qualidade de Software">
+      
+      
+      
+      
+        <link rel="prev" href="../acao-melhoria/">
+      
+      
+        <link rel="next" href="../../../gestaoProjeto/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Plano de validação - Processo de Avaliação de Produto de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-plano-de-validacao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Processo de Avaliação de Produto de Software" class="md-header__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Processo de Avaliação de Produto de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Plano de validação
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_RADIA_PERLMAN" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Equipe Radia Perlman (GitHub)
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../fase1-requisitos/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../fase2-especificacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../fase3-plano-avaliacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../fase4-execucao/" class="md-tabs__link">
+          
+  
+  
+  Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../gestaoProjeto/" class="md-tabs__link">
+          
+  
+  
+  Gestão do projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ia-generativa/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  IA Generativa
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Processo de Avaliação de Produto de Software" class="md-nav__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Processo de Avaliação de Produto de Software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_RADIA_PERLMAN" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Equipe Radia Perlman (GitHub)
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propósito da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/produto-avaliado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Produto Avaliado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/modelo-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade de Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/alinhamento-ods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alinhamento aos Objetivos de Desenvolvimento Sustentável (ODS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2-especificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Especificação da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objetivos de medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/questoes-hipoteses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Questões e hipóteses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/metricas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Métricas e pontuações
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/grafico-gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráfico GQM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/criterios-julgamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critérios de julgamento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rastreabilidade Fase 1–2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/protocolo-coleta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocolo de coleta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3-plano-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de Avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/recursos-ambiente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos e ambiente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/metodo-procedimentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Método e procedimentos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronograma de execução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase4-execucao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão geral da execução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../obtencao-medidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obtenção das medidas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dados-brutos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dados brutos e evidências
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resultados GQM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Resultados GQM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resultados-g1-capacidade-interacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G1 — Capacidade de Interação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resultados-g2-confiabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G2 — Confiabilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resultados-g3-seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G3 — Segurança
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resultados-g4-desempenho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G4 — Eficiência de desempenho
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../julgamento-conclusoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Julgamento e conclusões
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ação de melhoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ação de melhoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acao-melhoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justificativa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Plano de validação
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de validação
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-plano-de-validacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Plano de validação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Plano de validação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-visao-geral-da-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Visão geral da sessão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-definicoes-fixadas-no-piloto" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Definições fixadas no piloto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-regras-de-conducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Regras de condução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-u-03-observar-a-tela-por-ate-30-segundos-e-responder-para-que-ela-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 U-03: observar a tela por até 30 segundos e responder para que ela serve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-u-04-usar-o-grafico-do-prototipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 U-04: usar o gráfico do protótipo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-encerramento" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Encerramento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-ficha-de-registro-por-participante" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 Ficha de registro por participante
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7 Ficha de registro por participante">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-p01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela P01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-p02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela P02
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-criterios-de-aceite-e-amostra" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8 Critérios de aceite e amostra
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-resultados-da-validacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Resultados da validação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Resultados da validação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-m9-reconhecimento-da-finalidade-da-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 M9 — Reconhecimento da finalidade da tela
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-m10-tarefas-de-operacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 M10 — Tarefas de operação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mudancas-a-partir-da-validacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Mudanças a partir da validação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gestão do projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Gestão do projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestaoProjeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão geral da gestão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestaoProjeto/planejamento-cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planejamento e cronograma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestaoProjeto/organizacao-atividades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organização das atividades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestaoProjeto/plano-medicao-psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de medição PSM/CID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestaoProjeto/automacao-psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automação do PSM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resultados PSM/CID
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Resultados PSM/CID
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/psm/entrega_1/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entrega 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/psm/entrega_2/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entrega 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/psm/consolidado/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consolidado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ia-generativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IA Generativa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-plano-de-validacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Plano de validação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Plano de validação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-visao-geral-da-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Visão geral da sessão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-definicoes-fixadas-no-piloto" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Definições fixadas no piloto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-regras-de-conducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Regras de condução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-u-03-observar-a-tela-por-ate-30-segundos-e-responder-para-que-ela-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 U-03: observar a tela por até 30 segundos e responder para que ela serve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-u-04-usar-o-grafico-do-prototipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 U-04: usar o gráfico do protótipo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-encerramento" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Encerramento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-ficha-de-registro-por-participante" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 Ficha de registro por participante
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7 Ficha de registro por participante">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-p01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela P01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-p02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela P02
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-criterios-de-aceite-e-amostra" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8 Critérios de aceite e amostra
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-resultados-da-validacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Resultados da validação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Resultados da validação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-m9-reconhecimento-da-finalidade-da-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 M9 — Reconhecimento da finalidade da tela
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-m10-tarefas-de-operacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 M10 — Tarefas de operação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mudancas-a-partir-da-validacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Mudanças a partir da validação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Plano de validação</h1>
+
+<h2 id="1-plano-de-validacao">1. Plano de validação<a class="headerlink" href="#1-plano-de-validacao" title="Permanent link">&para;</a></h2>
+<p>O protótipo será avaliado com <strong>o mesmo protocolo da Fase 4</strong>: mesmas regras de condução, mesmas falas neutras, mesmos códigos de registro e mesma ficha por participante. Assim, os resultados podem ser comparados diretamente com os <a href="../../resultados-g1-capacidade-interacao/">Resultados de G1</a>.</p>
+<h3 id="11-visao-geral-da-sessao">1.1 Visão geral da sessão<a class="headerlink" href="#11-visao-geral-da-sessao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Cenário</th>
+<th>Conteúdo</th>
+<th>Tempo previsto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Abertura</td>
+<td>Fala inicial, termo de consentimento e pergunta de perfil (iguais aos da Fase 4)</td>
+<td>5 a 7 min</td>
+</tr>
+<tr>
+<td>2</td>
+<td>U-03 (M9)</td>
+<td>Tela B (novo protótipo de Indicadores de Continuidade)</td>
+<td>Até 30 s de observação por tela, mais a resposta</td>
+</tr>
+<tr>
+<td>3</td>
+<td>U-04 (M10)</td>
+<td>Duas tarefas de operação no protótipo: T4 (trocar o período) e T5 (alternar entre tabela e gráfico)</td>
+<td>Até 5 min por tarefa</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Encerramento</td>
+<td>Perguntas abertas opcionais e agradecimento</td>
+<td>3 a 5 min</td>
+</tr>
+</tbody>
+</table>
+<p>A Tela A continua na sessão para manter as <strong>duas apresentações por participante</strong> de M9, como na Fase 4, e serve de controle: se o reconhecimento da Tela A cair, o problema está na sessão, não no protótipo.</p>
+<h3 id="12-definicoes-fixadas-no-piloto">1.2 Definições fixadas no piloto<a class="headerlink" href="#12-definicoes-fixadas-no-piloto" title="Permanent link">&para;</a></h3>
+<p>Executar o roteiro completo uma vez com um integrante da equipe, como na Fase 4. Depois da primeira sessão, estas definições não mudam.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Valor fixado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Endereço da Tela B e das tarefas</td>
+<td><code>prototipo/index.html?cenario=ficticio&amp;painel=0</code> (dados fictícios, sem o seletor de cenário)</td>
+</tr>
+<tr>
+<td>Estado inicial</td>
+<td>Período de outubro/2025 a setembro/2026, gráfico de "Tempo sem energia", último mês selecionado</td>
+</tr>
+<tr>
+<td>Retorno ao ponto de partida</td>
+<td>Recarregar a página (F5), que restaura o estado inicial</td>
+</tr>
+<tr>
+<td>Período-alvo de T4</td>
+<td>Abril/2026 a setembro/2026</td>
+</tr>
+<tr>
+<td>Resultado esperado de T4</td>
+<td>Gráfico exibindo somente os seis meses de abril/2026 a setembro/2026</td>
+</tr>
+<tr>
+<td>Resultado esperado de T5</td>
+<td>Tabela exibida e, em seguida, gráfico exibido novamente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-regras-de-conducao">1.3 Regras de condução<a class="headerlink" href="#13-regras-de-conducao" title="Permanent link">&para;</a></h3>
+<p>Valem as regras da Fase 4, sem alteração:</p>
+<ul>
+<li><strong>Falas neutras permitidas:</strong> repetir a instrução com as mesmas palavras; "Faça como faria se estivesse sozinho(a)."; "Quando achar que concluiu, é só me avisar."; se o participante perguntar "É aqui?" ou "Está certo?": "Se acha que concluiu, pode me avisar; se não, pode continuar."</li>
+<li><strong>Não permitido:</strong> apontar a tela, nomear menus, campos ou botões, confirmar ou negar escolhas, sugerir que volte ou tente outro lugar, ou reagir de modo que indique acerto ou erro.</li>
+<li><strong>Tempo:</strong> o anotador inicia o cronômetro quando o mediador termina de ler a instrução e o para quando o participante avisa que concluiu, desiste ou atinge o tempo-limite.</li>
+<li><strong>Entre tarefas:</strong> o mediador recarrega a página, sem comentar o resultado.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>Registro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pedido de esclarecimento respondido apenas com a repetição literal da instrução</td>
+<td>Não é ajuda. Anotar em observações.</td>
+</tr>
+<tr>
+<td>Qualquer indicação de caminho, rótulo ou resposta, ainda que involuntária</td>
+<td>AJ — ajuda: insucesso.</td>
+</tr>
+<tr>
+<td>O participante diz que não consegue ou que desiste da tarefa</td>
+<td>DE — desistência: insucesso. Seguir para a próxima tarefa.</td>
+</tr>
+<tr>
+<td>Tempo-limite atingido (5 min em U-04)</td>
+<td>TE — tempo esgotado: insucesso.</td>
+</tr>
+<tr>
+<td>Resultado diferente do esperado ao avisar que concluiu</td>
+<td>EO — erro de operação: insucesso.</td>
+</tr>
+<tr>
+<td>Erro do sistema, função indisponível ou conteúdo que não carrega em 30 s</td>
+<td>FS — falha do sistema: tarefa excluída do cálculo, com justificativa. A mesma tarefa não é repetida com o mesmo participante.</td>
+</tr>
+<tr>
+<td>O participante decide encerrar a participação</td>
+<td>IP — interrompida: a tarefa em andamento e as seguintes ficam fora do cálculo.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-u-03-observar-a-tela-por-ate-30-segundos-e-responder-para-que-ela-serve">1.4 U-03: observar a tela por até 30 segundos e responder para que ela serve<a class="headerlink" href="#14-u-03-observar-a-tela-por-ate-30-segundos-e-responder-para-que-ela-serve" title="Permanent link">&para;</a></h3>
+<p><strong>(M9) — Reconhecimento da finalidade da tela</strong></p>
+<p><strong>Objetivo:</strong> verificar se os participantes reconhecem a finalidade da nova tela de Indicadores de Continuidade.</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Com o participante sem olhar para o monitor, o mediador abre a tela, espera o carregamento completo e afasta o mouse.</li>
+<li>Ler: "Vou mostrar uma tela por até 30 segundos. Apenas observe, sem clicar. Depois vou fazer uma pergunta."</li>
+<li>Iniciar a contagem de 30 segundos. O participante pode avisar antes que terminou de observar.</li>
+<li>Ao final, minimizar ou cobrir a tela e entregar o cartão com as quatro alternativas.</li>
+<li>Ler: "Para que serve esta tela?" e, em seguida, as quatro alternativas, na ordem do cartão.</li>
+<li>Registrar a letra escolhida, sem comentar. Se o participante não escolher nenhuma, registrar "sem resposta".</li>
+</ol>
+<p><strong>Pergunta padrão:</strong> "Para que serve esta tela?" </p>
+<p><strong>Tela B — Indicadores de Continuidade</strong> (protótipo)  <br />
+- a. Exibir os indicadores e a qualidade do fornecimento de energia na unidade consumidora. <strong>(Correta)</strong> <br />
+- b. Acompanhar o histórico de consumo de energia da residência nos últimos meses.<br />
+- c. Cadastrar a conta de energia para pagamento em débito automático.<br />
+- d. Informar a falta de energia na residência em tempo real.   </p>
+<p>As alternativas são as mesmas da Fase 4, para que a comparação com o resultado anterior (3 de 5 na Tela B) seja direta.</p>
+<p><strong>Códigos:</strong> S — sucesso (alternativa correta); IN — alternativa incorreta ou sem resposta.</p>
+<h3 id="15-u-04-usar-o-grafico-do-prototipo">1.5 U-04: usar o gráfico do protótipo<a class="headerlink" href="#15-u-04-usar-o-grafico-do-prototipo" title="Permanent link">&para;</a></h3>
+<p><strong>(M10) — Tarefas de operação concluídas</strong></p>
+<p><strong>Objetivo:</strong> observar se os participantes conseguem usar o gráfico de forma dinâmica, trocando o período e alternando entre tabela e gráfico, até o resultado esperado.</p>
+<p><strong>Condição:</strong> cada tarefa começa no estado inicial da Tela B, já aberta pelo mediador.</p>
+<p><strong>Instruções (ler exatamente):</strong></p>
+<p><strong>T4 — Trocar o período</strong></p>
+<blockquote>
+<p>"Nesta tela, faça aparecer somente os meses de abril a setembro de 2026. Quando terminar, me avise."</p>
+</blockquote>
+<p><strong>T5 — Alternar entre tabela e gráfico</strong></p>
+<blockquote>
+<p>"Agora, veja essas mesmas informações organizadas em tabela. Depois, volte para a forma como elas estavam antes. Quando terminar, me avise."</p>
+</blockquote>
+<p><strong>Fim da tentativa:</strong> quando o participante avisa que terminou, desiste ou completa 5 minutos.</p>
+<p>Desvios corrigidos pelo próprio participante sem recomeçar a tarefa, como escolher um mês errado e corrigi-lo, não são erros de operação, mas devem ser anotados em observações.</p>
+<p><strong>Códigos:</strong> S — sucesso; CI — caminho incorreto; AJ — ajuda; DE — desistência; TE — tempo esgotado; EO — erro de operação; FS — falha do sistema; IP — interrompida.</p>
+<h3 id="16-encerramento">1.6 Encerramento<a class="headerlink" href="#16-encerramento" title="Permanent link">&para;</a></h3>
+<p><strong>Perguntas abertas (opcionais):</strong> não entram no cálculo das métricas e são anotadas sem dados que identifiquem o participante.
+- "Qual das tarefas foi mais difícil? O que dificultou?"
+- "Alguma palavra ou tela deixou você em dúvida?"</p>
+<h3 id="17-ficha-de-registro-por-participante">1.7 Ficha de registro por participante<a class="headerlink" href="#17-ficha-de-registro-por-participante" title="Permanent link">&para;</a></h3>
+<h4 id="tabela-p01">Tabela P01<a class="headerlink" href="#tabela-p01" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Identificador</th>
+<th>Tarefa</th>
+<th>Tempo</th>
+<th>Código</th>
+<th>Situação</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M9-U03-20261123-P01-TB</td>
+<td>Tela B — Indicadores de Continuidade (protótipo) Alternativa: A</td>
+<td>3 s</td>
+<td>S</td>
+<td>Elegível</td>
+<td>Não demonstrou dúvida entre as alternativas</td>
+</tr>
+<tr>
+<td>M10-U04-20261123-P01-T4</td>
+<td>T4 — trocar o período</td>
+<td>7 s</td>
+<td>S</td>
+<td>Elegível</td>
+<td>-</td>
+</tr>
+<tr>
+<td>M10-U04-20261123-P01-T5</td>
+<td>T5 — alternar entre tabela e gráfico</td>
+<td>17 s</td>
+<td>S</td>
+<td>Elegível</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observações da entrevista:</strong> Participante comentou que achou a página fácil, mas que o campo de seleção para os indicadores poderia ter mais destaque.</p>
+<h4 id="tabela-p02">Tabela P02<a class="headerlink" href="#tabela-p02" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Identificador</th>
+<th>Tarefa</th>
+<th>Tempo</th>
+<th>Código</th>
+<th>Situação</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M9-U03-20261123-P02-TB</td>
+<td>Tela B — Indicadores de Continuidade (protótipo) Alternativa: A</td>
+<td>90 s</td>
+<td>S</td>
+<td>Elegível</td>
+<td>Solicitou que repetisse as alternativas. P02 comentou ter ficado em dúvida entre A e D</td>
+</tr>
+<tr>
+<td>M10-U04-20261123-P02-T4</td>
+<td>T4 — trocar o período</td>
+<td>14 s</td>
+<td>S</td>
+<td>Elegível</td>
+<td>-</td>
+</tr>
+<tr>
+<td>M10-U04-20261123-P02-T5</td>
+<td>T5 — alternar entre tabela e gráfico</td>
+<td>108 s</td>
+<td>S</td>
+<td>Elegível</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observações da entrevista:</strong> Foi solicitado que P02 falasse com as próprias palavras o que achava ser a função da Tela B (protótipo). A entrevistadora concluiu que P02 entendeu a função da página, mas as alternativas causaram dúvidas.</p>
+<h3 id="18-criterios-de-aceite-e-amostra">1.8 Critérios de aceite e amostra<a class="headerlink" href="#18-criterios-de-aceite-e-amostra" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Fórmula</th>
+<th>Critério de aceite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M9</td>
+<td><code>100 × K / N</code> (telas reconhecidas / apresentações elegíveis)</td>
+<td><strong>≥ 80%</strong> (H9)</td>
+</tr>
+<tr>
+<td>M10</td>
+<td><code>100 × O / N</code> (tarefas concluídas sem erro e sem ajuda / tarefas elegíveis)</td>
+<td><strong>≥ 80%</strong> (H10)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-resultados-da-validacao">2. Resultados da validação<a class="headerlink" href="#2-resultados-da-validacao" title="Permanent link">&para;</a></h2>
+<p>Esta seção apresenta os resultados das sessões de 23/11/2026 com o protótipo da tela de Indicadores de Continuidade. Foram realizadas <strong>2 sessões</strong>. Por isso, os percentuais abaixo são <strong>descritivos</strong>.</p>
+<h3 id="21-m9-reconhecimento-da-finalidade-da-tela">2.1 M9 — Reconhecimento da finalidade da tela<a class="headerlink" href="#21-m9-reconhecimento-da-finalidade-da-tela" title="Permanent link">&para;</a></h3>
+<p><strong>Questão Q9:</strong> Os usuários reconhecem de imediato se a tela atende à sua necessidade de informação?</p>
+<p><strong>Hipótese H9:</strong> ao menos 80% das telas apresentadas terão sua finalidade reconhecida corretamente.</p>
+<p><strong>Cálculo:</strong> <code>M9 = 100 × 2 / 2 = 100%</code>.</p>
+<p><strong>Classificação:</strong> descritiva, <strong>Excelente</strong> (95% ou mais).</p>
+<p><strong>Resultado da hipótese:</strong> <em>inconclusiva</em> (apenas 2 apresentações; a Fase 4 usou 10).</p>
+<table>
+<thead>
+<tr>
+<th>Participante</th>
+<th>Familiaridade digital</th>
+<th>Alternativa</th>
+<th>Código</th>
+<th>Tempo</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P01</td>
+<td>Alta</td>
+<td>A (correta)</td>
+<td>S</td>
+<td>3 s</td>
+<td>Respondeu sem demonstrar dúvida</td>
+</tr>
+<tr>
+<td>P02</td>
+<td><strong>Baixa</strong></td>
+<td>A (correta)</td>
+<td>S</td>
+<td>90 s</td>
+<td>Pediu a repetição das alternativas; ficou em dúvida entre A e D</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Análise:</strong></p>
+<ul>
+<li><strong>A confusão com o consumo não apareceu.</strong> Na Fase 4, os dois erros da Tela B escolheram a alternativa B ("histórico de consumo"). Com o protótipo, nenhum participante a considerou, o que indica que o subtítulo, o gráfico e os cartões do mês deixam claro que a tela não trata de consumo. O título "Indicadores de Continuidade" foi mantido.</li>
+<li><strong>Comparação com a Fase 4.</strong> A tela original foi reconhecida por 3 de 5 participantes (60%), e só 1 respondeu sem hesitar. Com o protótipo, 2 de 2 reconheceram a tela e 1 respondeu sem hesitar. O resultado é favorável, mas a amostra ainda é pequena para comparação.</li>
+<li><strong>Nova dúvida: alternativa D.</strong> P02 hesitou entre A ("indicadores e qualidade do fornecimento") e D ("informar a falta de energia em tempo real"). O subtítulo fala de quando "a energia faltou", e isso pode ser lido como um serviço de aviso de falta. Ver a mudança S1.</li>
+<li><strong>Resposta com as próprias palavras.</strong> A pedido da entrevistadora, P02 explicou a tela com as próprias palavras e mostrou ter entendido a função, o que reforça que a dúvida veio da proximidade entre as alternativas. Essa pergunta não faz parte do roteiro, então é registrada só como observação qualitativa e não muda o cálculo.</li>
+<li><strong>Perfil.</strong> P02, de baixa familiaridade digital, reconheceu a tela. Na Fase 4, a única pessoa de baixa familiaridade errou a tela original, escolhendo "histórico de consumo". A hesitação de P02 mostra, porém, que o reconhecimento ainda exige mais esforço desse perfil. Com um participante por perfil, não é possível tirar conclusões sobre a relação entre familiaridade e resultado.</li>
+<li><strong>Tempos.</strong> Os tempos de M9 correspondem ao tempo para escolher a alternativa e não entram no cálculo. Os 90 s de P02 incluem a repetição das alternativas.</li>
+</ul>
+<h3 id="22-m10-tarefas-de-operacao">2.2 M10 — Tarefas de operação<a class="headerlink" href="#22-m10-tarefas-de-operacao" title="Permanent link">&para;</a></h3>
+<p><strong>Questão Q10:</strong> Os usuários conseguem operar as funções até o resultado esperado sem erro e sem ajuda?</p>
+<p><strong>Hipótese H10:</strong> ao menos 80% das tarefas de operação serão concluídas sem erro e sem ajuda.</p>
+<p><strong>Cálculo:</strong> <code>M10 = 100 × 4 / 4 = 100%</code>.</p>
+<p><strong>Classificação:</strong> descritiva, <strong>Excelente</strong> (95% ou mais).</p>
+<p><strong>Resultado da hipótese:</strong> <em>inconclusiva</em> (apenas 4 tarefas; mínimo de 10).</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>P01 (familiaridade alta)</th>
+<th>P02 (familiaridade baixa)</th>
+<th>Sucessos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T4 — trocar o período</td>
+<td>S, 7 s</td>
+<td>S, 14 s</td>
+<td>2 de 2</td>
+</tr>
+<tr>
+<td>T5 — alternar entre tabela e gráfico</td>
+<td>S, 17 s</td>
+<td>S, 108 s</td>
+<td>2 de 2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Análise:</strong></p>
+<ul>
+<li><strong>Trocar o período (T4).</strong> As duas tarefas foram concluídas em poucos segundos, muito abaixo do limite de 5 minutos. Os campos "De" e "até" foram encontrados e usados sem dificuldade.</li>
+<li><strong>Alternar entre tabela e gráfico (T5).</strong> As duas tarefas foram concluídas, mas P02 levou 108 s, seis vezes o tempo de P01. Os comandos "Ver tabela" e "Ver gráfico" eram links de texto discretos, o que pode ter atrasado a localização.</li>
+<li><strong>Destaque das opções.</strong> P01 comentou que achou a página fácil, mas que o seletor de indicadores poderia ter mais destaque. Esse comentário e o tempo de P02 em T5 apontam na mesma direção: os elementos clicáveis precisam se parecer mais com botões.</li>
+</ul>
+<h3 id="23-mudancas-a-partir-da-validacao">2.3 Mudanças a partir da validação<a class="headerlink" href="#23-mudancas-a-partir-da-validacao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Sugestão</th>
+<th>Evidência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>Incluir "mês a mês" no subtítulo ("Veja, mês a mês, quantas vezes e por quanto tempo a energia faltou no seu endereço"), para indicar que a tela mostra meses anteriores e não avisos em tempo real</td>
+<td>P02 (baixa familiaridade) em dúvida entre A e D</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>Dar mais destaque aos elementos clicáveis: letra um pouco maior, seletor de indicadores com contorno verde e opção ativa preenchida, campos de período com contorno, e "Ver tabela", "Baixar CSV" e "Imprimir" como botões</td>
+<td>Comentário de P01 (alta familiaridade); P02 (baixa familiaridade) levou 108 s em T5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="historico-de-versoes">Histórico de Versões<a class="headerlink" href="#historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição da Alteração</th>
+<th>Autor(a)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>23/11/2026</td>
+<td>Criação da página de plano de validação</td>
+<td>Beatriz</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>23/11/2026</td>
+<td>Adiciona dados de entrevistas com voluntários, análises da entrevistadora e sugestões de mudanças</td>
+<td>Beatriz</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>24/11/2026</td>
+<td>Correções ortográficas e de formatação</td>
+<td>Dara Maria Barbosa de Sousa</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Equipe Radia Perlman — Qualidade de Software 2026.2 | Última atualização: 24/11/2026
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

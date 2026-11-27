@@ -1,0 +1,2126 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto da disciplina de Qualidade de Software">
+      
+      
+      
+      
+        <link rel="prev" href="../dados-brutos/">
+      
+      
+        <link rel="next" href="../resultados-g2-confiabilidade/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>G1 — Capacidade de Interação - Processo de Avaliação de Produto de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#resultados-de-g1-capacidade-de-interacao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-header__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Processo de Avaliação de Produto de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              G1 — Capacidade de Interação
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_RADIA_PERLMAN" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Equipe Radia Perlman (GitHub)
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase1-requisitos/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase2-especificacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase3-plano-avaliacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../fase4-execucao/" class="md-tabs__link">
+          
+  
+  
+  Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gestaoProjeto/" class="md-tabs__link">
+          
+  
+  
+  Gestão do projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ia-generativa/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  IA Generativa
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Processo de Avaliação de Produto de Software" class="md-nav__button md-logo" aria-label="Processo de Avaliação de Produto de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Processo de Avaliação de Produto de Software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_RADIA_PERLMAN" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Equipe Radia Perlman (GitHub)
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propósito da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/produto-avaliado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Produto Avaliado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/modelo-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade de Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/alinhamento-ods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alinhamento aos Objetivos de Desenvolvimento Sustentável (ODS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2-especificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Especificação da avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objetivos de medição
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/questoes-hipoteses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Questões e hipóteses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/metricas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Métricas e pontuações
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/grafico-gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráfico GQM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/criterios-julgamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Critérios de julgamento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rastreabilidade Fase 1–2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/protocolo-coleta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocolo de coleta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3-plano-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de Avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/recursos-ambiente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos e ambiente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/metodo-procedimentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Método e procedimentos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronograma de execução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase4-execucao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão geral da execução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../obtencao-medidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obtenção das medidas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dados-brutos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dados brutos e evidências
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resultados GQM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Resultados GQM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    G1 — Capacidade de Interação
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    G1 — Capacidade de Interação
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-m1-localizacao-de-funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. M1 — Localização de funcionalidades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-m2-tratamento-de-entradas-invalidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. M2 — Tratamento de entradas inválidas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-m9-reconhecimento-da-finalidade-da-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. M9 — Reconhecimento da finalidade da tela
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-m10-tarefas-de-operacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. M10 — Tarefas de operação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-oportunidades-de-melhoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Oportunidades de melhoria
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sintese-do-objetivo-g1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Síntese do objetivo G1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resultados-g2-confiabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G2 — Confiabilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resultados-g3-seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G3 — Segurança
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resultados-g4-desempenho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G4 — Eficiência de desempenho
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../julgamento-conclusoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Julgamento e conclusões
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ação de melhoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ação de melhoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../melhoria/acao-melhoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justificativa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../melhoria/plano-validacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de validação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gestão do projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Gestão do projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestaoProjeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão geral da gestão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestaoProjeto/planejamento-cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planejamento e cronograma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestaoProjeto/organizacao-atividades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organização das atividades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestaoProjeto/plano-medicao-psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de medição PSM/CID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestaoProjeto/automacao-psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automação do PSM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resultados PSM/CID
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Resultados PSM/CID
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/psm/entrega_1/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entrega 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/psm/entrega_2/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entrega 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/psm/consolidado/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consolidado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ia-generativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IA Generativa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-m1-localizacao-de-funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. M1 — Localização de funcionalidades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-m2-tratamento-de-entradas-invalidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. M2 — Tratamento de entradas inválidas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-m9-reconhecimento-da-finalidade-da-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. M9 — Reconhecimento da finalidade da tela
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-m10-tarefas-de-operacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. M10 — Tarefas de operação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-oportunidades-de-melhoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Oportunidades de melhoria
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sintese-do-objetivo-g1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Síntese do objetivo G1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="resultados-de-g1-capacidade-de-interacao">Resultados de G1 — Capacidade de Interação<a class="headerlink" href="#resultados-de-g1-capacidade-de-interacao" title="Permanent link">&para;</a></h1>
+<p>Esta página apresenta os resultados do objetivo G1 obtidos com voluntários (M1, M9 e M10). A M2 (tratamento de entradas inválidas) é coletada pela equipe, sem voluntários.</p>
+<p>As fórmulas, as faixas de pontuação e as quantidades mínimas são as definidas em <a href="../../fase2/metricas/">Métricas</a> e nos <a href="../../fase2/criterios-julgamento/">Critérios de julgamento</a>. Os dados brutos estão nas fichas do roteiro de coleta de capacidade de interação.</p>
+<h2 id="1-m1-localizacao-de-funcionalidades">1. M1 — Localização de funcionalidades<a class="headerlink" href="#1-m1-localizacao-de-funcionalidades" title="Permanent link">&para;</a></h2>
+<p><strong>Questão Q1:</strong> Os usuários conseguem localizar as funções sem auxílio?</p>
+<p><strong>Hipótese H1:</strong> ao menos 80% das tarefas de localização serão concluídas na primeira tentativa e sem ajuda.</p>
+<p><strong>Fórmula:</strong> <code>M1 = 100 × S / N</code>, em que <strong>S</strong> = tarefas localizadas corretamente na primeira tentativa e sem ajuda; <strong>N</strong> = tarefas de localização elegíveis.</p>
+<p><strong>Cálculo:</strong> <code>M1 = 100 × 10 / 10 = 100%</code>.</p>
+<p><strong>Classificação:</strong> <strong>Excelente</strong> (95% ou mais).</p>
+<p><strong>Resultado da hipótese:</strong> <strong>H1 sustentada</strong> (M1 ≥ 80%, com amostra mínima).</p>
+<p><strong>Análise:</strong></p>
+<ul>
+<li><strong>Desempenho por tarefa.</strong> Todas as tarefas foram concluídas na primeira tentativa, sem ajuda e muito abaixo do limite de 3 minutos. A mediana foi de 10 s em T1 e de 11 s em T2. Nenhum participante seguiu caminho incorreto.</li>
+<li><strong>Sucesso com hesitação.</strong> P03 e P04 acharam a tela inicial pouco intuitiva. P04 encontrou o histórico, mas não teve certeza de que estava no lugar certo, o que é coerente com a tela observada: uma tabela de leituras e valores.</li>
+<li><strong>Tempos.</strong> Como o tempo não entra no cálculo de M1, a classificação não muda, mas os tempos não devem ser comparados entre sessões.</li>
+<li><strong>Resposta a Q1:</strong> sim. Todos os participantes localizaram a 2ª via e o histórico de consumo sem auxílio, embora parte deles tenha considerado a tela inicial pouco intuitiva.</li>
+</ul>
+<h2 id="2-m2-tratamento-de-entradas-invalidas">2. M2 — Tratamento de entradas inválidas<a class="headerlink" href="#2-m2-tratamento-de-entradas-invalidas" title="Permanent link">&para;</a></h2>
+<p><strong>Questão Q2:</strong> Os formulários ajudam a corrigir entradas inválidas?</p>
+<p><strong>Hipótese H2:</strong> ao menos 80% das entradas inválidas serão sinalizadas antes do envio, com orientação para a correção.</p>
+<p><strong>Fórmula:</strong> <code>M2 = 100 × V / N</code>, em que <strong>V</strong> = tentativas inválidas tratadas adequadamente e <strong>N</strong> = tentativas inválidas elegíveis. Uma tentativa só é considerada adequada quando a interface impede ou sinaliza o erro <strong>e</strong> apresenta orientação compreensível para a correção.</p>
+<p><strong>Dados da coleta:</strong> a avaliação foi realizada por Isabella em 16/11/2026, às 18h40, no cenário U-02. Foram registrados onze casos (T01 a T11); T09 foi excluído conforme a ficha de coleta, restando dez tentativas elegíveis.</p>
+<p><strong>Tabela 1 —</strong> Consolidação das tentativas da M2</p>
+<table>
+<thead>
+<tr>
+<th>Classificação</th>
+<th style="text-align: right;">Tentativas</th>
+<th>Registros</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adequadas</td>
+<td style="text-align: right;">4</td>
+<td>T06, T07, T08 e T11</td>
+</tr>
+<tr>
+<td>Inadequadas</td>
+<td style="text-align: right;">6</td>
+<td>T01, T02, T03, T04, T05 e T10</td>
+</tr>
+<tr>
+<td>Excluída</td>
+<td style="text-align: right;">1</td>
+<td>T09</td>
+</tr>
+<tr>
+<td><strong>Total registrado</strong></td>
+<td style="text-align: right;"><strong>11</strong></td>
+<td><strong>10 elegíveis + 1 excluída</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cálculo:</strong> <code>M2 = 100 × 4 / 10 = 40%</code>.</p>
+<p><strong>Classificação:</strong> <strong>Insatisfatório</strong> (abaixo de 60%).</p>
+<p><strong>Resultado da hipótese:</strong> <strong>H2 não sustentada</strong> (M2 = 40%, abaixo do requisito de 80%).</p>
+<p><strong>Análise:</strong></p>
+<ul>
+<li><strong>Ausência de orientação específica no cadastro.</strong> Em T01, T02 e T03, o campo CPF ficou destacado em vermelho, mas não apresentou mensagem explicativa que indicasse o problema ou como corrigi-lo.</li>
+<li><strong>Campo obrigatório sem instrução.</strong> Em T04, o campo vazio impediu o prosseguimento, porém não houve orientação textual para o usuário.</li>
+<li><strong>Mensagens genéricas.</strong> Em T05 e T10, a interface exibiu “Realize o procedimento de segurança”, sem indicar qual informação precisava ser corrigida.</li>
+<li><strong>Respostas adequadas.</strong> T06, T07 e T08 apresentaram avisos relacionados ao preenchimento do CPF/CNPJ no login. Em T11, foi exibida a mensagem “Senha é obrigatória”. Esses quatro registros atenderam ao critério definido para a métrica.</li>
+<li><strong>Interpretação.</strong> O destaque visual de um campo ou o bloqueio do avanço, isoladamente, não garantem que o usuário compreenda o erro. A métrica exige também uma orientação clara e útil para a correção.</li>
+<li><strong>Resposta a Q2:</strong> parcialmente. Quatro das dez tentativas elegíveis foram tratadas adequadamente (40%). Nas demais, faltou mensagem explicativa ou foi apresentada uma mensagem genérica, sem indicação clara do dado a corrigir. Portanto, os formulários não atingiram a hipótese H2.</li>
+</ul>
+<p><strong>Oportunidades de melhoria:</strong> apresentar mensagens textuais junto aos campos inválidos; diferenciar campos obrigatórios de valores em formato incorreto; substituir mensagens genéricas por instruções específicas que não exponham informações sensíveis; e padronizar o feedback entre cadastro e login.</p>
+<p><strong>Evidências:</strong> a <a href="../../evidencias/M2/M2-Tabela-16112026-03.png">ficha consolidada da M2</a> reúne os onze registros, as classificações e a elegibilidade. As <a href="../../evidencias/M2/M2-U02-16112026-01.png">capturas das entradas inválidas — parte 1</a> e <a href="../../evidencias/M2/M2-U02-16112026-02.png">parte 2</a> ilustram as respostas observadas. Os dados individuais estão no <a href="../../dados-coleta/M2/M2-registros.csv">CSV da M2</a>, e o procedimento e a consolidação estão descritos no <a href="../../dados-coleta/M2/M2-resultados/">registro individual da coleta</a>.</p>
+<p><strong>Limitações:</strong> a coleta representa os campos e fluxos acessíveis nas condições observadas em 16/11/2026. Não foram realizados envios que pudessem concluir operações ou alterar dados. A métrica avalia o feedback perceptível ao usuário, não a implementação interna da validação. O registro T09 foi excluído conforme a ficha original e não integra o denominador.</p>
+<h2 id="3-m9-reconhecimento-da-finalidade-da-tela">3. M9 — Reconhecimento da finalidade da tela<a class="headerlink" href="#3-m9-reconhecimento-da-finalidade-da-tela" title="Permanent link">&para;</a></h2>
+<p><strong>Questão Q9:</strong> Os usuários reconhecem de imediato se a tela atende à sua necessidade de informação?</p>
+<p><strong>Hipótese H9:</strong> ao menos 80% das telas apresentadas terão sua finalidade reconhecida corretamente.</p>
+<p><strong>Fórmula:</strong> <code>M9 = 100 × K / N</code>, em que <strong>K</strong> = telas cuja finalidade foi reconhecida corretamente; <strong>N</strong> = apresentações de tela elegíveis.</p>
+<p><strong>Cálculo:</strong> <code>M9 = 100 × 8 / 10 = 80%</code>.</p>
+<p><strong>Classificação:</strong> <strong>Alvo</strong> (de 80% a menos de 95%).</p>
+<p><strong>Resultado da hipótese:</strong> <strong>H9 sustentada</strong> (M9 ≥ 80%, com amostra mínima).</p>
+<p><strong>Análise:</strong></p>
+<ul>
+<li><strong>A tela de indicadores concentra as dificuldades.</strong> Quatro dos cinco participantes tiveram dificuldade com a Tela B: dois erraram e dois só acertaram depois de pedir a repetição das alternativas. Apenas P05 respondeu sem hesitar.</li>
+<li><strong>Confusão com o histórico de consumo.</strong> Os dois erros na Tela B escolheram a mesma alternativa: “acompanhar o histórico de consumo”.</li>
+<li><strong>Nada Consta.</strong> Todos os participantes reconheceram a finalidade da tela.</li>
+<li><strong>Perfil e erros.</strong> P02, a única pessoa com baixa familiaridade digital, acertou o Nada Consta e errou a tela de indicadores, assim como P03, que tem alta familiaridade. Os dados não indicam relação entre familiaridade e erro, mas a amostra é pequena demais para conclusões nesse sentido.</li>
+<li><strong>Resultado por tela.</strong> A Fase 2 define M9 como uma única proporção. Os percentuais de 100% e 60% são descritivos e ajudam a localizar a dificuldade; a classificação usa os 80% agregados.</li>
+<li><strong>Registro das sessões.</strong> Os tempos anotados em M9 correspondem ao tempo para escolher a alternativa e não entram no cálculo.</li>
+<li><strong>Resposta a Q9:</strong> sim, no limite previsto, mas com diferença entre as telas: a finalidade do Nada Consta foi reconhecida por todos, enquanto a dos Indicadores de Continuidade foi reconhecida por três dos cinco participantes.</li>
+</ul>
+<h2 id="4-m10-tarefas-de-operacao">4. M10 — Tarefas de operação<a class="headerlink" href="#4-m10-tarefas-de-operacao" title="Permanent link">&para;</a></h2>
+<p><strong>Questão Q10:</strong> Os usuários conseguem operar as funções até o resultado esperado sem erro e sem ajuda?</p>
+<p><strong>Hipótese H10:</strong> ao menos 80% das tarefas de operação serão concluídas sem erro e sem ajuda.</p>
+<p><strong>Fórmula:</strong> <code>M10 = 100 × O / N</code>, em que <strong>O</strong> = tarefas concluídas sem erro e sem ajuda; <strong>N</strong> = tarefas de operação elegíveis.</p>
+<p><strong>Dados da coleta e exclusão da T4:</strong> o protocolo da Fase 2 prevê duas tarefas por participante (total mínimo de 10 tarefas elegíveis): emissão da 2ª via (T3) e alteração do período do gráfico de consumo (T4). Durante a execução, constatou-se que a interface real do Histórico de Consumo exibe apenas uma <strong>tabela estática</strong>, sem gráfico interativo ou seletor de período. Por essa razão, a tarefa T4 foi excluída, restando apenas <strong>5 tarefas elegíveis</strong> (referentes à T3), abaixo da amostra mínima de 10 tarefas estabelecida na Fase 2.</p>
+<p><strong>Resultado descritivo (T3):</strong> 5 de 5 participantes concluíram a emissão da 2ª via sem erro e sem ajuda (<code>100%</code> na tarefa executável).</p>
+<p><strong>Classificação:</strong> <strong>Inconclusiva</strong> (amostra elegível de 5 tarefas, inferior ao mínimo de 10 definido na Fase 2).</p>
+<p><strong>Resultado da hipótese:</strong> <strong>H10 inconclusiva</strong> (não é possível sustentar ou refutar a hipótese sem atingir a amostra mínima prevista).</p>
+<p><strong>Análise:</strong></p>
+<ul>
+<li><strong>Conclusão da tarefa executável (T3).</strong> Todos os cinco participantes emitiram a 2ª via sem ajuda e dentro do limite de 5 minutos, com mediana de 19 s.</li>
+<li><strong>Ícone de impressão.</strong> P02 levou 190 s, quase dois terços do limite. Chegou à tela correta, mas demorou a perceber que o ícone de impressora — que não possui rótulo textual — era o comando para gerar o PDF.</li>
+<li><strong>Impedimento metodológico (T4).</strong> Conforme a regra de transparência dos critérios de julgamento, a amostra mínima não foi alterada após a coleta; a impossibilidade de executar T4 torna M10 e H10 formalmente inconclusivas.</li>
+<li><strong>Resposta a Q10:</strong> inconclusiva para o escopo completo planejado. Embora todos os participantes tenham concluído a emissão da 2ª via (T3) sem erro e sem ajuda, a ausência de gráfico interativo no Histórico de Consumo impediu a avaliação da segunda tarefa prevista (T4).</li>
+</ul>
+<h2 id="5-oportunidades-de-melhoria">5. Oportunidades de melhoria<a class="headerlink" href="#5-oportunidades-de-melhoria" title="Permanent link">&para;</a></h2>
+<p>As hipóteses H1 e H9 foram sustentadas (enquanto H10 permaneceu inconclusiva), mas as análises acima mostram pontos em que o usuário hesitou, demorou ou errou mesmo com a métrica dentro da meta. Esta seção reúne essas observações como <strong>pré-sugestões de melhoria</strong>.</p>
+<p><strong>Tabela 2 —</strong> Pré-sugestões de melhoria identificadas em G1</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Pré-sugestão</th>
+<th>Evidência</th>
+<th>Métrica de origem</th>
+<th>Prioridade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OM-01</strong></td>
+<td>Reformular a funcionalidade <strong>Indicadores de Continuidade</strong>: deixar clara a finalidade da tela, usar linguagem do dia a dia em vez das siglas e mostrar os dados sem exigir que o usuário abra mês a mês</td>
+<td>Tela B reconhecida por 3 de 5 participantes (60%); os 2 erros escolheram "histórico de consumo"; 2 dos 3 acertos vieram com pedido de repetição</td>
+<td>M9</td>
+<td><strong>Alta</strong></td>
+</tr>
+<tr>
+<td><strong>OM-02</strong></td>
+<td>Dar rótulo de texto ao ícone de impressora da 2ª via (ex.: "Baixar PDF")</td>
+<td>P02 levou 190 s na T3 até perceber que o ícone gerava o PDF</td>
+<td>M10</td>
+<td>Média</td>
+</tr>
+<tr>
+<td><strong>OM-03</strong></td>
+<td>Tornar a tela inicial mais clara, com acesso às funções por rótulos visíveis em vez do botão verde sem texto</td>
+<td>P03 e P04 relataram que a tela inicial "não é nada intuitiva"</td>
+<td>M1 (perguntas abertas)</td>
+<td>Média</td>
+</tr>
+<tr>
+<td><strong>OM-04</strong></td>
+<td>Dar ao Histórico de consumo um título e um gráfico que confirmem ao usuário que ele chegou ao lugar certo</td>
+<td>Impediu a tarefa T4 prevista para a M10</td>
+<td>M10</td>
+<td>Baixa</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-sintese-do-objetivo-g1">6. Síntese do objetivo G1<a class="headerlink" href="#6-sintese-do-objetivo-g1" title="Permanent link">&para;</a></h2>
+<p><strong>Tabela 3 —</strong> Consolidação das métricas e hipóteses de G1</p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Resultado</th>
+<th>Classificação</th>
+<th>Hipótese</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1 — Localização de funcionalidades</td>
+<td>100% (10/10)</td>
+<td>Excelente</td>
+<td>H1 sustentada</td>
+</tr>
+<tr>
+<td>M2 — Tratamento de entradas inválidas</td>
+<td>40% (4/10)</td>
+<td>Insatisfatório</td>
+<td>H2 não sustentada</td>
+</tr>
+<tr>
+<td>M9 — Reconhecimento da finalidade da tela</td>
+<td>80% (8/10)</td>
+<td>Alvo</td>
+<td>H9 sustentada</td>
+</tr>
+<tr>
+<td>M10 — Tarefas de operação concluídas</td>
+<td>100% em T3 (5/5)*</td>
+<td>Inconclusiva</td>
+<td>H10 inconclusiva</td>
+</tr>
+</tbody>
+</table>
+<p><em>*Nota: O percentual de 100% em M10 refere-se exclusivamente à tarefa executável T3 (n = 5), abaixo do mínimo de 10 tarefas previsto na Fase 2 em razão da exclusão de T4.</em></p>
+<pre class="mermaid"><code>xychart-beta
+    title "G1 — Taxas Observadas vs. Meta das Hipóteses (80%)"
+    x-axis ["M1 (Localização)", "M2 (Entradas Inválidas)", "M9 (Finalidade)", "M10 (Apenas T3*)"]
+    y-axis "Percentual (%)" 0 --&gt; 100
+    bar [100, 40, 80, 100]
+    line [80, 80, 80, 80]
+</code></pre>
+<p><em>Figura 1 — Comparação entre os resultados obtidos nas métricas de Capacidade de Interação (G1) e o patamar mínimo exigido pelas hipóteses (80%).</em></p>
+<p>Conforme a regra de consolidação definida nos <a href="../../fase2/criterios-julgamento/">Critérios de julgamento</a> (menor nível entre as métricas conclusivas do objetivo), o objetivo <strong>G1 — Capacidade de Interação</strong> recebe classificação <strong>Insatisfatório</strong> (determinada pelo desempenho de M2 = 40%), com <strong>H1 e H9 sustentadas</strong>, <strong>H2 não sustentada</strong> e <strong>H10 inconclusiva</strong>.</p>
+<h2 id="historico-de-versoes">Histórico de Versões<a class="headerlink" href="#historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição da Alteração</th>
+<th>Autor(a)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>21/11/2026</td>
+<td>Análise de M1, M9 e M10 a partir das fichas P01 a P05</td>
+<td>Beatriz</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>22/11/2026</td>
+<td>Análise da M2</td>
+<td>Isabella</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>22/11/2026</td>
+<td>Inclusão da seção de oportunidades de melhoria (pré-sugestões OM-01 a OM-04) e ligação com a página Ação de melhoria; correção de frase incompleta na análise de M10</td>
+<td>Beatriz</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>23/11/2026</td>
+<td>Formalização de M10/H10 como inconclusiva devido à exclusão da T4 (ausência de gráfico interativo na interface)</td>
+<td>Dara Maria Barbosa de Sousa</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>24/11/2026</td>
+<td>Inclusão do quadro de síntese final de G1, gráfico comparativo e numeração padronizada das tabelas (critério F4-C3)</td>
+<td>Dara Maria Barbosa de Sousa</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Equipe Radia Perlman — Qualidade de Software 2026.2 | Última atualização: 24/11/2026
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

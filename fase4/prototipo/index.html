@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indicadores de Continuidade — Protótipo (Agência Virtual)</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/prototipo.css">
+</head>
+<body>
+
+  <div class="proto-bar" role="region" aria-label="Controle do protótipo">
+    <p><strong>Protótipo acadêmico</strong> · não é o site oficial da Neoenergia
+      <span class="proto-bar__cenario" id="proto-rotulo-cenario"></span></p>
+    <div class="proto-bar__controle" id="proto-controle">
+      <label for="proto-cenario">Cenário</label>
+      <select id="proto-cenario">
+        <option value="real">Dados reais</option>
+        <option value="ficticio">Fictício</option>
+        <option value="carregando">Carregando</option>
+        <option value="erro">Indisponível</option>
+      </select>
+    </div>
+  </div>
+
+  <header class="topo">
+    <div class="topo__conteudo">
+      <a class="marca" href="#" data-proto-link>
+        <img src="img/logo-neoenergia.svg" alt="Neoenergia" width="116" height="25">
+        <span class="marca__regiao">Brasília</span>
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#" class="menu__item menu__item--ativo" aria-current="page" data-proto-link>Home</a></li>
+          <li><a href="#" class="menu__item" data-proto-link>Outros Canais</a></li>
+          <li><a href="#" class="menu__item" data-proto-link>Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="cabecalho-pagina">
+      <div class="cabecalho-pagina__conteudo">
+        <h1 class="cabecalho-pagina__titulo">Indicadores de Continuidade</h1>
+        <nav aria-label="Você está em">
+          <ol class="trilha">
+            <li><a href="#" data-proto-link>Home</a></li>
+            <li><a href="#" data-proto-link>Unidade Consumidora</a></li>
+            <li aria-current="page">Indicadores de Continuidade</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="conteudo">
+      <div class="cartao">
+
+      <section class="uc" aria-labelledby="uc-titulo">
+        <h2 id="uc-titulo" class="cartao__titulo">Dados da Unidade Consumidora</h2>
+        <dl class="uc__dados">
+          <div class="uc__codigo"><dt>Código do Cliente:</dt><dd id="uc-codigo"></dd></div>
+          <div class="uc__endereco"><dt>Endereço:</dt><dd id="uc-endereco"></dd></div>
+          <div class="uc__numero"><dt>Unidade Consumidora (UC):</dt><dd id="uc-numero"></dd></div>
+          <div class="uc__cpf"><dt>CPF:</dt><dd id="uc-cpf"></dd></div>
+          <div class="uc__situacao"><dt>Situação UC:</dt><dd id="uc-situacao"></dd></div>
+        </dl>
+      </section>
+      </div>
+
+      <div class="cartao">
+      <section aria-labelledby="ind-titulo">
+        <h2 id="ind-titulo" class="cartao__titulo">Indicadores de Continuidade</h2>
+
+        <p class="intro__subtitulo">
+          Veja <strong>quantas vezes</strong> e <strong>por quanto tempo</strong> a energia faltou no seu endereço em meses anteriores.
+        </p>
+        <p></p>
+        <!-- Período e indicador na mesma linha e com a mesma altura -->
+        <div class="filtros">
+          <div class="filtros__grupo" role="group" aria-labelledby="periodo-rotulo">
+            <span id="periodo-rotulo" class="rotulo">Período</span>
+            <div class="periodo-personalizado" id="periodo-personalizado">
+              <label>De <select id="periodo-de"></select></label>
+              <label>até <select id="periodo-ate"></select></label>
+            </div>
+          </div>
+          <div class="filtros__grupo" id="indicador-grupo">
+            <span id="indicador-rotulo" class="rotulo">Indicador</span>
+            <div class="seletor" id="indicador" role="radiogroup" aria-labelledby="indicador-rotulo">
+              <button type="button" role="radio" data-indicador="dic">Tempo sem energia</button>
+              <button type="button" role="radio" data-indicador="fic">Vezes</button>
+              <button type="button" role="radio" data-indicador="dmic">Maior falta</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="estado-carregando" class="estado-carregando" hidden aria-busy="true">
+          <p class="sr-only" role="status">Carregando os indicadores de continuidade…</p>
+          <div class="esqueleto esqueleto--grafico"></div>
+        </div>
+
+        <div id="estado-erro" class="estado-erro" hidden role="alert">
+          <h3>Não foi possível carregar os indicadores agora</h3>
+          <p>Isso não significa que a energia não faltou. Tente novamente em alguns instantes.</p>
+          <button type="button" class="botao" id="tentar-novamente">Tentar novamente</button>
+        </div>
+
+        <div id="conteudo-indicadores">
+
+          <div class="grafico__cabecalho">
+            <h3 id="grafico-titulo" class="grafico__titulo" tabindex="-1"></h3>
+          </div>
+
+          <div class="grafico__area" id="grafico-area">
+            <div id="grafico-svg"></div>
+            <p class="grafico__vazio" id="grafico-vazio" hidden>Não foi registrada falta de energia nesse período.</p>
+            <div class="dica" id="dica" role="presentation" hidden></div>
+          </div>
+
+          <div class="grafico__rodape">
+            <p class="grafico__instrucao" id="grafico-instrucao">
+              <span id="legenda-acima"><span class="legenda__marca legenda__marca--acima" aria-hidden="true"></span> Acima do limite</span>
+              <span><span class="legenda__marca legenda__marca--limite" aria-hidden="true"></span> Limite</span>
+              <span class="grafico__dica-uso">Selecione um mês para ver os detalhes</span>
+            </p>
+            <div class="links-acao">
+              <button type="button" class="link-acao" id="alternar-tabela" aria-controls="tabela-container" aria-expanded="false">Ver tabela</button>
+              <button type="button" class="link-acao" id="baixar-csv">Baixar CSV</button>
+              <button type="button" class="link-acao" id="salvar-pdf">Imprimir</button>
+            </div>
+          </div>
+
+          <div class="tabela-container" id="tabela-container" hidden>
+            <table class="tabela">
+              <caption id="tabela-legenda" class="sr-only"></caption>
+              <thead>
+                <tr>
+                  <th scope="col">Mês</th>
+                  <th scope="col" id="th-dic">Tempo sem energia</th>
+                  <th scope="col" id="th-fic">Vezes</th>
+                  <th scope="col" id="th-dmic">Maior falta</th>
+                </tr>
+              </thead>
+              <tbody id="tabela-corpo"></tbody>
+            </table>
+          </div>
+
+          <section class="mes" id="detalhe" aria-labelledby="detalhe-titulo" aria-live="polite">
+            <h3 id="detalhe-titulo" class="mes__titulo"></h3>
+            <ul class="mes__lista" id="detalhe-corpo"></ul>
+          </section>
+        </div>
+
+        <details class="ajuda">
+          <summary>O que significam esses indicadores?</summary>
+          <dl>
+            <dt>Tempo sem energia <abbr title="Duração de Interrupção Individual por Unidade Consumidora">(DIC)</abbr></dt>
+            <dd>Soma de todo o tempo em que o seu endereço ficou sem energia no mês.</dd>
+            <dt>Vezes sem energia <abbr title="Frequência de Interrupção Individual por Unidade Consumidora">(FIC)</abbr></dt>
+            <dd>Quantas vezes a energia foi interrompida no mês.</dd>
+            <dt>Maior falta seguida <abbr title="Duração Máxima de Interrupção Contínua por Unidade Consumidora">(DMIC)</abbr></dt>
+            <dd>A interrupção mais longa do mês, sem a energia voltar no meio.</dd>
+          </dl>
+          <p>Se um limite for ultrapassado, a distribuidora deve compensar você com um crédito na fatura, sem que seja preciso pedir (ANEEL, PRODIST Módulo 8).</p>
+        </details>
+      </section>
+      </div>
+
+      <div class="voltar">
+        <a href="#" class="botao" data-proto-link>Voltar para o Menu</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2026 Neoenergia Brasília · Política de Privacidade</p>
+  </footer>
+
+  <div class="aviso-flutuante" id="aviso-flutuante" role="status" aria-live="polite" hidden></div>
+
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <defs>
+      <pattern id="hachura-acima" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="#D03B3B"/>
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#8F1F1F" stroke-width="2.4"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <script src="js/dados.js"></script>
+  <script src="js/prototipo.js"></script>
+</body>
+</html>
